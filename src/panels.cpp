@@ -1325,6 +1325,83 @@ static void draw_stat_wide( avatar &u, const catacurses::window &w )
     wrefresh( w );
 }
 
+/*
+01234567890123456789012345678901234567890123
+============================================
+ Snd: 110    Mood: :|    Str: 100  Dex: 100
+ Fcs: 100    Powr: --    Int: 100  Per: 100
+ Sta: |||||  Spd: 100  Mov: 100(W) Saf: On
+============================================
+*/
+static void draw_stat_move_compact_wide( avatar &u, const catacurses::window &w )
+{
+    std::pair<nc_color, int> morale_pair = morale_stat( u );
+    std::pair<nc_color, std::string> pwr_pair = power_stat( u );
+
+    nc_color move_color =  move_mode_color( u );
+    std::string move_char = move_mode_string( u );
+    std::string movecost = std::to_string( u.movecounter ) + "(" + move_char + ")";
+    bool m_style = get_option<std::string>( "MORALE_STYLE" ) == "horizontal";
+    std::string smiley = morale_emotion( morale_pair.second, get_face_type( u ), m_style );
+
+    werase( w );
+
+    // NOLINTNEXTLINE(cata-use-named-point-constants)
+    mvwprintz( w, point( 1, 0 ), c_light_gray, _( "Snd:" ) );
+    mvwprintz( w, point( 13, 0 ), c_light_gray, _( "Mood:" ) );
+    mvwprintz( w, point( 1, 1 ), c_light_gray, _( "Fcs:" ) );
+    mvwprintz( w, point( 13, 1 ), c_light_gray, _( "Powr:" ) );
+
+    // sound value
+    mvwprintz( w, point( 6, 0 ), c_light_gray, "%s", u.volume );
+    // mood value
+    mvwprintz( w, point( 19, 0 ), morale_pair.first, "%s", smiley );
+    // focus value
+    mvwprintz( w, point( 6, 1 ), focus_color( u.focus_pool ), "%s", u.focus_pool );
+    // power value
+    mvwprintz( w, point( 19, 1 ), pwr_pair.first, "%s", pwr_pair.second );
+
+    // attr labels
+    mvwprintz( w, point( 25, 0 ), c_light_gray, _( "Str:" ) );
+    mvwprintz( w, point( 25, 1 ), c_light_gray, _( "Int:" ) );
+    mvwprintz( w, point( 35, 0 ), c_light_gray, _( "Dex:" ) );
+    mvwprintz( w, point( 35, 1 ), c_light_gray, _( "Per:" ) );
+
+    // attr values
+    nc_color stat_clr = str_string( u ).first;
+    mvwprintz( w, point( 30, 0 ), stat_clr, "%s", u.get_str() );
+    stat_clr = int_string( u ).first;
+    mvwprintz( w, point( 30, 1 ), stat_clr, "%s", u.get_int() );
+    stat_clr = dex_string( u ).first;
+    mvwprintz( w, point( 40, 0 ), stat_clr, "%s", u.get_dex() );
+    stat_clr = per_string( u ).first;
+    mvwprintz( w, point( 40, 1 ), stat_clr, "%s", u.get_per() );
+
+    // NOLINTNEXTLINE(cata-use-named-point-constants)
+    mvwprintz( w, point( 1, 2 ), c_light_gray, _( "Sta:" ) );
+    mvwprintz( w, point( 13, 2 ), c_light_gray, _( "Spd:" ) );
+    mvwprintz( w, point( 23, 2 ), c_light_gray, _( "Mov:" ) );
+
+    // print stamina value (bar)
+    auto needs_pair = std::make_pair( get_hp_bar( u.get_stamina(), u.get_stamina_max() ).second,
+                                      get_hp_bar( u.get_stamina(), u.get_stamina_max() ).first );
+    mvwprintz( w, point( 6, 2 ), needs_pair.first, needs_pair.second );
+    const int width = utf8_width( needs_pair.second );
+    for( int i = 0; i < 5 - width; i++ ) {
+        mvwprintz( w, point( 10 - i, 2 ), c_white, "." );
+    }
+
+    // speed value
+    mvwprintz( w, point( 18, 2 ), focus_color( u.get_speed() ), "%s", u.get_speed() );
+    // move value
+    mvwprintz( w, point( 28, 2 ), move_color, "%s", movecost );
+
+    // safe
+    mvwprintz( w, point( 35, 2 ), c_light_gray, _( "Saf:" ) );
+    mvwprintz( w, point( 40, 2 ), safe_color(), g->safe_mode ? _( "On" ) : _( "Off" ) );
+    wrefresh( w );
+}
+
 static void draw_loc_labels( const avatar &u, const catacurses::window &w, bool minimap )
 {
     werase( w );
@@ -1379,6 +1456,51 @@ static void draw_loc_narrow( const avatar &u, const catacurses::window &w )
 static void draw_loc_wide( const avatar &u, const catacurses::window &w )
 {
     draw_loc_labels( u, w, false );
+}
+
+static void draw_loc_labels_compact( const avatar &u, const catacurses::window &w )
+{
+    werase( w );
+    // display location
+    const oter_id &cur_ter = overmap_buffer.ter( u.global_omt_location() );
+    // NOLINTNEXTLINE(cata-use-named-point-constants)
+    mvwprintz( w, point( 1, 0 ), c_light_gray, _( "Loc: " ) );
+    wprintz( w, c_white, utf8_truncate( cur_ter->get_name(), getmaxx( w ) - 6 ) );
+    // display weather
+    if( g->get_levz() < 0 ) {
+        // NOLINTNEXTLINE(cata-use-named-point-constants)
+        mvwprintz( w, point( 1, 1 ), c_light_gray, _( "Sky: Underground" ) );
+    } else {
+        // NOLINTNEXTLINE(cata-use-named-point-constants)
+        mvwprintz( w, point( 1, 1 ), c_light_gray, _( "Sky:" ) );
+        const weather_datum wdata = weather_data( g->weather.weather );
+        wprintz( w, wdata.color, " %s", utf8_truncate( wdata.name, getmaxx( w ) - 5 - 20 ) );
+    }
+    // display lighting
+    const auto ll = get_light_level( g->u.fine_detail_vision_mod() );
+    mvwprintz( w, point( getmaxx( w ) - 20, 1 ), c_light_gray, "%s ", _( "Lgt:" ) );
+    wprintz( w, ll.second, ll.first );
+
+    // display time & date
+    if( u.has_watch() ) {
+        mvwprintz( w, point( 1, 2 ), c_light_gray, _( "Time: %s" ),
+                   to_string_time_of_day( calendar::turn ) );
+    } else if( g->get_levz() >= 0 ) {
+        mvwprintz( w, point( 1, 2 ), c_light_gray, _( "Time: %s" ), time_approx() );
+    } else {
+        // NOLINTNEXTLINE(cata-text-style): the question mark does not end a sentence
+        mvwprintz( w, point( 1, 2 ), c_light_gray, _( "Time: ???" ) );
+    }
+    wprintz( w, c_light_gray, _( " day %d, %s" ),
+               day_of_season<int>( calendar::turn ) + 1,
+               calendar::name_season( season_of_year( calendar::turn ) ));
+
+    wrefresh( w );
+}
+
+static void draw_loc_compact_wide( const avatar &u, const catacurses::window &w )
+{
+    draw_loc_labels_compact( u, w );
 }
 
 static void draw_loc_wide_map( const avatar &u, const catacurses::window &w )
@@ -2070,6 +2192,35 @@ static std::vector<window_panel> initialize_default_label_panels()
     return ret;
 }
 
+static std::vector<window_panel> initialize_default_label_compact_panels()
+{
+    std::vector<window_panel> ret;
+
+    ret.emplace_back( window_panel( draw_hint, translate_marker( "Hint" ), 1, 44, true ) );
+    ret.emplace_back( window_panel( draw_limb_wide, translate_marker( "Limbs" ), 2, 44, true ) );
+    ret.emplace_back( window_panel( draw_mana_wide, translate_marker( "Mana" ), 1, 44, true,
+                                    spell_panel ) );
+    ret.emplace_back( window_panel( draw_stat_move_compact_wide, translate_marker( "Stats" ), 3, 44, true ) );
+    ret.emplace_back( window_panel( draw_veh_padding, translate_marker( "Vehicle" ), 1, 44, true ) );
+    ret.emplace_back( window_panel( draw_loc_wide_map, translate_marker( "Location" ), 5, 44, false ) );
+    ret.emplace_back( window_panel( draw_wind_padding, translate_marker( "Wind" ), 1, 44, false ) );
+    ret.emplace_back( window_panel( draw_loc_compact_wide, translate_marker( "Location Alt" ), 3, 44, true ) );
+    ret.emplace_back( window_panel( draw_weapon_labels, translate_marker( "Weapon" ), 2, 44, true ) );
+    ret.emplace_back( window_panel( draw_needs_labels, translate_marker( "Needs" ), 3, 44, true ) );
+    ret.emplace_back( window_panel( draw_messages, translate_marker( "Log" ), -2, 44, true ) );
+    ret.emplace_back( window_panel( draw_moon_wide, translate_marker( "Moon" ), 1, 44, false ) );
+    ret.emplace_back( window_panel( draw_armor_padding, translate_marker( "Armor" ), 5, 44, false ) );
+    ret.emplace_back( window_panel( draw_compass_padding, translate_marker( "Compass" ), 8, 44,
+                                    true ) );
+#if defined(TILES)
+    ret.emplace_back( window_panel( draw_mminimap, translate_marker( "Map" ), -1, 44, true,
+                                    default_render, true ) );
+#endif // TILES
+    ret.emplace_back( window_panel( draw_ai_goal, "AI Needs", 1, 44, false ) );
+
+    return ret;
+}
+
 static std::map<std::string, std::vector<window_panel>> initialize_default_panel_layouts()
 {
     std::map<std::string, std::vector<window_panel>> ret;
@@ -2079,6 +2230,7 @@ static std::map<std::string, std::vector<window_panel>> initialize_default_panel
     ret.emplace( std::make_pair( translate_marker( "labels-narrow" ),
                                  initialize_default_label_narrow_panels() ) );
     ret.emplace( std::make_pair( translate_marker( "labels" ), initialize_default_label_panels() ) );
+    ret.emplace( std::make_pair( translate_marker( "labels-compact" ), initialize_default_label_compact_panels() ) );
 
     return ret;
 }
