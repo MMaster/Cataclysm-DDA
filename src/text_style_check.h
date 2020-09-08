@@ -1,24 +1,24 @@
 #pragma once
-#ifndef TEXT_STYLE_CHECK_H
-#define TEXT_STYLE_CHECK_H
+#ifndef CATA_SRC_TEXT_STYLE_CHECK_H
+#define CATA_SRC_TEXT_STYLE_CHECK_H
 
 // This is used in both the game itself and the clang-tidy check,
 // so only system headers should be included here.
 #include <functional>
 #include <string>
 
-enum class text_style_fix {
+enum class text_style_fix : int {
     removal,
     insertion,
     replacement
 };
 
-enum class fix_end_of_string_spaces {
+enum class fix_end_of_string_spaces : int {
     no,
     yes
 };
 
-enum class escape_unicode {
+enum class escape_unicode : int {
     no,
     yes
 };
@@ -38,7 +38,7 @@ void text_style_check( Iter beg, Iter end,
         std::u32string symbol;
         std::u32string follow;
         struct {
-            bool check;
+            bool check = false;
             size_t min_string_length = 0;
             size_t min_word_length = 0;
             size_t fix_spaces_min = 0;
@@ -56,7 +56,7 @@ void text_style_check( Iter beg, Iter end,
             size_t fix_before_max = 0;
         } spaces;
         struct {
-            bool yes;
+            bool yes = false;
             std::string str {};
             std::string escaped {};
             std::string sym_desc {};
@@ -87,11 +87,11 @@ void text_style_check( Iter beg, Iter end,
     // *INDENT-ON*
 
     const size_t text_length = std::distance( beg, end );
-    for( auto it = beg; it < end; ) {
-        auto itpunc = it;
+    for( Iter it = beg; it < end; ) {
+        Iter itpunc = it;
         auto punc = punctuations.begin();
         for( ; punc < punctuations.end(); ++punc ) {
-            auto itpuncend = it;
+            Iter itpuncend = it;
             bool matches = true;
             for( auto isym = punc->symbol.begin(); isym < punc->symbol.end(); ++isym, ++itpuncend ) {
                 if( itpuncend >= end || *isym != *itpuncend ) {
@@ -123,7 +123,7 @@ void text_style_check( Iter beg, Iter end,
         }
         if( punc->spaces.check && text_length >= punc->spaces.min_string_length ) {
             size_t spacesbefore = 0;
-            auto itspacebefore = itpunc;
+            Iter itspacebefore = itpunc;
             for( ; itspacebefore > beg; --itspacebefore, ++spacesbefore ) {
                 const uint32_t ch = *( itspacebefore - 1 );
                 if( ch != U' ' ) {
@@ -136,7 +136,7 @@ void text_style_check( Iter beg, Iter end,
                              beg, end, itpunc, itspacebefore, itpunc, {} );
             }
             size_t wordlen = 0;
-            for( auto itword = itpunc; itword > beg; --itword, ++wordlen ) {
+            for( Iter itword = itpunc; itword > beg; --itword, ++wordlen ) {
                 const uint32_t ch = *( itword - 1 );
                 if( ( ch < U'a' || ch > U'z' ) && ( ch < U'A' || ch > U'Z' ) &&
                     ( ch < U'0' || ch > U'9' ) && ch != U'-' ) {
@@ -144,7 +144,7 @@ void text_style_check( Iter beg, Iter end,
                 }
             }
             bool after_word = wordlen >= punc->spaces.min_word_length;
-            auto itspaceend = it;
+            Iter itspaceend = it;
             size_t spacelen = 0;
             for( ; itspaceend < end && *itspaceend == U' '; ++itspaceend, ++spacelen ) {
             }
@@ -199,4 +199,4 @@ void text_style_check( Iter beg, Iter end,
     }
 }
 
-#endif // TEXT_STYLE_CHECK
+#endif // CATA_SRC_TEXT_STYLE_CHECK_H

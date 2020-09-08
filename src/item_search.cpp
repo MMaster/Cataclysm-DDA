@@ -11,7 +11,7 @@
 #include "string_id.h"
 #include "type_id.h"
 
-std::pair<std::string, std::string> get_both( const std::string &a );
+static std::pair<std::string, std::string> get_both( const std::string &a );
 
 std::function<bool( const item & )> basic_item_filter( std::string filter )
 {
@@ -56,7 +56,7 @@ std::function<bool( const item & )> basic_item_filter( std::string filter )
         case 'd':
             return [filter]( const item & i ) {
                 const auto &components = i.get_uncraft_components();
-                for( auto &component : components ) {
+                for( const item_comp &component : components ) {
                     if( lcmatch( component.to_string(), filter ) ) {
                         return true;
                     }

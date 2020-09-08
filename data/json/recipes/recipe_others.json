@@ -1,6 +1,7 @@
 [
   {
     "type": "recipe",
+    "activity_level": "BRISK_EXERCISE",
     "result": "caltrops",
     "category": "CC_OTHER",
     "subcategory": "CSC_OTHER_TRAPS",
@@ -15,6 +16,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "fake",
     "result": "caltrops_glass",
     "category": "CC_OTHER",
     "subcategory": "CSC_OTHER_TRAPS",
@@ -24,22 +26,25 @@
     "time": "25 m",
     "autolearn": true,
     "qualities": [ { "id": "HAMMER", "level": 1 } ],
-    "components": [ [ [ "glass_shard", 17 ] ], [ [ "superglue", 1 ], [ "bone_glue", 1 ] ] ]
+    "components": [ [ [ "glass_shard", 4 ] ], [ [ "superglue", 1 ], [ "bone_glue", 1 ] ] ]
   },
   {
     "type": "recipe",
+    "activity_level": "fake",
     "result": "concrete",
     "category": "CC_OTHER",
     "subcategory": "CSC_OTHER_OTHER",
     "skill_used": "fabrication",
     "difficulty": 4,
     "time": "10 m",
-    "autolearn": true,
+    "autolearn": false,
+    "book_learn": [ [ "concrete_book", 4 ] ],
     "tools": [ [ [ "con_mix", 50 ] ] ],
     "components": [ [ [ "material_cement", 50 ] ], [ [ "material_sand", 25 ] ], [ [ "pebble", 20 ] ] ]
   },
   {
     "type": "recipe",
+    "activity_level": "fake",
     "result": "wood_smoother",
     "category": "CC_OTHER",
     "subcategory": "CSC_OTHER_TOOLS",
@@ -52,6 +57,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "fake",
     "result": "down_pillow",
     "category": "CC_OTHER",
     "subcategory": "CSC_OTHER_OTHER",
@@ -64,6 +70,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "fake",
     "result": "down_mattress",
     "category": "CC_OTHER",
     "subcategory": "CSC_OTHER_OTHER",
@@ -77,6 +84,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "fake",
     "result": "pillow",
     "category": "CC_OTHER",
     "subcategory": "CSC_OTHER_OTHER",
@@ -89,6 +97,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "fake",
     "result": "wood_beam",
     "id_suffix": "from logs",
     "category": "CC_OTHER",
@@ -104,6 +113,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "fake",
     "result": "wood_panel",
     "id_suffix": "from wooden beams",
     "category": "CC_OTHER",
@@ -117,6 +127,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "fake",
     "result": "wood_panel",
     "id_suffix": "from wooden sheets",
     "category": "CC_OTHER",
@@ -129,6 +140,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "fake",
     "result": "wood_panel",
     "id_suffix": "from nailed planks",
     "category": "CC_OTHER",
@@ -140,6 +152,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "fake",
     "result": "2x4",
     "id_suffix": "from wooden beams",
     "category": "CC_OTHER",
@@ -153,6 +166,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "fake",
     "result": "wind_mill",
     "category": "CC_OTHER",
     "skill_used": "fabrication",
@@ -177,6 +191,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "fake",
     "result": "water_mill",
     "category": "CC_OTHER",
     "skill_used": "fabrication",
@@ -208,6 +223,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "fake",
     "result": "tent_kit",
     "category": "CC_OTHER",
     "subcategory": "CSC_OTHER_TOOLS",
@@ -222,6 +238,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "fake",
     "result": "large_tent_kit",
     "category": "CC_OTHER",
     "subcategory": "CSC_OTHER_TOOLS",
@@ -236,6 +253,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "fake",
     "result": "felt_patch",
     "category": "CC_OTHER",
     "subcategory": "CSC_OTHER_MATERIALS",
@@ -248,6 +266,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "BRISK_EXERCISE",
     "result": "caltrops",
     "id_suffix": "from wire",
     "category": "CC_OTHER",
@@ -263,6 +282,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "fake",
     "result": "meal_chitin_piece",
     "category": "CC_OTHER",
     "subcategory": "CSC_OTHER_MATERIALS",
@@ -273,10 +293,11 @@
     "batch_time_factors": [ 83, 3 ],
     "flags": [ "BLIND_EASY" ],
     "tools": [ [ [ "rock_quern", -1 ], [ "clay_quern", -1 ] ] ],
-    "components": [ [ [ "chitin_piece", 1 ], [ "acidchitin_piece", 1 ] ] ]
+    "components": [ [ [ "chitin_piece", 1 ], [ "acidchitin_piece", 1 ], [ "endochitin", 1 ] ] ]
   },
   {
     "type": "recipe",
+    "activity_level": "fake",
     "result": "meal_chitin_piece",
     "id_suffix": "mortar",
     "category": "CC_OTHER",
@@ -289,10 +310,11 @@
     "batch_time_factors": [ 83, 3 ],
     "flags": [ "BLIND_EASY" ],
     "tools": [ [ [ "mortar_pestle", -1 ] ] ],
-    "components": [ [ [ "chitin_piece", 1 ] ] ]
+    "components": [ [ [ "chitin_piece", 1 ], [ "acidchitin_piece", 1 ], [ "endochitin", 1 ] ] ]
   },
   {
     "type": "recipe",
+    "activity_level": "BRISK_EXERCISE",
     "result": "reinforced_glass_sheet",
     "category": "CC_OTHER",
     "subcategory": "CSC_OTHER_MATERIALS",
@@ -308,6 +330,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "BRISK_EXERCISE",
     "result": "chainsaw_off",
     "category": "CC_OTHER",
     "subcategory": "CSC_OTHER_TOOLS",
@@ -323,6 +346,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "BRISK_EXERCISE",
     "result": "small_space_heater",
     "category": "CC_OTHER",
     "subcategory": "CSC_OTHER_TOOLS",
@@ -343,6 +367,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "BRISK_EXERCISE",
     "result": "large_space_heater",
     "category": "CC_OTHER",
     "subcategory": "CSC_OTHER_TOOLS",
@@ -363,6 +388,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "fake",
     "result": "puller",
     "category": "CC_OTHER",
     "subcategory": "CSC_OTHER_TOOLS",
@@ -377,6 +403,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "BRISK_EXERCISE",
     "result": "press",
     "category": "CC_OTHER",
     "subcategory": "CSC_OTHER_TOOLS",
@@ -391,6 +418,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "fake",
     "result": "press_dowel",
     "category": "CC_OTHER",
     "subcategory": "CSC_OTHER_TOOLS",
@@ -409,12 +437,14 @@
   },
   {
     "type": "recipe",
+    "activity_level": "fake",
     "result": "tailors_kit",
     "category": "CC_OTHER",
     "subcategory": "CSC_OTHER_TOOLS",
     "skill_used": "tailor",
     "difficulty": 3,
     "time": "1 m",
+    "autolearn": true,
     "reversible": true,
     "decomp_learn": 3,
     "book_learn": [ [ "textbook_tailor", 3 ], [ "manual_tailor", 3 ] ],
@@ -432,6 +462,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "fake",
     "result": "anesthetic_kit",
     "category": "CC_OTHER",
     "subcategory": "CSC_OTHER_MEDICAL",
@@ -441,16 +472,17 @@
     "reversible": true,
     "autolearn": true,
     "qualities": [ { "id": "SEW", "level": 1 } ],
-    "components": [ [ [ "jar_3l_glass", 1 ] ], [ [ "hose", 1 ] ], [ [ "rag", 2 ] ] ]
+    "components": [ [ [ "jar_3l_glass_sealed", 1 ] ], [ [ "hose", 1 ], [ "makeshift_hose", 1 ] ], [ [ "rag", 2 ] ] ]
   },
   {
     "type": "recipe",
+    "activity_level": "fake",
     "result": "wearable_light",
     "category": "CC_OTHER",
     "subcategory": "CSC_OTHER_TOOLS",
     "skill_used": "fabrication",
     "difficulty": 1,
-    "time": "20 m",
+    "time": "5 m",
     "reversible": true,
     "autolearn": true,
     "qualities": [ { "id": "CUT", "level": 1 } ],
@@ -462,6 +494,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "fake",
     "result": "analytical_set_basic",
     "category": "CC_OTHER",
     "subcategory": "CSC_OTHER_TOOLS",
@@ -481,6 +514,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "fake",
     "result": "survivor_light",
     "category": "CC_OTHER",
     "subcategory": "CSC_OTHER_TOOLS",
@@ -489,6 +523,7 @@
     "difficulty": 2,
     "time": "25 m",
     "autolearn": true,
+    "reversible": true,
     "using": [ [ "soldering_standard", 10 ] ],
     "qualities": [ { "id": "CUT", "level": 1 }, { "id": "SCREW", "level": 1 } ],
     "components": [
@@ -501,6 +536,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "fake",
     "result": "wearable_atomic_light",
     "category": "CC_OTHER",
     "subcategory": "CSC_OTHER_TOOLS",
@@ -523,6 +559,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "fake",
     "result": "oil_lamp",
     "category": "CC_OTHER",
     "subcategory": "CSC_OTHER_TOOLS",
@@ -534,18 +571,13 @@
     "components": [
       [ [ "scrap", 1 ] ],
       [ [ "rag", 1 ] ],
-      [ [ "bottle_glass", 1 ], [ "flask_glass", 1 ], [ "jar_glass", 1 ] ],
-      [
-        [ "clay_teapot", 1 ],
-        [ "jug_clay", 1 ],
-        [ "can_food_unsealed", 1 ],
-        [ "can_drink_unsealed", 1 ],
-        [ "canister_empty", 1 ]
-      ]
+      [ [ "bottle_glass", 1 ], [ "flask_glass", 1 ], [ "jar_glass_sealed", 1 ] ],
+      [ [ "clay_teapot", 1 ], [ "jug_clay", 1 ], [ "can_food", 1 ], [ "can_drink", 1 ], [ "canister_empty", 1 ] ]
     ]
   },
   {
     "type": "recipe",
+    "activity_level": "fake",
     "result": "gasoline_lantern",
     "category": "CC_OTHER",
     "subcategory": "CSC_OTHER_TOOLS",
@@ -557,18 +589,13 @@
     "components": [
       [ [ "scrap", 1 ] ],
       [ [ "rag", 1 ] ],
-      [ [ "bottle_glass", 1 ], [ "flask_glass", 1 ], [ "jar_glass", 1 ] ],
-      [
-        [ "clay_teapot", 1 ],
-        [ "jug_clay", 1 ],
-        [ "can_food_unsealed", 1 ],
-        [ "can_drink_unsealed", 1 ],
-        [ "canister_empty", 1 ]
-      ]
+      [ [ "bottle_glass", 1 ], [ "flask_glass", 1 ], [ "jar_glass_sealed", 1 ] ],
+      [ [ "clay_teapot", 1 ], [ "jug_clay", 1 ], [ "can_food", 1 ], [ "can_drink", 1 ], [ "canister_empty", 1 ] ]
     ]
   },
   {
     "type": "recipe",
+    "activity_level": "BRISK_EXERCISE",
     "result": "reinforced_glass_pane",
     "category": "CC_OTHER",
     "subcategory": "CSC_OTHER_MATERIALS",
@@ -582,6 +609,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "BRISK_EXERCISE",
     "result": "headlight_reinforced",
     "category": "CC_OTHER",
     "subcategory": "CSC_OTHER_PARTS",
@@ -595,6 +623,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "BRISK_EXERCISE",
     "result": "wide_headlight_reinforced",
     "category": "CC_OTHER",
     "subcategory": "CSC_OTHER_PARTS",
@@ -608,6 +637,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "BRISK_EXERCISE",
     "result": "reinforced_solar_panel",
     "category": "CC_OTHER",
     "subcategory": "CSC_OTHER_PARTS",
@@ -622,6 +652,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "BRISK_EXERCISE",
     "result": "reinforced_solar_panel_v2",
     "category": "CC_OTHER",
     "subcategory": "CSC_OTHER_PARTS",
@@ -636,6 +667,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "fake",
     "result": "telepad",
     "category": "CC_OTHER",
     "subcategory": "CSC_OTHER_TRAPS",
@@ -652,17 +684,27 @@
   },
   {
     "type": "recipe",
+    "activity_level": "fake",
     "result": "primitive_hammer",
     "category": "CC_OTHER",
     "subcategory": "CSC_OTHER_TOOLS",
     "skill_used": "survival",
-    "time": "5 m",
+    "skills_required": [ "fabrication", 2 ],
+    "difficulty": 4,
+    "time": "3 h",
     "autolearn": true,
-    "qualities": [ { "id": "HAMMER", "level": 1 } ],
-    "components": [ [ [ "stick", 1 ], [ "2x4", 1 ] ], [ [ "rock", 1 ] ], [ [ "filament", 100, "LIST" ], [ "cordage_short", 2, "LIST" ] ] ]
+    "qualities": [ { "id": "HAMMER", "level": 1 }, { "id": "ANVIL", "level": 1 }, { "id": "CHISEL_WOOD", "level": 1 } ],
+    "components": [
+      [ [ "stick", 1 ], [ "2x4", 1 ] ],
+      [ [ "rock", 1 ] ],
+      [ [ "water", 1 ], [ "water_clean", 1 ], [ "water_sewage", 1 ], [ "salt_water", 1 ], [ "saline", 5 ] ],
+      [ [ "material_sand", 1 ] ],
+      [ [ "cordage_short", 1, "LIST" ], [ "filament", 50, "LIST" ] ]
+    ]
   },
   {
     "type": "recipe",
+    "activity_level": "fake",
     "result": "makeshift_hammer",
     "category": "CC_OTHER",
     "subcategory": "CSC_OTHER_TOOLS",
@@ -678,6 +720,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "fake",
     "result": "needle_bone",
     "category": "CC_OTHER",
     "subcategory": "CSC_OTHER_TOOLS",
@@ -686,10 +729,11 @@
     "time": "20 m",
     "autolearn": true,
     "qualities": [ { "id": "CUT", "level": 1 } ],
-    "components": [ [ [ "bone", 1 ], [ "bone_human", 1 ], [ "skewer_bone", 1 ] ] ]
+    "components": [ [ [ "bone_sturdy", 1, "LIST" ], [ "skewer_bone", 1 ] ] ]
   },
   {
     "type": "recipe",
+    "activity_level": "fake",
     "result": "needle_wood",
     "category": "CC_OTHER",
     "subcategory": "CSC_OTHER_TOOLS",
@@ -703,6 +747,7 @@
   {
     "result": "bone_flute",
     "type": "recipe",
+    "activity_level": "fake",
     "category": "CC_OTHER",
     "subcategory": "CSC_OTHER_TOOLS",
     "skill_used": "survival",
@@ -711,25 +756,34 @@
     "time": "1 h",
     "autolearn": true,
     "qualities": [ { "id": "CUT", "level": 1 } ],
-    "components": [ [ [ "bone", 1 ], [ "bone_human", 1 ] ] ]
+    "components": [ [ [ "bone_sturdy", 1, "LIST" ] ] ]
   },
   {
     "type": "recipe",
+    "activity_level": "fake",
     "result": "primitive_knife",
     "category": "CC_OTHER",
     "subcategory": "CSC_OTHER_TOOLS",
     "skill_used": "survival",
-    "time": "1 h",
+    "skills_required": [ "fabrication", 2 ],
+    "difficulty": 5,
+    "time": "30 m",
     "autolearn": true,
-    "qualities": [ { "id": "HAMMER", "level": 1 } ],
+    "qualities": [
+      { "id": "HAMMER", "level": 1 },
+      { "id": "HAMMER_SOFT", "level": 1 },
+      { "id": "PUNCH", "level": 1 },
+      { "id": "CUT", "level": 1 }
+    ],
     "components": [
-      [ [ "stick", 1 ], [ "2x4", 1 ], [ "bone", 1 ], [ "bone_human", 1 ] ],
-      [ [ "rock", 1 ], [ "ceramic_shard", 1 ], [ "sharp_rock", 1 ] ],
+      [ [ "stick", 1 ], [ "2x4", 1 ] ],
+      [ [ "rock_flaking", 1 ], [ "sharp_rock", 1 ] ],
       [ [ "cordage_short", 1, "LIST" ], [ "filament", 50, "LIST" ] ]
     ]
   },
   {
     "type": "recipe",
+    "activity_level": "fake",
     "result": "digging_stick",
     "category": "CC_OTHER",
     "subcategory": "CSC_OTHER_TOOLS",
@@ -742,36 +796,29 @@
   },
   {
     "type": "recipe",
-    "result": "rock_pot",
-    "category": "CC_OTHER",
-    "subcategory": "CSC_OTHER_TOOLS",
-    "skill_used": "survival",
-    "skills_required": [ "cooking", 1 ],
-    "difficulty": 2,
-    "time": "20 m",
-    "autolearn": true,
-    "qualities": [ { "id": "HAMMER", "level": 1 } ],
-    "components": [ [ [ "rock", 3 ] ], [ [ "cordage", 1, "LIST" ] ] ]
-  },
-  {
-    "type": "recipe",
+    "activity_level": "fake",
     "result": "primitive_shovel",
     "category": "CC_OTHER",
     "subcategory": "CSC_OTHER_TOOLS",
-    "skill_used": "survival",
-    "skills_required": [ "fabrication", 2 ],
+    "skill_used": "fabrication",
     "difficulty": 2,
     "time": "1 h",
     "autolearn": true,
-    "qualities": [ { "id": "HAMMER", "level": 1 } ],
+    "qualities": [
+      { "id": "HAMMER", "level": 2 },
+      { "id": "SAW_W", "level": 1 },
+      { "id": "CUT", "level": 1 },
+      { "id": "CHISEL_WOOD", "level": 1 }
+    ],
     "components": [
       [ [ "stick", 1 ], [ "2x4", 1 ] ],
-      [ [ "rock", 1 ], [ "ceramic_shard", 1 ], [ "sharp_rock", 1 ] ],
-      [ [ "cordage_short", 2, "LIST" ] ]
+      [ [ "2x4", 1 ] ],
+      [ [ "nail", 2 ], [ "cordage_short", 2, "LIST" ], [ "filament", 100, "LIST" ], [ "duct_tape", 40 ] ]
     ]
   },
   {
     "type": "recipe",
+    "activity_level": "fake",
     "result": "copper_ax",
     "category": "CC_OTHER",
     "subcategory": "CSC_OTHER_TOOLS",
@@ -785,30 +832,35 @@
     "tools": [ [ [ "surface_heat", 10, "LIST" ] ] ],
     "components": [
       [ [ "stick", 1 ], [ "2x4", 1 ] ],
-      [ [ "scrap_copper", 10 ], [ "copper", 1000 ] ],
+      [ [ "copper_scrap_equivalent", 40, "LIST" ] ],
       [ [ "cordage_short", 2, "LIST" ], [ "filament", 100, "LIST" ], [ "duct_tape", 40 ] ]
     ]
   },
   {
     "type": "recipe",
+    "activity_level": "fake",
     "result": "primitive_axe",
     "category": "CC_OTHER",
     "subcategory": "CSC_OTHER_TOOLS",
     "skill_used": "survival",
     "skills_required": [ "fabrication", 2 ],
-    "difficulty": 3,
-    "time": "1 h",
+    "difficulty": 5,
+    "time": "2 h",
     "autolearn": true,
+    "proficiencies": [ { "proficiency": "prof_knapping", "required": true } ],
     "book_learn": [ [ "mag_survival", 1 ], [ "atomic_survival", 1 ], [ "textbook_carpentry", 2 ] ],
-    "qualities": [ { "id": "HAMMER", "level": 1 } ],
+    "qualities": [ { "id": "HAMMER", "level": 1 }, { "id": "ANVIL", "level": 1 }, { "id": "CHISEL_WOOD", "level": 1 } ],
+    "tools": [ [ [ "fire", -1 ] ] ],
     "components": [
       [ [ "stick", 1 ], [ "2x4", 1 ] ],
-      [ [ "rock", 1 ], [ "ceramic_shard", 1 ], [ "sharp_rock", 1 ] ],
-      [ [ "cordage_short", 2, "LIST" ], [ "filament", 100, "LIST" ] ]
+      [ [ "rock", 1 ] ],
+      [ [ "water", 1 ], [ "water_clean", 1 ], [ "water_sewage", 1 ], [ "salt_water", 1 ], [ "saline", 5 ] ],
+      [ [ "material_sand", 1 ] ]
     ]
   },
   {
     "type": "recipe",
+    "activity_level": "fake",
     "result": "primitive_adze",
     "category": "CC_OTHER",
     "subcategory": "CSC_OTHER_TOOLS",
@@ -826,6 +878,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "fake",
     "result": "fire_drill",
     "category": "CC_OTHER",
     "subcategory": "CSC_OTHER_TOOLS",
@@ -839,6 +892,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "fake",
     "result": "fire_drill_large",
     "category": "CC_OTHER",
     "subcategory": "CSC_OTHER_TOOLS",
@@ -852,6 +906,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "fake",
     "result": "crude_firestarter",
     "category": "CC_ELECTRONIC",
     "subcategory": "CSC_ELECTRONIC_TOOLS",
@@ -865,6 +920,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "fake",
     "result": "knitting_needles",
     "category": "CC_OTHER",
     "subcategory": "CSC_OTHER_TOOLS",
@@ -877,6 +933,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "fake",
     "result": "distaff_spindle",
     "category": "CC_OTHER",
     "subcategory": "CSC_OTHER_TOOLS",
@@ -889,6 +946,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "fake",
     "result": "carding_paddles",
     "category": "CC_OTHER",
     "subcategory": "CSC_OTHER_TOOLS",
@@ -901,6 +959,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "fake",
     "result": "waterskin",
     "category": "CC_OTHER",
     "subcategory": "CSC_OTHER_CONTAINERS",
@@ -914,6 +973,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "fake",
     "result": "waterskin2",
     "category": "CC_OTHER",
     "subcategory": "CSC_OTHER_CONTAINERS",
@@ -927,6 +987,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "fake",
     "result": "waterskin3",
     "category": "CC_OTHER",
     "subcategory": "CSC_OTHER_CONTAINERS",
@@ -940,6 +1001,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "fake",
     "result": "makeshift_funnel",
     "category": "CC_OTHER",
     "subcategory": "CSC_OTHER_TOOLS",
@@ -952,6 +1014,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "fake",
     "result": "shelter_kit",
     "category": "CC_OTHER",
     "subcategory": "CSC_OTHER_OTHER",
@@ -965,6 +1028,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "fake",
     "result": "shelter_kit",
     "id_suffix": "repair",
     "category": "CC_OTHER",
@@ -983,6 +1047,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "fake",
     "result": "fur_rollmat",
     "category": "CC_OTHER",
     "subcategory": "CSC_OTHER_OTHER",
@@ -998,6 +1063,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "fake",
     "result": "water_faucet",
     "category": "CC_OTHER",
     "subcategory": "CSC_OTHER_PARTS",
@@ -1007,10 +1073,11 @@
     "time": "7 m",
     "autolearn": true,
     "qualities": [ { "id": "HAMMER", "level": 2 }, { "id": "SAW_M", "level": 1 } ],
-    "components": [ [ [ "pipe", 1 ] ], [ [ "scrap", 1 ] ], [ [ "plastic_chunk", 1 ] ] ]
+    "components": [ [ [ "pipe", 1 ] ], [ [ "scrap", 1 ] ], [ [ "plastic_chunk", 1 ] ], [ [ "pipe_fittings", 1 ] ] ]
   },
   {
     "type": "recipe",
+    "activity_level": "BRISK_EXERCISE",
     "result": "cargo_rack",
     "category": "CC_OTHER",
     "subcategory": "CSC_OTHER_PARTS",
@@ -1025,6 +1092,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "fake",
     "result": "w_table",
     "category": "CC_OTHER",
     "subcategory": "CSC_OTHER_PARTS",
@@ -1039,6 +1107,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "BRISK_EXERCISE",
     "result": "workbench",
     "category": "CC_OTHER",
     "subcategory": "CSC_OTHER_PARTS",
@@ -1049,23 +1118,11 @@
     "decomp_learn": 1,
     "autolearn": true,
     "using": [ [ "welding_standard", 5 ] ],
-    "components": [ [ [ "pipe", 8 ] ], [ [ "sheet_metal", 2 ] ], [ [ "sheet_metal_small", 4 ] ] ]
+    "components": [ [ [ "pipe", 8 ] ], [ [ "sheet_metal", 2 ] ], [ [ "sheet_metal_small", 4 ] ], [ [ "pipe_fittings", 4 ] ] ]
   },
   {
     "type": "recipe",
-    "result": "foot_crank",
-    "category": "CC_OTHER",
-    "subcategory": "CSC_OTHER_PARTS",
-    "skill_used": "mechanics",
-    "difficulty": 1,
-    "time": "10 m",
-    "reversible": true,
-    "autolearn": true,
-    "qualities": [ { "id": "HAMMER", "level": 2 }, { "id": "WRENCH", "level": 1 } ],
-    "components": [ [ [ "pipe", 1 ] ], [ [ "steel_chunk", 2 ], [ "scrap", 6 ] ], [ [ "chain", 1 ] ] ]
-  },
-  {
-    "type": "recipe",
+    "activity_level": "BRISK_EXERCISE",
     "result": "muffler",
     "category": "CC_OTHER",
     "subcategory": "CSC_OTHER_PARTS",
@@ -1076,10 +1133,11 @@
     "autolearn": true,
     "using": [ [ "welding_standard", 5 ] ],
     "qualities": [ { "id": "HAMMER", "level": 2 }, { "id": "SAW_M", "level": 1 } ],
-    "components": [ [ [ "pipe", 2 ] ], [ [ "sheet_metal_small", 5 ] ] ]
+    "components": [ [ [ "pipe", 2 ] ], [ [ "sheet_metal_small", 5 ] ], [ [ "pipe_fittings", 1 ] ] ]
   },
   {
     "type": "recipe",
+    "activity_level": "BRISK_EXERCISE",
     "result": "seat",
     "category": "CC_OTHER",
     "subcategory": "CSC_OTHER_PARTS",
@@ -1089,10 +1147,11 @@
     "reversible": true,
     "autolearn": true,
     "using": [ [ "sewing_standard", 50 ], [ "welding_standard", 5 ] ],
-    "components": [ [ [ "pipe", 4 ] ], [ [ "spring", 2 ] ], [ [ "rag", 20 ], [ "sheet", 1 ] ] ]
+    "components": [ [ [ "pipe", 4 ] ], [ [ "spring", 2 ] ], [ [ "rag", 20 ], [ "sheet", 1 ] ], [ [ "pipe_fittings", 4 ] ] ]
   },
   {
     "type": "recipe",
+    "activity_level": "BRISK_EXERCISE",
     "result": "seat_leather",
     "category": "CC_OTHER",
     "subcategory": "CSC_OTHER_PARTS",
@@ -1106,11 +1165,13 @@
       [ [ "pipe", 4 ] ],
       [ [ "spring", 2 ] ],
       [ [ "leather", 12 ], [ "fur", 12 ], [ "tanned_hide", 3 ], [ "tanned_pelt", 3 ] ],
+      [ [ "pipe_fittings", 4 ] ],
       [ [ "rag", 8 ] ]
     ]
   },
   {
     "type": "recipe",
+    "activity_level": "fake",
     "result": "cotton_ball",
     "category": "CC_OTHER",
     "subcategory": "CSC_OTHER_MATERIALS",
@@ -1123,6 +1184,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "fake",
     "result": "cotton_ball",
     "category": "CC_OTHER",
     "subcategory": "CSC_OTHER_MATERIALS",
@@ -1135,6 +1197,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "fake",
     "result": "thread",
     "category": "CC_OTHER",
     "subcategory": "CSC_OTHER_MATERIALS",
@@ -1148,6 +1211,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "fake",
     "result": "rag",
     "id_suffix": "knitting",
     "category": "CC_OTHER",
@@ -1161,6 +1225,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "fake",
     "result": "rag",
     "category": "CC_OTHER",
     "subcategory": "CSC_OTHER_MATERIALS",
@@ -1172,6 +1237,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "fake",
     "result": "sheet",
     "category": "CC_OTHER",
     "subcategory": "CSC_OTHER_MATERIALS",
@@ -1184,6 +1250,31 @@
   },
   {
     "type": "recipe",
+    "activity_level": "fake",
+    "result": "sheet_kevlar_layered",
+    "category": "CC_OTHER",
+    "subcategory": "CSC_OTHER_MATERIALS",
+    "skill_used": "tailor",
+    "time": "2 m",
+    "autolearn": true,
+    "reversible": true,
+    "using": [ [ "sewing_standard", 15 ] ],
+    "components": [ [ [ "sheet_kevlar", 16 ] ] ]
+  },
+  {
+    "type": "recipe",
+    "activity_level": "fake",
+    "result": "rigid_kevlar_plate",
+    "category": "CC_OTHER",
+    "subcategory": "CSC_OTHER_MATERIALS",
+    "skill_used": "tailor",
+    "time": "15 m",
+    "autolearn": true,
+    "components": [ [ [ "sheet_kevlar", 16 ], [ "sheet_kevlar_layered", 1 ] ], [ [ "superglue", 1 ] ] ]
+  },
+  {
+    "type": "recipe",
+    "activity_level": "BRISK_EXERCISE",
     "result": "vehicle_controls",
     "category": "CC_OTHER",
     "subcategory": "CSC_OTHER_PARTS",
@@ -1193,10 +1284,17 @@
     "book_learn": [ [ "textbook_fabrication", 5 ], [ "textbook_mechanics", 3 ], [ "manual_mechanics", 3 ] ],
     "using": [ [ "welding_standard", 5 ] ],
     "qualities": [ { "id": "HAMMER", "level": 2 }, { "id": "SAW_M", "level": 1 }, { "id": "WRENCH", "level": 1 } ],
-    "components": [ [ [ "pipe", 6 ] ], [ [ "steel_chunk", 4 ], [ "scrap", 12 ] ], [ [ "wire", 3 ] ], [ [ "cable", 10 ] ] ]
+    "components": [
+      [ [ "pipe", 6 ] ],
+      [ [ "steel_chunk", 4 ], [ "scrap", 12 ] ],
+      [ [ "wire", 3 ] ],
+      [ [ "cable", 10 ] ],
+      [ [ "pipe_fittings", 4 ] ]
+    ]
   },
   {
     "type": "recipe",
+    "activity_level": "BRISK_EXERCISE",
     "result": "folding_bicycle",
     "category": "CC_OTHER",
     "subcategory": "CSC_OTHER_OTHER",
@@ -1218,6 +1316,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "fake",
     "result": "rolling_paper",
     "category": "CC_OTHER",
     "subcategory": "CSC_OTHER_MATERIALS",
@@ -1230,6 +1329,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "fake",
     "result": "string_6",
     "category": "CC_OTHER",
     "subcategory": "CSC_OTHER_MATERIALS",
@@ -1241,6 +1341,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "fake",
     "result": "string_36",
     "category": "CC_OTHER",
     "subcategory": "CSC_OTHER_MATERIALS",
@@ -1252,6 +1353,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "fake",
     "result": "rope_6",
     "id_suffix": "from_string",
     "category": "CC_OTHER",
@@ -1264,6 +1366,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "fake",
     "result": "rope_6",
     "id_suffix": "from_cloth",
     "category": "CC_OTHER",
@@ -1271,12 +1374,14 @@
     "skill_used": "tailor",
     "difficulty": 3,
     "time": "1 h 30 m",
+    "reversible": true,
     "autolearn": true,
     "qualities": [ { "id": "CUT", "level": 1 } ],
     "components": [ [ [ "rag", 30 ], [ "leather", 30 ], [ "felt_patch", 30 ], [ "tanned_hide", 5 ] ] ]
   },
   {
     "type": "recipe",
+    "activity_level": "fake",
     "result": "rope_30",
     "category": "CC_OTHER",
     "subcategory": "CSC_OTHER_MATERIALS",
@@ -1288,6 +1393,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "fake",
     "result": "rope_makeshift_6",
     "category": "CC_OTHER",
     "subcategory": "CSC_OTHER_MATERIALS",
@@ -1295,10 +1401,11 @@
     "time": "7 m 30 s",
     "reversible": true,
     "autolearn": true,
-    "components": [ [ [ "cordage_36", 6 ], [ "withered", 36 ], [ "straw_pile", 36 ] ] ]
+    "components": [ [ [ "cordage_36", 6 ], [ "withered", 36 ], [ "straw_pile", 36 ], [ "tanbark", 36 ], [ "willowbark", 36 ] ] ]
   },
   {
     "type": "recipe",
+    "activity_level": "fake",
     "result": "rope_makeshift_30",
     "category": "CC_OTHER",
     "subcategory": "CSC_OTHER_MATERIALS",
@@ -1306,10 +1413,20 @@
     "time": "7 m 30 s",
     "reversible": true,
     "autolearn": true,
-    "components": [ [ [ "rope_makeshift_6", 5 ], [ "cordage_36", 30 ], [ "withered", 180 ], [ "straw_pile", 180 ] ] ]
+    "components": [
+      [
+        [ "rope_makeshift_6", 5 ],
+        [ "cordage_36", 30 ],
+        [ "withered", 180 ],
+        [ "straw_pile", 180 ],
+        [ "tanbark", 180 ],
+        [ "willowbark", 180 ]
+      ]
+    ]
   },
   {
     "type": "recipe",
+    "activity_level": "BRISK_EXERCISE",
     "result": "wire",
     "category": "CC_OTHER",
     "subcategory": "CSC_OTHER_MATERIALS",
@@ -1324,6 +1441,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "fake",
     "result": "wire_barbed",
     "category": "CC_OTHER",
     "subcategory": "CSC_OTHER_MATERIALS",
@@ -1337,6 +1455,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "fake",
     "result": "wire_mesh",
     "category": "CC_OTHER",
     "subcategory": "CSC_OTHER_MATERIALS",
@@ -1350,6 +1469,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "fake",
     "result": "candle",
     "category": "CC_OTHER",
     "subcategory": "CSC_OTHER_OTHER",
@@ -1358,10 +1478,11 @@
     "autolearn": true,
     "qualities": [ { "id": "CONTAIN", "level": 1 } ],
     "tools": [ [ [ "lighter", 5 ], [ "ref_lighter", 5 ], [ "surface_heat", 2, "LIST" ] ] ],
-    "components": [ [ [ "wax", 1 ], [ "any_tallow", 4, "LIST" ] ], [ [ "string_6", 1 ] ] ]
+    "components": [ [ [ "wax", 1 ], [ "any_tallow", 4, "LIST" ], [ "edible_lard", 1, "LIST" ] ], [ [ "cordage_short", 1, "LIST" ] ] ]
   },
   {
     "type": "recipe",
+    "activity_level": "fake",
     "result": "holy_symbol_wood",
     "category": "CC_OTHER",
     "subcategory": "CSC_OTHER_OTHER",
@@ -1374,6 +1495,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "fake",
     "result": "spike",
     "category": "CC_OTHER",
     "subcategory": "CSC_OTHER_MATERIALS",
@@ -1382,10 +1504,11 @@
     "reversible": true,
     "autolearn": true,
     "qualities": [ { "id": "HAMMER", "level": 1 } ],
-    "components": [ [ [ "steel_chunk", 2 ], [ "scrap", 5 ] ] ]
+    "components": [ [ [ "steel_chunk", 1 ] ] ]
   },
   {
     "type": "recipe",
+    "activity_level": "BRISK_EXERCISE",
     "result": "blade",
     "category": "CC_OTHER",
     "subcategory": "CSC_OTHER_MATERIALS",
@@ -1397,6 +1520,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "fake",
     "result": "screwdriver",
     "category": "CC_OTHER",
     "subcategory": "CSC_OTHER_TOOLS",
@@ -1409,6 +1533,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "BRISK_EXERCISE",
     "result": "screwdriver_set",
     "id_suffix": "forged",
     "category": "CC_OTHER",
@@ -1424,6 +1549,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "fake",
     "result": "stepladder",
     "category": "CC_OTHER",
     "subcategory": "CSC_OTHER_TOOLS",
@@ -1437,6 +1563,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "fake",
     "result": "duct_tape",
     "category": "CC_OTHER",
     "subcategory": "CSC_OTHER_MATERIALS",
@@ -1451,6 +1578,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "fake",
     "result": "tree_spile",
     "category": "CC_OTHER",
     "subcategory": "CSC_OTHER_TOOLS",
@@ -1463,17 +1591,32 @@
   },
   {
     "type": "recipe",
+    "activity_level": "fake",
     "result": "crude_picklock",
     "category": "CC_OTHER",
     "subcategory": "CSC_OTHER_TOOLS",
     "skill_used": "fabrication",
-    "time": "1 m",
+    "time": "10 m",
     "autolearn": true,
-    "qualities": [ { "id": "HAMMER", "level": 1 } ],
+    "qualities": [ [ { "id": "HAMMER_FINE", "level": 1 }, { "id": "WRENCH", "level": 1 } ], { "id": "SAW_M", "level": 2 } ],
     "components": [ [ [ "scrap", 1 ] ] ]
   },
   {
     "type": "recipe",
+    "activity_level": "fake",
+    "result": "crude_picklock",
+    "id_suffix": "from wire",
+    "category": "CC_OTHER",
+    "subcategory": "CSC_OTHER_TOOLS",
+    "skill_used": "fabrication",
+    "time": "5 m",
+    "autolearn": true,
+    "qualities": [ [ { "id": "HAMMER_FINE", "level": 1 }, { "id": "WRENCH", "level": 1 } ] ],
+    "components": [ [ [ "wire", 2 ] ] ]
+  },
+  {
+    "type": "recipe",
+    "activity_level": "fake",
     "result": "tripwire",
     "category": "CC_OTHER",
     "subcategory": "CSC_OTHER_TRAPS",
@@ -1486,6 +1629,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "fake",
     "result": "board_trap",
     "category": "CC_OTHER",
     "subcategory": "CSC_OTHER_TRAPS",
@@ -1498,6 +1642,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "fake",
     "result": "board_trap",
     "id_suffix": "use_nailboards",
     "category": "CC_OTHER",
@@ -1511,13 +1656,14 @@
   },
   {
     "type": "recipe",
+    "activity_level": "BRISK_EXERCISE",
     "result": "beartrap",
     "category": "CC_OTHER",
     "subcategory": "CSC_OTHER_TRAPS",
     "skill_used": "traps",
     "skills_required": [ "mechanics", 3 ],
     "difficulty": 2,
-    "time": "3 m",
+    "time": "3 h",
     "reversible": true,
     "decomp_learn": 2,
     "autolearn": true,
@@ -1529,6 +1675,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "fake",
     "result": "crossbow_trap",
     "category": "CC_OTHER",
     "subcategory": "CSC_OTHER_TRAPS",
@@ -1544,6 +1691,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "fake",
     "result": "shotgun_trap",
     "category": "CC_OTHER",
     "subcategory": "CSC_OTHER_TRAPS",
@@ -1555,10 +1703,11 @@
     "decomp_learn": 2,
     "autolearn": true,
     "using": [ [ "cordage", 1 ] ],
-    "components": [ [ [ "shotgun_d", 1 ] ], [ [ "shot_00", 2 ], [ "shot_slug", 2 ], [ "shot_flechette", 2 ] ] ]
+    "components": [ [ [ "slamfire_shotgun_d", 1 ] ], [ [ "shot_00", 2 ], [ "shot_slug", 2 ], [ "shot_flechette", 2 ] ] ]
   },
   {
     "type": "recipe",
+    "activity_level": "fake",
     "result": "blade_trap",
     "category": "CC_OTHER",
     "subcategory": "CSC_OTHER_TRAPS",
@@ -1574,6 +1723,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "fake",
     "result": "boobytrap",
     "id_suffix": "closed_cans_such_as_drinks",
     "category": "CC_OTHER",
@@ -1581,16 +1731,14 @@
     "skill_used": "traps",
     "difficulty": 3,
     "time": "5 m",
-    "book_learn": [ [ "textbook_traps", 2 ], [ "manual_traps", 3 ], [ "howto_traps", 3 ] ],
+    "book_learn": [ [ "manual_traps_mil", 3 ] ],
     "using": [ [ "cordage_short", 1 ] ],
     "qualities": [ { "id": "CUT", "level": 1 } ],
-    "components": [
-      [ [ "grenade", 1 ] ],
-      [ [ "clay_canister", 1 ], [ "can_drink_unsealed", 1 ], [ "can_food_unsealed", 1 ], [ "canister_empty", 1 ] ]
-    ]
+    "components": [ [ [ "grenade", 1 ] ], [ [ "clay_canister", 1 ], [ "can_drink", 1 ], [ "can_food", 1 ], [ "canister_empty", 1 ] ] ]
   },
   {
     "type": "recipe",
+    "activity_level": "fake",
     "result": "landmine",
     "category": "CC_OTHER",
     "subcategory": "CSC_OTHER_TRAPS",
@@ -1599,17 +1747,11 @@
     "difficulty": 5,
     "time": "10 m",
     "reversible": true,
-    "book_learn": [ [ "textbook_traps", 5 ], [ "manual_traps", 5 ], [ "howto_traps", 4 ], [ "recipe_bullets", 6 ] ],
+    "book_learn": [ [ "manual_traps_mil", 5 ] ],
     "qualities": [ { "id": "SCREW", "level": 1 } ],
     "components": [
       [ [ "superglue", 1 ], [ "duct_tape", 75 ] ],
-      [
-        [ "scrap", 3 ],
-        [ "steel_chunk", 1 ],
-        [ "canister_empty", 1 ],
-        [ "clay_canister", 1 ],
-        [ "can_food_unsealed", 1 ]
-      ],
+      [ [ "scrap", 3 ], [ "steel_chunk", 1 ], [ "canister_empty", 1 ], [ "clay_canister", 1 ], [ "can_food", 1 ] ],
       [ [ "bb", 200 ], [ "nail", 100 ] ],
       [
         [ "gunpowder", 72 ],
@@ -1621,12 +1763,14 @@
         [ "shot_he", 3 ],
         [ "gasoline", 600 ],
         [ "diesel", 600 ],
+        [ "biodiesel", 600 ],
         [ "grenade", 1 ]
       ]
     ]
   },
   {
     "type": "recipe",
+    "activity_level": "fake",
     "result": "brazier",
     "category": "CC_OTHER",
     "subcategory": "CSC_OTHER_TOOLS",
@@ -1640,6 +1784,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "fake",
     "result": "55gal_firebarrel",
     "category": "CC_OTHER",
     "subcategory": "CSC_OTHER_TOOLS",
@@ -1653,6 +1798,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "fake",
     "result": "30gal_firebarrel",
     "category": "CC_OTHER",
     "subcategory": "CSC_OTHER_TOOLS",
@@ -1666,6 +1812,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "BRISK_EXERCISE",
     "result": "metal_tank",
     "category": "CC_OTHER",
     "subcategory": "CSC_OTHER_MATERIALS",
@@ -1679,6 +1826,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "fake",
     "result": "it_battery_mount",
     "category": "CC_OTHER",
     "subcategory": "CSC_OTHER_MATERIALS",
@@ -1693,6 +1841,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "BRISK_EXERCISE",
     "result": "metal_tank_little",
     "category": "CC_OTHER",
     "subcategory": "CSC_OTHER_MATERIALS",
@@ -1706,6 +1855,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "fake",
     "result": "arm_xlsplint",
     "category": "CC_OTHER",
     "subcategory": "CSC_OTHER_MEDICAL",
@@ -1722,6 +1872,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "fake",
     "result": "arm_splint",
     "category": "CC_OTHER",
     "subcategory": "CSC_OTHER_MEDICAL",
@@ -1738,6 +1889,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "fake",
     "result": "leg_splint",
     "category": "CC_OTHER",
     "subcategory": "CSC_OTHER_MEDICAL",
@@ -1754,6 +1906,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "fake",
     "result": "leg_xlsplint",
     "category": "CC_OTHER",
     "subcategory": "CSC_OTHER_MEDICAL",
@@ -1770,6 +1923,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "fake",
     "result": "scrap_copper",
     "category": "CC_OTHER",
     "subcategory": "CSC_OTHER_MATERIALS",
@@ -1783,6 +1937,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "fake",
     "result": "jug_plastic",
     "category": "CC_OTHER",
     "subcategory": "CSC_OTHER_CONTAINERS",
@@ -1795,6 +1950,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "fake",
     "result": "jerrycan",
     "category": "CC_OTHER",
     "subcategory": "CSC_OTHER_CONTAINERS",
@@ -1808,6 +1964,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "BRISK_EXERCISE",
     "result": "jerrycan_big",
     "category": "CC_OTHER",
     "subcategory": "CSC_OTHER_CONTAINERS",
@@ -1821,6 +1978,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "BRISK_EXERCISE",
     "result": "jerrycan_big",
     "id_suffix": "welder",
     "category": "CC_OTHER",
@@ -1835,6 +1993,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "BRISK_EXERCISE",
     "result": "flask_hip",
     "category": "CC_OTHER",
     "subcategory": "CSC_OTHER_CONTAINERS",
@@ -1849,6 +2008,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "fake",
     "result": "bowl_plastic",
     "category": "CC_OTHER",
     "subcategory": "CSC_OTHER_CONTAINERS",
@@ -1861,6 +2021,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "fake",
     "result": "mold_plastic",
     "category": "CC_OTHER",
     "subcategory": "CSC_OTHER_TOOLS",
@@ -1873,6 +2034,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "fake",
     "result": "bottle_plastic",
     "category": "CC_OTHER",
     "subcategory": "CSC_OTHER_CONTAINERS",
@@ -1885,6 +2047,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "fake",
     "result": "bottle_plastic_small",
     "category": "CC_OTHER",
     "subcategory": "CSC_OTHER_CONTAINERS",
@@ -1897,6 +2060,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "fake",
     "result": "bottle_twoliter",
     "category": "CC_OTHER",
     "subcategory": "CSC_OTHER_CONTAINERS",
@@ -1909,11 +2073,12 @@
   },
   {
     "type": "recipe",
+    "activity_level": "fake",
     "result": "chemistry_set_basic",
     "category": "CC_OTHER",
     "subcategory": "CSC_OTHER_TOOLS",
     "skill_used": "fabrication",
-    "skills_required": [ "cooking", 2 ],
+    "skills_required": [ "chemistry", 2 ],
     "time": "2 m",
     "reversible": true,
     "decomp_learn": 0,
@@ -1921,18 +2086,19 @@
     "book_learn": [ [ "adv_chemistry", 1 ], [ "textbook_chemistry", 1 ] ],
     "components": [
       [ [ "glasses_safety", 1 ] ],
-      [ [ "hose", 3 ] ],
-      [ [ "flask_glass", 4 ], [ "jar_glass", 4 ], [ "bottle_glass", 4 ], [ "test_tube", 20 ] ],
+      [ [ "hose", 3 ], [ "makeshift_hose", 3 ] ],
+      [ [ "flask_glass", 4 ], [ "jar_glass_sealed", 4 ], [ "bottle_glass", 4 ], [ "test_tube", 20 ] ],
       [ [ "box_small", 1 ], [ "bag_canvas", 1 ], [ "backpack", 1 ], [ "backpack_leather", 1 ], [ "rucksack", 1 ] ]
     ]
   },
   {
     "type": "recipe",
+    "activity_level": "fake",
     "result": "chemistry_set",
     "category": "CC_OTHER",
     "subcategory": "CSC_OTHER_TOOLS",
     "skill_used": "fabrication",
-    "skills_required": [ "cooking", 2 ],
+    "skills_required": [ "chemistry", 2 ],
     "time": "3 m",
     "reversible": true,
     "decomp_learn": 0,
@@ -1942,6 +2108,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "fake",
     "result": "misc_repairkit",
     "category": "CC_OTHER",
     "subcategory": "CSC_OTHER_TOOLS",
@@ -1960,6 +2127,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "fake",
     "result": "small_repairkit",
     "category": "CC_OTHER",
     "subcategory": "CSC_OTHER_TOOLS",
@@ -1989,6 +2157,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "fake",
     "result": "pipe_cleaner",
     "category": "CC_OTHER",
     "subcategory": "CSC_OTHER_TOOLS",
@@ -2006,24 +2175,36 @@
       [ "mag_mechanics", 2 ],
       [ "mag_rifle", 2 ]
     ],
-    "components": [ [ [ "wire", 2 ], [ "cable", 2 ] ], [ [ "rag", 2 ], [ "leather", 2 ], [ "fur", 2 ] ] ]
+    "components": [ [ [ "wire", 2 ], [ "cable", 2 ] ] ]
   },
   {
     "type": "recipe",
+    "activity_level": "fake",
     "result": "rock_quern",
     "category": "CC_OTHER",
     "subcategory": "CSC_OTHER_TOOLS",
     "skill_used": "fabrication",
-    "skills_required": [ [ "survival", 1 ], [ "cooking", 2 ] ],
-    "difficulty": 2,
-    "time": "5 m",
+    "skills_required": [ [ "survival", 4 ] ],
+    "difficulty": 6,
+    "time": "3 h",
     "autolearn": true,
     "book_learn": [ [ "atomic_survival", 1 ], [ "textbook_survival", 1 ], [ "cookbook", 3 ] ],
-    "qualities": [ { "id": "HAMMER", "level": 2 } ],
-    "components": [ [ [ "stick", 2 ], [ "2x4", 1 ] ], [ [ "rock", 6 ], [ "ceramic_shard", 6 ] ] ]
+    "qualities": [
+      { "id": "HAMMER", "level": 1 },
+      { "id": "ANVIL", "level": 1 },
+      { "id": "CHISEL_WOOD", "level": 1 },
+      { "id": "DRILL_ROCK", "level": 1 }
+    ],
+    "components": [
+      [ [ "stick", 1 ], [ "2x4", 1 ] ],
+      [ [ "rock_large", 2 ] ],
+      [ [ "water", 1 ], [ "water_clean", 1 ], [ "water_sewage", 1 ], [ "salt_water", 1 ], [ "saline", 5 ] ],
+      [ [ "material_sand", 1 ] ]
+    ]
   },
   {
     "type": "recipe",
+    "activity_level": "fake",
     "result": "welder_crude",
     "category": "CC_OTHER",
     "subcategory": "CSC_OTHER_TOOLS",
@@ -2045,6 +2226,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "fake",
     "result": "popcan_stove",
     "category": "CC_OTHER",
     "subcategory": "CSC_OTHER_TOOLS",
@@ -2053,10 +2235,11 @@
     "time": "20 m",
     "book_learn": [ [ "fun_survival", 1 ], [ "manual_fabrication", 1 ] ],
     "qualities": [ { "id": "CUT", "level": 1 } ],
-    "components": [ [ [ "can_drink_unsealed", 2 ] ], [ [ "bottle_plastic", 1 ] ] ]
+    "components": [ [ [ "can_drink", 2 ] ], [ [ "bottle_plastic", 1 ] ] ]
   },
   {
     "type": "recipe",
+    "activity_level": "fake",
     "result": "forge",
     "category": "CC_OTHER",
     "subcategory": "CSC_OTHER_TOOLS",
@@ -2089,6 +2272,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "fake",
     "result": "anvil",
     "category": "CC_OTHER",
     "subcategory": "CSC_OTHER_TOOLS",
@@ -2102,19 +2286,7 @@
   },
   {
     "type": "recipe",
-    "result": "crucible",
-    "category": "CC_OTHER",
-    "subcategory": "CSC_OTHER_TOOLS",
-    "skill_used": "fabrication",
-    "difficulty": 2,
-    "time": "4 h",
-    "autolearn": true,
-    "qualities": [ { "id": "HAMMER", "level": 2 } ],
-    "tools": [ [ [ "forge", 100 ], [ "oxy_torch", 20 ] ] ],
-    "components": [ [ [ "frame", 1 ] ], [ [ "sheet_metal", 1 ] ] ]
-  },
-  {
-    "type": "recipe",
+    "activity_level": "fake",
     "result": "crucible_clay",
     "category": "CC_OTHER",
     "subcategory": "CSC_OTHER_TOOLS",
@@ -2127,6 +2299,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "fake",
     "result": "tongs",
     "category": "CC_OTHER",
     "subcategory": "CSC_OTHER_TOOLS",
@@ -2136,10 +2309,11 @@
     "autolearn": true,
     "qualities": [ { "id": "ANVIL", "level": 3 }, { "id": "HAMMER", "level": 2 } ],
     "tools": [ [ [ "forge", 150 ], [ "oxy_torch", 30 ] ] ],
-    "components": [ [ [ "steel_lump", 1 ], [ "steel_chunk", 4 ], [ "scrap", 12 ], [ "pipe", 3 ] ] ]
+    "components": [ [ [ "steel_lump", 1 ], [ "steel_chunk", 4 ], [ "scrap", 12 ], [ "pipe", 3 ], [ "pipe_fittings", 1 ] ] ]
   },
   {
     "type": "recipe",
+    "activity_level": "BRISK_EXERCISE",
     "result": "chisel",
     "category": "CC_OTHER",
     "subcategory": "CSC_OTHER_TOOLS",
@@ -2160,6 +2334,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "BRISK_EXERCISE",
     "result": "swage",
     "category": "CC_OTHER",
     "subcategory": "CSC_OTHER_TOOLS",
@@ -2180,6 +2355,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "BRISK_EXERCISE",
     "result": "hammer",
     "category": "CC_OTHER",
     "subcategory": "CSC_OTHER_TOOLS",
@@ -2194,6 +2370,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "BRISK_EXERCISE",
     "result": "hand_drill",
     "category": "CC_OTHER",
     "subcategory": "CSC_OTHER_TOOLS",
@@ -2208,6 +2385,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "BRISK_EXERCISE",
     "result": "nail",
     "category": "CC_OTHER",
     "subcategory": "CSC_OTHER_MATERIALS",
@@ -2221,6 +2399,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "BRISK_EXERCISE",
     "result": "scissors",
     "category": "CC_OTHER",
     "subcategory": "CSC_OTHER_TOOLS",
@@ -2234,6 +2413,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "fake",
     "//": "Tin can be melted by fire, but you need something to contain and work with it. Hence the press.",
     "result": "pot_copper",
     "category": "CC_OTHER",
@@ -2244,15 +2424,16 @@
     "autolearn": true,
     "qualities": [ { "id": "HAMMER", "level": 3 } ],
     "tools": [ [ [ "press", -1 ] ], [ [ "surface_heat", 10, "LIST" ] ] ],
-    "components": [ [ [ "scrap_copper", 5 ], [ "copper", 500 ] ], [ [ "tin", 30 ] ] ]
+    "components": [ [ [ "copper_scrap_equivalent", 20, "LIST" ] ], [ [ "tin", 30 ] ] ]
   },
   {
     "type": "recipe",
+    "activity_level": "fake",
     "//": "Alternative to the press explained above: this electroplates the tin using an electrolysis kit.",
     "result": "pot_copper",
     "category": "CC_OTHER",
     "subcategory": "CSC_OTHER_TOOLS",
-    "skill_used": "cooking",
+    "skill_used": "chemistry",
     "difficulty": 4,
     "book_learn": [ [ "textbook_chemistry", 4 ], [ "textbook_fabrication", 4 ], [ "welding_book", 4 ] ],
     "time": "1 h 30 m",
@@ -2260,14 +2441,15 @@
     "qualities": [ { "id": "HAMMER", "level": 3 } ],
     "tools": [ [ [ "electrolysis_kit", 10 ] ], [ [ "surface_heat", 10, "LIST" ] ] ],
     "components": [
-      [ [ "scrap_copper", 5 ], [ "copper", 500 ] ],
+      [ [ "copper_scrap_equivalent", 20, "LIST" ] ],
       [ [ "tin", 30 ] ],
       [ [ "water", 3 ], [ "water_clean", 3 ] ],
-      [ [ "acid", 1 ] ]
+      [ [ "any_strong_acid", 1, "LIST" ] ]
     ]
   },
   {
     "type": "recipe",
+    "activity_level": "BRISK_EXERCISE",
     "result": "pot",
     "category": "CC_OTHER",
     "subcategory": "CSC_OTHER_TOOLS",
@@ -2279,6 +2461,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "BRISK_EXERCISE",
     "result": "teapot",
     "category": "CC_OTHER",
     "subcategory": "CSC_OTHER_TOOLS",
@@ -2291,6 +2474,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "BRISK_EXERCISE",
     "result": "blade",
     "id_suffix": "from steel",
     "category": "CC_OTHER",
@@ -2305,6 +2489,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "BRISK_EXERCISE",
     "result": "wrench",
     "category": "CC_OTHER",
     "subcategory": "CSC_OTHER_TOOLS",
@@ -2318,6 +2503,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "BRISK_EXERCISE",
     "result": "pliers",
     "category": "CC_OTHER",
     "subcategory": "CSC_OTHER_TOOLS",
@@ -2332,6 +2518,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "BRISK_EXERCISE",
     "result": "hacksaw",
     "category": "CC_OTHER",
     "subcategory": "CSC_OTHER_TOOLS",
@@ -2347,6 +2534,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "BRISK_EXERCISE",
     "result": "boltcutters",
     "category": "CC_OTHER",
     "subcategory": "CSC_OTHER_TOOLS",
@@ -2362,6 +2550,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "BRISK_EXERCISE",
     "result": "shovel",
     "category": "CC_OTHER",
     "subcategory": "CSC_OTHER_TOOLS",
@@ -2377,6 +2566,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "BRISK_EXERCISE",
     "result": "e_tool",
     "category": "CC_OTHER",
     "subcategory": "CSC_OTHER_TOOLS",
@@ -2391,6 +2581,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "BRISK_EXERCISE",
     "result": "hoe",
     "category": "CC_OTHER",
     "subcategory": "CSC_OTHER_TOOLS",
@@ -2406,6 +2597,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "BRISK_EXERCISE",
     "result": "ax",
     "category": "CC_OTHER",
     "subcategory": "CSC_OTHER_TOOLS",
@@ -2421,6 +2613,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "BRISK_EXERCISE",
     "result": "saw",
     "category": "CC_OTHER",
     "subcategory": "CSC_OTHER_TOOLS",
@@ -2436,21 +2629,87 @@
   },
   {
     "type": "recipe",
+    "activity_level": "BRISK_EXERCISE",
     "result": "hammer_sledge",
     "category": "CC_OTHER",
     "subcategory": "CSC_OTHER_TOOLS",
     "skill_used": "fabrication",
     "difficulty": 6,
     "time": "7 h 40 m",
-    "autolearn": true,
+    "byproducts": [ [ "splinter", 13 ] ],
     "book_learn": [ [ "manual_fabrication", 3 ], [ "textbook_fabrication", 4 ] ],
     "using": [ [ "blacksmithing_standard", 32 ], [ "steel_standard", 8 ] ],
     "qualities": [ { "id": "CHISEL", "level": 3 } ],
     "tools": [ [ [ "crucible", -1 ], [ "crucible_clay", -1 ] ] ],
-    "components": [ [ [ "2x4", 3 ] ] ]
+    "components": [ [ [ "2x4", 1 ] ] ]
   },
   {
     "type": "recipe",
+    "activity_level": "BRISK_EXERCISE",
+    "result": "hammer_sledge_short",
+    "id_suffix": "forged",
+    "category": "CC_OTHER",
+    "subcategory": "CSC_OTHER_TOOLS",
+    "skill_used": "fabrication",
+    "difficulty": 6,
+    "time": "7 h 40 m",
+    "byproducts": [ [ "splinter", 14 ] ],
+    "book_learn": [ [ "manual_fabrication", 3 ], [ "textbook_fabrication", 4 ] ],
+    "using": [ [ "blacksmithing_standard", 32 ], [ "steel_standard", 8 ] ],
+    "qualities": [ { "id": "CHISEL", "level": 3 } ],
+    "tools": [ [ [ "crucible", -1 ], [ "crucible_clay", -1 ] ] ],
+    "components": [ [ [ "2x4", 1 ] ] ]
+  },
+  {
+    "type": "recipe",
+    "activity_level": "BRISK_EXERCISE",
+    "result": "hammer_sledge_short",
+    "id_suffix": "from_cutting",
+    "category": "CC_OTHER",
+    "subcategory": "CSC_OTHER_TOOLS",
+    "skill_used": "fabrication",
+    "difficulty": 1,
+    "time": "2 m",
+    "byproducts": [ [ "splinter", 1 ] ],
+    "autolearn": true,
+    "qualities": [ { "id": "CUT", "level": 1 } ],
+    "components": [ [ [ "hammer_sledge", 1 ] ] ]
+  },
+  {
+    "type": "recipe",
+    "activity_level": "BRISK_EXERCISE",
+    "result": "hammer_sledge_heavy",
+    "category": "CC_OTHER",
+    "subcategory": "CSC_OTHER_TOOLS",
+    "skill_used": "fabrication",
+    "difficulty": 6,
+    "time": "8 h 40 m",
+    "byproducts": [ [ "splinter", 13 ] ],
+    "book_learn": [ [ "manual_fabrication", 3 ], [ "textbook_fabrication", 4 ] ],
+    "using": [ [ "blacksmithing_standard", 32 ], [ "steel_standard", 20 ] ],
+    "qualities": [ { "id": "CHISEL", "level": 3 } ],
+    "tools": [ [ [ "crucible", -1 ], [ "crucible_clay", -1 ] ] ],
+    "components": [ [ [ "2x4", 1 ] ] ]
+  },
+  {
+    "type": "recipe",
+    "activity_level": "BRISK_EXERCISE",
+    "result": "hammer_sledge_engineer",
+    "category": "CC_OTHER",
+    "subcategory": "CSC_OTHER_TOOLS",
+    "skill_used": "fabrication",
+    "difficulty": 6,
+    "time": "6 h 40 m",
+    "byproducts": [ [ "splinter", 16 ] ],
+    "book_learn": [ [ "manual_fabrication", 3 ], [ "textbook_fabrication", 4 ] ],
+    "using": [ [ "blacksmithing_standard", 32 ], [ "steel_standard", 4 ] ],
+    "qualities": [ { "id": "CHISEL", "level": 3 } ],
+    "tools": [ [ [ "crucible", -1 ], [ "crucible_clay", -1 ] ] ],
+    "components": [ [ [ "2x4", 1 ] ] ]
+  },
+  {
+    "type": "recipe",
+    "activity_level": "BRISK_EXERCISE",
     "result": "chain",
     "category": "CC_OTHER",
     "subcategory": "CSC_OTHER_MATERIALS",
@@ -2464,6 +2723,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "BRISK_EXERCISE",
     "result": "canister_empty",
     "category": "CC_OTHER",
     "subcategory": "CSC_OTHER_CONTAINERS",
@@ -2477,7 +2737,8 @@
   },
   {
     "type": "recipe",
-    "result": "can_medium_unsealed",
+    "activity_level": "BRISK_EXERCISE",
+    "result": "can_medium",
     "category": "CC_OTHER",
     "subcategory": "CSC_OTHER_CONTAINERS",
     "skill_used": "fabrication",
@@ -2490,6 +2751,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "BRISK_EXERCISE",
     "result": "jackhammer",
     "category": "CC_OTHER",
     "subcategory": "CSC_OTHER_TOOLS",
@@ -2510,6 +2772,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "fake",
     "result": "magnifying_glass",
     "category": "CC_OTHER",
     "subcategory": "CSC_OTHER_TOOLS",
@@ -2524,6 +2787,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "fake",
     "result": "survivor_scope",
     "category": "CC_OTHER",
     "subcategory": "CSC_OTHER_TOOLS",
@@ -2538,6 +2802,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "fake",
     "result": "crackpipe",
     "category": "CC_OTHER",
     "subcategory": "CSC_OTHER_TOOLS",
@@ -2549,10 +2814,11 @@
   },
   {
     "type": "recipe",
+    "activity_level": "fake",
     "result": "quikclot",
     "category": "CC_OTHER",
     "subcategory": "CSC_OTHER_MEDICAL",
-    "skill_used": "cooking",
+    "skill_used": "chemistry",
     "skills_required": [ "firstaid", 1 ],
     "difficulty": 4,
     "time": "1 m 12 s",
@@ -2563,20 +2829,22 @@
   },
   {
     "type": "recipe",
+    "activity_level": "fake",
     "result": "bfipowder",
     "category": "CC_OTHER",
     "subcategory": "CSC_OTHER_MEDICAL",
-    "skill_used": "cooking",
+    "skill_used": "chemistry",
     "skills_required": [ "firstaid", 1 ],
-    "difficulty": 6,
+    "difficulty": 5,
     "time": "1 m 12 s",
-    "book_learn": [ [ "textbook_firstaid", 8 ], [ "textbook_chemistry", 7 ], [ "adv_chemistry", 6 ], [ "emergency_book", 8 ] ],
+    "book_learn": [ [ "textbook_firstaid", 7 ], [ "textbook_chemistry", 5 ], [ "adv_chemistry", 5 ], [ "emergency_book", 7 ] ],
     "qualities": [ { "id": "CHEM", "level": 1 } ],
     "tools": [ [ [ "surface_heat", 18, "LIST" ] ] ],
     "components": [ [ [ "iodine", 2 ] ], [ [ "aspirin", 4 ] ], [ [ "oxy_powder", 50 ] ], [ [ "salt_water", 1 ], [ "saline", 5 ] ] ]
   },
   {
     "type": "recipe",
+    "activity_level": "fake",
     "result": "char_forge",
     "category": "CC_OTHER",
     "subcategory": "CSC_OTHER_TOOLS",
@@ -2601,11 +2869,13 @@
       [ [ "pilot_light", 1 ] ],
       [ [ "steel_lump", 3 ], [ "steel_chunk", 12 ], [ "scrap", 36 ] ],
       [ [ "metal_tank_little", 1 ] ],
-      [ [ "pipe", 3 ] ]
+      [ [ "pipe", 3 ] ],
+      [ [ "pipe_fittings", 2 ] ]
     ]
   },
   {
     "type": "recipe",
+    "activity_level": "fake",
     "result": "char_smoker",
     "category": "CC_OTHER",
     "subcategory": "CSC_OTHER_TOOLS",
@@ -2627,6 +2897,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "BRISK_EXERCISE",
     "result": "waffleiron",
     "category": "CC_OTHER",
     "subcategory": "CSC_OTHER_TOOLS",
@@ -2640,6 +2911,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "BRISK_EXERCISE",
     "result": "pastaextruder",
     "category": "CC_OTHER",
     "subcategory": "CSC_OTHER_TOOLS",
@@ -2653,6 +2925,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "BRISK_EXERCISE",
     "result": "brick_kiln",
     "category": "CC_OTHER",
     "subcategory": "CSC_OTHER_TOOLS",
@@ -2672,6 +2945,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "BRISK_EXERCISE",
     "result": "kiln",
     "category": "CC_OTHER",
     "subcategory": "CSC_OTHER_TOOLS",
@@ -2694,11 +2968,13 @@
       [ [ "cable", 4 ] ],
       [ [ "power_supply", 1 ] ],
       [ [ "metal_tank_little", 1 ] ],
-      [ [ "pipe", 8 ] ]
+      [ [ "pipe", 8 ] ],
+      [ [ "pipe_fittings", 4 ] ]
     ]
   },
   {
     "type": "recipe",
+    "activity_level": "BRISK_EXERCISE",
     "result": "con_mix",
     "category": "CC_OTHER",
     "subcategory": "CSC_OTHER_TOOLS",
@@ -2727,6 +3003,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "BRISK_EXERCISE",
     "result": "metal_smoother",
     "category": "CC_OTHER",
     "subcategory": "CSC_OTHER_TOOLS",
@@ -2740,6 +3017,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "fake",
     "result": "char_kiln",
     "category": "CC_OTHER",
     "subcategory": "CSC_OTHER_TOOLS",
@@ -2755,10 +3033,16 @@
       { "id": "WRENCH", "level": 1 }
     ],
     "tools": [ [ [ "welder", 150 ], [ "welder_crude", 225 ], [ "toolset", 225 ], [ "soldering_iron", 225 ], [ "oxy_torch", 30 ] ] ],
-    "components": [ [ [ "steel_lump", 5 ], [ "steel_chunk", 20 ], [ "scrap", 60 ] ], [ [ "metal_tank_little", 1 ] ], [ [ "pipe", 6 ] ] ]
+    "components": [
+      [ [ "steel_lump", 5 ], [ "steel_chunk", 20 ], [ "scrap", 60 ] ],
+      [ [ "metal_tank_little", 1 ] ],
+      [ [ "pipe", 6 ] ],
+      [ [ "pipe_fittings", 4 ] ]
+    ]
   },
   {
     "type": "recipe",
+    "activity_level": "fake",
     "result": "kiln_full",
     "category": "CC_OTHER",
     "subcategory": "CSC_OTHER_MATERIALS",
@@ -2767,21 +3051,13 @@
     "time": "1 m",
     "autolearn": true,
     "components": [
-      [
-        [ "splinter", 40 ],
-        [ "2x4", 6 ],
-        [ "stick", 8 ],
-        [ "bone", 40 ],
-        [ "bone_human", 40 ],
-        [ "bone_tainted", 40 ],
-        [ "pine_bough", 20 ],
-        [ "log", 1 ]
-      ],
+      [ [ "splinter", 40 ], [ "2x4", 6 ], [ "stick", 8 ], [ "bone_any", 40, "LIST" ], [ "pine_bough", 20 ], [ "log", 1 ] ],
       [ [ "char_kiln", 1 ] ]
     ]
   },
   {
     "type": "recipe",
+    "activity_level": "fake",
     "result": "char_purifier",
     "category": "CC_OTHER",
     "subcategory": "CSC_OTHER_TOOLS",
@@ -2794,6 +3070,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "fake",
     "result": "wooden_barrel",
     "category": "CC_OTHER",
     "subcategory": "CSC_OTHER_CONTAINERS",
@@ -2806,6 +3083,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "BRISK_EXERCISE",
     "result": "55gal_drum",
     "id_suffix": "from_scratch",
     "category": "CC_OTHER",
@@ -2820,6 +3098,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "BRISK_EXERCISE",
     "result": "30gal_drum",
     "id_suffix": "from_scratch",
     "category": "CC_OTHER",
@@ -2834,6 +3113,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "BRISK_EXERCISE",
     "result": "55gal_drum",
     "id_suffix": "welded",
     "category": "CC_OTHER",
@@ -2847,6 +3127,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "BRISK_EXERCISE",
     "result": "30gal_drum",
     "id_suffix": "welded",
     "category": "CC_OTHER",
@@ -2860,6 +3141,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "fake",
     "result": "30gal_barrel",
     "category": "CC_OTHER",
     "subcategory": "CSC_OTHER_CONTAINERS",
@@ -2873,6 +3155,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "fake",
     "result": "mop",
     "category": "CC_OTHER",
     "subcategory": "CSC_OTHER_TOOLS",
@@ -2886,15 +3169,16 @@
   },
   {
     "type": "recipe",
+    "activity_level": "fake",
     "result": "glass_shard",
-    "byproducts": [ [ "glass_shard", 33 ] ],
     "category": "CC_OTHER",
     "subcategory": "CSC_OTHER_MATERIALS",
     "skill_used": "fabrication",
-    "skills_required": [ "cooking", 4 ],
+    "skills_required": [ "chemistry", 4 ],
     "difficulty": 4,
     "time": "30 m",
     "book_learn": [ [ "glassblowing_book", 5 ] ],
+    "result_mult": 4,
     "qualities": [ { "id": "CHEM", "level": 2 } ],
     "tools": [
       [ [ "crucible", -1 ], [ "crucible_clay", -1 ] ],
@@ -2907,12 +3191,13 @@
       [ [ "ammonia", 1 ] ],
       [ [ "salt", 20 ], [ "salt_water", 2 ], [ "saline", 10 ] ],
       [ [ "water", 2 ], [ "water_clean", 2 ], [ "salt_water", 2 ], [ "saline", 10 ] ],
-      [ [ "material_quicklime", 2 ], [ "meal_bone", 2 ], [ "meal_bone_tainted", 4 ] ]
+      [ [ "material_quicklime", 2 ], [ "bone_meal_any", 1, "LIST" ] ]
     ]
   },
   {
     "type": "recipe",
-    "result": "jar_3l_glass",
+    "activity_level": "fake",
+    "result": "jar_3l_glass_sealed",
     "category": "CC_OTHER",
     "subcategory": "CSC_OTHER_CONTAINERS",
     "skill_used": "fabrication",
@@ -2921,10 +3206,11 @@
     "book_learn": [ [ "glassblowing_book", 5 ] ],
     "qualities": [ { "id": "CHISEL", "level": 3 } ],
     "tools": [ [ [ "tongs", -1 ] ], [ [ "pipe", -1 ] ], [ [ "crucible", -1 ], [ "crucible_clay", -1 ] ], [ [ "forge", 150 ] ] ],
-    "components": [ [ [ "glass_shard", 27 ], [ "flask_glass", 6 ], [ "jar_glass", 4 ] ] ]
+    "components": [ [ [ "glass_shard", 5 ], [ "flask_glass", 5 ], [ "test_tube", 10 ], [ "marble", 125 ] ] ]
   },
   {
     "type": "recipe",
+    "activity_level": "fake",
     "result": "bottle_glass",
     "category": "CC_OTHER",
     "subcategory": "CSC_OTHER_CONTAINERS",
@@ -2934,11 +3220,12 @@
     "book_learn": [ [ "glassblowing_book", 5 ] ],
     "qualities": [ { "id": "CHISEL", "level": 3 } ],
     "tools": [ [ [ "tongs", -1 ] ], [ [ "pipe", -1 ] ], [ [ "crucible", -1 ], [ "crucible_clay", -1 ] ], [ [ "forge", 75 ] ] ],
-    "components": [ [ [ "glass_shard", 15 ], [ "flask_glass", 3 ], [ "jar_glass", 2 ] ] ]
+    "components": [ [ [ "glass_shard", 3 ], [ "pipe_glass", 1 ], [ "flask_glass", 3 ], [ "test_tube", 6 ], [ "marble", 75 ] ] ]
   },
   {
     "type": "recipe",
-    "result": "jar_glass",
+    "activity_level": "fake",
+    "result": "jar_glass_sealed",
     "category": "CC_OTHER",
     "subcategory": "CSC_OTHER_CONTAINERS",
     "skill_used": "fabrication",
@@ -2947,10 +3234,11 @@
     "book_learn": [ [ "glassblowing_book", 4 ] ],
     "qualities": [ { "id": "CHISEL", "level": 3 } ],
     "tools": [ [ [ "tongs", -1 ] ], [ [ "pipe", -1 ] ], [ [ "crucible", -1 ], [ "crucible_clay", -1 ] ], [ [ "forge", 50 ] ] ],
-    "components": [ [ [ "glass_shard", 11 ], [ "flask_glass", 2 ] ] ]
+    "components": [ [ [ "glass_shard", 2 ], [ "flask_glass", 2 ], [ "test_tube", 4 ], [ "marble", 50 ] ] ]
   },
   {
     "type": "recipe",
+    "activity_level": "fake",
     "result": "flask_glass",
     "category": "CC_OTHER",
     "subcategory": "CSC_OTHER_CONTAINERS",
@@ -2960,10 +3248,11 @@
     "book_learn": [ [ "glassblowing_book", 4 ] ],
     "qualities": [ { "id": "CHISEL", "level": 3 } ],
     "tools": [ [ [ "tongs", -1 ] ], [ [ "pipe", -1 ] ], [ [ "crucible", -1 ], [ "crucible_clay", -1 ] ], [ [ "forge", 25 ] ] ],
-    "components": [ [ [ "glass_shard", 4 ] ] ]
+    "components": [ [ [ "glass_shard", 1 ], [ "test_tube", 2 ], [ "marble", 25 ] ] ]
   },
   {
     "type": "recipe",
+    "activity_level": "fake",
     "result": "test_tube",
     "category": "CC_OTHER",
     "subcategory": "CSC_OTHER_CONTAINERS",
@@ -2971,12 +3260,14 @@
     "difficulty": 4,
     "time": "4 m",
     "book_learn": [ [ "glassblowing_book", 4 ] ],
+    "result_mult": 2,
     "qualities": [ { "id": "CHISEL", "level": 3 } ],
     "tools": [ [ [ "tongs", -1 ] ], [ [ "pipe", -1 ] ], [ [ "crucible", -1 ], [ "crucible_clay", -1 ] ], [ [ "forge", 5 ] ] ],
-    "components": [ [ [ "glass_shard", 1 ] ] ]
+    "components": [ [ [ "glass_shard", 1 ], [ "flask_glass", 1 ], [ "marble", 25 ] ] ]
   },
   {
     "type": "recipe",
+    "activity_level": "fake",
     "result": "mirror",
     "category": "CC_OTHER",
     "subcategory": "CSC_OTHER_TOOLS",
@@ -2989,6 +3280,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "fake",
     "result": "mirror",
     "id_suffix": "from_steel",
     "category": "CC_OTHER",
@@ -3003,6 +3295,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "fake",
     "result": "pipe_glass",
     "category": "CC_OTHER",
     "subcategory": "CSC_OTHER_TOOLS",
@@ -3012,10 +3305,11 @@
     "book_learn": [ [ "glassblowing_book", 6 ] ],
     "qualities": [ { "id": "CHISEL", "level": 3 } ],
     "tools": [ [ [ "tongs", -1 ] ], [ [ "pipe", -1 ] ], [ [ "crucible", -1 ], [ "crucible_clay", -1 ] ], [ [ "forge", 25 ] ] ],
-    "components": [ [ [ "glass_shard", 4 ] ] ]
+    "components": [ [ [ "glass_shard", 3 ], [ "bottle_glass", 1 ], [ "flask_glass", 3 ], [ "test_tube", 6 ], [ "marble", 75 ] ] ]
   },
   {
     "type": "recipe",
+    "activity_level": "fake",
     "result": "glass_sheet",
     "category": "CC_OTHER",
     "subcategory": "CSC_OTHER_MATERIALS",
@@ -3024,23 +3318,25 @@
     "time": "1 h",
     "autolearn": true,
     "tools": [ [ [ "tongs", -1 ] ], [ [ "crucible", -1 ], [ "crucible_clay", -1 ] ], [ [ "sheet_metal", -1 ] ], [ [ "forge", 75 ] ] ],
-    "components": [ [ [ "glass_shard", 250 ], [ "flask_glass", 63 ], [ "jar_glass", 21 ] ] ]
+    "components": [ [ [ "glass_shard", 182 ], [ "jar_glass_sealed", 91 ], [ "flask_glass", 182 ], [ "test_tube", 364 ] ] ]
   },
   {
     "type": "recipe",
+    "activity_level": "fake",
     "result": "grapnel",
     "category": "CC_OTHER",
     "subcategory": "CSC_OTHER_TOOLS",
     "skill_used": "fabrication",
-    "difficulty": 3,
-    "time": "30 m",
+    "difficulty": 1,
+    "autolearn": true,
+    "time": "2 m",
     "reversible": true,
     "book_learn": [ [ "mag_survival", 4 ], [ "atomic_survival", 3 ], [ "textbook_survival", 2 ] ],
-    "qualities": [ { "id": "HAMMER", "level": 1 } ],
-    "components": [ [ [ "rope_superior", 1, "LIST" ] ], [ [ "scrap", 4 ] ] ]
+    "components": [ [ [ "rope_superior", 1, "LIST" ] ], [ [ "grip_hook", 4 ] ] ]
   },
   {
     "type": "recipe",
+    "activity_level": "fake",
     "result": "well_pump",
     "category": "CC_OTHER",
     "subcategory": "CSC_OTHER_OTHER",
@@ -3061,6 +3357,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "fake",
     "result": "fishing_rod_basic",
     "category": "CC_OTHER",
     "subcategory": "CSC_OTHER_TOOLS",
@@ -3074,6 +3371,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "fake",
     "result": "wearable_rx12",
     "category": "CC_OTHER",
     "subcategory": "CSC_OTHER_TOOLS",
@@ -3089,6 +3387,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "fake",
     "result": "fishing_hook_basic",
     "category": "CC_OTHER",
     "subcategory": "CSC_OTHER_TOOLS",
@@ -3101,6 +3400,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "fake",
     "result": "fishing_hook_bone",
     "category": "CC_OTHER",
     "subcategory": "CSC_OTHER_TOOLS",
@@ -3110,20 +3410,11 @@
     "time": "2 m",
     "autolearn": true,
     "qualities": [ { "id": "CUT", "level": 1 } ],
-    "components": [
-      [
-        [ "bone", 1 ],
-        [ "bone_human", 1 ],
-        [ "stick", 1 ],
-        [ "broom", 1 ],
-        [ "pool_cue", 1 ],
-        [ "splinter", 1 ],
-        [ "2x4", 1 ]
-      ]
-    ]
+    "components": [ [ [ "bone_sturdy", 1, "LIST" ], [ "stick", 1 ], [ "broom", 1 ], [ "pool_cue", 1 ], [ "splinter", 1 ], [ "2x4", 1 ] ] ]
   },
   {
     "type": "recipe",
+    "activity_level": "fake",
     "result": "skewer_bone",
     "category": "CC_OTHER",
     "subcategory": "CSC_OTHER_TOOLS",
@@ -3131,10 +3422,11 @@
     "time": "1 m",
     "autolearn": true,
     "qualities": [ { "id": "CUT", "level": 1 } ],
-    "components": [ [ [ "bone", 1 ], [ "bone_human", 1 ] ] ]
+    "components": [ [ [ "bone_sturdy", 1, "LIST" ] ] ]
   },
   {
     "type": "recipe",
+    "activity_level": "fake",
     "result": "fish_trap",
     "category": "CC_OTHER",
     "subcategory": "CSC_OTHER_TOOLS",
@@ -3150,6 +3442,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "fake",
     "result": "bag_canvas_small",
     "category": "CC_OTHER",
     "subcategory": "CSC_OTHER_CONTAINERS",
@@ -3162,6 +3455,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "fake",
     "result": "bag_canvas",
     "category": "CC_OTHER",
     "subcategory": "CSC_OTHER_CONTAINERS",
@@ -3174,34 +3468,39 @@
   },
   {
     "type": "recipe",
+    "activity_level": "fake",
     "result": "material_quicklime",
     "category": "CC_OTHER",
     "subcategory": "CSC_OTHER_MATERIALS",
     "skill_used": "fabrication",
-    "skills_required": [ "cooking", 2 ],
+    "skills_required": [ "chemistry", 2 ],
     "difficulty": 3,
     "time": "1 h",
+    "autolearn": false,
     "batch_time_factors": [ 75, 4 ],
-    "autolearn": true,
+    "book_learn": [ [ "concrete_book", 3 ], [ "adv_chemistry", 3 ], [ "textbook_chemistry", 3 ] ],
     "tools": [ [ [ "crucible", -1 ], [ "crucible_clay", -1 ] ], [ [ "forge", 250 ], [ "oxy_torch", 50 ] ] ],
     "components": [ [ [ "material_limestone", 50 ] ] ]
   },
   {
     "type": "recipe",
+    "activity_level": "fake",
     "result": "material_cement",
     "category": "CC_OTHER",
     "subcategory": "CSC_OTHER_MATERIALS",
     "skill_used": "fabrication",
-    "skills_required": [ "cooking", 3 ],
+    "skills_required": [ "chemistry", 3 ],
     "difficulty": 4,
     "time": "1 h 30 m",
-    "autolearn": true,
+    "autolearn": false,
+    "book_learn": [ [ "concrete_book", 4 ] ],
     "batch_time_factors": [ 75, 3 ],
     "tools": [ [ [ "crucible", -1 ], [ "crucible_clay", -1 ] ], [ [ "forge", 250 ], [ "oxy_torch", 50 ] ] ],
     "components": [ [ [ "material_quicklime", 50 ] ], [ [ "material_sand", 50 ] ] ]
   },
   {
     "type": "recipe",
+    "activity_level": "fake",
     "result": "cu_pipe",
     "category": "CC_OTHER",
     "subcategory": "CSC_OTHER_MATERIALS",
@@ -3211,10 +3510,11 @@
     "autolearn": true,
     "qualities": [ { "id": "ANVIL", "level": 3 }, { "id": "HAMMER", "level": 3 }, { "id": "CHISEL", "level": 3 } ],
     "tools": [ [ [ "tongs", -1 ] ], [ [ "swage", -1 ] ], [ [ "forge", 50 ], [ "oxy_torch", 10 ] ] ],
-    "components": [ [ [ "scrap_copper", 7 ], [ "copper", 175 ] ] ]
+    "components": [ [ [ "copper_scrap_equivalent", 7, "LIST" ] ] ]
   },
   {
     "type": "recipe",
+    "activity_level": "fake",
     "result": "pilot_light",
     "category": "CC_OTHER",
     "subcategory": "CSC_OTHER_MATERIALS",
@@ -3228,6 +3528,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "fake",
     "result": "paper",
     "category": "CC_OTHER",
     "subcategory": "CSC_OTHER_MATERIALS",
@@ -3242,7 +3543,22 @@
   },
   {
     "type": "recipe",
-    "result": "toolbox",
+    "activity_level": "fake",
+    "result": "toolbox_empty",
+    "category": "CC_OTHER",
+    "subcategory": "CSC_OTHER_TOOLS",
+    "skill_used": "fabrication",
+    "skills_required": [ "mechanics", 3 ],
+    "difficulty": 4,
+    "time": "4 m",
+    "reversible": true,
+    "autolearn": true,
+    "components": [ [ [ "sheet_metal_small", 5 ] ], [ [ "nail", 11 ] ], [ [ "wire", 1 ] ] ]
+  },
+  {
+    "type": "recipe",
+    "activity_level": "fake",
+    "result": "toolbox_workshop",
     "category": "CC_OTHER",
     "subcategory": "CSC_OTHER_TOOLS",
     "skill_used": "fabrication",
@@ -3260,11 +3576,15 @@
       [ [ "hacksaw", 1 ] ],
       [ [ "wrench", 1 ] ],
       [ [ "saw", 1 ] ],
-      [ [ "hammer", 1 ] ]
+      [ [ "hammer", 1 ] ],
+      [ [ "metal_file", 1 ] ],
+      [ [ "pin_reamer", 1 ] ],
+      [ [ "clamp", 1 ] ]
     ]
   },
   {
     "type": "recipe",
+    "activity_level": "fake",
     "result": "vacutainer",
     "category": "CC_OTHER",
     "subcategory": "CSC_OTHER_MEDICAL",
@@ -3278,11 +3598,12 @@
   },
   {
     "type": "recipe",
+    "activity_level": "fake",
     "result": "plastic_chunk",
     "category": "CC_OTHER",
     "subcategory": "CSC_OTHER_MATERIALS",
-    "skill_used": "cooking",
-    "difficulty": 5,
+    "skill_used": "chemistry",
+    "difficulty": 3,
     "time": "50 m",
     "autolearn": true,
     "batch_time_factors": [ 80, 4 ],
@@ -3293,6 +3614,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "BRISK_EXERCISE",
     "result": "pipe",
     "category": "CC_OTHER",
     "subcategory": "CSC_OTHER_MATERIALS",
@@ -3306,6 +3628,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "fake",
     "result": "survival_marker",
     "category": "CC_OTHER",
     "subcategory": "CSC_OTHER_TOOLS",
@@ -3318,6 +3641,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "fake",
     "result": "plastic_chunk",
     "id_suffix": "from_plastic_bags",
     "category": "CC_OTHER",
@@ -3326,22 +3650,32 @@
     "time": "10 m",
     "autolearn": true,
     "tools": [ [ [ "surface_heat", 4, "LIST" ] ], [ [ "mold_plastic", -1 ] ] ],
-    "components": [ [ [ "bag_plastic", 10 ] ] ]
+    "components": [
+      [
+        [ "stopcock", 11 ],
+        [ "button_plastic", 3 ],
+        [ "bottle_folding", 4 ],
+        [ "plastic_straw", 3 ],
+        [ "plastic_knife", 2 ],
+        [ "plastic_spoon", 2 ],
+        [ "plastic_spoon_kids", 4 ],
+        [ "plastic_fork", 2 ],
+        [ "plastic_plate", 4 ],
+        [ "plastic_six_dice", 11 ],
+        [ "bag_zipper", 25 ],
+        [ "cup_plastic", 25 ],
+        [ "bag_plastic", 10 ],
+        [ "tumbler_plastic", 4 ],
+        [ "bowl_plastic", 4 ],
+        [ "plastic_bowl_kids", 8 ],
+        [ "sippy_cup", 4 ],
+        [ "gasket_plastic", 1 ]
+      ]
+    ]
   },
   {
     "type": "recipe",
-    "result": "plastic_chunk",
-    "id_suffix": "from_cash_cards",
-    "category": "CC_OTHER",
-    "subcategory": "CSC_OTHER_MATERIALS",
-    "skill_used": "fabrication",
-    "time": "10 m",
-    "autolearn": true,
-    "tools": [ [ [ "surface_heat", 6, "LIST" ], [ "soldering_iron", 10 ] ] ],
-    "components": [ [ [ "cash_card", 9 ], [ "plastic_straw", 2 ] ] ]
-  },
-  {
-    "type": "recipe",
+    "activity_level": "fake",
     "result": "chitin_plate",
     "category": "CC_OTHER",
     "subcategory": "CSC_OTHER_PARTS",
@@ -3354,6 +3688,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "fake",
     "result": "acidchitin_plate",
     "category": "CC_OTHER",
     "subcategory": "CSC_OTHER_PARTS",
@@ -3366,34 +3701,7 @@
   },
   {
     "type": "recipe",
-    "result": "bone_plate",
-    "category": "CC_OTHER",
-    "subcategory": "CSC_OTHER_PARTS",
-    "skill_used": "fabrication",
-    "difficulty": 3,
-    "time": "40 m",
-    "reversible": true,
-    "autolearn": true,
-    "components": [
-      [ [ "bone", 25 ], [ "bone_human", 25 ], [ "bone_tainted", 50 ] ],
-      [ [ "rope_natural_short", 4, "LIST" ], [ "adhesive", 4, "LIST" ] ]
-    ]
-  },
-  {
-    "type": "recipe",
-    "result": "wheel_metal",
-    "category": "CC_OTHER",
-    "subcategory": "CSC_WEAPON_PARTS",
-    "skill_used": "fabrication",
-    "difficulty": 6,
-    "time": "6 h",
-    "autolearn": true,
-    "using": [ [ "blacksmithing_standard", 20 ], [ "steel_standard", 5 ] ],
-    "qualities": [ { "id": "CHISEL", "level": 3 } ],
-    "tools": [ [ [ "crucible", -1 ], [ "crucible_clay", -1 ] ] ]
-  },
-  {
-    "type": "recipe",
+    "activity_level": "BRISK_EXERCISE",
     "result": "spring",
     "category": "CC_OTHER",
     "subcategory": "CSC_OTHER_MATERIALS",
@@ -3407,6 +3715,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "BRISK_EXERCISE",
     "result": "rebar",
     "category": "CC_OTHER",
     "subcategory": "CSC_OTHER_MATERIALS",
@@ -3420,6 +3729,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "BRISK_EXERCISE",
     "result": "railroad_track_small",
     "category": "CC_OTHER",
     "subcategory": "CSC_OTHER_MATERIALS",
@@ -3434,6 +3744,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "fake",
     "result": "jumper_cable",
     "category": "CC_OTHER",
     "subcategory": "CSC_OTHER_PARTS",
@@ -3449,6 +3760,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "fake",
     "result": "jumper_cable_heavy",
     "category": "CC_OTHER",
     "subcategory": "CSC_OTHER_PARTS",
@@ -3460,10 +3772,11 @@
     "reversible": true,
     "using": [ [ "soldering_standard", 60 ] ],
     "qualities": [ { "id": "CUT", "level": 1 } ],
-    "components": [ [ [ "cable", 650 ] ], [ [ "scrap", 10 ] ], [ [ "duct_tape", 30 ] ], [ [ "hose", 2 ] ] ]
+    "components": [ [ [ "cable", 650 ] ], [ [ "scrap", 10 ] ], [ [ "duct_tape", 30 ] ], [ [ "hose", 2 ], [ "makeshift_hose", 2 ] ] ]
   },
   {
     "type": "recipe",
+    "activity_level": "BRISK_EXERCISE",
     "result": "bucket",
     "category": "CC_OTHER",
     "subcategory": "CSC_OTHER_CONTAINERS",
@@ -3478,6 +3791,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "BRISK_EXERCISE",
     "result": "metal_funnel",
     "category": "CC_OTHER",
     "subcategory": "CSC_OTHER_TOOLS",
@@ -3492,6 +3806,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "fake",
     "result": "tarp_raincatcher",
     "category": "CC_OTHER",
     "subcategory": "CSC_OTHER_TOOLS",
@@ -3505,6 +3820,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "fake",
     "result": "funnel",
     "category": "CC_OTHER",
     "subcategory": "CSC_OTHER_TOOLS",
@@ -3517,6 +3833,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "fake",
     "result": "jug_plastic",
     "id_suffix": "plastic-mod",
     "category": "CC_OTHER",
@@ -3530,6 +3847,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "fake",
     "result": "leather_funnel",
     "category": "CC_OTHER",
     "subcategory": "CSC_OTHER_TOOLS",
@@ -3543,6 +3861,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "fake",
     "result": "birchbark_funnel",
     "category": "CC_OTHER",
     "subcategory": "CSC_OTHER_TOOLS",
@@ -3555,6 +3874,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "fake",
     "result": "chem_sulphur",
     "category": "CC_OTHER",
     "subcategory": "CSC_OTHER_MATERIALS",
@@ -3569,22 +3889,24 @@
   },
   {
     "type": "recipe",
+    "activity_level": "fake",
     "result": "cured_hide",
     "category": "CC_OTHER",
     "subcategory": "CSC_OTHER_MATERIALS",
     "skill_used": "survival",
-    "skills_required": [ "cooking", 1 ],
+    "skills_required": [ "chemistry", 1 ],
     "difficulty": 1,
     "time": "5 m",
     "autolearn": true,
     "qualities": [ { "id": "CUT", "level": 1 } ],
     "components": [
       [ [ "salt_water", 1 ], [ "saline", 2 ], [ "salt", 2 ] ],
-      [ [ "raw_leather", 1 ], [ "raw_tainted_leather", 1 ], [ "raw_hleather", 1 ] ]
+      [ [ "raw_leather", 1 ], [ "raw_tainted_leather", 1 ], [ "raw_hleather", 1 ], [ "raw_demihumanleather", 1 ] ]
     ]
   },
   {
     "type": "recipe",
+    "activity_level": "fake",
     "result": "cured_hide",
     "id_suffix": "scraped",
     "category": "CC_OTHER",
@@ -3598,11 +3920,12 @@
   },
   {
     "type": "recipe",
+    "activity_level": "fake",
     "result": "tanning_hide",
     "category": "CC_OTHER",
     "subcategory": "CSC_OTHER_MATERIALS",
     "skill_used": "survival",
-    "skills_required": [ "cooking", 2 ],
+    "skills_required": [ "chemistry", 2 ],
     "difficulty": 3,
     "time": "48 m",
     "batch_time_factors": [ 20, 10 ],
@@ -3616,7 +3939,7 @@
     "tools": [ [ [ "surface_heat", 20, "LIST" ] ] ],
     "components": [
       [ [ "water_clean", 2 ], [ "water", 2 ] ],
-      [ [ "tanbark", 1 ], [ "acorns", 2 ], [ "hops", 2 ], [ "pine_bough", 6 ] ],
+      [ [ "tanbark", 1 ], [ "acorns", 2 ], [ "hops", 2 ], [ "pine_bough", 6 ], [ "brain", 3 ] ],
       [ [ "salt_water", 2 ], [ "saline", 10 ], [ "salt", 10 ] ],
       [ [ "edible_tallow_lard", 1, "LIST" ], [ "tallow_tainted", 1 ] ],
       [ [ "cured_hide", 6 ] ]
@@ -3624,24 +3947,29 @@
   },
   {
     "type": "recipe",
+    "activity_level": "fake",
     "result": "cured_pelt",
     "category": "CC_OTHER",
     "subcategory": "CSC_OTHER_MATERIALS",
     "skill_used": "survival",
-    "skills_required": [ "cooking", 1 ],
+    "skills_required": [ "chemistry", 1 ],
     "difficulty": 1,
     "time": "5 m",
     "autolearn": true,
     "qualities": [ { "id": "CUT", "level": 1 } ],
-    "components": [ [ [ "salt_water", 1 ], [ "saline", 2 ], [ "salt", 2 ] ], [ [ "raw_fur", 1 ], [ "raw_tainted_fur", 1 ] ] ]
+    "components": [
+      [ [ "salt_water", 1 ], [ "saline", 2 ], [ "salt", 2 ] ],
+      [ [ "raw_fur", 1 ], [ "raw_hfur", 1 ], [ "raw_tainted_fur", 1 ] ]
+    ]
   },
   {
     "type": "recipe",
+    "activity_level": "fake",
     "result": "tanning_pelt",
     "category": "CC_OTHER",
     "subcategory": "CSC_OTHER_MATERIALS",
     "skill_used": "survival",
-    "skills_required": [ "cooking", 2 ],
+    "skills_required": [ "chemistry", 2 ],
     "difficulty": 3,
     "time": "48 m",
     "batch_time_factors": [ 20, 10 ],
@@ -3663,16 +3991,17 @@
   },
   {
     "type": "recipe",
+    "activity_level": "fake",
     "result": "tanning_hide",
     "id_suffix": "modern",
     "category": "CC_OTHER",
     "subcategory": "CSC_OTHER_MATERIALS",
-    "skill_used": "cooking",
+    "skill_used": "chemistry",
     "skills_required": [ "survival", 3 ],
     "difficulty": 4,
     "time": "20 m",
     "batch_time_factors": [ 50, 5 ],
-    "book_learn": [ [ "textbook_survival", 6 ], [ "textbook_chemistry", 5 ], [ "modern_tanner", 4 ] ],
+    "book_learn": [ [ "textbook_survival", 6 ], [ "textbook_chemistry", 4 ], [ "modern_tanner", 4 ] ],
     "qualities": [
       { "id": "CHEM", "level": 1 },
       { "id": "COOK", "level": 3 },
@@ -3684,16 +4013,17 @@
   },
   {
     "type": "recipe",
+    "activity_level": "fake",
     "result": "tanning_pelt",
     "id_suffix": "modern",
     "category": "CC_OTHER",
     "subcategory": "CSC_OTHER_MATERIALS",
-    "skill_used": "cooking",
+    "skill_used": "chemistry",
     "skills_required": [ "survival", 3 ],
     "difficulty": 4,
     "time": "20 m",
     "batch_time_factors": [ 50, 5 ],
-    "book_learn": [ [ "textbook_survival", 6 ], [ "textbook_chemistry", 5 ], [ "modern_tanner", 4 ] ],
+    "book_learn": [ [ "textbook_survival", 6 ], [ "textbook_chemistry", 4 ], [ "modern_tanner", 4 ] ],
     "qualities": [
       { "id": "CHEM", "level": 1 },
       { "id": "COOK", "level": 3 },
@@ -3705,6 +4035,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "BRISK_EXERCISE",
     "result": "lobotomizer",
     "category": "CC_OTHER",
     "subcategory": "CSC_OTHER_TOOLS",
@@ -3719,6 +4050,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "fake",
     "result": "chipper",
     "category": "CC_OTHER",
     "subcategory": "CSC_OTHER_TOOLS",
@@ -3731,6 +4063,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "fake",
     "result": "paint_brush",
     "category": "CC_OTHER",
     "subcategory": "CSC_OTHER_TOOLS",
@@ -3743,6 +4076,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "fake",
     "result": "clay_pot",
     "category": "CC_OTHER",
     "subcategory": "CSC_OTHER_TOOLS",
@@ -3756,9 +4090,10 @@
   },
   {
     "type": "recipe",
+    "activity_level": "fake",
     "result": "clay_pot_flower",
     "category": "CC_OTHER",
-    "subcategory": "CSC_OTHER_GENERIC",
+    "subcategory": "CSC_OTHER_OTHER",
     "skill_used": "fabrication",
     "skills_required": [ "survival", 1 ],
     "difficulty": 2,
@@ -3769,6 +4104,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "fake",
     "result": "clay_quern",
     "category": "CC_OTHER",
     "subcategory": "CSC_OTHER_TOOLS",
@@ -3782,6 +4118,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "fake",
     "result": "clay_teapot",
     "category": "CC_OTHER",
     "subcategory": "CSC_OTHER_TOOLS",
@@ -3795,6 +4132,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "fake",
     "result": "brick",
     "category": "CC_OTHER",
     "subcategory": "CSC_OTHER_MATERIALS",
@@ -3808,6 +4146,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "fake",
     "result": "fire_brick",
     "category": "CC_OTHER",
     "subcategory": "CSC_OTHER_MATERIALS",
@@ -3826,6 +4165,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "fake",
     "result": "soft_adobe_brick",
     "category": "CC_OTHER",
     "subcategory": "CSC_OTHER_MATERIALS",
@@ -3845,6 +4185,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "fake",
     "result": "adobe_pallet_full",
     "category": "CC_OTHER",
     "subcategory": "CSC_OTHER_MATERIALS",
@@ -3857,6 +4198,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "fake",
     "result": "mortar_adobe",
     "category": "CC_OTHER",
     "subcategory": "CSC_OTHER_MATERIALS",
@@ -3871,18 +4213,21 @@
   },
   {
     "type": "recipe",
+    "activity_level": "fake",
     "result": "mortar_build",
     "category": "CC_OTHER",
     "subcategory": "CSC_OTHER_OTHER",
     "skill_used": "fabrication",
     "difficulty": 2,
     "time": "10 m",
-    "autolearn": true,
+    "autolearn": false,
+    "book_learn": [ [ "concrete_book", 2 ] ],
     "tools": [ [ [ "con_mix", 50 ] ] ],
     "components": [ [ [ "material_cement", 50 ] ], [ [ "material_sand", 150 ] ] ]
   },
   {
     "type": "recipe",
+    "activity_level": "fake",
     "result": "survivor_mess_kit",
     "category": "CC_OTHER",
     "subcategory": "CSC_OTHER_TOOLS",
@@ -3895,6 +4240,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "fake",
     "result": "charcoal_cooker",
     "category": "CC_OTHER",
     "subcategory": "CSC_OTHER_TOOLS",
@@ -3908,6 +4254,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "fake",
     "result": "oil_cooker",
     "category": "CC_OTHER",
     "subcategory": "CSC_OTHER_TOOLS",
@@ -3920,6 +4267,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "fake",
     "result": "gasoline_cooker",
     "category": "CC_OTHER",
     "subcategory": "CSC_OTHER_TOOLS",
@@ -3932,6 +4280,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "fake",
     "result": "chem_aluminium_powder",
     "category": "CC_OTHER",
     "subcategory": "CSC_OTHER_OTHER",
@@ -3941,13 +4290,14 @@
     "autolearn": true,
     "qualities": [ { "id": "SAW_M", "level": 1 } ],
     "components": [
-      [ [ "material_aluminium_ingot", 1 ], [ "can_drink_unsealed", 6 ], [ "aluminum_foil", 40 ] ],
+      [ [ "material_aluminium_ingot", 1 ], [ "can_drink", 6 ], [ "aluminum_foil", 40 ] ],
       [ [ "water", 5 ], [ "water_clean", 5 ] ],
       [ [ "material_sand", 25 ] ]
     ]
   },
   {
     "type": "recipe",
+    "activity_level": "fake",
     "result": "canteen",
     "category": "CC_OTHER",
     "subcategory": "CSC_OTHER_CONTAINERS",
@@ -3961,6 +4311,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "fake",
     "result": "2lcanteen",
     "category": "CC_OTHER",
     "subcategory": "CSC_OTHER_CONTAINERS",
@@ -3974,6 +4325,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "fake",
     "result": "bagpipes",
     "category": "CC_OTHER",
     "subcategory": "CSC_OTHER_OTHER",
@@ -3981,7 +4333,7 @@
     "skills_required": [ "tailor", 4 ],
     "difficulty": 6,
     "time": "1 h",
-    "book_learn": [ [ "scots_cookbook", 3 ] ],
+    "book_learn": [ [ "scots_tailor", 3 ], [ "scots_cookbook", 7 ] ],
     "using": [ [ "sewing_standard", 20 ] ],
     "components": [
       [ [ "large_stomach_sealed", 1 ], [ "tanned_hide", 2 ], [ "leather", 10 ], [ "tanned_pelt", 2 ], [ "fur", 10 ] ],
@@ -3992,6 +4344,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "fake",
     "result": "survivor_shavingkit",
     "category": "CC_OTHER",
     "subcategory": "CSC_OTHER_TOOLS",
@@ -4004,13 +4357,14 @@
     "components": [
       [ [ "leather", 1 ], [ "fur", 1 ] ],
       [ [ "rag", 1 ] ],
-      [ [ "razor_blade", 1 ] ],
+      [ [ "razor_shaving", 1 ] ],
       [ [ "mirror", 1 ] ],
       [ [ "plastic_chunk", 1 ], [ "skewer_bone", 4 ], [ "splinter", 4 ] ]
     ]
   },
   {
     "type": "recipe",
+    "activity_level": "fake",
     "result": "survivor_hairtrimmer",
     "category": "CC_OTHER",
     "subcategory": "CSC_OTHER_TOOLS",
@@ -4024,6 +4378,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "fake",
     "result": "plant_fibre",
     "category": "CC_OTHER",
     "subcategory": "CSC_OTHER_MATERIALS",
@@ -4035,6 +4390,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "BRISK_EXERCISE",
     "result": "v_scoop_item",
     "category": "CC_OTHER",
     "subcategory": "CSC_OTHER_PARTS",
@@ -4049,6 +4405,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "BRISK_EXERCISE",
     "result": "v_planter_item",
     "category": "CC_OTHER",
     "subcategory": "CSC_OTHER_PARTS",
@@ -4063,6 +4420,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "BRISK_EXERCISE",
     "result": "v_reaper_item",
     "category": "CC_OTHER",
     "subcategory": "CSC_OTHER_PARTS",
@@ -4077,6 +4435,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "BRISK_EXERCISE",
     "result": "v_plow_item",
     "category": "CC_OTHER",
     "subcategory": "CSC_OTHER_PARTS",
@@ -4087,23 +4446,32 @@
     "reversible": true,
     "using": [ [ "welding_standard", 5 ] ],
     "qualities": [ { "id": "HAMMER", "level": 2 }, { "id": "SAW_M", "level": 1 } ],
-    "components": [ [ [ "pipe", 2 ] ], [ [ "steel_plate", 2 ] ], [ [ "frame", 1 ] ], [ [ "wheel", 1 ] ], [ [ "motor", 1 ] ] ]
+    "components": [
+      [ [ "pipe", 2 ] ],
+      [ [ "steel_plate", 2 ] ],
+      [ [ "frame", 1 ] ],
+      [ [ "wheel", 1 ] ],
+      [ [ "motor", 1 ] ],
+      [ [ "pipe_fittings", 2 ] ]
+    ]
   },
   {
     "type": "recipe",
+    "activity_level": "fake",
     "result": "neoprene",
-    "category": "CC_CHEM",
-    "subcategory": "CSC_CHEM_OTHER",
-    "skill_used": "cooking",
+    "category": "CC_OTHER",
+    "subcategory": "CSC_OTHER_MATERIALS",
+    "skill_used": "chemistry",
     "difficulty": 5,
     "time": "25 m",
-    "book_learn": [ [ "adv_chemistry", 3 ], [ "textbook_chemistry", 3 ] ],
+    "book_learn": [ [ "adv_chemistry", 4 ], [ "textbook_chemistry", 4 ] ],
+    "result_mult": 9,
     "qualities": [ { "id": "CHEM", "level": 2 } ],
-    "tools": [ [ [ "hotplate", 100 ], [ "toolset", 100 ] ] ],
+    "tools": [ [ [ "surface_heat", 100, "LIST" ] ], [ [ "sheet_metal", -1 ] ] ],
     "components": [
       [ [ "chem_ethanol", 50 ], [ "denat_alcohol", 50 ] ],
-      [ [ "copper", 50 ] ],
-      [ [ "acid", 1 ] ],
+      [ [ "copper_scrap_equivalent", 2, "LIST" ] ],
+      [ [ "any_strong_acid", 1, "LIST" ] ],
       [ [ "bleach", 2 ] ],
       [ [ "oxy_powder", 50 ] ],
       [ [ "scrap", 1 ] ]
@@ -4111,6 +4479,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "BRISK_EXERCISE",
     "result": "needle_curved",
     "category": "CC_OTHER",
     "subcategory": "CSC_OTHER_TOOLS",
@@ -4126,6 +4495,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "fake",
     "result": "washboard",
     "category": "CC_OTHER",
     "subcategory": "CSC_OTHER_TOOLS",
@@ -4138,6 +4508,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "fake",
     "result": "wash_kit",
     "category": "CC_OTHER",
     "subcategory": "CSC_OTHER_TOOLS",
@@ -4145,10 +4516,11 @@
     "reversible": true,
     "time": "1 s",
     "autolearn": true,
-    "components": [ [ [ "washboard", 1 ] ], [ [ "sponge", 1 ], [ "rag", 1 ] ] ]
+    "components": [ [ [ "washboard", 1 ] ], [ [ "sponge", 1 ], [ "rag", 1 ], [ "brush", 1 ] ] ]
   },
   {
     "type": "recipe",
+    "activity_level": "fake",
     "result": "ash",
     "category": "CC_OTHER",
     "subcategory": "CSC_OTHER_MATERIALS",
@@ -4160,6 +4532,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "fake",
     "result": "chain_link",
     "id_suffix": "fabrication",
     "category": "CC_OTHER",
@@ -4173,6 +4546,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "fake",
     "result": "link_sheet",
     "id_suffix": "fabrication",
     "category": "CC_OTHER",
@@ -4187,6 +4561,7 @@
   {
     "result": "bundle_rag",
     "type": "recipe",
+    "activity_level": "fake",
     "category": "CC_OTHER",
     "subcategory": "CSC_OTHER_MATERIALS",
     "skill_used": "fabrication",
@@ -4202,6 +4577,7 @@
   {
     "result": "bundle_leather",
     "type": "recipe",
+    "activity_level": "fake",
     "category": "CC_OTHER",
     "subcategory": "CSC_OTHER_MATERIALS",
     "skill_used": "fabrication",
@@ -4217,6 +4593,7 @@
   {
     "result": "bundle_wool",
     "type": "recipe",
+    "activity_level": "fake",
     "category": "CC_OTHER",
     "subcategory": "CSC_OTHER_MATERIALS",
     "skill_used": "fabrication",
@@ -4230,7 +4607,47 @@
     "flags": [ "BLIND_HARD" ]
   },
   {
+    "result": "bundle_plank",
     "type": "recipe",
+    "activity_level": "fake",
+    "category": "CC_OTHER",
+    "subcategory": "CSC_OTHER_MATERIALS",
+    "skill_used": "fabrication",
+    "time": "1 m",
+    "autolearn": true,
+    "reversible": true,
+    "components": [ [ [ "2x4", 10 ] ], [ [ "rope_any_short", 1, "LIST" ] ] ],
+    "flags": [ "BLIND_EASY" ]
+  },
+  {
+    "result": "bundle_branch",
+    "type": "recipe",
+    "activity_level": "fake",
+    "category": "CC_OTHER",
+    "subcategory": "CSC_OTHER_MATERIALS",
+    "skill_used": "fabrication",
+    "time": "1 m",
+    "autolearn": true,
+    "reversible": true,
+    "components": [ [ [ "stick", 10 ] ], [ [ "rope_any_short", 1, "LIST" ] ] ],
+    "flags": [ "BLIND_EASY" ]
+  },
+  {
+    "result": "bundle_branch_long",
+    "type": "recipe",
+    "activity_level": "fake",
+    "category": "CC_OTHER",
+    "subcategory": "CSC_OTHER_MATERIALS",
+    "skill_used": "fabrication",
+    "time": "1 m",
+    "autolearn": true,
+    "reversible": true,
+    "components": [ [ [ "stick_long", 5 ] ], [ [ "rope_any_short", 2, "LIST" ] ] ],
+    "flags": [ "BLIND_EASY" ]
+  },
+  {
+    "type": "recipe",
+    "activity_level": "fake",
     "result": "metal_butcher_rack",
     "category": "CC_OTHER",
     "subcategory": "CSC_OTHER_TOOLS",
@@ -4252,11 +4669,13 @@
       [ [ "nail", 12 ] ],
       [ [ "wire", 6 ], [ "rope_6", 6 ], [ "vine_6", 6 ], [ "rope_makeshift_6", 6 ] ],
       [ [ "chain", 1 ], [ "rope_natural", 1, "LIST" ] ],
-      [ [ "spike", 2 ] ]
+      [ [ "spike", 2 ] ],
+      [ [ "pipe_fittings", 24 ] ]
     ]
   },
   {
     "type": "recipe",
+    "activity_level": "fake",
     "result": "metal_smoking_rack",
     "category": "CC_OTHER",
     "subcategory": "CSC_OTHER_TOOLS",
@@ -4277,11 +4696,13 @@
       [ [ "pipe", 15 ], [ "cu_pipe", 15 ], [ "frame", 2 ] ],
       [ [ "nail", 12 ] ],
       [ [ "wire", 6 ], [ "rope_natural_short", 6, "LIST" ] ],
-      [ [ "spike", 4 ] ]
+      [ [ "spike", 4 ] ],
+      [ [ "pipe_fittings", 30 ] ]
     ]
   },
   {
     "type": "recipe",
+    "activity_level": "fake",
     "result": "tourist_table",
     "category": "CC_OTHER",
     "subcategory": "CSC_OTHER_OTHER",
@@ -4291,10 +4712,11 @@
     "autolearn": true,
     "book_learn": [ [ "textbook_fabrication", 2 ], [ "textbook_mechanics", 3 ] ],
     "qualities": [ { "id": "SAW_M", "level": 1 }, { "id": "DRILL", "level": 1 }, { "id": "SCREW", "level": 1 } ],
-    "components": [ [ [ "scrap", 6 ] ], [ [ "pipe", 6 ] ], [ [ "nail", 12 ] ], [ [ "sheet_metal", 1 ] ] ]
+    "components": [ [ [ "scrap", 6 ] ], [ [ "pipe", 6 ] ], [ [ "nail", 12 ] ], [ [ "sheet_metal", 1 ] ], [ [ "pipe_fittings", 6 ] ] ]
   },
   {
     "type": "recipe",
+    "activity_level": "fake",
     "result": "leather_tarp",
     "category": "CC_OTHER",
     "subcategory": "CSC_OTHER_OTHER",
@@ -4308,6 +4730,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "fake",
     "result": "fiber_mat",
     "category": "CC_OTHER",
     "subcategory": "CSC_OTHER_OTHER",
@@ -4315,10 +4738,12 @@
     "time": "1 h",
     "reversible": true,
     "autolearn": true,
-    "components": [ [ [ "withered", 12 ], [ "straw_pile", 12 ], [ "willowbark", 6 ], [ "birchbark", 6 ] ], [ [ "plant_fibre", 100 ] ] ]
+    "using": [ [ "sewing_standard", 100 ] ],
+    "components": [ [ [ "withered", 12 ], [ "straw_pile", 12 ], [ "willowbark", 6 ], [ "birchbark", 6 ] ] ]
   },
   {
     "type": "recipe",
+    "activity_level": "BRISK_EXERCISE",
     "result": "pot_canning",
     "category": "CC_OTHER",
     "subcategory": "CSC_OTHER_CONTAINERS",
@@ -4332,12 +4757,13 @@
   },
   {
     "type": "recipe",
+    "activity_level": "fake",
     "result": "platinum_grille",
     "category": "CC_OTHER",
     "subcategory": "CSC_OTHER_TOOLS",
     "skill_used": "fabrication",
     "difficulty": 5,
-    "book_learn": [ [ "textbook_chemistry", 5 ], [ "textbook_fabrication", 4 ] ],
+    "book_learn": [ [ "textbook_chemistry", 4 ], [ "textbook_fabrication", 4 ] ],
     "time": "2 h",
     "autolearn": true,
     "qualities": [ { "id": "HAMMER", "level": 3 } ],
@@ -4346,11 +4772,12 @@
       [ [ "steel_grille", 1 ] ],
       [ [ "platinum_small", 100 ] ],
       [ [ "water", 3 ], [ "water_clean", 3 ] ],
-      [ [ "acid", 1 ] ]
+      [ [ "any_strong_acid", 1, "LIST" ] ]
     ]
   },
   {
     "type": "recipe",
+    "activity_level": "BRISK_EXERCISE",
     "result": "steel_grille",
     "category": "CC_OTHER",
     "subcategory": "CSC_OTHER_TOOLS",
@@ -4365,9 +4792,10 @@
   },
   {
     "type": "recipe",
+    "activity_level": "fake",
     "result": "wooden_bead",
     "category": "CC_OTHER",
-    "subcategory": "CSC_AMMO_OTHER",
+    "subcategory": "CSC_OTHER_MATERIALS",
     "skill_used": "fabrication",
     "time": "20 m",
     "autolearn": true,
@@ -4376,6 +4804,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "fake",
     "result": "sandbag",
     "category": "CC_OTHER",
     "subcategory": "CSC_OTHER_MATERIALS",
@@ -4383,10 +4812,11 @@
     "time": "2 m",
     "autolearn": true,
     "qualities": [ { "id": "DIG", "level": 3 } ],
-    "components": [ [ [ "bag_canvas", 1 ] ], [ [ "material_sand", 60 ] ] ]
+    "components": [ [ [ "bag_canvas", 1 ] ], [ [ "material_sand", 3000 ] ] ]
   },
   {
     "type": "recipe",
+    "activity_level": "fake",
     "result": "earthbag",
     "category": "CC_OTHER",
     "subcategory": "CSC_OTHER_MATERIALS",
@@ -4399,6 +4829,7 @@
   {
     "result": "anvil_bronze",
     "type": "recipe",
+    "activity_level": "BRISK_EXERCISE",
     "category": "CC_OTHER",
     "subcategory": "CSC_OTHER_TOOLS",
     "skill_used": "fabrication",
@@ -4413,6 +4844,7 @@
   {
     "result": "scrap_bronze",
     "type": "recipe",
+    "activity_level": "BRISK_EXERCISE",
     "category": "CC_OTHER",
     "subcategory": "CSC_OTHER_MATERIALS",
     "skill_used": "fabrication",
@@ -4422,10 +4854,11 @@
     "autolearn": true,
     "using": [ [ "forging_standard", 1 ] ],
     "tools": [ [ [ "crucible", -1 ], [ "crucible_clay", -1 ] ] ],
-    "components": [ [ [ "tin", 12 ] ], [ [ "copper", 50 ] ] ]
+    "components": [ [ [ "tin", 12 ] ], [ [ "copper_scrap_equivalent", 2, "LIST" ] ] ]
   },
   {
     "type": "recipe",
+    "activity_level": "fake",
     "result": "pet_carrier_wooden",
     "category": "CC_OTHER",
     "subcategory": "CSC_OTHER_OTHER",
@@ -4436,5 +4869,98 @@
     "autolearn": true,
     "qualities": [ { "id": "HAMMER", "level": 2 }, { "id": "SAW_W", "level": 2 } ],
     "components": [ [ [ "2x4", 4 ] ], [ [ "nail", 20 ] ], [ [ "hinge", 2 ] ] ]
+  },
+  {
+    "type": "recipe",
+    "activity_level": "fake",
+    "result": "razor_shaving",
+    "category": "CC_OTHER",
+    "subcategory": "CSC_OTHER_TOOLS",
+    "skill_used": "fabrication",
+    "time": "30 s",
+    "reversible": true,
+    "autolearn": true,
+    "qualities": [ { "id": "CUT", "level": 1 } ],
+    "components": [ [ [ "razor_blade", 1 ] ], [ [ "plastic_chunk", 1 ] ] ]
+  },
+  {
+    "type": "recipe",
+    "activity_level": "fake",
+    "result": "makeshift_stethoscope",
+    "category": "CC_OTHER",
+    "subcategory": "CSC_OTHER_TOOLS",
+    "skill_used": "fabrication",
+    "difficulty": 1,
+    "book_learn": [
+      [ "mag_fabrication", 1 ],
+      [ "manual_fabrication", 1 ],
+      [ "textbook_fabrication", 1 ],
+      [ "manual_first_aid", 1 ],
+      [ "pocket_firstaid", 1 ]
+    ],
+    "time": "15 m",
+    "qualities": [ { "id": "CUT", "level": 1 } ],
+    "components": [
+      [ [ "duct_tape", 30 ], [ "medical_tape", 30 ] ],
+      [ [ "bottle_plastic_small", 2 ], [ "funnel", 2 ], [ "metal_funnel", 2 ], [ "makeshift_funnel", 2 ] ],
+      [ [ "hose", 1 ] ],
+      [ [ "condom", 1 ], [ "balloon", 1 ] ]
+    ]
+  },
+  {
+    "type": "recipe",
+    "activity_level": "fake",
+    "result": "tempered_glass_sheet",
+    "category": "CC_OTHER",
+    "subcategory": "CSC_OTHER_MATERIALS",
+    "skill_used": "fabrication",
+    "difficulty": 4,
+    "time": "1 h",
+    "autolearn": true,
+    "tools": [ [ [ "tongs", -1 ] ], [ [ "crucible", -1 ], [ "crucible_clay", -1 ] ], [ [ "sheet_metal", -1 ] ], [ [ "forge", 75 ] ] ],
+    "components": [ [ [ "glass_shard", 400 ], [ "flask_glass", 126 ], [ "jar_glass_sealed", 42 ] ] ]
+  },
+  {
+    "type": "recipe",
+    "activity_level": "fake",
+    "result": "rigid_plastic_sheet",
+    "category": "CC_OTHER",
+    "subcategory": "CSC_OTHER_MATERIALS",
+    "skill_used": "fabrication",
+    "difficulty": 4,
+    "time": "1 h",
+    "autolearn": true,
+    "tools": [ [ [ "tongs", -1 ] ], [ [ "crucible", -1 ], [ "crucible_clay", -1 ] ], [ [ "sheet_metal", -1 ] ], [ [ "forge", 75 ] ] ],
+    "components": [ [ [ "plastic_chunk", 200 ] ] ]
+  },
+  {
+    "type": "recipe",
+    "activity_level": "fake",
+    "result": "funnel_separation",
+    "category": "CC_OTHER",
+    "subcategory": "CSC_OTHER_TOOLS",
+    "skill_used": "fabrication",
+    "difficulty": 7,
+    "time": "1 h",
+    "book_learn": [ [ "glassblowing_book", 5 ] ],
+    "qualities": [ { "id": "CHISEL", "level": 3 } ],
+    "tools": [ [ [ "tongs", -1 ] ], [ [ "pipe", -1 ] ], [ [ "crucible", -1 ], [ "crucible_clay", -1 ] ], [ [ "forge", 75 ] ] ],
+    "components": [
+      [ [ "glass_shard", 3 ], [ "pipe_glass", 1 ], [ "flask_glass", 3 ], [ "test_tube", 6 ], [ "marble", 75 ] ],
+      [ [ "stopcock", 1 ] ]
+    ]
+  },
+  {
+    "type": "recipe",
+    "activity_level": "fake",
+    "result": "stopcock",
+    "category": "CC_OTHER",
+    "subcategory": "CSC_OTHER_OTHER",
+    "skill_used": "fabrication",
+    "difficulty": 4,
+    "time": "30 m",
+    "autolearn": true,
+    "tools": [ [ [ "mold_plastic", -1 ] ], [ [ "surface_heat", 5, "LIST" ] ] ],
+    "components": [ [ [ "plastic_chunk", 1 ] ] ]
   }
 ]

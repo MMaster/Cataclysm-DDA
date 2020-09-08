@@ -1,15 +1,17 @@
 #pragma once
-#ifndef AUTO_NOTE_H
-#define AUTO_NOTE_H
+#ifndef CATA_SRC_AUTO_NOTE_H
+#define CATA_SRC_AUTO_NOTE_H
 
 #include <string>
+#include <unordered_map>
 #include <unordered_set>
 #include <utility>
-#include <unordered_map>
 #include <vector>
 
-#include "string_id.h"
 #include "map_extras.h"
+#include "string_id.h"
+
+class map_extra;
 
 namespace auto_notes
 {
@@ -88,4 +90,4 @@ class auto_note_settings
 
 auto_notes::auto_note_settings &get_auto_notes_settings();
 
-#endif // AUTO_NOTE_H
+#endif // CATA_SRC_AUTO_NOTE_H

@@ -1,8 +1,10 @@
 #include "speech.h"
 
+#include <algorithm>
 #include <map>
-#include <vector>
+#include <set>
 #include <utility>
+#include <vector>
 
 #include "json.h"
 #include "rng.h"
@@ -11,7 +13,7 @@ static std::map<std::string, std::vector<SpeechBubble>> speech;
 
 static SpeechBubble nullSpeech = { no_translation( "INVALID SPEECH" ), 0 };
 
-void load_speech( JsonObject &jo )
+void load_speech( const JsonObject &jo )
 {
     translation sound;
     jo.read( "sound", sound );

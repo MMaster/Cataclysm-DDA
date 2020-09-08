@@ -1,9 +1,11 @@
 #pragma once
-#ifndef FLAG_H
-#define FLAG_H
+#ifndef CATA_SRC_FLAG_H
+#define CATA_SRC_FLAG_H
 
 #include <set>
 #include <string>
+
+#include "translations.h"
 
 class JsonObject;
 
@@ -21,8 +23,13 @@ class json_flag
         }
 
         /** Get informative text for display in UI */
-        const std::string &info() const {
-            return info_;
+        std::string info() const {
+            return info_.translated();
+        }
+
+        /** Get "restriction" phrase, saying what items with this flag must be able to do */
+        std::string restriction() const {
+            return restriction_.translated();
         }
 
         /** Is flag inherited by base items from any attached items? */
@@ -35,6 +42,16 @@ class json_flag
             return craft_inherit_;
         }
 
+        /** Requires this flag to be installed on vehicle */
+        std::string requires_flag() const {
+            return requires_flag_;
+        }
+
+        /** The flag's modifier on the fun value of comestibles */
+        int taste_mod() const {
+            return taste_mod_;
+        }
+
         /** Is this a valid (non-null) flag */
         operator bool() const {
             return !id_.empty();
@@ -42,15 +59,18 @@ class json_flag
 
     private:
         const std::string id_;
-        std::string info_;
+        translation info_;
+        translation restriction_;
         std::set<std::string> conflicts_;
         bool inherit_ = true;
         bool craft_inherit_ = false;
+        std::string requires_flag_;
+        int taste_mod_ = 0;
 
         json_flag( const std::string &id = std::string() ) : id_( id ) {}
 
         /** Load flag definition from JSON */
-        static void load( JsonObject &jo );
+        static void load( const JsonObject &jo );
 
         /** Check consistency of all loaded flags */
         static void check_consistency();
@@ -59,4 +79,4 @@ class json_flag
         static void reset();
 };
 
-#endif
+#endif // CATA_SRC_FLAG_H

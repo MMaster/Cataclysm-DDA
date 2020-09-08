@@ -1,6 +1,7 @@
 [
   {
     "type": "recipe",
+    "activity_level": "fake",
     "result": "briefcase_smg",
     "category": "CC_WEAPON",
     "subcategory": "CSC_WEAPON_RANGED",
@@ -11,6 +12,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "fake",
     "result": "makeshift_machete",
     "category": "CC_WEAPON",
     "subcategory": "CSC_WEAPON_CUTTING",
@@ -22,6 +24,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "fake",
     "result": "makeshift_halberd",
     "category": "CC_WEAPON",
     "subcategory": "CSC_WEAPON_CUTTING",
@@ -33,6 +36,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "fake",
     "result": "makeshift_scythe_war",
     "category": "CC_WEAPON",
     "subcategory": "CSC_WEAPON_CUTTING",
@@ -47,6 +51,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "BRISK_EXERCISE",
     "result": "scythe_war",
     "id_suffix": "forge",
     "category": "CC_WEAPON",
@@ -55,6 +60,10 @@
     "difficulty": 6,
     "time": "7 h 40 m",
     "autolearn": true,
+    "proficiencies": [
+      { "proficiency": "prof_blacksmithing", "required": false, "time_multiplier": 3.0 },
+      { "proficiency": "prof_bladesmith", "required": false, "time_multiplier": 2.5 }
+    ],
     "using": [ [ "blacksmithing_standard", 24 ], [ "steel_standard", 6 ] ],
     "qualities": [ { "id": "CHISEL", "level": 3 } ],
     "tools": [ [ [ "swage", -1 ] ] ],
@@ -62,6 +71,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "fake",
     "result": "copper_knife",
     "category": "CC_WEAPON",
     "subcategory": "CSC_WEAPON_PIERCING",
@@ -74,11 +84,12 @@
     "tools": [ [ [ "surface_heat", 10, "LIST" ] ] ],
     "components": [
       [ [ "rag", 1 ], [ "felt_patch", 1 ], [ "duct_tape", 50 ], [ "cordage_short", 2, "LIST" ], [ "filament", 100, "LIST" ] ],
-      [ [ "scrap_copper", 2 ], [ "copper", 200 ] ]
+      [ [ "copper_scrap_equivalent", 8, "LIST" ] ]
     ]
   },
   {
     "type": "recipe",
+    "activity_level": "fake",
     "result": "makeshift_knife",
     "category": "CC_WEAPON",
     "subcategory": "CSC_WEAPON_PIERCING",
@@ -94,6 +105,22 @@
   },
   {
     "type": "recipe",
+    "activity_level": "BRISK_EXERCISE",
+    "result": "knife_baselard",
+    "category": "CC_WEAPON",
+    "subcategory": "CSC_WEAPON_PIERCING",
+    "skill_used": "fabrication",
+    "difficulty": 4,
+    "time": "5 h",
+    "autolearn": true,
+    "using": [ [ "blacksmithing_standard", 4 ], [ "steel_standard", 1 ] ],
+    "qualities": [ { "id": "CHISEL", "level": 3 } ],
+    "tools": [ [ [ "swage", -1 ] ] ],
+    "components": [ [ [ "fur", 1 ], [ "leather", 1 ] ] ]
+  },
+  {
+    "type": "recipe",
+    "activity_level": "fake",
     "result": "pointy_stick",
     "category": "CC_WEAPON",
     "subcategory": "CSC_WEAPON_PIERCING",
@@ -105,6 +132,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "fake",
     "result": "throwing_stick",
     "category": "CC_WEAPON",
     "subcategory": "CSC_WEAPON_RANGED",
@@ -118,6 +146,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "fake",
     "result": "bolas",
     "category": "CC_WEAPON",
     "subcategory": "CSC_WEAPON_RANGED",
@@ -131,6 +160,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "fake",
     "result": "net",
     "category": "CC_WEAPON",
     "subcategory": "CSC_WEAPON_RANGED",
@@ -145,6 +175,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "fake",
     "result": "cudgel",
     "category": "CC_WEAPON",
     "subcategory": "CSC_WEAPON_BASHING",
@@ -156,6 +187,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "fake",
     "result": "spear_rebar",
     "category": "CC_WEAPON",
     "subcategory": "CSC_WEAPON_PIERCING",
@@ -167,18 +199,21 @@
   },
   {
     "type": "recipe",
+    "activity_level": "fake",
     "result": "sling",
     "category": "CC_WEAPON",
     "subcategory": "CSC_WEAPON_RANGED",
     "skill_used": "fabrication",
+    "skills_required": [ "tailor", 1 ],
     "time": "1 m",
     "reversible": true,
     "autolearn": true,
-    "qualities": [ { "id": "CUT", "level": 1 } ],
+    "qualities": [ { "id": "CUT", "level": 1 }, { "id": "SEW", "level": 1 } ],
     "components": [ [ [ "filament", 20, "LIST" ] ], [ [ "leather", 1 ], [ "fur", 1 ] ] ]
   },
   {
     "type": "recipe",
+    "activity_level": "fake",
     "result": "sling",
     "id_suffix": "cord",
     "category": "CC_WEAPON",
@@ -192,6 +227,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "fake",
     "result": "slingshot",
     "category": "CC_WEAPON",
     "subcategory": "CSC_WEAPON_RANGED",
@@ -203,6 +239,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "fake",
     "result": "bullwhip",
     "category": "CC_WEAPON",
     "subcategory": "CSC_WEAPON_RANGED",
@@ -216,6 +253,46 @@
   },
   {
     "type": "recipe",
+    "activity_level": "fake",
+    "result": "pike_wood",
+    "category": "CC_WEAPON",
+    "subcategory": "CSC_WEAPON_PIERCING",
+    "skill_used": "fabrication",
+    "skills_required": [ "survival", 1 ],
+    "difficulty": 3,
+    "time": "30 m",
+    "autolearn": true,
+    "qualities": [ { "id": "CUT", "level": 1 } ],
+    "tools": [ [ [ "fire", -1 ] ] ],
+    "components": [
+      [ [ "long_pole", 1 ] ],
+      [ [ "rag", 1 ], [ "felt_patch", 1 ], [ "leather", 1 ], [ "fur", 1 ] ],
+      [ [ "duct_tape", 20 ], [ "filament", 20, "LIST" ] ]
+    ]
+  },
+  {
+    "type": "recipe",
+    "activity_level": "fake",
+    "result": "pike_copper",
+    "category": "CC_WEAPON",
+    "subcategory": "CSC_WEAPON_PIERCING",
+    "skill_used": "fabrication",
+    "difficulty": 3,
+    "time": "40 m",
+    "reversible": true,
+    "autolearn": true,
+    "qualities": [ { "id": "CUT", "level": 1 }, { "id": "HAMMER", "level": 1 } ],
+    "tools": [ [ [ "surface_heat", 10, "LIST" ] ] ],
+    "components": [
+      [ [ "long_pole", 1 ] ],
+      [ [ "rag", 1 ], [ "felt_patch", 1 ], [ "leather", 1 ], [ "fur", 1 ] ],
+      [ [ "duct_tape", 20 ], [ "cordage_short", 1, "LIST" ], [ "filament", 50, "LIST" ] ],
+      [ [ "copper_scrap_equivalent", 12, "LIST" ] ]
+    ]
+  },
+  {
+    "type": "recipe",
+    "activity_level": "fake",
     "result": "spear_wood",
     "category": "CC_WEAPON",
     "subcategory": "CSC_WEAPON_PIERCING",
@@ -227,13 +304,14 @@
     "qualities": [ { "id": "CUT", "level": 1 } ],
     "tools": [ [ [ "fire", -1 ] ] ],
     "components": [
-      [ [ "stick_long", 1 ], [ "pool_cue", 1 ] ],
+      [ [ "stick_long", 1 ] ],
       [ [ "rag", 1 ], [ "felt_patch", 1 ], [ "leather", 1 ], [ "fur", 1 ] ],
       [ [ "duct_tape", 20 ], [ "filament", 20, "LIST" ] ]
     ]
   },
   {
     "type": "recipe",
+    "activity_level": "fake",
     "result": "spear_copper",
     "category": "CC_WEAPON",
     "subcategory": "CSC_WEAPON_PIERCING",
@@ -248,11 +326,12 @@
       [ [ "stick_long", 1 ], [ "pool_cue", 1 ] ],
       [ [ "rag", 1 ], [ "felt_patch", 1 ], [ "leather", 1 ], [ "fur", 1 ] ],
       [ [ "duct_tape", 20 ], [ "cordage_short", 1, "LIST" ], [ "filament", 50, "LIST" ] ],
-      [ [ "scrap_copper", 3 ], [ "copper", 300 ] ]
+      [ [ "copper_scrap_equivalent", 12, "LIST" ] ]
     ]
   },
   {
     "type": "recipe",
+    "activity_level": "fake",
     "result": "spear_forked",
     "category": "CC_WEAPON",
     "subcategory": "CSC_WEAPON_PIERCING",
@@ -272,6 +351,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "fake",
     "result": "spear_homemade_halfpike",
     "category": "CC_WEAPON",
     "subcategory": "CSC_WEAPON_PIERCING",
@@ -290,6 +370,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "fake",
     "result": "javelin",
     "category": "CC_WEAPON",
     "subcategory": "CSC_WEAPON_PIERCING",
@@ -308,6 +389,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "BRISK_EXERCISE",
     "result": "javelin_iron",
     "category": "CC_WEAPON",
     "subcategory": "CSC_WEAPON_PIERCING",
@@ -316,12 +398,17 @@
     "difficulty": 2,
     "time": "1 h",
     "autolearn": true,
+    "proficiencies": [
+      { "proficiency": "prof_blacksmithing", "required": false, "time_multiplier": 3.0 },
+      { "proficiency": "prof_bladesmith", "required": false, "time_multiplier": 2.5 }
+    ],
     "using": [ [ "blacksmithing_standard", 1 ] ],
     "qualities": [ { "id": "CHISEL", "level": 3 } ],
     "components": [ [ [ "javelin", 1 ] ], [ [ "scrap", 1 ] ] ]
   },
   {
     "type": "recipe",
+    "activity_level": "fake",
     "result": "spear_spike",
     "category": "CC_WEAPON",
     "subcategory": "CSC_WEAPON_PIERCING",
@@ -344,6 +431,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "fake",
     "result": "spear_knife",
     "category": "CC_WEAPON",
     "subcategory": "CSC_WEAPON_PIERCING",
@@ -375,6 +463,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "fake",
     "result": "spear_knife_superior",
     "category": "CC_WEAPON",
     "subcategory": "CSC_WEAPON_PIERCING",
@@ -408,6 +497,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "fake",
     "result": "spear_knife_superior",
     "category": "CC_WEAPON",
     "subcategory": "CSC_WEAPON_PIERCING",
@@ -422,12 +512,13 @@
   },
   {
     "type": "recipe",
+    "activity_level": "fake",
     "result": "longbow",
     "category": "CC_WEAPON",
     "subcategory": "CSC_WEAPON_RANGED",
     "skill_used": "fabrication",
     "skills_required": [ "archery", 3 ],
-    "difficulty": 3,
+    "difficulty": 5,
     "time": "15 m",
     "reversible": true,
     "decomp_learn": 1,
@@ -438,6 +529,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "fake",
     "result": "woodgreatbow",
     "category": "CC_WEAPON",
     "subcategory": "CSC_WEAPON_RANGED",
@@ -453,6 +545,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "fake",
     "result": "selfbow",
     "category": "CC_WEAPON",
     "subcategory": "CSC_WEAPON_RANGED",
@@ -466,6 +559,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "fake",
     "result": "shortbow",
     "category": "CC_WEAPON",
     "subcategory": "CSC_WEAPON_RANGED",
@@ -482,19 +576,7 @@
   },
   {
     "type": "recipe",
-    "result": "reflexrecurvebow",
-    "category": "CC_WEAPON",
-    "subcategory": "CSC_WEAPON_RANGED",
-    "skill_used": "fabrication",
-    "skills_required": [ [ "archery", 7 ] ],
-    "difficulty": 5,
-    "time": "25 m",
-    "book_learn": [ [ "recipe_bows", 6 ], [ "manual_archery", 7 ] ],
-    "qualities": [ { "id": "CUT", "level": 1 } ],
-    "components": [ [ [ "stick", 3 ], [ "2x4", 2 ] ], [ [ "bone", 3 ], [ "bone_human", 3 ] ], [ [ "cordage_superior", 2, "LIST" ] ] ]
-  },
-  {
-    "type": "recipe",
+    "activity_level": "fake",
     "result": "compositebow",
     "category": "CC_WEAPON",
     "subcategory": "CSC_WEAPON_RANGED",
@@ -505,56 +587,11 @@
     "autolearn": true,
     "book_learn": [ [ "recipe_bows", 4 ], [ "manual_archery", 5 ] ],
     "qualities": [ { "id": "CUT", "level": 1 } ],
-    "components": [ [ [ "stick", 3 ], [ "2x4", 2 ] ], [ [ "bone", 3 ], [ "bone_human", 3 ] ], [ [ "cordage_superior", 2, "LIST" ] ] ]
+    "components": [ [ [ "stick", 3 ], [ "2x4", 2 ] ], [ [ "bone_sturdy", 3, "LIST" ] ], [ [ "cordage_superior", 2, "LIST" ] ] ]
   },
   {
     "type": "recipe",
-    "result": "recurbow",
-    "category": "CC_WEAPON",
-    "subcategory": "CSC_WEAPON_RANGED",
-    "skill_used": "fabrication",
-    "skills_required": [ [ "mechanics", 2 ] ],
-    "difficulty": 5,
-    "time": "30 m",
-    "book_learn": [ [ "recipe_bows", 6 ] ],
-    "qualities": [ { "id": "CUT", "level": 1 }, { "id": "HAMMER", "level": 2 }, { "id": "SAW_M_FINE", "level": 1 } ],
-    "components": [
-      [ [ "stick", 3 ], [ "2x4", 2 ] ],
-      [ [ "steel_tiny", 1, "LIST" ] ],
-      [ [ "plastic_chunk", 2 ] ],
-      [ [ "adhesive", 2, "LIST" ] ],
-      [ [ "cordage_superior", 2, "LIST" ] ]
-    ]
-  },
-  {
-    "type": "recipe",
-    "result": "compbow",
-    "category": "CC_WEAPON",
-    "subcategory": "CSC_WEAPON_RANGED",
-    "skill_used": "fabrication",
-    "skills_required": [ [ "mechanics", 4 ] ],
-    "using": [ [ "blacksmithing_standard", 4 ] ],
-    "difficulty": 7,
-    "time": "4 h",
-    "book_learn": [ [ "recipe_bows", 8 ], [ "welding_book", 7 ], [ "textbook_mechanics", 7 ] ],
-    "qualities": [
-      { "id": "CUT", "level": 1 },
-      { "id": "SCREW", "level": 1 },
-      { "id": "HAMMER_FINE", "level": 1 },
-      { "id": "SAW_M_FINE", "level": 1 },
-      { "id": "CHISEL", "level": 3 }
-    ],
-    "tools": [ [ [ "swage", -1 ] ] ],
-    "components": [
-      [ [ "sheet_metal_small", 4 ] ],
-      [ [ "steel_standard", 1, "LIST" ] ],
-      [ [ "plastic_chunk", 10 ] ],
-      [ [ "duct_tape", 100 ], [ "superglue", 4 ] ],
-      [ [ "cordage_superior", 6, "LIST" ] ]
-    ]
-  },
-  {
-    "type": "recipe",
+    "activity_level": "BRISK_EXERCISE",
     "result": "compgreatbow",
     "category": "CC_WEAPON",
     "subcategory": "CSC_WEAPON_RANGED",
@@ -582,6 +619,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "fake",
     "result": "nailboard",
     "category": "CC_WEAPON",
     "subcategory": "CSC_WEAPON_BASHING",
@@ -593,6 +631,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "fake",
     "result": "homewrecker",
     "category": "CC_WEAPON",
     "subcategory": "CSC_WEAPON_BASHING",
@@ -605,6 +644,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "fake",
     "result": "nailbat",
     "category": "CC_WEAPON",
     "subcategory": "CSC_WEAPON_BASHING",
@@ -616,6 +656,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "fake",
     "result": "bwirebat",
     "category": "CC_WEAPON",
     "subcategory": "CSC_WEAPON_BASHING",
@@ -627,6 +668,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "fake",
     "result": "bowling_axe",
     "category": "CC_WEAPON",
     "subcategory": "CSC_WEAPON_PIERCING",
@@ -638,26 +680,18 @@
   },
   {
     "type": "recipe",
+    "activity_level": "BRISK_EXERCISE",
     "result": "revolver_shotgun",
     "category": "CC_WEAPON",
     "subcategory": "CSC_WEAPON_RANGED",
     "skill_used": "mechanics",
     "skills_required": [ [ "gun", 3 ] ],
     "difficulty": 3,
-    "time": "1 h",
+    "time": "2 h",
     "autolearn": true,
     "book_learn": [ [ "manual_shotgun", 2 ], [ "manual_pistol", 2 ] ],
-    "qualities": [ { "id": "SAW_M_FINE", "level": 1 }, { "id": "GLARE", "level": 2 } ],
-    "tools": [
-      [
-        [ "oxy_torch", 6 ],
-        [ "welder", 30 ],
-        [ "welder_crude", 45 ],
-        [ "toolset", 45 ],
-        [ "small_repairkit", 150 ],
-        [ "large_repairkit", 30 ]
-      ]
-    ],
+    "qualities": [ { "id": "SAW_M_FINE", "level": 1 } ],
+    "using": [ [ "welding_standard", 3 ] ],
     "components": [
       [ [ "shotgun_s", 1 ], [ "pipe_shotgun", 1 ] ],
       [ [ "pipe", 3 ] ],
@@ -667,6 +701,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "BRISK_EXERCISE",
     "result": "surv_six_shooter",
     "category": "CC_WEAPON",
     "subcategory": "CSC_WEAPON_RANGED",
@@ -676,21 +711,13 @@
     "time": "1 h 30 m",
     "autolearn": true,
     "book_learn": [ [ "manual_pistol", 3 ] ],
-    "qualities": [ { "id": "SAW_M_FINE", "level": 1 }, { "id": "GLARE", "level": 2 } ],
-    "tools": [
-      [
-        [ "oxy_torch", 6 ],
-        [ "welder", 30 ],
-        [ "welder_crude", 45 ],
-        [ "toolset", 45 ],
-        [ "small_repairkit", 150 ],
-        [ "large_repairkit", 30 ]
-      ]
-    ],
+    "qualities": [ { "id": "SAW_M_FINE", "level": 1 } ],
+    "using": [ [ "welding_standard", 3 ] ],
     "components": [ [ [ "pipe", 1 ] ], [ [ "spring", 1 ] ], [ [ "steel_chunk", 2 ] ], [ [ "scrap", 2 ] ] ]
   },
   {
     "type": "recipe",
+    "activity_level": "BRISK_EXERCISE",
     "result": "surv_hand_cannon",
     "category": "CC_WEAPON",
     "subcategory": "CSC_WEAPON_RANGED",
@@ -700,141 +727,13 @@
     "time": "2 h",
     "autolearn": true,
     "book_learn": [ [ "manual_pistol", 5 ] ],
-    "qualities": [ { "id": "SAW_M_FINE", "level": 1 }, { "id": "GLARE", "level": 2 } ],
-    "tools": [
-      [
-        [ "oxy_torch", 6 ],
-        [ "welder", 30 ],
-        [ "welder_crude", 45 ],
-        [ "toolset", 45 ],
-        [ "small_repairkit", 150 ],
-        [ "large_repairkit", 30 ]
-      ]
-    ],
+    "qualities": [ { "id": "SAW_M_FINE", "level": 1 } ],
+    "using": [ [ "welding_standard", 3 ] ],
     "components": [ [ [ "pipe", 1 ] ], [ [ "spring", 1 ] ], [ [ "steel_chunk", 2 ] ], [ [ "scrap", 2 ] ] ]
   },
   {
     "type": "recipe",
-    "result": "mosin91_30",
-    "byproducts": [ [ "mn_ebr_kit" ] ],
-    "category": "CC_WEAPON",
-    "subcategory": "CSC_WEAPON_RANGED",
-    "skill_used": "mechanics",
-    "skills_required": [ [ "gun", 4 ] ],
-    "difficulty": 5,
-    "time": "3 h",
-    "//": "Firearms kits are mandatory by design--you're doing significant modifications to your gun and should use the right gear to sight everything in, etc.",
-    "autolearn": true,
-    "tools": [ [ [ "small_repairkit", -1 ], [ "large_repairkit", -1 ] ] ],
-    "components": [ [ [ "mosin91_30_ebr", 1 ] ], [ [ "mn_classic_kit", 1 ] ] ]
-  },
-  {
-    "type": "recipe",
-    "result": "mosin44",
-    "byproducts": [ [ "mn_ebr_kit" ] ],
-    "category": "CC_WEAPON",
-    "subcategory": "CSC_WEAPON_RANGED",
-    "skill_used": "mechanics",
-    "skills_required": [ [ "gun", 4 ] ],
-    "difficulty": 5,
-    "time": "3 h",
-    "//": "Firearms kits are mandatory by design--you're doing significant modifications to your gun and should use the right gear to sight everything in, etc.",
-    "autolearn": true,
-    "tools": [ [ [ "small_repairkit", -1 ], [ "large_repairkit", -1 ] ] ],
-    "components": [ [ [ "mosin44_ebr", 1 ] ], [ [ "mn_classic_kit", 1 ] ] ]
-  },
-  {
-    "type": "recipe",
-    "result": "mosin91_30_ebr",
-    "byproducts": [ [ "mn_classic_kit" ] ],
-    "category": "CC_WEAPON",
-    "subcategory": "CSC_WEAPON_RANGED",
-    "skill_used": "mechanics",
-    "skills_required": [ [ "gun", 4 ] ],
-    "difficulty": 5,
-    "time": "3 h",
-    "//": "Firearms kits are mandatory by design--you're doing significant modifications to your gun and should use the right gear to sight everything in, etc.",
-    "autolearn": true,
-    "tools": [ [ [ "small_repairkit", -1 ], [ "large_repairkit", -1 ] ] ],
-    "components": [ [ [ "mosin91_30", 1 ] ], [ [ "mn_ebr_kit", 1 ] ] ]
-  },
-  {
-    "type": "recipe",
-    "result": "mosin44_ebr",
-    "byproducts": [ [ "mn_classic_kit" ] ],
-    "category": "CC_WEAPON",
-    "subcategory": "CSC_WEAPON_RANGED",
-    "skill_used": "mechanics",
-    "skills_required": [ [ "gun", 4 ] ],
-    "difficulty": 5,
-    "time": "3 h",
-    "//": "Firearms kits are mandatory by design--you're doing significant modifications to your gun and should use the right gear to sight everything in, etc.",
-    "autolearn": true,
-    "tools": [ [ [ "small_repairkit", -1 ], [ "large_repairkit", -1 ] ] ],
-    "components": [ [ [ "mosin44", 1 ] ], [ [ "mn_ebr_kit", 1 ] ] ]
-  },
-  {
-    "type": "recipe",
-    "result": "l_car_223",
-    "category": "CC_WEAPON",
-    "subcategory": "CSC_WEAPON_RANGED",
-    "skill_used": "mechanics",
-    "skills_required": [ [ "gun", 4 ] ],
-    "difficulty": 5,
-    "time": "1 h 30 m",
-    "//": "Firearms kits are mandatory by design--you're doing significant modifications to your gun and should use the right gear to sight everything in, etc.",
-    "reversible": true,
-    "autolearn": true,
-    "tools": [ [ [ "small_repairkit", -1 ], [ "large_repairkit", -1 ] ] ],
-    "components": [ [ [ "l_base_223", 1 ] ], [ [ "l_car_223_kit", 1 ] ] ]
-  },
-  {
-    "type": "recipe",
-    "result": "l_mbr_223",
-    "category": "CC_WEAPON",
-    "subcategory": "CSC_WEAPON_RANGED",
-    "skill_used": "mechanics",
-    "skills_required": [ [ "gun", 4 ] ],
-    "difficulty": 5,
-    "time": "1 h 35 m",
-    "reversible": true,
-    "autolearn": true,
-    "//": "Firearms kits are mandatory by design--you're doing significant modifications to your gun and should use the right gear to sight everything in, etc.",
-    "tools": [ [ [ "small_repairkit", -1 ], [ "large_repairkit", -1 ] ] ],
-    "components": [ [ [ "l_base_223", 1 ] ], [ [ "l_mbr_223_kit", 1 ] ] ]
-  },
-  {
-    "type": "recipe",
-    "result": "l_dsr_223",
-    "category": "CC_WEAPON",
-    "subcategory": "CSC_WEAPON_RANGED",
-    "skill_used": "mechanics",
-    "skills_required": [ [ "gun", 6 ] ],
-    "difficulty": 6,
-    "time": "2 h",
-    "reversible": true,
-    "autolearn": true,
-    "//": "Firearms kits are mandatory by design--you're doing significant modifications to your gun and should use the right gear to sight everything in, etc.",
-    "tools": [ [ [ "small_repairkit", -1 ], [ "large_repairkit", -1 ] ] ],
-    "components": [ [ [ "l_base_223", 1 ] ], [ [ "l_dsr_223_kit", 1 ] ] ]
-  },
-  {
-    "type": "recipe",
-    "result": "l_lmg_223",
-    "category": "CC_WEAPON",
-    "subcategory": "CSC_WEAPON_RANGED",
-    "skill_used": "mechanics",
-    "skills_required": [ [ "gun", 5 ] ],
-    "difficulty": 7,
-    "time": "1 h 40 m",
-    "//": "Firearms kits are mandatory by design--you're doing significant modifications to your gun and should use the right gear to sight everything in, etc.",
-    "reversible": true,
-    "autolearn": true,
-    "tools": [ [ [ "small_repairkit", -1 ], [ "large_repairkit", -1 ] ] ],
-    "components": [ [ [ "l_base_223", 1 ] ], [ [ "l_lmg_223_kit", 1 ] ] ]
-  },
-  {
-    "type": "recipe",
+    "activity_level": "fake",
     "result": "hand_crossbow",
     "category": "CC_WEAPON",
     "subcategory": "CSC_WEAPON_RANGED",
@@ -860,6 +759,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "fake",
     "result": "crossbow",
     "category": "CC_WEAPON",
     "subcategory": "CSC_WEAPON_RANGED",
@@ -868,59 +768,27 @@
     "time": "15 m",
     "reversible": true,
     "decomp_learn": 2,
-    "book_learn": [
-      [ "recipe_bows", 2 ],
-      [ "manual_archery", 4 ],
-      [ "book_archery", 3 ],
-      [ "scots_cookbook", 6 ],
-      [ "textbook_armschina", 5 ]
-    ],
+    "book_learn": [ [ "recipe_bows", 2 ], [ "manual_archery", 4 ], [ "book_archery", 3 ], [ "textbook_armschina", 5 ] ],
     "qualities": [ { "id": "SCREW", "level": 1 }, { "id": "WRENCH", "level": 1 } ],
     "components": [ [ [ "2x4", 2 ], [ "stick", 4 ] ], [ [ "scrap", 1 ] ], [ [ "cordage_superior", 3, "LIST" ] ] ]
   },
   {
     "type": "recipe",
+    "activity_level": "fake",
     "result": "compositecrossbow",
     "category": "CC_WEAPON",
     "subcategory": "CSC_WEAPON_RANGED",
     "skill_used": "fabrication",
     "skills_required": [ [ "mechanics", 3 ] ],
     "difficulty": 5,
-    "time": "15 m",
-    "autolearn": true,
-    "book_learn": [ [ "recipe_bows", 5 ], [ "manual_archery", 6 ] ],
-    "qualities": [ { "id": "CUT", "level": 1 } ],
-    "components": [ [ [ "stick", 5 ], [ "2x4", 3 ] ], [ [ "bone", 3 ], [ "bone_human", 3 ] ], [ [ "cordage_superior", 1, "LIST" ] ] ]
+    "time": "1 h",
+    "book_learn": [ [ "recipe_bows", 5 ], [ "manual_archery", 6 ], [ "book_archery", 6 ], [ "textbook_armschina", 6 ] ],
+    "qualities": [ { "id": "CUT", "level": 1 }, { "id": "SCREW", "level": 1 }, { "id": "WRENCH", "level": 1 } ],
+    "components": [ [ [ "stick", 5 ], [ "2x4", 3 ] ], [ [ "bone_sturdy", 3, "LIST" ] ], [ [ "cordage_superior", 1, "LIST" ] ] ]
   },
   {
     "type": "recipe",
-    "result": "compcrossbow",
-    "category": "CC_WEAPON",
-    "subcategory": "CSC_WEAPON_RANGED",
-    "skill_used": "fabrication",
-    "skills_required": [ [ "mechanics", 5 ] ],
-    "using": [ [ "blacksmithing_standard", 4 ] ],
-    "difficulty": 7,
-    "time": "4 h",
-    "book_learn": [ [ "recipe_bows", 9 ], [ "welding_book", 8 ], [ "textbook_mechanics", 8 ] ],
-    "qualities": [
-      { "id": "CUT", "level": 1 },
-      { "id": "SCREW", "level": 1 },
-      { "id": "HAMMER_FINE", "level": 1 },
-      { "id": "SAW_M_FINE", "level": 1 },
-      { "id": "CHISEL", "level": 3 }
-    ],
-    "tools": [ [ [ "swage", -1 ] ] ],
-    "components": [
-      [ [ "sheet_metal_small", 4 ] ],
-      [ [ "steel_standard", 1, "LIST" ] ],
-      [ [ "plastic_chunk", 15 ] ],
-      [ [ "duct_tape", 100 ], [ "superglue", 4 ] ],
-      [ [ "cordage_superior", 6, "LIST" ] ]
-    ]
-  },
-  {
-    "type": "recipe",
+    "activity_level": "fake",
     "result": "bullet_crossbow",
     "category": "CC_WEAPON",
     "subcategory": "CSC_WEAPON_RANGED",
@@ -935,6 +803,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "fake",
     "result": "2_shot_special",
     "category": "CC_WEAPON",
     "subcategory": "CSC_WEAPON_RANGED",
@@ -948,6 +817,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "fake",
     "result": "rifle_22",
     "category": "CC_WEAPON",
     "subcategory": "CSC_WEAPON_RANGED",
@@ -962,6 +832,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "fake",
     "result": "blunderbuss",
     "category": "CC_WEAPON",
     "subcategory": "CSC_WEAPON_RANGED",
@@ -975,6 +846,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "fake",
     "result": "pipe_shotgun",
     "category": "CC_WEAPON",
     "subcategory": "CSC_WEAPON_RANGED",
@@ -989,6 +861,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "fake",
     "result": "pipe_double_shotgun",
     "category": "CC_WEAPON",
     "subcategory": "CSC_WEAPON_RANGED",
@@ -1003,34 +876,7 @@
   },
   {
     "type": "recipe",
-    "result": "pipe_combination_gun",
-    "category": "CC_WEAPON",
-    "subcategory": "CSC_WEAPON_RANGED",
-    "skill_used": "mechanics",
-    "skills_required": [ "gun", 5 ],
-    "difficulty": 7,
-    "time": "4 h 30 m",
-    "autolearn": true,
-    "qualities": [
-      { "id": "HAMMER_FINE", "level": 1 },
-      { "id": "SAW_M_FINE", "level": 1 },
-      { "id": "SCREW_FINE", "level": 1 },
-      { "id": "GLARE", "level": 1 }
-    ],
-    "tools": [
-      [
-        [ "oxy_torch", 7 ],
-        [ "welder", 36 ],
-        [ "welder_crude", 54 ],
-        [ "toolset", 54 ],
-        [ "small_repairkit", 180 ],
-        [ "large_repairkit", 75 ]
-      ]
-    ],
-    "components": [ [ [ "pipe", 2 ] ], [ [ "nail", 2 ] ], [ [ "spring", 1 ] ], [ [ "scrap", 3 ] ], [ [ "shotgun_d", 1 ] ] ]
-  },
-  {
-    "type": "recipe",
+    "activity_level": "fake",
     "result": "rifle_9mm",
     "category": "CC_WEAPON",
     "subcategory": "CSC_WEAPON_RANGED",
@@ -1045,64 +891,7 @@
   },
   {
     "type": "recipe",
-    "result": "rifle_308",
-    "category": "CC_WEAPON",
-    "subcategory": "CSC_WEAPON_RANGED",
-    "skill_used": "mechanics",
-    "skills_required": [ "gun", 3 ],
-    "difficulty": 5,
-    "time": "30 m",
-    "reversible": true,
-    "autolearn": true,
-    "qualities": [ { "id": "SAW_M_FINE", "level": 1 }, { "id": "SCREW_FINE", "level": 1 } ],
-    "tools": [ [ [ "pliers", -1 ], [ "multitool", -1 ] ] ],
-    "components": [ [ [ "pipe", 1 ] ], [ [ "2x4", 1 ] ], [ [ "scrap", 3 ] ], [ [ "spring", 1 ] ] ]
-  },
-  {
-    "type": "recipe",
-    "result": "surv_carbine_223",
-    "category": "CC_WEAPON",
-    "subcategory": "CSC_WEAPON_RANGED",
-    "skill_used": "mechanics",
-    "skills_required": [ "gun", 5 ],
-    "difficulty": 7,
-    "time": "2 h",
-    "autolearn": true,
-    "using": [ [ "welding_standard", 30 ] ],
-    "qualities": [ { "id": "SAW_M_FINE", "level": 1 }, { "id": "SCREW_FINE", "level": 1 }, { "id": "WRENCH_FINE", "level": 1 } ],
-    "tools": [ [ [ "pliers", -1 ], [ "multitool", -1 ] ] ],
-    "components": [ [ [ "pipe", 2 ] ], [ [ "spring", 1 ] ], [ [ "steel_chunk", 3 ] ], [ [ "2x4", 1 ] ], [ [ "scrap", 3 ] ] ]
-  },
-  {
-    "type": "recipe",
-    "result": "rifle_3006",
-    "category": "CC_WEAPON",
-    "subcategory": "CSC_WEAPON_RANGED",
-    "skill_used": "mechanics",
-    "skills_required": [ "gun", 4 ],
-    "difficulty": 6,
-    "time": "4 h",
-    "autolearn": true,
-    "qualities": [
-      { "id": "SAW_M_FINE", "level": 1 },
-      { "id": "SCREW_FINE", "level": 1 },
-      { "id": "WRENCH_FINE", "level": 1 },
-      { "id": "GLARE", "level": 2 }
-    ],
-    "tools": [
-      [
-        [ "oxy_torch", 30 ],
-        [ "welder", 150 ],
-        [ "large_repairkit", 75 ],
-        [ "small_repairkit", 150 ],
-        [ "welder_crude", 225 ],
-        [ "toolset", 225 ]
-      ]
-    ],
-    "components": [ [ [ "pipe", 3 ] ], [ [ "spring", 2 ] ], [ [ "steel_chunk", 3 ] ], [ [ "2x4", 1 ] ], [ [ "scrap", 3 ] ] ]
-  },
-  {
-    "type": "recipe",
+    "activity_level": "BRISK_EXERCISE",
     "result": "triple_launcher_simple",
     "category": "CC_WEAPON",
     "subcategory": "CSC_WEAPON_RANGED",
@@ -1111,26 +900,13 @@
     "difficulty": 7,
     "time": "4 h",
     "autolearn": true,
-    "qualities": [
-      { "id": "SAW_M_FINE", "level": 1 },
-      { "id": "SCREW_FINE", "level": 1 },
-      { "id": "WRENCH_FINE", "level": 1 },
-      { "id": "GLARE", "level": 2 }
-    ],
-    "tools": [
-      [
-        [ "oxy_torch", 40 ],
-        [ "welder", 200 ],
-        [ "large_repairkit", 100 ],
-        [ "small_repairkit", 200 ],
-        [ "welder_crude", 300 ],
-        [ "toolset", 300 ]
-      ]
-    ],
+    "qualities": [ { "id": "SAW_M_FINE", "level": 1 }, { "id": "SCREW_FINE", "level": 1 }, { "id": "WRENCH_FINE", "level": 1 } ],
+    "using": [ [ "welding_standard", 20 ] ],
     "components": [ [ [ "pipe", 3 ] ], [ [ "nail", 3 ] ], [ [ "scrap", 3 ] ], [ [ "2x4", 1 ] ] ]
   },
   {
     "type": "recipe",
+    "activity_level": "fake",
     "result": "launcher_simple",
     "category": "CC_WEAPON",
     "subcategory": "CSC_WEAPON_RANGED",
@@ -1145,6 +921,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "fake",
     "result": "pipe_launcher40mm",
     "//": "underbarrel mount",
     "category": "CC_WEAPON",
@@ -1159,6 +936,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "fake",
     "result": "m320",
     "category": "CC_WEAPON",
     "subcategory": "CSC_WEAPON_RANGED",
@@ -1171,6 +949,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "fake",
     "result": "u_shotgun",
     "category": "CC_WEAPON",
     "subcategory": "CSC_WEAPON_MODS",
@@ -1184,28 +963,7 @@
   },
   {
     "type": "recipe",
-    "result": "aux_flamer",
-    "category": "CC_WEAPON",
-    "subcategory": "CSC_WEAPON_MODS",
-    "skill_used": "mechanics",
-    "skills_required": [ "fabrication", 3 ],
-    "difficulty": 6,
-    "time": "18 m",
-    "reversible": true,
-    "decomp_learn": 5,
-    "autolearn": true,
-    "book_learn": [ [ "book_icef", 4 ] ],
-    "qualities": [ { "id": "SAW_M", "level": 1 }, { "id": "SCREW", "level": 1 } ],
-    "components": [
-      [ [ "duct_tape", 50 ] ],
-      [ [ "pilot_light", 1 ] ],
-      [ [ "pipe", 1 ] ],
-      [ [ "hose", 2 ] ],
-      [ [ "metal_tank_little", 1 ] ]
-    ]
-  },
-  {
-    "type": "recipe",
+    "activity_level": "BRISK_EXERCISE",
     "result": "combatsaw_off",
     "category": "CC_WEAPON",
     "subcategory": "CSC_WEAPON_CUTTING",
@@ -1226,6 +984,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "BRISK_EXERCISE",
     "result": "e_combatsaw_off",
     "category": "CC_WEAPON",
     "subcategory": "CSC_WEAPON_CUTTING",
@@ -1246,21 +1005,7 @@
   },
   {
     "type": "recipe",
-    "result": "coilgun",
-    "category": "CC_WEAPON",
-    "subcategory": "CSC_WEAPON_RANGED",
-    "skill_used": "electronics",
-    "skills_required": [ "gun", 1 ],
-    "difficulty": 3,
-    "time": "25 m",
-    "reversible": true,
-    "book_learn": [ [ "advanced_electronics", 3 ], [ "textbook_electronics", 3 ], [ "textbook_anarch", 4 ] ],
-    "qualities": [ { "id": "SAW_M_FINE", "level": 1 } ],
-    "tools": [ [ [ "soldering_standard", 10, "LIST" ], [ "small_repairkit", 10 ], [ "large_repairkit", 5 ] ] ],
-    "components": [ [ [ "pipe", 1 ] ], [ [ "power_supply", 1 ] ], [ [ "amplifier", 1 ] ], [ [ "scrap", 6 ] ], [ [ "cable", 20 ] ] ]
-  },
-  {
-    "type": "recipe",
+    "activity_level": "fake",
     "result": "shoulder_strap",
     "category": "CC_WEAPON",
     "subcategory": "CSC_WEAPON_MODS",
@@ -1273,6 +1018,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "fake",
     "result": "makeshift_bayonet",
     "category": "CC_WEAPON",
     "subcategory": "CSC_WEAPON_MODS",
@@ -1286,6 +1032,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "BRISK_EXERCISE",
     "result": "sword_bayonet",
     "category": "CC_WEAPON",
     "subcategory": "CSC_WEAPON_CUTTING",
@@ -1293,6 +1040,10 @@
     "skills_required": [ "gun", 1 ],
     "difficulty": 9,
     "time": "55 m",
+    "proficiencies": [
+      { "proficiency": "prof_blacksmithing", "required": false, "time_multiplier": 3.0 },
+      { "proficiency": "prof_bladesmith", "required": false, "time_multiplier": 2.5 }
+    ],
     "book_learn": [ [ "welding_book", 7 ], [ "recipe_melee", 5 ] ],
     "using": [ [ "blacksmithing_standard", 12 ], [ "steel_standard", 3 ] ],
     "qualities": [ { "id": "CHISEL", "level": 3 } ],
@@ -1301,6 +1052,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "fake",
     "result": "pistol_bayonet",
     "category": "CC_WEAPON",
     "subcategory": "CSC_WEAPON_MODS",
@@ -1314,6 +1066,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "fake",
     "result": "crafted_suppressor",
     "category": "CC_WEAPON",
     "subcategory": "CSC_WEAPON_MODS",
@@ -1327,6 +1080,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "fake",
     "result": "suppressor",
     "category": "CC_WEAPON",
     "subcategory": "CSC_WEAPON_MODS",
@@ -1340,6 +1094,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "fake",
     "result": "brass_catcher",
     "category": "CC_WEAPON",
     "subcategory": "CSC_WEAPON_MODS",
@@ -1354,6 +1109,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "BRISK_EXERCISE",
     "result": "adjustable_stock",
     "category": "CC_WEAPON",
     "subcategory": "CSC_WEAPON_MODS",
@@ -1369,26 +1125,13 @@
       [ "manual_rifle", 4 ],
       [ "manual_launcher", 4 ]
     ],
-    "qualities": [
-      { "id": "HAMMER_FINE", "level": 1 },
-      { "id": "SAW_M_FINE", "level": 1 },
-      { "id": "SCREW_FINE", "level": 1 },
-      { "id": "GLARE", "level": 2 }
-    ],
-    "tools": [
-      [
-        [ "oxy_torch", 3 ],
-        [ "welder", 15 ],
-        [ "welder_crude", 25 ],
-        [ "toolset", 25 ],
-        [ "small_repairkit", 15 ],
-        [ "large_repairkit", 15 ]
-      ]
-    ],
+    "qualities": [ { "id": "HAMMER_FINE", "level": 1 }, { "id": "SAW_M_FINE", "level": 1 }, { "id": "SCREW_FINE", "level": 1 } ],
+    "using": [ [ "welding_standard", 1 ] ],
     "components": [ [ [ "scrap", 6 ], [ "pipe", 1 ], [ "steel_chunk", 2 ] ], [ [ "plastic_chunk", 3 ] ] ]
   },
   {
     "type": "recipe",
+    "activity_level": "BRISK_EXERCISE",
     "result": "folding_stock",
     "category": "CC_WEAPON",
     "subcategory": "CSC_WEAPON_MODS",
@@ -1398,26 +1141,13 @@
     "time": "25 m",
     "autolearn": true,
     "book_learn": [ [ "manual_fabrication", 3 ], [ "manual_shotgun", 4 ], [ "manual_smg", 4 ], [ "manual_rifle", 4 ] ],
-    "qualities": [
-      { "id": "HAMMER_FINE", "level": 1 },
-      { "id": "SAW_M_FINE", "level": 1 },
-      { "id": "SCREW_FINE", "level": 1 },
-      { "id": "GLARE", "level": 2 }
-    ],
-    "tools": [
-      [
-        [ "oxy_torch", 3 ],
-        [ "welder", 15 ],
-        [ "welder_crude", 25 ],
-        [ "toolset", 25 ],
-        [ "small_repairkit", 15 ],
-        [ "large_repairkit", 15 ]
-      ]
-    ],
+    "qualities": [ { "id": "HAMMER_FINE", "level": 1 }, { "id": "SAW_M_FINE", "level": 1 }, { "id": "SCREW_FINE", "level": 1 } ],
+    "using": [ [ "welding_standard", 1 ] ],
     "components": [ [ [ "scrap", 6 ], [ "pipe", 1 ], [ "steel_chunk", 2 ] ], [ [ "spring", 1 ] ], [ [ "plastic_chunk", 3 ] ] ]
   },
   {
     "type": "recipe",
+    "activity_level": "fake",
     "result": "barrel_ported",
     "category": "CC_WEAPON",
     "subcategory": "CSC_WEAPON_MODS",
@@ -1437,6 +1167,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "BRISK_EXERCISE",
     "result": "bipod",
     "category": "CC_WEAPON",
     "subcategory": "CSC_WEAPON_MODS",
@@ -1446,26 +1177,13 @@
     "time": "20 m",
     "autolearn": true,
     "book_learn": [ [ "manual_fabrication", 2 ], [ "manual_rifle", 3 ], [ "manual_launcher", 3 ] ],
-    "qualities": [
-      { "id": "HAMMER_FINE", "level": 1 },
-      { "id": "SAW_M_FINE", "level": 1 },
-      { "id": "SCREW_FINE", "level": 1 },
-      { "id": "GLARE", "level": 2 }
-    ],
-    "tools": [
-      [
-        [ "oxy_torch", 2 ],
-        [ "welder", 10 ],
-        [ "welder_crude", 20 ],
-        [ "toolset", 20 ],
-        [ "small_repairkit", 10 ],
-        [ "large_repairkit", 10 ]
-      ]
-    ],
+    "qualities": [ { "id": "HAMMER_FINE", "level": 1 }, { "id": "SAW_M_FINE", "level": 1 }, { "id": "SCREW_FINE", "level": 1 } ],
+    "using": [ [ "welding_standard", 1 ] ],
     "components": [ [ [ "scrap", 6 ], [ "pipe", 1 ], [ "steel_chunk", 2 ] ], [ [ "plastic_chunk", 3 ] ] ]
   },
   {
     "type": "recipe",
+    "activity_level": "fake",
     "result": "grip",
     "category": "CC_WEAPON",
     "subcategory": "CSC_WEAPON_MODS",
@@ -1488,6 +1206,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "fake",
     "result": "muzzle_brake",
     "category": "CC_WEAPON",
     "subcategory": "CSC_WEAPON_MODS",
@@ -1501,6 +1220,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "fake",
     "result": "pistol_grip",
     "category": "CC_WEAPON",
     "subcategory": "CSC_WEAPON_MODS",
@@ -1523,6 +1243,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "BRISK_EXERCISE",
     "result": "pistol_stock",
     "category": "CC_WEAPON",
     "subcategory": "CSC_WEAPON_MODS",
@@ -1532,26 +1253,13 @@
     "time": "30 m",
     "autolearn": true,
     "book_learn": [ [ "manual_fabrication", 3 ], [ "manual_pistol", 4 ] ],
-    "qualities": [
-      { "id": "HAMMER_FINE", "level": 1 },
-      { "id": "SAW_M_FINE", "level": 1 },
-      { "id": "SCREW_FINE", "level": 1 },
-      { "id": "GLARE", "level": 2 }
-    ],
-    "tools": [
-      [
-        [ "oxy_torch", 3 ],
-        [ "welder", 15 ],
-        [ "welder_crude", 25 ],
-        [ "toolset", 25 ],
-        [ "small_repairkit", 15 ],
-        [ "large_repairkit", 15 ]
-      ]
-    ],
+    "qualities": [ { "id": "HAMMER_FINE", "level": 1 }, { "id": "SAW_M_FINE", "level": 1 }, { "id": "SCREW_FINE", "level": 1 } ],
+    "using": [ [ "welding_standard", 1 ] ],
     "components": [ [ [ "scrap", 6 ], [ "pipe", 1 ], [ "steel_chunk", 3 ] ], [ [ "plastic_chunk", 3 ] ] ]
   },
   {
     "type": "recipe",
+    "activity_level": "BRISK_EXERCISE",
     "result": "recoil_stock",
     "category": "CC_WEAPON",
     "subcategory": "CSC_WEAPON_MODS",
@@ -1567,26 +1275,13 @@
       [ "manual_rifle", 4 ],
       [ "manual_launcher", 4 ]
     ],
-    "qualities": [
-      { "id": "HAMMER_FINE", "level": 1 },
-      { "id": "SAW_M_FINE", "level": 1 },
-      { "id": "SCREW_FINE", "level": 1 },
-      { "id": "GLARE", "level": 2 }
-    ],
-    "tools": [
-      [
-        [ "oxy_torch", 3 ],
-        [ "welder", 15 ],
-        [ "welder_crude", 25 ],
-        [ "toolset", 25 ],
-        [ "small_repairkit", 15 ],
-        [ "large_repairkit", 15 ]
-      ]
-    ],
+    "qualities": [ { "id": "HAMMER_FINE", "level": 1 }, { "id": "SAW_M_FINE", "level": 1 }, { "id": "SCREW_FINE", "level": 1 } ],
+    "using": [ [ "welding_standard", 1 ] ],
     "components": [ [ [ "scrap", 6 ], [ "pipe", 1 ], [ "steel_chunk", 2 ] ], [ [ "plastic_chunk", 3 ] ], [ [ "spring", 2 ] ] ]
   },
   {
     "type": "recipe",
+    "activity_level": "fake",
     "result": "waterproof_gunmod",
     "category": "CC_WEAPON",
     "subcategory": "CSC_WEAPON_MODS",
@@ -1608,6 +1303,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "BRISK_EXERCISE",
     "result": "dias",
     "category": "CC_WEAPON",
     "subcategory": "CSC_WEAPON_MODS",
@@ -1619,14 +1315,24 @@
     "book_learn": [ [ "manual_rifle", 5 ], [ "textbook_anarch", 5 ] ],
     "qualities": [ { "id": "HAMMER", "level": 1 }, { "id": "SAW_M_FINE", "level": 1 }, { "id": "DRILL", "level": 1 } ],
     "tools": [
-      [ [ "ar15", -1 ], [ "h&k416a5", -1 ], [ "m27iar", -1 ], [ "m4a1", -1 ], [ "m16a4", -1 ] ],
-      [ [ "oxy_torch", 4 ], [ "welder", 20 ], [ "welder_crude", 40 ], [ "toolset", 40 ] ],
+      [
+        [ "ar15", -1 ],
+        [ "ar15_retool_300blk", -1 ],
+        [ "ar_pistol", -1 ],
+        [ "oa93", -1 ],
+        [ "h&k416a5", -1 ],
+        [ "m27iar", -1 ],
+        [ "m4a1", -1 ],
+        [ "m16a4", -1 ]
+      ],
       [ [ "small_repairkit", 40 ], [ "large_repairkit", 40 ] ]
     ],
+    "using": [ [ "welding_standard", 2 ] ],
     "components": [ [ [ "steel_plate", 1 ], [ "steel_lump", 2 ] ], [ [ "pipe", 1 ], [ "sheet_metal_small", 1 ] ], [ [ "scrap", 1 ] ] ]
   },
   {
     "type": "recipe",
+    "activity_level": "fake",
     "result": "llink",
     "category": "CC_WEAPON",
     "subcategory": "CSC_WEAPON_MODS",
@@ -1637,11 +1343,15 @@
     "//": "Simple to manufacture, hence it's not gonna be in published in too much detail in gun-mags.",
     "book_learn": [ [ "manual_rifle", 6 ], [ "textbook_anarch", 3 ] ],
     "qualities": [ { "id": "SAW_M", "level": 1 }, { "id": "HAMMER", "level": 1 } ],
-    "tools": [ [ [ "ar15", -1 ] ], [ [ "small_repairkit", 40 ], [ "large_repairkit", 40 ] ] ],
+    "tools": [
+      [ [ "ar15", -1 ], [ "ar15_retool_300blk", -1 ], [ "ar_pistol", -1 ], [ "oa93", -1 ] ],
+      [ [ "small_repairkit", 40 ], [ "large_repairkit", 40 ] ]
+    ],
     "components": [ [ [ "sheet_metal_small", 2 ] ] ]
   },
   {
     "type": "recipe",
+    "activity_level": "fake",
     "result": "bow_sight",
     "category": "CC_WEAPON",
     "subcategory": "CSC_WEAPON_MODS",
@@ -1657,6 +1367,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "fake",
     "result": "bow_stabilizer",
     "category": "CC_WEAPON",
     "subcategory": "CSC_WEAPON_MODS",
@@ -1672,6 +1383,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "fake",
     "result": "arrowrest",
     "category": "CC_WEAPON",
     "subcategory": "CSC_WEAPON_MODS",
@@ -1687,6 +1399,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "fake",
     "result": "gun_crossbow",
     "category": "CC_WEAPON",
     "subcategory": "CSC_WEAPON_MODS",
@@ -1711,6 +1424,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "fake",
     "result": "sword_wood",
     "category": "CC_WEAPON",
     "subcategory": "CSC_WEAPON_BASHING",
@@ -1722,6 +1436,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "fake",
     "result": "sword_nail",
     "category": "CC_WEAPON",
     "subcategory": "CSC_WEAPON_BASHING",
@@ -1734,125 +1449,7 @@
   },
   {
     "type": "recipe",
-    "result": "shishkebab_off",
-    "category": "CC_WEAPON",
-    "subcategory": "CSC_WEAPON_CUTTING",
-    "skill_used": "mechanics",
-    "difficulty": 1,
-    "time": "10 m",
-    "reversible": true,
-    "decomp_learn": 3,
-    "book_learn": [ [ "welding_book", 8 ], [ "book_icef", 4 ] ],
-    "components": [
-      [ [ "leather", 5 ] ],
-      [ [ "pipe", 1 ] ],
-      [ [ "makeshift_machete", 1 ] ],
-      [ [ "pilot_light", 1 ] ],
-      [ [ "aux_pressurized_tank", 1 ] ]
-    ]
-  },
-  {
-    "type": "recipe",
-    "result": "firemachete_off",
-    "category": "CC_WEAPON",
-    "subcategory": "CSC_WEAPON_CUTTING",
-    "skill_used": "mechanics",
-    "difficulty": 4,
-    "time": "20 m",
-    "reversible": true,
-    "decomp_learn": 4,
-    "book_learn": [ [ "welding_book", 8 ], [ "book_icef", 4 ] ],
-    "using": [ [ "welding_standard", 2 ] ],
-    "components": [
-      [ [ "leather", 5 ] ],
-      [ [ "pipe", 1 ] ],
-      [ [ "machete", 1 ] ],
-      [ [ "pilot_light", 1 ] ],
-      [ [ "aux_pressurized_tank", 1 ] ]
-    ]
-  },
-  {
-    "type": "recipe",
-    "result": "broadfire_off",
-    "category": "CC_WEAPON",
-    "subcategory": "CSC_WEAPON_CUTTING",
-    "skill_used": "mechanics",
-    "difficulty": 5,
-    "time": "30 m",
-    "reversible": true,
-    "decomp_learn": 4,
-    "book_learn": [ [ "welding_book", 8 ], [ "book_icef", 4 ] ],
-    "using": [ [ "welding_standard", 2 ] ],
-    "components": [
-      [ [ "leather", 5 ] ],
-      [ [ "pipe", 1 ] ],
-      [ [ "broadsword", 1 ] ],
-      [ [ "pilot_light", 1 ] ],
-      [ [ "aux_pressurized_tank", 1 ] ]
-    ]
-  },
-  {
-    "type": "recipe",
-    "result": "firekatana_off",
-    "category": "CC_WEAPON",
-    "subcategory": "CSC_WEAPON_CUTTING",
-    "skill_used": "mechanics",
-    "difficulty": 5,
-    "time": "30 m",
-    "reversible": true,
-    "decomp_learn": 4,
-    "book_learn": [ [ "welding_book", 8 ], [ "book_icef", 4 ] ],
-    "using": [ [ "welding_standard", 2 ] ],
-    "components": [
-      [ [ "leather", 5 ] ],
-      [ [ "pipe", 1 ] ],
-      [ [ "katana", 1 ] ],
-      [ [ "pilot_light", 1 ] ],
-      [ [ "aux_pressurized_tank", 1 ] ]
-    ]
-  },
-  {
-    "type": "recipe",
-    "result": "zweifire_off",
-    "category": "CC_WEAPON",
-    "subcategory": "CSC_WEAPON_CUTTING",
-    "skill_used": "mechanics",
-    "difficulty": 5,
-    "time": "30 m",
-    "reversible": true,
-    "decomp_learn": 4,
-    "book_learn": [ [ "welding_book", 8 ], [ "book_icef", 4 ] ],
-    "using": [ [ "welding_standard", 2 ] ],
-    "components": [
-      [ [ "leather", 5 ] ],
-      [ [ "pipe", 1 ] ],
-      [ [ "zweihander", 1 ] ],
-      [ [ "pilot_light", 1 ] ],
-      [ [ "aux_pressurized_tank", 1 ] ]
-    ]
-  },
-  {
-    "type": "recipe",
-    "result": "tihar",
-    "category": "CC_WEAPON",
-    "subcategory": "CSC_WEAPON_RANGED",
-    "skill_used": "mechanics",
-    "skills_required": [ "gun", 2 ],
-    "difficulty": 6,
-    "time": "2 h 40 m",
-    "autolearn": true,
-    "using": [ [ "welding_standard", 15 ] ],
-    "qualities": [ { "id": "SAW_M_FINE", "level": 1 }, { "id": "SCREW_FINE", "level": 1 }, { "id": "WRENCH_FINE", "level": 1 } ],
-    "components": [
-      [ [ "pipe", 4 ] ],
-      [ [ "duct_tape", 100 ], [ "superglue", 1 ] ],
-      [ [ "2x4", 1 ], [ "stick", 1 ] ],
-      [ [ "metal_tank_little", 1 ] ],
-      [ [ "steel_chunk", 3 ], [ "scrap", 9 ] ]
-    ]
-  },
-  {
-    "type": "recipe",
+    "activity_level": "BRISK_EXERCISE",
     "result": "bigun",
     "category": "CC_WEAPON",
     "subcategory": "CSC_WEAPON_RANGED",
@@ -1871,79 +1468,19 @@
     "components": [
       [ [ "xlframe", 1 ] ],
       [ [ "foot_crank", 1 ] ],
-      [ [ "spring", 1 ] ],
       [ [ "sheet_metal_small", 12 ] ],
       [ [ "pipe", 6 ] ],
       [ [ "chain", 1 ] ],
       [ [ "motor_small", 1 ] ],
       [ [ "power_supply", 2 ] ],
       [ [ "cable", 4 ] ],
-      [ [ "spring", 6 ] ],
+      [ [ "spring", 7 ] ],
       [ [ "scrap", 2 ] ]
     ]
   },
   {
     "type": "recipe",
-    "result": "helsing",
-    "category": "CC_WEAPON",
-    "subcategory": "CSC_WEAPON_RANGED",
-    "skill_used": "mechanics",
-    "skills_required": [ "gun", 3 ],
-    "difficulty": 8,
-    "time": "3 h",
-    "autolearn": true,
-    "using": [ [ "welding_standard", 30 ] ],
-    "qualities": [ { "id": "SAW_M_FINE", "level": 1 }, { "id": "SCREW_FINE", "level": 1 }, { "id": "WRENCH_FINE", "level": 1 } ],
-    "components": [
-      [ [ "pipe", 8 ] ],
-      [ [ "duct_tape", 100 ], [ "superglue", 1 ] ],
-      [ [ "2x4", 1 ], [ "stick", 1 ] ],
-      [ [ "metal_tank_little", 1 ] ],
-      [ [ "steel_chunk", 3 ], [ "scrap", 9 ] ]
-    ]
-  },
-  {
-    "type": "recipe",
-    "result": "pneumatic_shotgun",
-    "category": "CC_WEAPON",
-    "subcategory": "CSC_WEAPON_RANGED",
-    "skill_used": "mechanics",
-    "skills_required": [ "gun", 3 ],
-    "difficulty": 7,
-    "time": "3 h",
-    "autolearn": true,
-    "using": [ [ "welding_standard", 30 ] ],
-    "qualities": [ { "id": "SAW_M_FINE", "level": 1 }, { "id": "SCREW_FINE", "level": 1 }, { "id": "WRENCH_FINE", "level": 1 } ],
-    "components": [
-      [ [ "pipe", 3 ] ],
-      [ [ "duct_tape", 100 ], [ "superglue", 1 ] ],
-      [ [ "2x4", 1 ], [ "stick", 1 ] ],
-      [ [ "metal_tank_little", 1 ] ],
-      [ [ "steel_chunk", 4 ], [ "scrap", 12 ] ]
-    ]
-  },
-  {
-    "type": "recipe",
-    "result": "mininuke_launcher",
-    "category": "CC_WEAPON",
-    "subcategory": "CSC_WEAPON_RANGED",
-    "skill_used": "mechanics",
-    "skills_required": [ "gun", 3 ],
-    "difficulty": 8,
-    "time": "4 h",
-    "book_learn": [ [ "recipe_mininuke_launch", 5 ] ],
-    "using": [ [ "welding_standard", 20 ] ],
-    "qualities": [ { "id": "SAW_M_FINE", "level": 1 }, { "id": "SCREW_FINE", "level": 1 }, { "id": "WRENCH_FINE", "level": 1 } ],
-    "components": [
-      [ [ "pipe", 2 ], [ "rebar", 2 ] ],
-      [ [ "duct_tape", 200 ] ],
-      [ [ "2x4", 2 ], [ "stick", 2 ] ],
-      [ [ "spring", 2 ] ],
-      [ [ "steel_chunk", 3 ], [ "scrap", 9 ] ]
-    ]
-  },
-  {
-    "type": "recipe",
+    "activity_level": "BRISK_EXERCISE",
     "result": "ashot",
     "category": "CC_WEAPON",
     "subcategory": "CSC_WEAPON_RANGED",
@@ -1953,43 +1490,13 @@
     "time": "3 h",
     "autolearn": true,
     "book_learn": [ [ "textbook_fabrication", 2 ] ],
-    "qualities": [
-      { "id": "SAW_M_FINE", "level": 1 },
-      { "id": "SCREW_FINE", "level": 1 },
-      { "id": "WRENCH_FINE", "level": 1 },
-      { "id": "GLARE", "level": 2 }
-    ],
-    "tools": [ [ [ "oxy_torch", 20 ], [ "welder", 100 ], [ "welder_crude", 150 ], [ "toolset", 150 ] ] ],
+    "qualities": [ { "id": "SAW_M_FINE", "level": 1 }, { "id": "SCREW_FINE", "level": 1 }, { "id": "WRENCH_FINE", "level": 1 } ],
+    "using": [ [ "welding_standard", 10 ] ],
     "components": [ [ [ "pipe", 1 ] ], [ [ "2x4", 1 ], [ "stick", 1 ] ], [ [ "scrap", 2 ] ] ]
   },
   {
     "type": "recipe",
-    "result": "rebar_rifle",
-    "category": "CC_WEAPON",
-    "subcategory": "CSC_WEAPON_RANGED",
-    "skill_used": "electronics",
-    "skills_required": [ "mechanics", 6 ],
-    "difficulty": 9,
-    "time": "6 h",
-    "autolearn": true,
-    "qualities": [
-      { "id": "SAW_M_FINE", "level": 1 },
-      { "id": "SCREW_FINE", "level": 1 },
-      { "id": "WRENCH_FINE", "level": 1 },
-      { "id": "GLARE", "level": 2 }
-    ],
-    "tools": [ [ [ "oxy_torch", 60 ], [ "welder", 300 ], [ "welder_crude", 450 ], [ "toolset", 450 ] ] ],
-    "components": [
-      [ [ "cable", 80 ] ],
-      [ [ "2x4", 1 ], [ "stick", 1 ] ],
-      [ [ "power_supply", 2 ] ],
-      [ [ "steel_chunk", 3 ], [ "scrap", 18 ] ],
-      [ [ "rebar", 1 ], [ "pipe", 1 ] ],
-      [ [ "e_scrap", 20 ] ]
-    ]
-  },
-  {
-    "type": "recipe",
+    "activity_level": "fake",
     "result": "knuckle_steel",
     "category": "CC_WEAPON",
     "subcategory": "CSC_WEAPON_BASHING",
@@ -2003,6 +1510,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "fake",
     "result": "knuckle_katar",
     "category": "CC_WEAPON",
     "subcategory": "CSC_WEAPON_CUTTING",
@@ -2016,6 +1524,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "fake",
     "result": "knuckle_nail",
     "category": "CC_WEAPON",
     "subcategory": "CSC_WEAPON_BASHING",
@@ -2029,6 +1538,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "fake",
     "result": "cestus",
     "category": "CC_WEAPON",
     "subcategory": "CSC_WEAPON_BASHING",
@@ -2042,6 +1552,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "BRISK_EXERCISE",
     "result": "hatchet",
     "category": "CC_WEAPON",
     "subcategory": "CSC_WEAPON_CUTTING",
@@ -2049,6 +1560,10 @@
     "difficulty": 6,
     "time": "5 h",
     "autolearn": true,
+    "proficiencies": [
+      { "proficiency": "prof_blacksmithing", "required": false, "time_multiplier": 3.0 },
+      { "proficiency": "prof_bladesmith", "required": false, "time_multiplier": 2.5 }
+    ],
     "using": [ [ "blacksmithing_standard", 4 ], [ "steel_standard", 1 ] ],
     "qualities": [ { "id": "CHISEL", "level": 3 } ],
     "tools": [ [ [ "swage", -1 ] ] ],
@@ -2056,6 +1571,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "BRISK_EXERCISE",
     "result": "crash_axe",
     "category": "CC_WEAPON",
     "subcategory": "CSC_WEAPON_CUTTING",
@@ -2063,6 +1579,10 @@
     "difficulty": 6,
     "time": "6 h",
     "book_learn": [ [ "textbook_fireman", 6 ] ],
+    "proficiencies": [
+      { "proficiency": "prof_blacksmithing", "required": false, "time_multiplier": 3.0 },
+      { "proficiency": "prof_bladesmith", "required": false, "time_multiplier": 2.5 }
+    ],
     "using": [ [ "blacksmithing_standard", 4 ], [ "steel_standard", 1 ] ],
     "qualities": [ { "id": "CHISEL", "level": 3 } ],
     "tools": [ [ [ "crucible", -1 ], [ "crucible_clay", -1 ] ] ],
@@ -2070,6 +1590,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "BRISK_EXERCISE",
     "result": "machete",
     "category": "CC_WEAPON",
     "subcategory": "CSC_WEAPON_CUTTING",
@@ -2077,6 +1598,10 @@
     "difficulty": 4,
     "time": "6 h",
     "autolearn": true,
+    "proficiencies": [
+      { "proficiency": "prof_blacksmithing", "required": false, "time_multiplier": 3.0 },
+      { "proficiency": "prof_bladesmith", "required": false, "time_multiplier": 2.5 }
+    ],
     "using": [ [ "blacksmithing_standard", 8 ], [ "steel_standard", 2 ] ],
     "qualities": [ { "id": "CHISEL", "level": 3 } ],
     "tools": [ [ [ "swage", -1 ] ] ],
@@ -2084,13 +1609,19 @@
   },
   {
     "type": "recipe",
+    "activity_level": "BRISK_EXERCISE",
     "result": "knife_butcher",
     "category": "CC_WEAPON",
     "subcategory": "CSC_WEAPON_CUTTING",
     "skill_used": "fabrication",
     "difficulty": 4,
     "time": "4 h",
+    "reversible": true,
     "autolearn": true,
+    "proficiencies": [
+      { "proficiency": "prof_blacksmithing", "required": false, "time_multiplier": 3.0 },
+      { "proficiency": "prof_bladesmith", "required": false, "time_multiplier": 2.5 }
+    ],
     "using": [ [ "blacksmithing_standard", 4 ], [ "steel_standard", 1 ] ],
     "qualities": [ { "id": "CHISEL", "level": 3 } ],
     "tools": [ [ [ "swage", -1 ] ] ],
@@ -2098,12 +1629,17 @@
   },
   {
     "type": "recipe",
+    "activity_level": "BRISK_EXERCISE",
     "result": "knife_combat",
     "category": "CC_WEAPON",
     "subcategory": "CSC_WEAPON_PIERCING",
     "skill_used": "fabrication",
     "difficulty": 6,
     "time": "6 h",
+    "proficiencies": [
+      { "proficiency": "prof_blacksmithing", "required": false, "time_multiplier": 3.0 },
+      { "proficiency": "prof_bladesmith", "required": false, "time_multiplier": 2.5 }
+    ],
     "using": [ [ "blacksmithing_standard", 4 ], [ "steel_standard", 1 ] ],
     "book_learn": [ [ "manual_knives", 4 ], [ "recipe_melee", 5 ] ],
     "qualities": [ { "id": "CHISEL", "level": 3 } ],
@@ -2112,6 +1648,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "BRISK_EXERCISE",
     "result": "knife_trench",
     "category": "CC_WEAPON",
     "subcategory": "CSC_WEAPON_PIERCING",
@@ -2119,6 +1656,10 @@
     "difficulty": 6,
     "time": "6 h 30 m",
     "book_learn": [ [ "manual_knives", 4 ], [ "recipe_melee", 5 ] ],
+    "proficiencies": [
+      { "proficiency": "prof_blacksmithing", "required": false, "time_multiplier": 3.0 },
+      { "proficiency": "prof_bladesmith", "required": false, "time_multiplier": 2.5 }
+    ],
     "using": [ [ "blacksmithing_standard", 8 ], [ "steel_standard", 2 ] ],
     "qualities": [ { "id": "CHISEL", "level": 3 } ],
     "tools": [ [ [ "swage", -1 ] ] ],
@@ -2126,6 +1667,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "BRISK_EXERCISE",
     "result": "knife_hunting",
     "category": "CC_WEAPON",
     "subcategory": "CSC_WEAPON_CUTTING",
@@ -2133,6 +1675,10 @@
     "difficulty": 4,
     "time": "6 h 30 m",
     "book_learn": [ [ "manual_knives", 3 ], [ "recipe_melee", 4 ] ],
+    "proficiencies": [
+      { "proficiency": "prof_blacksmithing", "required": false, "time_multiplier": 3.0 },
+      { "proficiency": "prof_bladesmith", "required": false, "time_multiplier": 2.5 }
+    ],
     "using": [ [ "blacksmithing_standard", 4 ], [ "steel_standard", 1 ] ],
     "qualities": [ { "id": "CHISEL", "level": 3 } ],
     "tools": [ [ [ "swage", -1 ] ] ],
@@ -2140,6 +1686,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "BRISK_EXERCISE",
     "result": "kukri",
     "category": "CC_WEAPON",
     "subcategory": "CSC_WEAPON_CUTTING",
@@ -2147,6 +1694,10 @@
     "difficulty": 8,
     "time": "6 h",
     "book_learn": [ [ "manual_knives", 9 ], [ "textbook_weapeast", 8 ] ],
+    "proficiencies": [
+      { "proficiency": "prof_blacksmithing", "required": false, "time_multiplier": 3.0 },
+      { "proficiency": "prof_bladesmith", "required": false, "time_multiplier": 2.5 }
+    ],
     "using": [ [ "blacksmithing_standard", 4 ], [ "steel_standard", 1 ] ],
     "qualities": [ { "id": "CHISEL", "level": 3 } ],
     "tools": [ [ [ "swage", -1 ] ] ],
@@ -2154,6 +1705,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "BRISK_EXERCISE",
     "result": "throwing_knife",
     "category": "CC_WEAPON",
     "subcategory": "CSC_WEAPON_RANGED",
@@ -2161,12 +1713,17 @@
     "difficulty": 4,
     "time": "4 h",
     "autolearn": true,
+    "proficiencies": [
+      { "proficiency": "prof_blacksmithing", "required": false, "time_multiplier": 3.0 },
+      { "proficiency": "prof_bladesmith", "required": false, "time_multiplier": 2.5 }
+    ],
     "using": [ [ "blacksmithing_standard", 8 ], [ "steel_tiny", 2 ] ],
     "qualities": [ { "id": "CHISEL", "level": 3 } ],
     "tools": [ [ [ "swage", -1 ] ] ]
   },
   {
     "type": "recipe",
+    "activity_level": "BRISK_EXERCISE",
     "result": "throwing_axe",
     "category": "CC_WEAPON",
     "subcategory": "CSC_WEAPON_RANGED",
@@ -2174,13 +1731,17 @@
     "difficulty": 3,
     "time": "3 h",
     "autolearn": true,
+    "proficiencies": [
+      { "proficiency": "prof_blacksmithing", "required": false, "time_multiplier": 3.0 },
+      { "proficiency": "prof_bladesmith", "required": false, "time_multiplier": 2.5 }
+    ],
     "using": [ [ "blacksmithing_standard", 3 ], [ "steel_tiny", 3 ] ],
     "qualities": [ { "id": "CUT", "level": 1 }, { "id": "CHISEL", "level": 3 } ],
-    "tools": [ [ [ "tongs", -1 ] ] ],
     "components": [ [ [ "2x4", 1 ], [ "stick", 1 ] ] ]
   },
   {
     "type": "recipe",
+    "activity_level": "fake",
     "result": "lawn_dart",
     "category": "CC_WEAPON",
     "subcategory": "CSC_WEAPON_RANGED",
@@ -2195,6 +1756,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "BRISK_EXERCISE",
     "result": "switchblade",
     "category": "CC_WEAPON",
     "subcategory": "CSC_WEAPON_PIERCING",
@@ -2203,6 +1765,10 @@
     "time": "7 h 40 m",
     "autolearn": true,
     "book_learn": [ [ "manual_knives", 5 ], [ "recipe_melee", 5 ] ],
+    "proficiencies": [
+      { "proficiency": "prof_blacksmithing", "required": false, "time_multiplier": 3.0 },
+      { "proficiency": "prof_bladesmith", "required": false, "time_multiplier": 2.5 }
+    ],
     "using": [ [ "blacksmithing_standard", 3 ], [ "steel_tiny", 3 ] ],
     "qualities": [ { "id": "CHISEL", "level": 3 } ],
     "tools": [ [ [ "swage", -1 ] ] ],
@@ -2210,6 +1776,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "BRISK_EXERCISE",
     "result": "diveknife",
     "category": "CC_WEAPON",
     "subcategory": "CSC_WEAPON_CUTTING",
@@ -2218,6 +1785,10 @@
     "time": "6 h",
     "autolearn": true,
     "book_learn": [ [ "manual_knives", 5 ], [ "recipe_melee", 6 ] ],
+    "proficiencies": [
+      { "proficiency": "prof_blacksmithing", "required": false, "time_multiplier": 3.0 },
+      { "proficiency": "prof_bladesmith", "required": false, "time_multiplier": 2.5 }
+    ],
     "using": [ [ "blacksmithing_standard", 2 ], [ "steel_tiny", 2 ] ],
     "qualities": [ { "id": "CHISEL", "level": 3 } ],
     "tools": [ [ [ "swage", -1 ] ] ],
@@ -2225,6 +1796,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "BRISK_EXERCISE",
     "result": "punch_dagger",
     "category": "CC_WEAPON",
     "subcategory": "CSC_WEAPON_PIERCING",
@@ -2233,12 +1805,17 @@
     "time": "1 h 30 m",
     "autolearn": true,
     "book_learn": [ [ "manual_knives", 3 ], [ "recipe_melee", 2 ] ],
+    "proficiencies": [
+      { "proficiency": "prof_blacksmithing", "required": false, "time_multiplier": 3.0 },
+      { "proficiency": "prof_bladesmith", "required": false, "time_multiplier": 2.5 }
+    ],
     "using": [ [ "blacksmithing_standard", 4 ], [ "steel_standard", 1 ] ],
     "qualities": [ { "id": "CHISEL", "level": 3 } ],
     "tools": [ [ [ "swage", -1 ] ] ]
   },
   {
     "type": "recipe",
+    "activity_level": "fake",
     "result": "cs_lajatang_off",
     "category": "CC_WEAPON",
     "subcategory": "CSC_WEAPON_CUTTING",
@@ -2250,6 +1827,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "fake",
     "result": "ecs_lajatang_off",
     "category": "CC_WEAPON",
     "subcategory": "CSC_WEAPON_CUTTING",
@@ -2261,6 +1839,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "BRISK_EXERCISE",
     "result": "fire_ax",
     "category": "CC_WEAPON",
     "subcategory": "CSC_WEAPON_CUTTING",
@@ -2268,6 +1847,10 @@
     "difficulty": 9,
     "time": "7 h",
     "book_learn": [ [ "textbook_fireman", 8 ], [ "textbook_fabrication", 9 ] ],
+    "proficiencies": [
+      { "proficiency": "prof_blacksmithing", "required": false, "time_multiplier": 3.0 },
+      { "proficiency": "prof_bladesmith", "required": false, "time_multiplier": 2.5 }
+    ],
     "using": [ [ "blacksmithing_standard", 16 ], [ "steel_standard", 4 ] ],
     "qualities": [ { "id": "CHISEL", "level": 3 } ],
     "tools": [ [ [ "crucible", -1 ], [ "crucible_clay", -1 ] ] ],
@@ -2275,6 +1858,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "BRISK_EXERCISE",
     "result": "scythe",
     "category": "CC_WEAPON",
     "subcategory": "CSC_WEAPON_CUTTING",
@@ -2282,6 +1866,10 @@
     "difficulty": 6,
     "time": "7 h 40 m",
     "autolearn": true,
+    "proficiencies": [
+      { "proficiency": "prof_blacksmithing", "required": false, "time_multiplier": 3.0 },
+      { "proficiency": "prof_bladesmith", "required": false, "time_multiplier": 2.5 }
+    ],
     "using": [ [ "blacksmithing_standard", 24 ], [ "steel_standard", 6 ] ],
     "qualities": [ { "id": "CHISEL", "level": 3 } ],
     "tools": [ [ [ "swage", -1 ] ] ],
@@ -2289,6 +1877,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "BRISK_EXERCISE",
     "result": "pockknife",
     "category": "CC_WEAPON",
     "subcategory": "CSC_WEAPON_PIERCING",
@@ -2303,6 +1892,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "fake",
     "result": "rock_sock",
     "category": "CC_WEAPON",
     "subcategory": "CSC_WEAPON_BASHING",
@@ -2315,6 +1905,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "fake",
     "result": "tonfa",
     "category": "CC_WEAPON",
     "subcategory": "CSC_WEAPON_BASHING",
@@ -2328,6 +1919,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "fake",
     "result": "tonfa_wood",
     "category": "CC_WEAPON",
     "subcategory": "CSC_WEAPON_BASHING",
@@ -2341,6 +1933,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "fake",
     "result": "shocktonfa_off",
     "category": "CC_WEAPON",
     "subcategory": "CSC_WEAPON_BASHING",
@@ -2362,6 +1955,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "fake",
     "result": "glass_shiv",
     "category": "CC_WEAPON",
     "subcategory": "CSC_WEAPON_CUTTING",
@@ -2375,6 +1969,32 @@
   },
   {
     "type": "recipe",
+    "activity_level": "fake",
+    "result": "bone_knife",
+    "category": "CC_WEAPON",
+    "subcategory": "CSC_WEAPON_PIERCING",
+    "skill_used": "survival",
+    "skills_required": [ "survival", 1 ],
+    "time": "2 m",
+    "autolearn": true,
+    "qualities": [ { "id": "HAMMER", "level": 1 } ],
+    "components": [ [ [ "bone_sturdy", 1, "LIST" ] ] ]
+  },
+  {
+    "type": "recipe",
+    "activity_level": "fake",
+    "result": "sharp_toothbrush",
+    "category": "CC_WEAPON",
+    "subcategory": "CSC_WEAPON_PIERCING",
+    "skill_used": "fabrication",
+    "time": "30 s",
+    "autolearn": true,
+    "qualities": [ { "id": "HAMMER", "level": 1 }, { "id": "GRIND", "level": 1 } ],
+    "components": [ [ [ "toothbrush_plain", 1 ], [ "hairbrush", 1 ], [ "comb_pocket", 1 ], [ "plastic_chunk", 1 ] ] ]
+  },
+  {
+    "type": "recipe",
+    "activity_level": "fake",
     "result": "sword_crude",
     "category": "CC_WEAPON",
     "subcategory": "CSC_WEAPON_CUTTING",
@@ -2387,13 +2007,18 @@
   },
   {
     "type": "recipe",
+    "activity_level": "BRISK_EXERCISE",
     "result": "cutlass",
     "category": "CC_WEAPON",
     "subcategory": "CSC_WEAPON_CUTTING",
     "skill_used": "fabrication",
     "difficulty": 7,
     "time": "6 h 40 m",
-    "book_learn": [ [ "textbook_weapwest", 6 ], [ "scots_cookbook", 8 ] ],
+    "book_learn": [ [ "textbook_weapwest", 6 ] ],
+    "proficiencies": [
+      { "proficiency": "prof_blacksmithing", "required": false, "time_multiplier": 3.0 },
+      { "proficiency": "prof_bladesmith", "required": false, "time_multiplier": 2.5 }
+    ],
     "using": [ [ "blacksmithing_standard", 12 ], [ "steel_standard", 3 ] ],
     "qualities": [ { "id": "CHISEL", "level": 3 } ],
     "tools": [ [ [ "swage", -1 ] ] ],
@@ -2401,13 +2026,18 @@
   },
   {
     "type": "recipe",
+    "activity_level": "BRISK_EXERCISE",
     "result": "arming_sword",
     "category": "CC_WEAPON",
     "subcategory": "CSC_WEAPON_CUTTING",
     "skill_used": "fabrication",
     "difficulty": 8,
     "time": "8 h",
-    "book_learn": [ [ "textbook_weapwest", 7 ], [ "scots_cookbook", 9 ] ],
+    "book_learn": [ [ "textbook_weapwest", 7 ] ],
+    "proficiencies": [
+      { "proficiency": "prof_blacksmithing", "required": false, "time_multiplier": 3.0 },
+      { "proficiency": "prof_bladesmith", "required": false, "time_multiplier": 2.5 }
+    ],
     "using": [ [ "blacksmithing_standard", 12 ], [ "steel_standard", 3 ] ],
     "qualities": [ { "id": "CHISEL", "level": 3 } ],
     "tools": [ [ [ "swage", -1 ] ] ],
@@ -2415,13 +2045,18 @@
   },
   {
     "type": "recipe",
+    "activity_level": "BRISK_EXERCISE",
     "result": "broadsword",
     "category": "CC_WEAPON",
     "subcategory": "CSC_WEAPON_CUTTING",
     "skill_used": "fabrication",
     "difficulty": 8,
     "time": "7 h",
-    "book_learn": [ [ "textbook_weapwest", 7 ], [ "scots_cookbook", 9 ] ],
+    "book_learn": [ [ "textbook_weapwest", 7 ] ],
+    "proficiencies": [
+      { "proficiency": "prof_blacksmithing", "required": false, "time_multiplier": 3.0 },
+      { "proficiency": "prof_bladesmith", "required": false, "time_multiplier": 2.5 }
+    ],
     "using": [ [ "blacksmithing_standard", 12 ], [ "steel_standard", 3 ] ],
     "qualities": [ { "id": "CHISEL", "level": 3 } ],
     "tools": [ [ [ "swage", -1 ] ] ],
@@ -2429,13 +2064,18 @@
   },
   {
     "type": "recipe",
+    "activity_level": "BRISK_EXERCISE",
     "result": "battleaxe",
     "category": "CC_WEAPON",
     "subcategory": "CSC_WEAPON_CUTTING",
     "skill_used": "fabrication",
     "difficulty": 8,
     "time": "8 h",
-    "book_learn": [ [ "textbook_weapwest", 8 ], [ "recipe_melee", 7 ], [ "scots_cookbook", 9 ] ],
+    "book_learn": [ [ "textbook_weapwest", 8 ], [ "recipe_melee", 7 ] ],
+    "proficiencies": [
+      { "proficiency": "prof_blacksmithing", "required": false, "time_multiplier": 3.0 },
+      { "proficiency": "prof_bladesmith", "required": false, "time_multiplier": 2.5 }
+    ],
     "using": [ [ "blacksmithing_standard", 12 ], [ "steel_standard", 3 ] ],
     "qualities": [ { "id": "CHISEL", "level": 3 } ],
     "tools": [ [ [ "swage", -1 ] ] ],
@@ -2443,6 +2083,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "BRISK_EXERCISE",
     "result": "warhammer",
     "category": "CC_WEAPON",
     "subcategory": "CSC_WEAPON_BASHING",
@@ -2450,6 +2091,10 @@
     "difficulty": 7,
     "time": "8 h",
     "book_learn": [ [ "textbook_weapwest", 8 ], [ "recipe_melee", 6 ] ],
+    "proficiencies": [
+      { "proficiency": "prof_blacksmithing", "required": false, "time_multiplier": 3.0 },
+      { "proficiency": "prof_bladesmith", "required": false, "time_multiplier": 2.5 }
+    ],
     "using": [ [ "blacksmithing_standard", 8 ], [ "steel_standard", 2 ] ],
     "qualities": [ { "id": "CHISEL", "level": 3 } ],
     "tools": [ [ [ "swage", -1 ] ] ],
@@ -2457,6 +2102,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "BRISK_EXERCISE",
     "result": "rapier",
     "category": "CC_WEAPON",
     "subcategory": "CSC_WEAPON_PIERCING",
@@ -2464,6 +2110,10 @@
     "difficulty": 9,
     "time": "7 h",
     "book_learn": [ [ "textbook_weapwest", 8 ] ],
+    "proficiencies": [
+      { "proficiency": "prof_blacksmithing", "required": false, "time_multiplier": 3.0 },
+      { "proficiency": "prof_bladesmith", "required": false, "time_multiplier": 2.5 }
+    ],
     "using": [ [ "blacksmithing_standard", 8 ], [ "steel_standard", 2 ] ],
     "qualities": [ { "id": "CHISEL", "level": 3 } ],
     "tools": [ [ [ "swage", -1 ] ] ],
@@ -2471,6 +2121,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "BRISK_EXERCISE",
     "result": "fencing_foil_sharpened",
     "category": "CC_WEAPON",
     "subcategory": "CSC_WEAPON_PIERCING",
@@ -2483,6 +2134,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "BRISK_EXERCISE",
     "result": "fencing_epee_sharpened",
     "category": "CC_WEAPON",
     "subcategory": "CSC_WEAPON_PIERCING",
@@ -2495,6 +2147,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "BRISK_EXERCISE",
     "result": "fencing_sabre_sharpened",
     "category": "CC_WEAPON",
     "subcategory": "CSC_WEAPON_PIERCING",
@@ -2507,6 +2160,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "fake",
     "result": "shock_foil",
     "category": "CC_WEAPON",
     "subcategory": "CSC_WEAPON_PIERCING",
@@ -2528,6 +2182,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "fake",
     "result": "shock_epee",
     "category": "CC_WEAPON",
     "subcategory": "CSC_WEAPON_PIERCING",
@@ -2549,6 +2204,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "fake",
     "result": "shock_sabre",
     "category": "CC_WEAPON",
     "subcategory": "CSC_WEAPON_PIERCING",
@@ -2570,6 +2226,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "BRISK_EXERCISE",
     "result": "jian",
     "category": "CC_WEAPON",
     "subcategory": "CSC_WEAPON_CUTTING",
@@ -2577,6 +2234,10 @@
     "difficulty": 8,
     "time": "8 h",
     "book_learn": [ [ "textbook_armschina", 7 ] ],
+    "proficiencies": [
+      { "proficiency": "prof_blacksmithing", "required": false, "time_multiplier": 3.0 },
+      { "proficiency": "prof_bladesmith", "required": false, "time_multiplier": 2.5 }
+    ],
     "using": [ [ "blacksmithing_standard", 12 ], [ "steel_standard", 3 ] ],
     "qualities": [ { "id": "CHISEL", "level": 3 } ],
     "tools": [ [ [ "swage", -1 ] ] ],
@@ -2584,6 +2245,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "BRISK_EXERCISE",
     "result": "scimitar",
     "category": "CC_WEAPON",
     "subcategory": "CSC_WEAPON_CUTTING",
@@ -2591,6 +2253,10 @@
     "difficulty": 8,
     "time": "7 h",
     "book_learn": [ [ "textbook_armschina", 7 ] ],
+    "proficiencies": [
+      { "proficiency": "prof_blacksmithing", "required": false, "time_multiplier": 3.0 },
+      { "proficiency": "prof_bladesmith", "required": false, "time_multiplier": 2.5 }
+    ],
     "using": [ [ "blacksmithing_standard", 12 ], [ "steel_standard", 3 ] ],
     "qualities": [ { "id": "CHISEL", "level": 3 } ],
     "tools": [ [ [ "swage", -1 ] ] ],
@@ -2598,13 +2264,18 @@
   },
   {
     "type": "recipe",
+    "activity_level": "BRISK_EXERCISE",
     "result": "estoc",
     "category": "CC_WEAPON",
     "subcategory": "CSC_WEAPON_PIERCING",
     "skill_used": "fabrication",
     "difficulty": 8,
     "time": "8 h 10 m",
-    "book_learn": [ [ "textbook_weapwest", 7 ], [ "scots_cookbook", 9 ] ],
+    "book_learn": [ [ "textbook_weapwest", 7 ] ],
+    "proficiencies": [
+      { "proficiency": "prof_blacksmithing", "required": false, "time_multiplier": 3.0 },
+      { "proficiency": "prof_bladesmith", "required": false, "time_multiplier": 2.5 }
+    ],
     "using": [ [ "blacksmithing_standard", 16 ], [ "steel_standard", 4 ] ],
     "qualities": [ { "id": "CHISEL", "level": 3 } ],
     "tools": [ [ [ "swage", -1 ] ] ],
@@ -2612,13 +2283,18 @@
   },
   {
     "type": "recipe",
+    "activity_level": "BRISK_EXERCISE",
     "result": "longsword",
     "category": "CC_WEAPON",
     "subcategory": "CSC_WEAPON_CUTTING",
     "skill_used": "fabrication",
     "difficulty": 8,
     "time": "7 h",
-    "book_learn": [ [ "textbook_weapwest", 7 ], [ "scots_cookbook", 9 ] ],
+    "book_learn": [ [ "textbook_weapwest", 7 ] ],
+    "proficiencies": [
+      { "proficiency": "prof_blacksmithing", "required": false, "time_multiplier": 3.0 },
+      { "proficiency": "prof_bladesmith", "required": false, "time_multiplier": 2.5 }
+    ],
     "using": [ [ "blacksmithing_standard", 16 ], [ "steel_standard", 4 ] ],
     "qualities": [ { "id": "CHISEL", "level": 3 } ],
     "tools": [ [ [ "swage", -1 ] ] ],
@@ -2626,6 +2302,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "BRISK_EXERCISE",
     "result": "zweihander",
     "category": "CC_WEAPON",
     "subcategory": "CSC_WEAPON_CUTTING",
@@ -2633,6 +2310,10 @@
     "difficulty": 9,
     "time": "8 h",
     "book_learn": [ [ "textbook_weapwest", 8 ], [ "scots_cookbook", 10 ] ],
+    "proficiencies": [
+      { "proficiency": "prof_blacksmithing", "required": false, "time_multiplier": 3.0 },
+      { "proficiency": "prof_bladesmith", "required": false, "time_multiplier": 2.5 }
+    ],
     "using": [ [ "blacksmithing_standard", 16 ], [ "steel_standard", 4 ] ],
     "qualities": [ { "id": "CHISEL", "level": 3 } ],
     "tools": [ [ [ "swage", -1 ] ] ],
@@ -2640,6 +2321,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "fake",
     "result": "bokken",
     "byproducts": [ [ "splinter", 30 ] ],
     "category": "CC_WEAPON",
@@ -2649,16 +2331,23 @@
     "time": "5 h 40 m",
     "book_learn": [ [ "textbook_weapeast", 6 ] ],
     "qualities": [ { "id": "SAW_W", "level": 1 }, { "id": "CUT", "level": 1 } ],
-    "//": "Bokken is a single piece of wood, and the heavy stick just isn't large enough.",
+    "//": "Bokken is a single piece of wood, and the stout branch just isn't large enough.",
     "components": [
       [ [ "log", 1 ] ],
-      [ [ "any_tallow", 2, "LIST" ], [ "cooking_oil", 16 ], [ "cooking_oil2", 16 ], [ "lamp_oil", 250 ] ],
+      [
+        [ "any_tallow", 2, "LIST" ],
+        [ "cooking_oil", 16 ],
+        [ "cooking_oil2", 16 ],
+        [ "lamp_oil", 250 ],
+        [ "motor_oil", 250 ]
+      ],
       [ [ "fur", 2 ], [ "leather", 2 ] ],
       [ [ "duct_tape", 20 ], [ "filament", 20, "LIST" ] ]
     ]
   },
   {
     "type": "recipe",
+    "activity_level": "BRISK_EXERCISE",
     "result": "tanto",
     "category": "CC_WEAPON",
     "subcategory": "CSC_WEAPON_PIERCING",
@@ -2666,6 +2355,10 @@
     "difficulty": 7,
     "time": "6 h 20 m",
     "book_learn": [ [ "textbook_weapeast", 6 ], [ "manual_knives", 7 ], [ "recipe_melee", 8 ] ],
+    "proficiencies": [
+      { "proficiency": "prof_blacksmithing", "required": false, "time_multiplier": 3.0 },
+      { "proficiency": "prof_bladesmith", "required": false, "time_multiplier": 2.5 }
+    ],
     "using": [ [ "blacksmithing_standard", 4 ], [ "steel_standard", 1 ] ],
     "qualities": [ { "id": "CHISEL", "level": 3 } ],
     "tools": [ [ [ "swage", -1 ] ] ],
@@ -2673,6 +2366,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "BRISK_EXERCISE",
     "result": "wakizashi",
     "category": "CC_WEAPON",
     "subcategory": "CSC_WEAPON_CUTTING",
@@ -2680,6 +2374,10 @@
     "difficulty": 8,
     "time": "7 h",
     "book_learn": [ [ "textbook_weapeast", 7 ] ],
+    "proficiencies": [
+      { "proficiency": "prof_blacksmithing", "required": false, "time_multiplier": 3.0 },
+      { "proficiency": "prof_bladesmith", "required": false, "time_multiplier": 2.5 }
+    ],
     "using": [ [ "blacksmithing_standard", 8 ], [ "steel_standard", 2 ] ],
     "qualities": [ { "id": "CHISEL", "level": 3 } ],
     "tools": [ [ [ "swage", -1 ] ] ],
@@ -2687,6 +2385,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "BRISK_EXERCISE",
     "result": "katana",
     "category": "CC_WEAPON",
     "subcategory": "CSC_WEAPON_CUTTING",
@@ -2694,6 +2393,10 @@
     "difficulty": 9,
     "time": "8 h",
     "book_learn": [ [ "textbook_weapeast", 8 ] ],
+    "proficiencies": [
+      { "proficiency": "prof_blacksmithing", "required": false, "time_multiplier": 3.0 },
+      { "proficiency": "prof_bladesmith", "required": false, "time_multiplier": 2.5 }
+    ],
     "using": [ [ "blacksmithing_standard", 8 ], [ "steel_standard", 2 ] ],
     "qualities": [ { "id": "CHISEL", "level": 3 } ],
     "tools": [ [ [ "swage", -1 ] ] ],
@@ -2701,6 +2404,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "BRISK_EXERCISE",
     "result": "nodachi",
     "category": "CC_WEAPON",
     "subcategory": "CSC_WEAPON_CUTTING",
@@ -2708,6 +2412,10 @@
     "difficulty": 10,
     "time": "9 h 40 m",
     "book_learn": [ [ "textbook_weapeast", 8 ] ],
+    "proficiencies": [
+      { "proficiency": "prof_blacksmithing", "required": false, "time_multiplier": 3.0 },
+      { "proficiency": "prof_bladesmith", "required": false, "time_multiplier": 2.5 }
+    ],
     "using": [ [ "blacksmithing_standard", 20 ], [ "steel_standard", 5 ] ],
     "qualities": [ { "id": "CHISEL", "level": 3 } ],
     "tools": [ [ [ "swage", -1 ] ] ],
@@ -2715,6 +2423,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "BRISK_EXERCISE",
     "result": "mace",
     "category": "CC_WEAPON",
     "subcategory": "CSC_WEAPON_BASHING",
@@ -2728,6 +2437,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "BRISK_EXERCISE",
     "result": "morningstar",
     "category": "CC_WEAPON",
     "subcategory": "CSC_WEAPON_BASHING",
@@ -2742,6 +2452,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "BRISK_EXERCISE",
     "result": "pike",
     "category": "CC_WEAPON",
     "subcategory": "CSC_WEAPON_PIERCING",
@@ -2749,13 +2460,18 @@
     "difficulty": 7,
     "time": "6 h",
     "book_learn": [ [ "textbook_weapwest", 6 ] ],
+    "proficiencies": [
+      { "proficiency": "prof_blacksmithing", "required": false, "time_multiplier": 3.0 },
+      { "proficiency": "prof_bladesmith", "required": false, "time_multiplier": 2.5 }
+    ],
     "using": [ [ "blacksmithing_standard", 8 ], [ "steel_standard", 2 ] ],
     "qualities": [ { "id": "CHISEL", "level": 3 } ],
     "tools": [ [ [ "swage", -1 ] ] ],
-    "components": [ [ [ "stick_long", 1 ] ], [ [ "fur", 2 ], [ "leather", 2 ] ] ]
+    "components": [ [ [ "long_pole", 1 ] ], [ [ "fur", 2 ], [ "leather", 2 ] ] ]
   },
   {
     "type": "recipe",
+    "activity_level": "fake",
     "result": "q_staff",
     "category": "CC_WEAPON",
     "subcategory": "CSC_WEAPON_BASHING",
@@ -2768,6 +2484,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "BRISK_EXERCISE",
     "result": "i_staff",
     "category": "CC_WEAPON",
     "subcategory": "CSC_WEAPON_BASHING",
@@ -2781,6 +2498,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "BRISK_EXERCISE",
     "result": "bagh_nakha",
     "category": "CC_WEAPON",
     "subcategory": "CSC_WEAPON_CUTTING",
@@ -2794,6 +2512,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "fake",
     "result": "shock_staff",
     "category": "CC_WEAPON",
     "subcategory": "CSC_WEAPON_BASHING",
@@ -2809,6 +2528,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "fake",
     "result": "lajatang",
     "category": "CC_WEAPON",
     "subcategory": "CSC_WEAPON_CUTTING",
@@ -2820,6 +2540,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "fake",
     "result": "huge_crossbow",
     "category": "CC_WEAPON",
     "subcategory": "CSC_WEAPON_RANGED",
@@ -2848,6 +2569,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "fake",
     "result": "rep_crossbow",
     "category": "CC_WEAPON",
     "subcategory": "CSC_WEAPON_RANGED",
@@ -2862,6 +2584,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "fake",
     "result": "ugl_buttstock",
     "category": "CC_WEAPON",
     "skill_used": "fabrication",
@@ -2874,6 +2597,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "fake",
     "result": "glass_macuahuitl",
     "category": "CC_WEAPON",
     "subcategory": "CSC_WEAPON_CUTTING",
@@ -2889,20 +2613,7 @@
   },
   {
     "type": "recipe",
-    "result": "laser_cannon",
-    "category": "CC_WEAPON",
-    "subcategory": "CSC_WEAPON_RANGED",
-    "skill_used": "electronics",
-    "skills_required": [ "gun", 1 ],
-    "difficulty": 5,
-    "time": "30 m",
-    "reversible": true,
-    "autolearn": true,
-    "qualities": [ { "id": "SAW_M_FINE", "level": 1 }, { "id": "SCREW_FINE", "level": 1 } ],
-    "components": [ [ [ "cerberus_laser", 1 ] ], [ [ "battery_ups", 1 ] ], [ [ "cable", 15 ] ] ]
-  },
-  {
-    "type": "recipe",
+    "activity_level": "BRISK_EXERCISE",
     "result": "knife_steak",
     "category": "CC_WEAPON",
     "subcategory": "CSC_WEAPON_PIERCING",
@@ -2910,12 +2621,17 @@
     "difficulty": 3,
     "time": "1 h",
     "autolearn": true,
+    "proficiencies": [
+      { "proficiency": "prof_blacksmithing", "required": false, "time_multiplier": 3.0 },
+      { "proficiency": "prof_bladesmith", "required": false, "time_multiplier": 2.5 }
+    ],
     "using": [ [ "blacksmithing_standard", 2 ], [ "steel_tiny", 2 ] ],
     "qualities": [ { "id": "CHISEL", "level": 3 } ],
     "tools": [ [ [ "swage", -1 ] ] ]
   },
   {
     "type": "recipe",
+    "activity_level": "BRISK_EXERCISE",
     "result": "knife_rambo",
     "category": "CC_WEAPON",
     "subcategory": "CSC_WEAPON_PIERCING",
@@ -2923,12 +2639,17 @@
     "difficulty": 6,
     "time": "3 h",
     "autolearn": true,
+    "proficiencies": [
+      { "proficiency": "prof_blacksmithing", "required": false, "time_multiplier": 3.0 },
+      { "proficiency": "prof_bladesmith", "required": false, "time_multiplier": 2.5 }
+    ],
     "using": [ [ "blacksmithing_standard", 4 ], [ "steel_standard", 1 ] ],
     "qualities": [ { "id": "CHISEL", "level": 3 } ],
     "tools": [ [ [ "swage", -1 ] ] ]
   },
   {
     "type": "recipe",
+    "activity_level": "BRISK_EXERCISE",
     "result": "qiang",
     "category": "CC_WEAPON",
     "subcategory": "CSC_WEAPON_PIERCING",
@@ -2936,6 +2657,10 @@
     "difficulty": 7,
     "time": "7 h 40 m",
     "book_learn": [ [ "textbook_armschina", 6 ] ],
+    "proficiencies": [
+      { "proficiency": "prof_blacksmithing", "required": false, "time_multiplier": 3.0 },
+      { "proficiency": "prof_bladesmith", "required": false, "time_multiplier": 2.5 }
+    ],
     "using": [ [ "blacksmithing_standard", 4 ], [ "steel_standard", 1 ] ],
     "qualities": [ { "id": "CHISEL", "level": 3 } ],
     "tools": [ [ [ "swage", -1 ] ] ],
@@ -2943,6 +2668,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "BRISK_EXERCISE",
     "result": "halberd",
     "category": "CC_WEAPON",
     "subcategory": "CSC_WEAPON_CUTTING",
@@ -2950,6 +2676,10 @@
     "difficulty": 7,
     "time": "6 h",
     "book_learn": [ [ "textbook_weapwest", 6 ] ],
+    "proficiencies": [
+      { "proficiency": "prof_blacksmithing", "required": false, "time_multiplier": 3.0 },
+      { "proficiency": "prof_bladesmith", "required": false, "time_multiplier": 2.5 }
+    ],
     "using": [ [ "blacksmithing_standard", 12 ], [ "steel_standard", 3 ] ],
     "qualities": [ { "id": "CHISEL", "level": 3 } ],
     "tools": [ [ [ "swage", -1 ] ] ],
@@ -2957,6 +2687,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "BRISK_EXERCISE",
     "result": "glaive",
     "category": "CC_WEAPON",
     "subcategory": "CSC_WEAPON_CUTTING",
@@ -2964,6 +2695,10 @@
     "difficulty": 7,
     "time": "7 h 40 m",
     "book_learn": [ [ "textbook_weapwest", 6 ] ],
+    "proficiencies": [
+      { "proficiency": "prof_blacksmithing", "required": false, "time_multiplier": 3.0 },
+      { "proficiency": "prof_bladesmith", "required": false, "time_multiplier": 2.5 }
+    ],
     "using": [ [ "blacksmithing_standard", 8 ], [ "steel_standard", 2 ] ],
     "qualities": [ { "id": "CHISEL", "level": 3 } ],
     "tools": [ [ [ "swage", -1 ] ] ],
@@ -2971,6 +2706,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "BRISK_EXERCISE",
     "result": "naginata",
     "category": "CC_WEAPON",
     "subcategory": "CSC_WEAPON_CUTTING",
@@ -2978,6 +2714,10 @@
     "difficulty": 7,
     "time": "7 h 40 m",
     "book_learn": [ [ "textbook_weapeast", 6 ] ],
+    "proficiencies": [
+      { "proficiency": "prof_blacksmithing", "required": false, "time_multiplier": 3.0 },
+      { "proficiency": "prof_bladesmith", "required": false, "time_multiplier": 2.5 }
+    ],
     "using": [ [ "blacksmithing_standard", 8 ], [ "steel_standard", 2 ] ],
     "qualities": [ { "id": "CHISEL", "level": 3 } ],
     "tools": [ [ [ "swage", -1 ] ] ],
@@ -2985,6 +2725,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "BRISK_EXERCISE",
     "result": "naginata",
     "id_suffix": "reforged",
     "category": "CC_WEAPON",
@@ -3000,6 +2741,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "BRISK_EXERCISE",
     "result": "spear_survivor",
     "category": "CC_WEAPON",
     "subcategory": "CSC_WEAPON_PIERCING",
@@ -3015,6 +2757,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "fake",
     "result": "survivor_machete",
     "category": "CC_WEAPON",
     "subcategory": "CSC_WEAPON_CUTTING",
@@ -3029,6 +2772,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "BRISK_EXERCISE",
     "result": "m2browning_sawn",
     "category": "CC_WEAPON",
     "subcategory": "CSC_WEAPON_RANGED",
@@ -3037,15 +2781,14 @@
     "difficulty": 6,
     "time": "3 h",
     "autolearn": true,
-    "qualities": [ { "id": "SAW_M_FINE", "level": 1 }, { "id": "SCREW_FINE", "level": 1 }, { "id": "GLARE", "level": 2 } ],
-    "tools": [
-      [ [ "oxy_torch", 6 ], [ "welder", 30 ], [ "welder_crude", 45 ], [ "toolset", 45 ] ],
-      [ [ "small_repairkit", 150 ], [ "large_repairkit", 30 ] ]
-    ],
+    "qualities": [ { "id": "SAW_M_FINE", "level": 1 }, { "id": "SCREW_FINE", "level": 1 } ],
+    "tools": [ [ [ "small_repairkit", 150 ], [ "large_repairkit", 30 ] ] ],
+    "using": [ [ "welding_standard", 3 ] ],
     "components": [ [ [ "m2browning", 1 ] ], [ [ "2x4", 1 ] ] ]
   },
   {
     "type": "recipe",
+    "activity_level": "BRISK_EXERCISE",
     "result": "surv_rocket_launcher",
     "category": "CC_WEAPON",
     "subcategory": "CSC_WEAPON_RANGED",
@@ -3059,45 +2802,7 @@
   },
   {
     "type": "recipe",
-    "result": "heavy_rail_rifle",
-    "category": "CC_WEAPON",
-    "subcategory": "CSC_WEAPON_RANGED",
-    "skill_used": "fabrication",
-    "skills_required": [ [ "mechanics", 10 ], [ "electronics", 9 ], [ "computer", 2 ] ],
-    "using": [
-      [ "soldering_standard", 20 ],
-      [ "welding_standard", 50 ],
-      [ "blacksmithing_standard", 12 ],
-      [ "surface_heat", 30 ],
-      [ "steel_standard", 3 ]
-    ],
-    "difficulty": 10,
-    "time": "12 h",
-    "autolearn": true,
-    "qualities": [
-      { "id": "SAW_M", "level": 1 },
-      { "id": "SAW_M_FINE", "level": 1 },
-      { "id": "SCREW_FINE", "level": 1 },
-      { "id": "WRENCH_FINE", "level": 1 },
-      { "id": "CHISEL", "level": 3 }
-    ],
-    "tools": [ [ [ "crucible", -1 ], [ "crucible_clay", -1 ] ], [ [ "swage", -1 ] ], [ [ "mold_plastic", -1 ] ] ],
-    "components": [
-      [ [ "plastic_chunk", 20 ] ],
-      [ [ "sheet_metal", 1 ] ],
-      [ [ "cable", 240 ] ],
-      [ [ "amplifier", 11 ] ],
-      [ [ "power_supply", 11 ] ],
-      [ [ "e_scrap", 30 ] ],
-      [ [ "processor", 1 ] ],
-      [ [ "RAM", 1 ] ],
-      [ [ "small_lcd_screen", 1 ] ],
-      [ [ "battery_ups", 1 ] ],
-      [ [ "small_storage_battery", 2 ], [ "UPS_off", 2 ] ]
-    ]
-  },
-  {
-    "type": "recipe",
+    "activity_level": "fake",
     "result": "2h_flail_wood",
     "category": "CC_WEAPON",
     "subcategory": "CSC_WEAPON_BASHING",
@@ -3111,6 +2816,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "BRISK_EXERCISE",
     "result": "2h_flail_steel",
     "category": "CC_WEAPON",
     "subcategory": "CSC_WEAPON_BASHING",
@@ -3125,6 +2831,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "BRISK_EXERCISE",
     "result": "butterfly_swords",
     "category": "CC_WEAPON",
     "subcategory": "CSC_WEAPON_CUTTING",
@@ -3132,6 +2839,10 @@
     "difficulty": 5,
     "time": "13 h 20 m",
     "book_learn": [ [ "textbook_weapeast", 6 ] ],
+    "proficiencies": [
+      { "proficiency": "prof_blacksmithing", "required": false, "time_multiplier": 3.0 },
+      { "proficiency": "prof_bladesmith", "required": false, "time_multiplier": 2.5 }
+    ],
     "using": [ [ "blacksmithing_standard", 20 ], [ "steel_standard", 5 ] ],
     "qualities": [ { "id": "CHISEL", "level": 3 } ],
     "//": "basically 2.5x the resources of a single machete to cover the fact that it's two weapons, each with a hand guard",
@@ -3140,6 +2851,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "fake",
     "result": "long_pole",
     "byproducts": [ [ "splinter", 30 ] ],
     "category": "CC_WEAPON",
@@ -3147,16 +2859,24 @@
     "skill_used": "fabrication",
     "difficulty": 5,
     "time": "5 h 40 m",
-    "book_learn": [ [ "textbook_weapeast", 6 ] ],
+    "book_learn": [ [ "textbook_weapeast", 4 ] ],
+    "autolearn": true,
     "qualities": [ { "id": "SAW_W", "level": 1 }, { "id": "CUT", "level": 1 } ],
-    "//": "a long pole is a single piece of wood, and the heavy stick just isn't large enough.",
+    "//": "a long pole is a single piece of wood, and the stout branch just isn't large enough.",
     "components": [
-      [ [ "log", 1 ] ],
-      [ [ "any_tallow", 4, "LIST" ], [ "cooking_oil", 32 ], [ "cooking_oil2", 32 ], [ "lamp_oil", 500 ] ]
+      [ [ "wood_beam", 1 ] ],
+      [
+        [ "any_tallow", 4, "LIST" ],
+        [ "cooking_oil", 32 ],
+        [ "cooking_oil2", 32 ],
+        [ "lamp_oil", 500 ],
+        [ "motor_oil", 500 ]
+      ]
     ]
   },
   {
     "type": "recipe",
+    "activity_level": "BRISK_EXERCISE",
     "result": "lucern_hammer",
     "category": "CC_WEAPON",
     "subcategory": "CSC_WEAPON_BASHING",
@@ -3164,9 +2884,54 @@
     "difficulty": 7,
     "time": "6 h",
     "book_learn": [ [ "textbook_weapwest", 6 ] ],
+    "proficiencies": [
+      { "proficiency": "prof_blacksmithing", "required": false, "time_multiplier": 3.0 },
+      { "proficiency": "prof_bladesmith", "required": false, "time_multiplier": 2.5 }
+    ],
     "using": [ [ "blacksmithing_standard", 12 ], [ "steel_standard", 3 ] ],
     "qualities": [ { "id": "CHISEL", "level": 3 } ],
     "tools": [ [ [ "swage", -1 ] ] ],
     "components": [ [ [ "stick_long", 1 ] ], [ [ "fur", 2 ], [ "leather", 2 ] ] ]
+  },
+  {
+    "type": "recipe",
+    "activity_level": "fake",
+    "result": "bullwhip_razor",
+    "category": "CC_WEAPON",
+    "subcategory": "CSC_WEAPON_RANGED",
+    "skill_used": "fabrication",
+    "difficulty": 6,
+    "time": "4 h",
+    "reversible": true,
+    "autolearn": true,
+    "qualities": [ { "id": "CUT", "level": 1 }, { "id": "HAMMER", "level": 1 } ],
+    "components": [ [ [ "leather", 30 ], [ "rope_superior_short", 2, "LIST" ] ], [ [ "scrap", 9 ], [ "razor_blade", 9 ] ] ]
+  },
+  {
+    "type": "recipe",
+    "activity_level": "fake",
+    "result": "coilgun",
+    "category": "CC_WEAPON",
+    "subcategory": "CSC_WEAPON_RANGED",
+    "skill_used": "electronics",
+    "skills_required": [ [ "computer", 3 ], [ "fabrication", 3 ] ],
+    "difficulty": 5,
+    "time": "4 h",
+    "reversible": true,
+    "book_learn": [ [ "advanced_electronics", 5 ], [ "textbook_electronics", 5 ], [ "textbook_anarch", 6 ] ],
+    "using": [ [ "soldering_standard", 20 ], [ "surface_heat", 10 ] ],
+    "qualities": [ { "id": "SAW_M_FINE", "level": 1 }, { "id": "SCREW", "level": 1 }, { "id": "SCREW_FINE", "level": 1 } ],
+    "tools": [ [ [ "mold_plastic", -1 ] ], [ [ "laptop", -1 ] ] ],
+    "components": [
+      [ [ "plastic_chunk", 10 ] ],
+      [ [ "superglue", 1 ] ],
+      [ [ "processor", 1 ] ],
+      [ [ "circuit", 2 ] ],
+      [ [ "power_supply", 2 ] ],
+      [ [ "amplifier", 1 ] ],
+      [ [ "e_scrap", 30 ] ],
+      [ [ "scrap", 10 ] ],
+      [ [ "cable", 100 ] ]
+    ]
   }
 ]

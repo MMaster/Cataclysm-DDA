@@ -4,8 +4,7 @@
 #include <utility>
 
 #include "calendar.h"
-#include "debug.h"
-#include "effect.h"
+#include "int_id.h"
 
 int field_entry::move_cost() const
 {
@@ -72,6 +71,11 @@ float field_entry::light_emitted() const
     return type.obj().get_light_emitted( intensity - 1 );
 }
 
+float field_entry::local_light_override() const
+{
+    return type.obj().get_local_light_override( intensity - 1 );
+}
+
 float field_entry::translucency() const
 {
     return type.obj().get_translucency( intensity - 1 );
@@ -103,7 +107,7 @@ field_type_id field_entry::get_field_type() const
     return type;
 }
 
-field_type_id field_entry::set_field_type( const field_type_id new_type )
+field_type_id field_entry::set_field_type( const field_type_id &new_type )
 {
     type = new_type;
     return type;
@@ -126,6 +130,11 @@ int field_entry::set_field_intensity( int new_intensity )
 
 }
 
+void field_entry::mod_field_intensity( int mod )
+{
+    set_field_intensity( get_field_intensity() + mod );
+}
+
 time_duration field_entry::get_field_age() const
 {
     return age;
@@ -146,8 +155,11 @@ Function: find_field
 Returns a field entry corresponding to the field_type_id parameter passed in. If no fields are found then returns NULL.
 Good for checking for existence of a field: if(myfield.find_field(fd_fire)) would tell you if the field is on fire.
 */
-field_entry *field::find_field( const field_type_id field_type_to_find )
+field_entry *field::find_field( const field_type_id &field_type_to_find )
 {
+    if( !_displayed_field_type ) {
+        return nullptr;
+    }
     const auto it = _field_type_list.find( field_type_to_find );
     if( it != _field_type_list.end() ) {
         return &it->second;
@@ -155,8 +167,11 @@ field_entry *field::find_field( const field_type_id field_type_to_find )
     return nullptr;
 }
 
-const field_entry *field::find_field_c( const field_type_id field_type_to_find ) const
+const field_entry *field::find_field_c( const field_type_id &field_type_to_find ) const
 {
+    if( !_displayed_field_type ) {
+        return nullptr;
+    }
     const auto it = _field_type_list.find( field_type_to_find );
     if( it != _field_type_list.end() ) {
         return &it->second;
@@ -164,7 +179,7 @@ const field_entry *field::find_field_c( const field_type_id field_type_to_find )
     return nullptr;
 }
 
-const field_entry *field::find_field( const field_type_id field_type_to_find ) const
+const field_entry *field::find_field( const field_type_id &field_type_to_find ) const
 {
     return find_field_c( field_type_to_find );
 }
@@ -177,23 +192,28 @@ If the field already exists, it will return false BUT it will add the intensity/
 If you wish to modify an already existing field use find_field and modify the result.
 Intensity defaults to 1, and age to 0 (permanent) if not specified.
 */
-bool field::add_field( const field_type_id field_type_to_add, const int new_intensity,
+bool field::add_field( const field_type_id &field_type_to_add, const int new_intensity,
                        const time_duration &new_age )
 {
-    auto it = _field_type_list.find( field_type_to_add );
-    if( field_type_to_add.obj().priority >= _displayed_field_type.obj().priority ) {
-        _displayed_field_type = field_type_to_add;
+    // sanity check, we don't want to store fd_null
+    if( !field_type_to_add ) {
+        return false;
     }
+    auto it = _field_type_list.find( field_type_to_add );
     if( it != _field_type_list.end() ) {
         //Already exists, but lets update it. This is tentative.
         it->second.set_field_intensity( it->second.get_field_intensity() + new_intensity );
         return false;
     }
+    if( !_displayed_field_type ||
+        field_type_to_add.obj().priority >= _displayed_field_type.obj().priority ) {
+        _displayed_field_type = field_type_to_add;
+    }
     _field_type_list[field_type_to_add] = field_entry( field_type_to_add, new_intensity, new_age );
     return true;
 }
 
-bool field::remove_field( field_type_id const field_to_remove )
+bool field::remove_field( const field_type_id &field_to_remove )
 {
     const auto it = _field_type_list.find( field_to_remove );
     if( it == _field_type_list.end() ) {
@@ -206,12 +226,10 @@ bool field::remove_field( field_type_id const field_to_remove )
 void field::remove_field( std::map<field_type_id, field_entry>::iterator const it )
 {
     _field_type_list.erase( it );
-    if( _field_type_list.empty() ) {
-        _displayed_field_type = fd_null;
-    } else {
-        _displayed_field_type = fd_null;
+    _displayed_field_type = fd_null;
+    if( !_field_type_list.empty() ) {
         for( auto &fld : _field_type_list ) {
-            if( fld.first.obj().priority >= _displayed_field_type.obj().priority ) {
+            if( !_displayed_field_type || fld.first.obj().priority >= _displayed_field_type.obj().priority ) {
                 _displayed_field_type = fld.first;
             }
         }
@@ -256,10 +274,15 @@ field_type_id field::displayed_field_type() const
     return _displayed_field_type;
 }
 
+description_affix field::displayed_description_affix() const
+{
+    return _displayed_field_type.obj().desc_affix;
+}
+
 int field::total_move_cost() const
 {
     int current_cost = 0;
-    for( auto &fld : _field_type_list ) {
+    for( const auto &fld : _field_type_list ) {
         current_cost += fld.second.move_cost();
     }
     return current_cost;
