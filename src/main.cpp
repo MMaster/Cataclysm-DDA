@@ -604,6 +604,9 @@ int main( int argc, const char *argv[] )
                                << static_cast<int>( linked.major ) << "."
                                << static_cast<int>( linked.minor ) << "."
                                << static_cast<int>( linked.patch );
+#if defined(_WIN32)
+    _putenv_s("SDL_AUDIODRIVER", "DirectSound");
+#endif
 #endif
 
 #if !defined(TILES)
