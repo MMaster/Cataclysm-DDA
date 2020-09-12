@@ -1,18 +1,18 @@
 #pragma once
-#ifndef FAULT_H
-#define FAULT_H
+#ifndef CATA_SRC_FAULT_H
+#define CATA_SRC_FAULT_H
 
 #include <map>
 #include <set>
 #include <string>
 
 #include "calendar.h"
+#include "optional.h"
 #include "string_id.h"
 #include "translations.h"
 #include "type_id.h"
 
 class JsonObject;
-struct requirement_data;
 
 struct mending_method {
     std::string id;
@@ -23,6 +23,7 @@ struct mending_method {
     std::map<skill_id, int> skills;
     requirement_id requirements;
     cata::optional<fault_id> turns_into;
+    cata::optional<fault_id> also_mends;
 };
 
 class fault
@@ -63,7 +64,7 @@ class fault
         }
 
         /** Load fault from JSON definition */
-        static void load_fault( JsonObject &jo );
+        static void load_fault( const JsonObject &jo );
 
         /** Get all currently loaded faults */
         static const std::map<fault_id, fault> &all();
@@ -82,4 +83,4 @@ class fault
         std::set<std::string> flags;
 };
 
-#endif
+#endif // CATA_SRC_FAULT_H

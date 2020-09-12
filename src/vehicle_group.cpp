@@ -2,21 +2,23 @@
 
 #include <cstddef>
 #include <functional>
+#include <memory>
 #include <utility>
 
 #include "debug.h"
 #include "json.h"
 #include "map.h"
+#include "memory_fast.h"
+#include "point.h"
 #include "translations.h"
 #include "vehicle.h"
 #include "vpart_position.h"
-#include "point.h"
 
 using vplacement_id = string_id<VehiclePlacement>;
 
 std::unordered_map<vgroup_id, VehicleGroup> vgroups;
-std::unordered_map<vplacement_id, VehiclePlacement> vplacements;
-std::unordered_map<vspawn_id, VehicleSpawn> vspawns;
+static std::unordered_map<vplacement_id, VehiclePlacement> vplacements;
+static std::unordered_map<vspawn_id, VehicleSpawn> vspawns;
 
 /** @relates string_id */
 template<>
@@ -61,13 +63,11 @@ bool string_id<VehiclePlacement>::is_valid() const
     return vplacements.count( *this ) > 0;
 }
 
-void VehicleGroup::load( JsonObject &jo )
+void VehicleGroup::load( const JsonObject &jo )
 {
     VehicleGroup &group = vgroups[vgroup_id( jo.get_string( "id" ) )];
 
-    JsonArray vehicles = jo.get_array( "vehicles" );
-    while( vehicles.has_more() ) {
-        JsonArray pair = vehicles.next_array();
+    for( JsonArray pair : jo.get_array( "vehicles" ) ) {
         group.add_vehicle( vproto_id( pair.get_string( 0 ) ), pair.get_int( 1 ) );
     }
 }
@@ -77,27 +77,22 @@ void VehicleGroup::reset()
     vgroups.clear();
 }
 
-VehicleFacings::VehicleFacings( JsonObject &jo, const std::string &key )
+VehicleFacings::VehicleFacings( const JsonObject &jo, const std::string &key )
 {
     if( jo.has_array( key ) ) {
-        JsonArray jpos = jo.get_array( key );
-
-        while( jpos.has_more() ) {
-            values.push_back( jpos.next_int() );
+        for( const int i : jo.get_array( key ) ) {
+            values.push_back( i );
         }
     } else {
         values.push_back( jo.get_int( key ) );
     }
 }
 
-void VehiclePlacement::load( JsonObject &jo )
+void VehiclePlacement::load( const JsonObject &jo )
 {
     VehiclePlacement &placement = vplacements[vplacement_id( jo.get_string( "id" ) )];
 
-    JsonArray locations = jo.get_array( "locations" );
-    while( locations.has_more() ) {
-        JsonObject jloc = locations.next_object();
-
+    for( JsonObject jloc : jo.get_array( "locations" ) ) {
         placement.add( jmapgen_int( jloc, "x" ), jmapgen_int( jloc, "y" ),
                        VehicleFacings( jloc, "facing" ) );
     }
@@ -117,7 +112,7 @@ const VehicleLocation *VehiclePlacement::pick() const
     return nullptr;
 }
 
-VehicleFunction_json::VehicleFunction_json( JsonObject &jo )
+VehicleFunction_json::VehicleFunction_json( const JsonObject &jo )
     : vehicle( jo.get_string( "vehicle" ) ),
       number( jo, "number" ),
       fuel( jo.get_int( "fuel" ) ),
@@ -133,7 +128,7 @@ VehicleFunction_json::VehicleFunction_json( JsonObject &jo )
 
 void VehicleFunction_json::apply( map &m, const std::string &terrain_name ) const
 {
-    for( auto i = number.get(); i > 0; i-- ) {
+    for( int i = number.get(); i > 0; i-- ) {
         if( !location ) {
             const size_t replace = placement.find( "%t" );
             const VehicleLocation *loc = vplacement_id( replace != std::string::npos ?
@@ -170,14 +165,10 @@ bool string_id<VehicleSpawn>::is_valid() const
     return vspawns.count( *this ) > 0;
 }
 
-void VehicleSpawn::load( JsonObject &jo )
+void VehicleSpawn::load( const JsonObject &jo )
 {
     VehicleSpawn &spawn = vspawns[vspawn_id( jo.get_string( "id" ) )];
-    JsonArray types = jo.get_array( "spawn_types" );
-
-    while( types.has_more() ) {
-        JsonObject type = types.next_object();
-
+    for( JsonObject type : jo.get_array( "spawn_types" ) ) {
         if( type.has_object( "vehicle_json" ) ) {
             JsonObject vjo = type.get_object( "vehicle_json" );
             spawn.add( type.get_float( "weight" ), make_shared_fast<VehicleFunction_json>( vjo ) );

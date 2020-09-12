@@ -1,6 +1,7 @@
 [
   {
     "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
     "result": "carver_off",
     "category": "CC_ELECTRONIC",
     "subcategory": "CSC_ELECTRONIC_TOOLS",
@@ -25,6 +26,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
     "result": "cordless_drill",
     "category": "CC_ELECTRONIC",
     "subcategory": "CSC_ELECTRONIC_TOOLS",
@@ -49,6 +51,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "fake",
     "result": "reading_light",
     "category": "CC_ELECTRONIC",
     "subcategory": "CSC_ELECTRONIC_LIGHTING",
@@ -69,6 +72,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
     "result": "trimmer_off",
     "category": "CC_ELECTRONIC",
     "subcategory": "CSC_ELECTRONIC_TOOLS",
@@ -94,6 +98,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
     "result": "circsaw_off",
     "category": "CC_ELECTRONIC",
     "subcategory": "CSC_ELECTRONIC_TOOLS",
@@ -117,6 +122,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "fake",
     "result": "antenna",
     "category": "CC_ELECTRONIC",
     "subcategory": "CSC_ELECTRONIC_COMPONENTS",
@@ -128,6 +134,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "fake",
     "result": "directional_antenna",
     "category": "CC_ELECTRONIC",
     "subcategory": "CSC_ELECTRONIC_COMPONENTS",
@@ -142,6 +149,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
     "result": "amplifier",
     "category": "CC_ELECTRONIC",
     "subcategory": "CSC_ELECTRONIC_COMPONENTS",
@@ -157,6 +165,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
     "result": "power_supply",
     "category": "CC_ELECTRONIC",
     "subcategory": "CSC_ELECTRONIC_COMPONENTS",
@@ -170,6 +179,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
     "result": "element",
     "category": "CC_ELECTRONIC",
     "subcategory": "CSC_ELECTRONIC_COMPONENTS",
@@ -183,6 +193,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
     "result": "receiver",
     "category": "CC_ELECTRONIC",
     "subcategory": "CSC_ELECTRONIC_COMPONENTS",
@@ -198,6 +209,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
     "result": "transponder",
     "category": "CC_ELECTRONIC",
     "subcategory": "CSC_ELECTRONIC_COMPONENTS",
@@ -213,6 +225,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
     "result": "electric_lantern",
     "category": "CC_ELECTRONIC",
     "subcategory": "CSC_ELECTRONIC_LIGHTING",
@@ -227,6 +240,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
     "result": "sheet_metal_lit",
     "category": "CC_ELECTRONIC",
     "subcategory": "CSC_ELECTRONIC_LIGHTING",
@@ -244,6 +258,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "fake",
     "result": "flashlight",
     "category": "CC_ELECTRONIC",
     "subcategory": "CSC_ELECTRONIC_LIGHTING",
@@ -257,8 +272,8 @@
       [ [ "amplifier", 1 ] ],
       [
         [ "scrap", 4 ],
-        [ "can_drink_unsealed", 1 ],
-        [ "can_food_unsealed", 1 ],
+        [ "can_drink", 1 ],
+        [ "can_food", 1 ],
         [ "canister_empty", 1 ],
         [ "bottle_glass", 1 ],
         [ "bottle_plastic", 1 ],
@@ -270,6 +285,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "fake",
     "result": "floodlight",
     "category": "CC_ELECTRONIC",
     "subcategory": "CSC_ELECTRONIC_LIGHTING",
@@ -289,6 +305,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "fake",
     "result": "directed_floodlight",
     "category": "CC_ELECTRONIC",
     "subcategory": "CSC_ELECTRONIC_LIGHTING",
@@ -308,6 +325,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "fake",
     "result": "car_headlight",
     "category": "CC_ELECTRONIC",
     "subcategory": "CSC_ELECTRONIC_LIGHTING",
@@ -327,6 +345,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "fake",
     "result": "car_wide_headlight",
     "category": "CC_ELECTRONIC",
     "subcategory": "CSC_ELECTRONIC_LIGHTING",
@@ -346,6 +365,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "fake",
     "result": "soldering_iron",
     "category": "CC_ELECTRONIC",
     "subcategory": "CSC_ELECTRONIC_TOOLS",
@@ -367,6 +387,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
     "result": "noise_emitter",
     "id_suffix": "radio-mod",
     "category": "CC_ELECTRONIC",
@@ -393,6 +414,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
     "result": "noise_emitter",
     "category": "CC_ELECTRONIC",
     "subcategory": "CSC_ELECTRONIC_TOOLS",
@@ -407,6 +429,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
     "result": "radio",
     "category": "CC_ELECTRONIC",
     "subcategory": "CSC_ELECTRONIC_TOOLS",
@@ -421,6 +444,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "fake",
     "result": "water_purifier",
     "category": "CC_ELECTRONIC",
     "subcategory": "CSC_ELECTRONIC_TOOLS",
@@ -435,13 +459,14 @@
     "components": [
       [ [ "element", 8 ] ],
       [ [ "bottle_glass", 2 ], [ "bottle_plastic", 5 ], [ "bottle_plastic_small", 10 ] ],
-      [ [ "hose", 1 ] ],
+      [ [ "hose", 1 ], [ "makeshift_hose", 1 ] ],
       [ [ "scrap", 3 ] ],
       [ [ "cable", 5 ] ]
     ]
   },
   {
     "type": "recipe",
+    "activity_level": "fake",
     "result": "hotplate",
     "category": "CC_ELECTRONIC",
     "subcategory": "CSC_ELECTRONIC_TOOLS",
@@ -470,6 +495,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "BRISK_EXERCISE",
     "result": "mess_kit",
     "category": "CC_ELECTRONIC",
     "subcategory": "CSC_ELECTRONIC_TOOLS",
@@ -491,6 +517,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
     "result": "coffeemaker",
     "category": "CC_ELECTRONIC",
     "subcategory": "CSC_ELECTRONIC_TOOLS",
@@ -521,6 +548,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
     "result": "tazer",
     "category": "CC_ELECTRONIC",
     "subcategory": "CSC_ELECTRONIC_TOOLS",
@@ -536,6 +564,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
     "result": "beeper",
     "category": "CC_ELECTRONIC",
     "subcategory": "CSC_ELECTRONIC_PARTS",
@@ -551,6 +580,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
     "result": "two_way_radio",
     "category": "CC_ELECTRONIC",
     "subcategory": "CSC_ELECTRONIC_TOOLS",
@@ -572,6 +602,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
     "result": "electrohack",
     "category": "CC_ELECTRONIC",
     "subcategory": "CSC_ELECTRONIC_TOOLS",
@@ -588,6 +619,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
     "result": "mp3",
     "category": "CC_ELECTRONIC",
     "subcategory": "CSC_ELECTRONIC_TOOLS",
@@ -604,6 +636,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
     "result": "portable_game",
     "category": "CC_ELECTRONIC",
     "subcategory": "CSC_ELECTRONIC_TOOLS",
@@ -628,6 +661,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
     "result": "geiger_off",
     "category": "CC_ELECTRONIC",
     "subcategory": "CSC_ELECTRONIC_TOOLS",
@@ -643,6 +677,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
     "result": "rad_monitor",
     "category": "CC_ELECTRONIC",
     "subcategory": "CSC_ELECTRONIC_TOOLS",
@@ -658,6 +693,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
     "result": "UPS_off",
     "category": "CC_ELECTRONIC",
     "subcategory": "CSC_ELECTRONIC_COMPONENTS",
@@ -674,6 +710,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
     "result": "adv_UPS_off",
     "category": "CC_ELECTRONIC",
     "subcategory": "CSC_ELECTRONIC_COMPONENTS",
@@ -690,6 +727,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
     "result": "recharge_station",
     "category": "CC_ELECTRONIC",
     "subcategory": "CSC_ELECTRONIC_PARTS",
@@ -705,6 +743,24 @@
   },
   {
     "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
+    "result": "battery_charger",
+    "category": "CC_ELECTRONIC",
+    "subcategory": "CSC_ELECTRONIC_PARTS",
+    "skill_used": "electronics",
+    "difficulty": 1,
+    "time": "10 m",
+    "reversible": true,
+    "decomp_learn": 0,
+    "autolearn": [ [ "electronics", 2 ] ],
+    "book_learn": [ [ "manual_electronics", 0 ], [ "mag_electronics", 1 ] ],
+    "using": [ [ "soldering_standard", 5 ] ],
+    "qualities": [ { "id": "SCREW", "level": 1 } ],
+    "components": [ [ [ "amplifier", 1 ] ], [ [ "plastic_chunk", 1 ], [ "duct_tape", 10 ] ], [ [ "cable", 10 ] ] ]
+  },
+  {
+    "type": "recipe",
+    "activity_level": "BRISK_EXERCISE",
     "result": "solarpack",
     "category": "CC_ELECTRONIC",
     "subcategory": "CSC_ELECTRONIC_OTHER",
@@ -729,30 +785,7 @@
   },
   {
     "type": "recipe",
-    "result": "q_solarpack",
-    "category": "CC_ELECTRONIC",
-    "subcategory": "CSC_ELECTRONIC_OTHER",
-    "skill_used": "electronics",
-    "skills_required": [ [ "fabrication", 2 ], [ "mechanics", 2 ] ],
-    "difficulty": 10,
-    "time": "50 m",
-    "decomp_learn": 5,
-    "autolearn": true,
-    "book_learn": [ [ "recipe_augs", 7 ], [ "recipe_lab_elec", 7 ], [ "advanced_electronics", 8 ] ],
-    "using": [ [ "soldering_standard", 35 ], [ "welding_standard", 20 ] ],
-    "qualities": [ { "id": "SCREW", "level": 1 }, { "id": "HAMMER", "level": 2 }, { "id": "SAW_M", "level": 2 } ],
-    "byproducts": [ [ "sheet_metal_small", 8 ], [ "scrap", 8 ] ],
-    "components": [
-      [ [ "power_supply", 2 ] ],
-      [ [ "amplifier", 2 ] ],
-      [ [ "cable", 20 ] ],
-      [ [ "solar_panel_v3", 1 ] ],
-      [ [ "sheet_metal", 2 ] ],
-      [ [ "rope_natural_short", 1, "LIST" ] ]
-    ]
-  },
-  {
-    "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
     "result": "solar_panel",
     "category": "CC_ELECTRONIC",
     "subcategory": "CSC_ELECTRONIC_PARTS",
@@ -769,6 +802,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
     "result": "wind_turbine",
     "category": "CC_ELECTRONIC",
     "subcategory": "CSC_ELECTRONIC_PARTS",
@@ -792,6 +826,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "BRISK_EXERCISE",
     "result": "xl_wind_turbine",
     "category": "CC_ELECTRONIC",
     "subcategory": "CSC_ELECTRONIC_PARTS",
@@ -823,6 +858,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
     "result": "water_wheel",
     "category": "CC_ELECTRONIC",
     "subcategory": "CSC_ELECTRONIC_PARTS",
@@ -852,6 +888,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
     "result": "xl_water_wheel",
     "category": "CC_ELECTRONIC",
     "subcategory": "CSC_ELECTRONIC_PARTS",
@@ -889,6 +926,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
     "result": "solar_panel_v2",
     "category": "CC_ELECTRONIC",
     "subcategory": "CSC_ELECTRONIC_PARTS",
@@ -910,6 +948,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "BRISK_EXERCISE",
     "result": "kitchen_unit",
     "category": "CC_ELECTRONIC",
     "subcategory": "CSC_ELECTRONIC_PARTS",
@@ -933,6 +972,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
     "result": "forgerig",
     "category": "CC_ELECTRONIC",
     "subcategory": "CSC_ELECTRONIC_PARTS",
@@ -949,6 +989,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
     "result": "kilnrig",
     "category": "CC_ELECTRONIC",
     "subcategory": "CSC_ELECTRONIC_PARTS",
@@ -965,6 +1006,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "fake",
     "result": "welding_components",
     "category": "CC_ELECTRONIC",
     "subcategory": "CSC_ELECTRONIC_PARTS",
@@ -980,6 +1022,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "BRISK_EXERCISE",
     "result": "weldrig",
     "category": "CC_ELECTRONIC",
     "subcategory": "CSC_ELECTRONIC_PARTS",
@@ -996,6 +1039,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "BRISK_EXERCISE",
     "result": "craftrig",
     "category": "CC_ELECTRONIC",
     "subcategory": "CSC_ELECTRONIC_PARTS",
@@ -1020,6 +1064,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "BRISK_EXERCISE",
     "result": "chemlab",
     "category": "CC_ELECTRONIC",
     "subcategory": "CSC_ELECTRONIC_PARTS",
@@ -1035,6 +1080,7 @@
     "components": [
       [ [ "frame", 1 ] ],
       [ [ "chemistry_set", 1 ] ],
+      [ [ "electrolysis_kit", 1 ] ],
       [ [ "water_faucet", 1 ] ],
       [ [ "power_supply", 1 ] ],
       [ [ "cable", 5 ] ]
@@ -1042,6 +1088,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
     "result": "medium_storage_battery",
     "category": "CC_ELECTRONIC",
     "subcategory": "CSC_ELECTRONIC_PARTS",
@@ -1056,6 +1103,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
     "result": "storage_battery",
     "id_suffix": "from_medium",
     "category": "CC_ELECTRONIC",
@@ -1077,6 +1125,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
     "result": "storage_battery",
     "category": "CC_ELECTRONIC",
     "subcategory": "CSC_ELECTRONIC_PARTS",
@@ -1091,6 +1140,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
     "result": "bot_manhack",
     "category": "CC_ELECTRONIC",
     "subcategory": "CSC_ELECTRONIC_OTHER",
@@ -1116,6 +1166,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
     "result": "bot_grenade_hack",
     "category": "CC_ELECTRONIC",
     "subcategory": "CSC_ELECTRONIC_OTHER",
@@ -1141,6 +1192,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
     "result": "bot_mininuke_hack",
     "category": "CC_ELECTRONIC",
     "subcategory": "CSC_ELECTRONIC_OTHER",
@@ -1166,6 +1218,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
     "result": "bot_gasbomb_hack",
     "category": "CC_ELECTRONIC",
     "subcategory": "CSC_ELECTRONIC_OTHER",
@@ -1191,6 +1244,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
     "result": "bot_EMP_hack",
     "category": "CC_ELECTRONIC",
     "subcategory": "CSC_ELECTRONIC_OTHER",
@@ -1204,7 +1258,7 @@
     "using": [ [ "soldering_standard", 10 ] ],
     "qualities": [ { "id": "SCREW", "level": 1 } ],
     "components": [
-      [ [ "EMPbomb", 1 ] ],
+      [ [ "grenade_emp", 1 ] ],
       [ [ "ai_module_basic", 1 ] ],
       [ [ "RAM", 1 ] ],
       [ [ "small_storage_battery", 1 ] ],
@@ -1216,6 +1270,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
     "result": "bot_flashbang_hack",
     "category": "CC_ELECTRONIC",
     "subcategory": "CSC_ELECTRONIC_OTHER",
@@ -1241,6 +1296,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
     "result": "bot_c4_hack",
     "category": "CC_ELECTRONIC",
     "subcategory": "CSC_ELECTRONIC_OTHER",
@@ -1266,6 +1322,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "BRISK_EXERCISE",
     "result": "bot_turret",
     "category": "CC_ELECTRONIC",
     "subcategory": "CSC_ELECTRONIC_OTHER",
@@ -1303,39 +1360,7 @@
   },
   {
     "type": "recipe",
-    "result": "bot_laserturret",
-    "category": "CC_ELECTRONIC",
-    "subcategory": "CSC_ELECTRONIC_OTHER",
-    "skill_used": "electronics",
-    "skills_required": [ [ "mechanics", 8 ], [ "computer", 5 ] ],
-    "difficulty": 8,
-    "time": "30 m",
-    "reversible": true,
-    "decomp_learn": 9,
-    "book_learn": [ [ "recipe_lab_elec", 8 ] ],
-    "using": [ [ "soldering_standard", 14 ] ],
-    "qualities": [
-      { "id": "SCREW", "level": 1 },
-      { "id": "SCREW_FINE", "level": 1 },
-      { "id": "WRENCH", "level": 2 },
-      { "id": "WRENCH_FINE", "level": 1 }
-    ],
-    "components": [
-      [ [ "ai_module", 1 ] ],
-      [ [ "gun_module", 1 ] ],
-      [ [ "targeting_module", 1 ] ],
-      [ [ "identification_module", 1 ] ],
-      [ [ "sensor_module", 1 ] ],
-      [ [ "laser_cannon", 1 ] ],
-      [ [ "medium_storage_battery", 1 ] ],
-      [ [ "solar_cell", 4 ] ],
-      [ [ "power_supply", 1 ] ],
-      [ [ "robot_controls", 1 ] ],
-      [ [ "turret_chassis", 1 ] ]
-    ]
-  },
-  {
-    "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
     "result": "bot_rifleturret",
     "category": "CC_ELECTRONIC",
     "subcategory": "CSC_ELECTRONIC_OTHER",
@@ -1368,6 +1393,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
     "result": "bot_crows_m240",
     "category": "CC_ELECTRONIC",
     "subcategory": "CSC_ELECTRONIC_OTHER",
@@ -1400,6 +1426,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "BRISK_EXERCISE",
     "result": "bot_nursebot",
     "category": "CC_ELECTRONIC",
     "subcategory": "CSC_ELECTRONIC_OTHER",
@@ -1432,6 +1459,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "BRISK_EXERCISE",
     "result": "bot_grocerybot",
     "category": "CC_ELECTRONIC",
     "subcategory": "CSC_ELECTRONIC_OTHER",
@@ -1464,6 +1492,83 @@
   },
   {
     "type": "recipe",
+    "activity_level": "BRISK_EXERCISE",
+    "result": "bot_dispatch",
+    "category": "CC_ELECTRONIC",
+    "subcategory": "CSC_ELECTRONIC_OTHER",
+    "skill_used": "electronics",
+    "skills_required": [ [ "mechanics", 7 ], [ "computer", 7 ] ],
+    "difficulty": 8,
+    "reversible": true,
+    "decomp_learn": 9,
+    "book_learn": [ [ "schematics_dispatch", 8 ] ],
+    "time": "2 h",
+    "using": [ [ "steel_standard", 1 ], [ "soldering_standard", 20 ], [ "welding_standard", 5 ] ],
+    "qualities": [
+      { "id": "SCREW", "level": 1 },
+      { "id": "SCREW_FINE", "level": 1 },
+      { "id": "WRENCH", "level": 2 },
+      { "id": "WRENCH_FINE", "level": 1 },
+      { "id": "SAW_M", "level": 1 },
+      { "id": "SAW_M_FINE", "level": 1 }
+    ],
+    "components": [
+      [ [ "ai_module", 1 ] ],
+      [ [ "sensor_module", 1 ] ],
+      [ [ "memory_module", 1 ] ],
+      [ [ "pathfinding_module", 1 ] ],
+      [ [ "identification_module", 1 ] ],
+      [ [ "tank_tread", 1 ] ],
+      [ [ "copbot_chassis", 1 ] ],
+      [ [ "targeting_module", 1 ] ],
+      [ [ "power_supply", 3 ] ],
+      [ [ "plut_cell", 1 ] ],
+      [ [ "broken_manhack", 4 ] ],
+      [ [ "omnicamera", 1 ] ],
+      [ [ "storage_battery", 1 ] ]
+    ]
+  },
+  {
+    "type": "recipe",
+    "activity_level": "BRISK_EXERCISE",
+    "result": "bot_dispatch_military",
+    "category": "CC_ELECTRONIC",
+    "subcategory": "CSC_ELECTRONIC_OTHER",
+    "skill_used": "electronics",
+    "skills_required": [ [ "mechanics", 7 ], [ "computer", 7 ] ],
+    "difficulty": 8,
+    "reversible": true,
+    "decomp_learn": 9,
+    "book_learn": [ [ "schematics_dispatch_military", 8 ] ],
+    "time": "2 h",
+    "using": [ [ "steel_standard", 1 ], [ "soldering_standard", 20 ], [ "welding_standard", 5 ] ],
+    "qualities": [
+      { "id": "SCREW", "level": 1 },
+      { "id": "SCREW_FINE", "level": 1 },
+      { "id": "WRENCH", "level": 2 },
+      { "id": "WRENCH_FINE", "level": 1 },
+      { "id": "SAW_M", "level": 1 },
+      { "id": "SAW_M_FINE", "level": 1 }
+    ],
+    "components": [
+      [ [ "ai_module", 1 ] ],
+      [ [ "sensor_module", 1 ] ],
+      [ [ "memory_module", 1 ] ],
+      [ [ "pathfinding_module", 1 ] ],
+      [ [ "identification_module", 1 ] ],
+      [ [ "tank_tread", 1 ] ],
+      [ [ "copbot_chassis", 1 ] ],
+      [ [ "targeting_module", 1 ] ],
+      [ [ "power_supply", 3 ] ],
+      [ [ "plut_cell", 1 ] ],
+      [ [ "broken_manhack", 4 ] ],
+      [ [ "omnicamera", 1 ] ],
+      [ [ "storage_battery", 1 ] ]
+    ]
+  },
+  {
+    "type": "recipe",
+    "activity_level": "BRISK_EXERCISE",
     "result": "bot_hazmatbot",
     "category": "CC_ELECTRONIC",
     "subcategory": "CSC_ELECTRONIC_OTHER",
@@ -1494,6 +1599,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "BRISK_EXERCISE",
     "result": "bot_copbot",
     "category": "CC_ELECTRONIC",
     "subcategory": "CSC_ELECTRONIC_OTHER",
@@ -1527,6 +1633,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "BRISK_EXERCISE",
     "result": "bot_eyebot",
     "category": "CC_ELECTRONIC",
     "subcategory": "CSC_ELECTRONIC_OTHER",
@@ -1559,6 +1666,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "BRISK_EXERCISE",
     "result": "bot_molebot",
     "category": "CC_ELECTRONIC",
     "subcategory": "CSC_ELECTRONIC_OTHER",
@@ -1588,6 +1696,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "BRISK_EXERCISE",
     "result": "bot_riotbot",
     "category": "CC_ELECTRONIC",
     "subcategory": "CSC_ELECTRONIC_OTHER",
@@ -1621,6 +1730,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "BRISK_EXERCISE",
     "result": "bot_secubot",
     "category": "CC_ELECTRONIC",
     "subcategory": "CSC_ELECTRONIC_OTHER",
@@ -1655,6 +1765,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "BRISK_EXERCISE",
     "result": "bot_talon_m202a1",
     "category": "CC_ELECTRONIC",
     "subcategory": "CSC_ELECTRONIC_OTHER",
@@ -1689,6 +1800,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
     "result": "bot_skitterbot",
     "category": "CC_ELECTRONIC",
     "subcategory": "CSC_ELECTRONIC_OTHER",
@@ -1721,6 +1833,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
     "result": "bot_science_bot",
     "category": "CC_ELECTRONIC",
     "subcategory": "CSC_ELECTRONIC_OTHER",
@@ -1756,116 +1869,7 @@
   },
   {
     "type": "recipe",
-    "result": "bot_tankbot",
-    "category": "CC_ELECTRONIC",
-    "subcategory": "CSC_ELECTRONIC_OTHER",
-    "skill_used": "electronics",
-    "skills_required": [ [ "mechanics", 9 ], [ "computer", 8 ] ],
-    "reversible": true,
-    "decomp_learn": 8,
-    "book_learn": [ [ "schematics_tankbot", 9 ] ],
-    "difficulty": 9,
-    "time": "1 h 15 m",
-    "using": [ [ "soldering_standard", 30 ], [ "welding_standard", 20 ] ],
-    "qualities": [
-      { "id": "SCREW", "level": 1 },
-      { "id": "SCREW_FINE", "level": 1 },
-      { "id": "WRENCH", "level": 2 },
-      { "id": "WRENCH_FINE", "level": 1 }
-    ],
-    "components": [
-      [ [ "ai_module", 1 ] ],
-      [ [ "sensor_module", 1 ] ],
-      [ [ "memory_module", 1 ] ],
-      [ [ "pathfinding_module", 1 ] ],
-      [ [ "identification_module", 1 ] ],
-      [ [ "tank_tread", 1 ] ],
-      [ [ "tankbot_chassis", 1 ] ],
-      [ [ "targeting_module", 1 ] ],
-      [ [ "gun_module", 3 ] ],
-      [ [ "flamethrower", 1 ] ],
-      [ [ "tazer", 1 ] ],
-      [ [ "m4a1", 1 ] ],
-      [ [ "power_supply", 20 ] ],
-      [ [ "storage_battery", 1 ] ],
-      [ [ "plut_cell", 4 ] ],
-      [ [ "mil_plate", 2 ] ]
-    ]
-  },
-  {
-    "type": "recipe",
-    "result": "bot_tripod",
-    "category": "CC_ELECTRONIC",
-    "subcategory": "CSC_ELECTRONIC_OTHER",
-    "skill_used": "electronics",
-    "skills_required": [ [ "mechanics", 9 ], [ "computer", 8 ] ],
-    "reversible": true,
-    "decomp_learn": 8,
-    "book_learn": [ [ "schematics_tripod", 9 ] ],
-    "difficulty": 9,
-    "time": "1 h",
-    "using": [ [ "soldering_standard", 10 ], [ "welding_standard", 10 ] ],
-    "qualities": [
-      { "id": "SCREW", "level": 1 },
-      { "id": "SCREW_FINE", "level": 1 },
-      { "id": "WRENCH", "level": 2 },
-      { "id": "WRENCH_FINE", "level": 1 }
-    ],
-    "components": [
-      [ [ "ai_module", 1 ] ],
-      [ [ "sensor_module", 1 ] ],
-      [ [ "memory_module", 1 ] ],
-      [ [ "pathfinding_module", 1 ] ],
-      [ [ "identification_module", 1 ] ],
-      [ [ "spidery_legs_big", 1 ] ],
-      [ [ "tripod_chassis", 1 ] ],
-      [ [ "targeting_module", 1 ] ],
-      [ [ "gun_module", 1 ] ],
-      [ [ "power_supply", 12 ] ],
-      [ [ "storage_battery", 1 ] ],
-      [ [ "flamethrower", 1 ] ]
-    ]
-  },
-  {
-    "type": "recipe",
-    "result": "bot_chickenbot",
-    "category": "CC_ELECTRONIC",
-    "subcategory": "CSC_ELECTRONIC_OTHER",
-    "skill_used": "electronics",
-    "skills_required": [ [ "mechanics", 10 ], [ "computer", 9 ] ],
-    "reversible": true,
-    "decomp_learn": 9,
-    "book_learn": [ [ "schematics_chickenbot", 10 ] ],
-    "difficulty": 10,
-    "time": "1 h 15 m",
-    "using": [ [ "soldering_standard", 30 ], [ "welding_standard", 20 ] ],
-    "qualities": [
-      { "id": "SCREW", "level": 1 },
-      { "id": "SCREW_FINE", "level": 1 },
-      { "id": "WRENCH", "level": 2 },
-      { "id": "WRENCH_FINE", "level": 1 }
-    ],
-    "components": [
-      [ [ "ai_module", 1 ] ],
-      [ [ "sensor_module", 1 ] ],
-      [ [ "memory_module", 1 ] ],
-      [ [ "pathfinding_module", 1 ] ],
-      [ [ "identification_module", 1 ] ],
-      [ [ "reverse_jointed_legs", 1 ] ],
-      [ [ "chickenbot_chassis", 1 ] ],
-      [ [ "targeting_module", 1 ] ],
-      [ [ "gun_module", 3 ] ],
-      [ [ "mark19", 1 ] ],
-      [ [ "tazer", 1 ] ],
-      [ [ "m249", 1 ] ],
-      [ [ "power_supply", 20 ] ],
-      [ [ "storage_battery", 1 ] ],
-      [ [ "plut_cell", 4 ] ],
-      [ [ "mil_plate", 2 ] ]
-    ]
-  },
-  {
-    "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
     "result": "bot_antimateriel",
     "category": "CC_ELECTRONIC",
     "subcategory": "CSC_ELECTRONIC_OTHER",
@@ -1898,21 +1902,38 @@
   },
   {
     "type": "recipe",
-    "result": "control_laptop",
+    "activity_level": "LIGHT_EXERCISE",
+    "result": "bot_turret_searchlight",
     "category": "CC_ELECTRONIC",
-    "subcategory": "CSC_ELECTRONIC_TOOLS",
+    "subcategory": "CSC_ELECTRONIC_OTHER",
     "skill_used": "electronics",
-    "skills_required": [ "computer", 4 ],
-    "difficulty": 7,
-    "time": "25 m",
-    "book_learn": [ [ "recipe_lab_elec", 7 ], [ "textbook_robots", 7 ] ],
-    "using": [ [ "soldering_standard", 14 ] ],
-    "qualities": [ { "id": "SCREW", "level": 1 } ],
-    "tools": [ [ [ "software_hacking", -1 ] ] ],
-    "components": [ [ [ "laptop", 1 ] ], [ [ "receiver", 2 ] ], [ [ "e_scrap", 2 ] ], [ [ "antenna", 1 ] ] ]
+    "skills_required": [ [ "mechanics", 4 ], [ "computer", 2 ] ],
+    "reversible": true,
+    "decomp_learn": 5,
+    "book_learn": [ [ "schematics_searchlight", 7 ] ],
+    "difficulty": 3,
+    "time": "1 h 15 m",
+    "using": [ [ "soldering_standard", 10 ] ],
+    "qualities": [
+      { "id": "SCREW", "level": 1 },
+      { "id": "SCREW_FINE", "level": 1 },
+      { "id": "WRENCH", "level": 2 },
+      { "id": "WRENCH_FINE", "level": 1 }
+    ],
+    "components": [
+      [ [ "ai_module_basic", 1 ] ],
+      [ [ "identification_module", 1 ] ],
+      [ [ "sensor_module", 1 ] ],
+      [ [ "targeting_module", 1 ] ],
+      [ [ "medium_storage_battery", 3 ] ],
+      [ [ "power_supply", 1 ] ],
+      [ [ "floodlight", 1 ] ],
+      [ [ "turret_chassis", 1 ] ]
+    ]
   },
   {
     "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
     "result": "dehydrator",
     "category": "CC_ELECTRONIC",
     "subcategory": "CSC_ELECTRONIC_TOOLS",
@@ -1936,6 +1957,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "fake",
     "result": "atomic_light",
     "category": "CC_ELECTRONIC",
     "subcategory": "CSC_ELECTRONIC_LIGHTING",
@@ -1956,6 +1978,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "fake",
     "result": "atomic_lamp",
     "category": "CC_ELECTRONIC",
     "subcategory": "CSC_ELECTRONIC_LIGHTING",
@@ -1975,6 +1998,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "fake",
     "result": "atomic_coffeepot",
     "category": "CC_ELECTRONIC",
     "subcategory": "CSC_ELECTRONIC_TOOLS",
@@ -1998,6 +2022,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
     "result": "hand_crank_charger",
     "category": "CC_ELECTRONIC",
     "subcategory": "CSC_ELECTRONIC_TOOLS",
@@ -2028,6 +2053,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
     "result": "motor_micro",
     "category": "CC_ELECTRONIC",
     "subcategory": "CSC_ELECTRONIC_COMPONENTS",
@@ -2044,6 +2070,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
     "result": "motor_tiny",
     "category": "CC_ELECTRONIC",
     "subcategory": "CSC_ELECTRONIC_PARTS",
@@ -2060,6 +2087,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
     "result": "motor_small",
     "category": "CC_ELECTRONIC",
     "subcategory": "CSC_ELECTRONIC_PARTS",
@@ -2076,6 +2104,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "fake",
     "result": "cable",
     "category": "CC_ELECTRONIC",
     "subcategory": "CSC_ELECTRONIC_COMPONENTS",
@@ -2096,6 +2125,24 @@
   },
   {
     "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
+    "result": "vibrator",
+    "category": "CC_ELECTRONIC",
+    "subcategory": "CSC_ELECTRONIC_TOOLS",
+    "skill_used": "fabrication",
+    "skills_required": [ "electronics", 1 ],
+    "difficulty": 3,
+    "time": "20 m",
+    "reversible": true,
+    "autolearn": true,
+    "using": [ [ "soldering_standard", 5 ] ],
+    "qualities": [ { "id": "SCREW", "level": 1 } ],
+    "tools": [ [ [ "mold_plastic", -1 ] ] ],
+    "components": [ [ [ "superglue", 1 ] ], [ [ "scrap", 1 ] ], [ [ "plastic_chunk", 3 ] ], [ [ "cable", 5 ] ], [ [ "motor_micro", 1 ] ] ]
+  },
+  {
+    "type": "recipe",
+    "activity_level": "BRISK_EXERCISE",
     "result": "elec_jackhammer",
     "category": "CC_ELECTRONIC",
     "subcategory": "CSC_ELECTRONIC_TOOLS",
@@ -2123,6 +2170,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "BRISK_EXERCISE",
     "result": "elec_chainsaw_off",
     "category": "CC_ELECTRONIC",
     "subcategory": "CSC_ELECTRONIC_TOOLS",
@@ -2143,6 +2191,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
     "result": "remotevehcontrol",
     "category": "CC_ELECTRONIC",
     "subcategory": "CSC_ELECTRONIC_TOOLS",
@@ -2167,6 +2216,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "BRISK_EXERCISE",
     "result": "drive_by_wire_controls",
     "category": "CC_ELECTRONIC",
     "subcategory": "CSC_ELECTRONIC_TOOLS",
@@ -2194,6 +2244,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
     "result": "electronics_controls",
     "category": "CC_ELECTRONIC",
     "subcategory": "CSC_ELECTRONIC_TOOLS",
@@ -2209,6 +2260,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
     "result": "camera_control",
     "category": "CC_ELECTRONIC",
     "subcategory": "CSC_ELECTRONIC_PARTS",
@@ -2224,6 +2276,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
     "result": "omnicamera",
     "category": "CC_ELECTRONIC",
     "subcategory": "CSC_ELECTRONIC_PARTS",
@@ -2239,6 +2292,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
     "result": "omnicamera",
     "id_suffix": "from-cameras",
     "category": "CC_ELECTRONIC",
@@ -2258,6 +2312,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
     "result": "makeshift_sealer",
     "category": "CC_ELECTRONIC",
     "subcategory": "CSC_ELECTRONIC_TOOLS",
@@ -2281,6 +2336,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
     "result": "radio_repeater_mod",
     "category": "CC_ELECTRONIC",
     "subcategory": "CSC_ELECTRONIC_PARTS",
@@ -2307,6 +2363,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
     "result": "elec_hairtrimmer",
     "category": "CC_ELECTRONIC",
     "subcategory": "CSC_ELECTRONIC_TOOLS",
@@ -2328,6 +2385,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
     "result": "radio_mod",
     "category": "CC_ELECTRONIC",
     "subcategory": "CSC_ELECTRONIC_TOOLS",
@@ -2350,6 +2408,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
     "result": "electrolysis_kit",
     "category": "CC_ELECTRONIC",
     "subcategory": "CSC_ELECTRONIC_TOOLS",
@@ -2364,6 +2423,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
     "result": "condensor_coil",
     "category": "CC_ELECTRONIC",
     "subcategory": "CSC_ELECTRONIC_COMPONENTS",
@@ -2382,6 +2442,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
     "result": "evaporator_coil",
     "category": "CC_ELECTRONIC",
     "subcategory": "CSC_ELECTRONIC_COMPONENTS",
@@ -2395,14 +2456,15 @@
   },
   {
     "type": "recipe",
+    "activity_level": "BRISK_EXERCISE",
     "result": "light_minus_disposable_cell",
     "category": "CC_ELECTRONIC",
     "subcategory": "CSC_ELECTRONIC_TOOLS",
-    "skill_used": "cooking",
+    "skill_used": "chemistry",
     "skills_required": [ "electronics", 5 ],
-    "difficulty": 6,
+    "difficulty": 4,
     "time": "45 m",
-    "book_learn": [ [ "adv_chemistry", 6 ] ],
+    "book_learn": [ [ "adv_chemistry", 4 ] ],
     "using": [ [ "blacksmithing_standard", 1 ] ],
     "qualities": [ { "id": "CHISEL", "level": 3 } ],
     "tools": [ [ [ "crucible", -1 ], [ "crucible_clay", -1 ] ] ],
@@ -2416,14 +2478,15 @@
   },
   {
     "type": "recipe",
+    "activity_level": "BRISK_EXERCISE",
     "result": "light_disposable_cell",
     "category": "CC_ELECTRONIC",
     "subcategory": "CSC_ELECTRONIC_TOOLS",
-    "skill_used": "cooking",
+    "skill_used": "chemistry",
     "skills_required": [ "electronics", 5 ],
-    "difficulty": 6,
+    "difficulty": 4,
     "time": "1 h",
-    "book_learn": [ [ "adv_chemistry", 6 ] ],
+    "book_learn": [ [ "adv_chemistry", 4 ] ],
     "using": [ [ "blacksmithing_standard", 1 ] ],
     "qualities": [ { "id": "CHISEL", "level": 3 } ],
     "tools": [ [ [ "crucible", -1 ], [ "crucible_clay", -1 ] ] ],
@@ -2437,14 +2500,15 @@
   },
   {
     "type": "recipe",
+    "activity_level": "BRISK_EXERCISE",
     "result": "medium_disposable_cell",
     "category": "CC_ELECTRONIC",
     "subcategory": "CSC_ELECTRONIC_TOOLS",
-    "skill_used": "cooking",
+    "skill_used": "chemistry",
     "skills_required": [ "electronics", 5 ],
-    "difficulty": 6,
+    "difficulty": 4,
     "time": "1 h 20 m",
-    "book_learn": [ [ "adv_chemistry", 6 ] ],
+    "book_learn": [ [ "adv_chemistry", 4 ] ],
     "using": [ [ "blacksmithing_standard", 1 ] ],
     "qualities": [ { "id": "CHISEL", "level": 3 } ],
     "tools": [ [ [ "crucible", -1 ], [ "crucible_clay", -1 ] ] ],
@@ -2458,14 +2522,15 @@
   },
   {
     "type": "recipe",
+    "activity_level": "BRISK_EXERCISE",
     "result": "heavy_disposable_cell",
     "category": "CC_ELECTRONIC",
     "subcategory": "CSC_ELECTRONIC_TOOLS",
-    "skill_used": "cooking",
+    "skill_used": "chemistry",
     "skills_required": [ "electronics", 5 ],
-    "difficulty": 6,
+    "difficulty": 4,
     "time": "1 h 45 m",
-    "book_learn": [ [ "adv_chemistry", 6 ] ],
+    "book_learn": [ [ "adv_chemistry", 4 ] ],
     "using": [ [ "blacksmithing_standard", 1 ] ],
     "qualities": [ { "id": "CHISEL", "level": 3 } ],
     "tools": [ [ [ "crucible", -1 ], [ "crucible_clay", -1 ] ] ],

@@ -2,11 +2,12 @@
   {
     "result": "aep_suit",
     "type": "recipe",
+    "activity_level": "MODERATE_EXERCISE",
     "category": "CC_ARMOR",
     "subcategory": "CSC_ARMOR_SUIT",
     "skill_used": "fabrication",
     "difficulty": 6,
-    "skills_required": [ "tailor", 1 ],
+    "skills_required": [ "tailor", 5 ],
     "time": "3 h",
     "book_learn": [ [ "tailor_portfolio", 7 ], [ "textbook_tailor", 8 ], [ "textbook_fireman", 6 ] ],
     "qualities": [ { "id": "CUT", "level": 1 } ],
@@ -14,17 +15,19 @@
     "components": [
       [ [ "cleansuit", 1 ] ],
       [ [ "duct_tape", 600 ] ],
-      [ [ "kevlar", 1 ], [ "modularvest", 1 ], [ "swat_armor", 1 ], [ "kevlar_plate", 24 ] ]
+      [ [ "kevlar", 1 ], [ "ballistic_vest_empty", 1 ], [ "swat_armor", 1 ], [ "sheet_kevlar_layered", 24 ] ],
+      [ [ "plastic_sheet", 1 ] ]
     ]
   },
   {
     "result": "anbc_suit",
     "type": "recipe",
+    "activity_level": "MODERATE_EXERCISE",
     "category": "CC_ARMOR",
     "subcategory": "CSC_ARMOR_SUIT",
     "skill_used": "fabrication",
     "difficulty": 8,
-    "skills_required": [ "tailor", 2 ],
+    "skills_required": [ "tailor", 7 ],
     "time": "3 h 40 m",
     "book_learn": [ [ "tailor_portfolio", 7 ], [ "textbook_fireman", 7 ] ],
     "qualities": [ { "id": "CUT", "level": 1 } ],
@@ -32,16 +35,18 @@
     "components": [
       [ [ "hazmat_suit", 1 ] ],
       [ [ "duct_tape", 800 ] ],
-      [ [ "kevlar", 1 ], [ "modularvest", 1 ], [ "swat_armor", 1 ], [ "kevlar_plate", 24 ] ]
+      [ [ "swat_armor", 1 ], [ "sheet_kevlar_layered", 48 ] ],
+      [ [ "plastic_sheet", 1 ] ]
     ]
   },
   {
     "result": "armor_blarmor",
     "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
     "category": "CC_ARMOR",
     "subcategory": "CSC_ARMOR_SUIT",
-    "skill_used": "cooking",
-    "difficulty": 3,
+    "skill_used": "chemistry",
+    "difficulty": 4,
     "skills_required": [ "tailor", 3 ],
     "time": "1 h",
     "book_learn": [
@@ -67,6 +72,7 @@
   {
     "result": "armor_chitin",
     "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
     "category": "CC_ARMOR",
     "subcategory": "CSC_ARMOR_SUIT",
     "skill_used": "tailor",
@@ -80,6 +86,7 @@
   {
     "result": "armor_acidchitin",
     "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
     "category": "CC_ARMOR",
     "subcategory": "CSC_ARMOR_SUIT",
     "skill_used": "tailor",
@@ -94,6 +101,7 @@
   {
     "result": "armor_farmor",
     "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
     "category": "CC_ARMOR",
     "subcategory": "CSC_ARMOR_SUIT",
     "skill_used": "tailor",
@@ -106,6 +114,7 @@
   {
     "result": "armor_larmor",
     "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
     "category": "CC_ARMOR",
     "subcategory": "CSC_ARMOR_SUIT",
     "//": "Whilst the trenchcoat needs 6 skill this'll need at least 4.",
@@ -119,6 +128,7 @@
   {
     "result": "armor_lightplate",
     "type": "recipe",
+    "activity_level": "BRISK_EXERCISE",
     "category": "CC_ARMOR",
     "subcategory": "CSC_ARMOR_SUIT",
     "skill_used": "fabrication",
@@ -133,6 +143,7 @@
   {
     "result": "armor_lightplate",
     "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
     "id_suffix": "assembly",
     "category": "CC_ARMOR",
     "subcategory": "CSC_ARMOR_SUIT",
@@ -140,11 +151,13 @@
     "difficulty": 3,
     "time": "20 m",
     "reversible": true,
+    "flags": [ "NO_RESIZE" ],
     "components": [ [ [ "cuirass_lightplate", 1 ] ], [ [ "armguard_lightplate", 1 ] ], [ [ "legguard_lightplate", 1 ] ] ]
   },
   {
     "result": "armor_lorica",
     "type": "recipe",
+    "activity_level": "BRISK_EXERCISE",
     "category": "CC_ARMOR",
     "subcategory": "CSC_ARMOR_TORSO",
     "skill_used": "fabrication",
@@ -159,6 +172,7 @@
   {
     "result": "armor_nomad",
     "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
     "category": "CC_ARMOR",
     "subcategory": "CSC_ARMOR_SUIT",
     "skill_used": "tailor",
@@ -178,6 +192,7 @@
   {
     "result": "armor_nomad_light",
     "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
     "category": "CC_ARMOR",
     "subcategory": "CSC_ARMOR_SUIT",
     "skill_used": "tailor",
@@ -197,6 +212,7 @@
   {
     "result": "armor_plarmor",
     "type": "recipe",
+    "activity_level": "BRISK_EXERCISE",
     "category": "CC_ARMOR",
     "subcategory": "CSC_ARMOR_SUIT",
     "skill_used": "fabrication",
@@ -210,6 +226,7 @@
   {
     "result": "armor_plate",
     "type": "recipe",
+    "activity_level": "BRISK_EXERCISE",
     "category": "CC_ARMOR",
     "subcategory": "CSC_ARMOR_SUIT",
     "skill_used": "fabrication",
@@ -224,6 +241,7 @@
   {
     "result": "armor_samurai",
     "type": "recipe",
+    "activity_level": "BRISK_EXERCISE",
     "category": "CC_ARMOR",
     "subcategory": "CSC_ARMOR_SUIT",
     "skill_used": "fabrication",
@@ -238,6 +256,7 @@
   {
     "result": "armor_scavenger",
     "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
     "category": "CC_ARMOR",
     "subcategory": "CSC_ARMOR_SUIT",
     "skill_used": "tailor",
@@ -252,12 +271,13 @@
       [ [ "fanny", 2 ], [ "dump_pouch", 1 ] ],
       [ [ "tool_belt", 1 ], [ "legrig", 1 ] ],
       [ [ "pants_army", 1 ] ],
-      [ [ "kevlar", 1 ], [ "modularvest", 1 ], [ "swat_armor", 1 ], [ "kevlar_plate", 24 ] ]
+      [ [ "kevlar", 1 ], [ "ballistic_vest_empty", 1 ], [ "swat_armor", 1 ], [ "sheet_kevlar_layered", 24 ] ]
     ]
   },
   {
     "result": "armor_scrapsuit",
     "type": "recipe",
+    "activity_level": "MODERATE_EXERCISE",
     "category": "CC_ARMOR",
     "subcategory": "CSC_ARMOR_SUIT",
     "skill_used": "fabrication",
@@ -273,6 +293,7 @@
   {
     "result": "armor_scrapsuit",
     "type": "recipe",
+    "activity_level": "MODERATE_EXERCISE",
     "category": "CC_ARMOR",
     "subcategory": "CSC_ARMOR_SUIT",
     "skill_used": "fabrication",
@@ -287,6 +308,7 @@
   {
     "result": "chainmail_hauberk",
     "type": "recipe",
+    "activity_level": "MODERATE_EXERCISE",
     "category": "CC_ARMOR",
     "subcategory": "CSC_ARMOR_SUIT",
     "skill_used": "tailor",
@@ -294,11 +316,13 @@
     "time": "18 m",
     "reversible": true,
     "autolearn": true,
+    "flags": [ "NO_RESIZE" ],
     "components": [ [ [ "chainmail_vest", 1 ] ], [ [ "chainmail_arms", 1 ] ], [ [ "chainmail_legs", 1 ] ], [ [ "gambeson", 1 ] ] ]
   },
   {
     "result": "chainmail_suit",
     "type": "recipe",
+    "activity_level": "MODERATE_EXERCISE",
     "category": "CC_ARMOR",
     "subcategory": "CSC_ARMOR_SUIT",
     "skill_used": "tailor",
@@ -306,6 +330,7 @@
     "time": "20 m",
     "reversible": true,
     "autolearn": true,
+    "flags": [ "NO_RESIZE" ],
     "components": [
       [ [ "chainmail_hood", 1 ] ],
       [ [ "chainmail_vest", 1 ] ],
@@ -317,6 +342,7 @@
   {
     "result": "chainmail_suit",
     "type": "recipe",
+    "activity_level": "MODERATE_EXERCISE",
     "id_suffix": "hauberk",
     "category": "CC_ARMOR",
     "subcategory": "CSC_ARMOR_SUIT",
@@ -325,11 +351,13 @@
     "time": "2 m",
     "reversible": true,
     "autolearn": true,
+    "flags": [ "NO_RESIZE" ],
     "components": [ [ [ "chainmail_hood", 1 ] ], [ [ "chainmail_hauberk", 1 ] ] ]
   },
   {
     "result": "chainmail_suit_faraday",
     "type": "recipe",
+    "activity_level": "MODERATE_EXERCISE",
     "category": "CC_ARMOR",
     "subcategory": "CSC_ARMOR_SUIT",
     "skill_used": "fabrication",
@@ -353,6 +381,7 @@
   {
     "result": "cloak",
     "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
     "category": "CC_ARMOR",
     "subcategory": "CSC_ARMOR_SUIT",
     "skill_used": "tailor",
@@ -366,6 +395,7 @@
   {
     "result": "cloak_fur",
     "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
     "category": "CC_ARMOR",
     "subcategory": "CSC_ARMOR_SUIT",
     "skill_used": "tailor",
@@ -381,6 +411,7 @@
   {
     "result": "cloak_leather",
     "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
     "category": "CC_ARMOR",
     "subcategory": "CSC_ARMOR_SUIT",
     "skill_used": "tailor",
@@ -394,6 +425,7 @@
   {
     "result": "cloak_wool",
     "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
     "category": "CC_ARMOR",
     "subcategory": "CSC_ARMOR_SUIT",
     "skill_used": "tailor",
@@ -407,6 +439,7 @@
   {
     "result": "entry_suit",
     "type": "recipe",
+    "activity_level": "MODERATE_EXERCISE",
     "category": "CC_ARMOR",
     "subcategory": "CSC_ARMOR_SUIT",
     "skill_used": "fabrication",
@@ -418,14 +451,15 @@
     "tools": [ [ [ "welder", 28 ], [ "welder_crude", 42 ], [ "soldering_iron", 42 ], [ "toolset", 42 ] ] ],
     "components": [
       [ [ "nomex", 40 ] ],
-      [ [ "kevlar_plate", 8 ] ],
+      [ [ "sheet_kevlar_layered", 8 ] ],
       [ [ "duct_tape", 200 ], [ "superglue", 5 ] ],
-      [ [ "kevlar", 1 ], [ "modularvest", 1 ], [ "swat_armor", 1 ], [ "kevlar_plate", 24 ] ]
+      [ [ "kevlar", 1 ], [ "ballistic_vest_empty", 1 ], [ "swat_armor", 1 ], [ "sheet_kevlar_layered", 24 ] ]
     ]
   },
   {
     "result": "fsurvivor_suit",
     "type": "recipe",
+    "activity_level": "MODERATE_EXERCISE",
     "category": "CC_ARMOR",
     "subcategory": "CSC_ARMOR_SUIT",
     "skill_used": "tailor",
@@ -452,12 +486,13 @@
         [ "fanny", 2 ]
       ],
       [ [ "duct_tape", 200 ] ],
-      [ [ "kevlar", 1 ], [ "modularvest", 1 ], [ "swat_armor", 1 ], [ "kevlar_plate", 24 ] ]
+      [ [ "kevlar", 1 ], [ "ballistic_vest_empty", 1 ], [ "swat_armor", 1 ], [ "sheet_kevlar_layered", 24 ] ]
     ]
   },
   {
     "result": "gambeson",
     "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
     "category": "CC_ARMOR",
     "subcategory": "CSC_ARMOR_SUIT",
     "skill_used": "tailor",
@@ -471,6 +506,7 @@
   {
     "result": "h20survivor_suit",
     "type": "recipe",
+    "activity_level": "MODERATE_EXERCISE",
     "category": "CC_ARMOR",
     "subcategory": "CSC_ARMOR_SUIT",
     "skill_used": "tailor",
@@ -495,12 +531,13 @@
         [ "fanny", 2 ]
       ],
       [ [ "duct_tape", 400 ] ],
-      [ [ "kevlar", 1 ], [ "modularvest", 1 ], [ "swat_armor", 1 ], [ "kevlar_plate", 24 ] ]
+      [ [ "kevlar", 1 ], [ "ballistic_vest_empty", 1 ], [ "swat_armor", 1 ], [ "sheet_kevlar_layered", 24 ] ]
     ]
   },
   {
     "result": "hsurvivor_suit",
     "type": "recipe",
+    "activity_level": "MODERATE_EXERCISE",
     "category": "CC_ARMOR",
     "subcategory": "CSC_ARMOR_SUIT",
     "skill_used": "tailor",
@@ -527,12 +564,13 @@
         [ "fanny", 2 ]
       ],
       [ [ "duct_tape", 300 ] ],
-      [ [ "kevlar", 1 ], [ "modularvest", 1 ], [ "swat_armor", 1 ], [ "kevlar_plate", 24 ] ]
+      [ [ "kevlar", 1 ], [ "ballistic_vest_empty", 1 ], [ "swat_armor", 1 ], [ "sheet_kevlar_layered", 24 ] ]
     ]
   },
   {
     "result": "jumpsuit",
     "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
     "category": "CC_ARMOR",
     "subcategory": "CSC_ARMOR_SUIT",
     "skill_used": "tailor",
@@ -545,6 +583,7 @@
   {
     "result": "jumpsuit_xl",
     "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
     "category": "CC_ARMOR",
     "subcategory": "CSC_ARMOR_SUIT",
     "skill_used": "tailor",
@@ -557,6 +596,7 @@
   {
     "result": "jumpsuit_xl",
     "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
     "id_suffix": "from_jumpsuit",
     "category": "CC_ARMOR",
     "subcategory": "CSC_ARMOR_SUIT",
@@ -570,6 +610,7 @@
   {
     "result": "kimono",
     "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
     "category": "CC_ARMOR",
     "subcategory": "CSC_ARMOR_SUIT",
     "skill_used": "tailor",
@@ -582,6 +623,7 @@
   {
     "result": "lsurvivor_suit",
     "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
     "category": "CC_ARMOR",
     "subcategory": "CSC_ARMOR_SUIT",
     "skill_used": "tailor",
@@ -606,12 +648,13 @@
         [ "fanny", 2 ]
       ],
       [ [ "duct_tape", 200 ] ],
-      [ [ "kevlar", 1 ], [ "modularvest", 1 ], [ "swat_armor", 1 ], [ "kevlar_plate", 24 ] ]
+      [ [ "kevlar", 1 ], [ "ballistic_vest_empty", 1 ], [ "swat_armor", 1 ], [ "sheet_kevlar_layered", 24 ] ]
     ]
   },
   {
     "result": "nomex_suit",
     "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
     "category": "CC_ARMOR",
     "subcategory": "CSC_ARMOR_SUIT",
     "skill_used": "tailor",
@@ -624,6 +667,7 @@
   {
     "result": "shark_suit_faraday",
     "type": "recipe",
+    "activity_level": "MODERATE_EXERCISE",
     "category": "CC_ARMOR",
     "subcategory": "CSC_ARMOR_SUIT",
     "skill_used": "electronics",
@@ -631,11 +675,13 @@
     "time": "12 m",
     "reversible": true,
     "autolearn": true,
+    "flags": [ "NO_RESIZE" ],
     "components": [ [ [ "shark_suit", 1 ] ], [ [ "cable", 50 ] ] ]
   },
   {
     "result": "survivor_suit",
     "type": "recipe",
+    "activity_level": "MODERATE_EXERCISE",
     "category": "CC_ARMOR",
     "subcategory": "CSC_ARMOR_SUIT",
     "skill_used": "tailor",
@@ -661,12 +707,13 @@
         [ "fanny", 2 ]
       ],
       [ [ "duct_tape", 300 ] ],
-      [ [ "kevlar", 1 ], [ "modularvest", 1 ], [ "swat_armor", 1 ], [ "kevlar_plate", 24 ] ]
+      [ [ "kevlar", 1 ], [ "ballistic_vest_empty", 1 ], [ "swat_armor", 1 ], [ "sheet_kevlar_layered", 24 ] ]
     ]
   },
   {
     "result": "thermal_outfit",
     "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
     "category": "CC_ARMOR",
     "subcategory": "CSC_ARMOR_SUIT",
     "skill_used": "electronics",
@@ -680,6 +727,7 @@
   {
     "result": "thermal_outfit",
     "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
     "id_suffix": "thermal_outfit_from_bits",
     "category": "CC_ARMOR",
     "subcategory": "CSC_ARMOR_SUIT",
@@ -700,6 +748,7 @@
   {
     "result": "thermal_suit",
     "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
     "category": "CC_ARMOR",
     "subcategory": "CSC_ARMOR_SUIT",
     "skill_used": "electronics",
@@ -713,6 +762,7 @@
   {
     "result": "tunic_rag",
     "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
     "category": "CC_ARMOR",
     "subcategory": "CSC_ARMOR_SUIT",
     "skill_used": "tailor",
@@ -725,6 +775,7 @@
   {
     "result": "union_suit",
     "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
     "category": "CC_ARMOR",
     "subcategory": "CSC_ARMOR_SUIT",
     "//": "OK, I sewed the shirt and pants together, and added laces to the top, so I can put the thing on.",
@@ -735,11 +786,13 @@
     "decomp_learn": 0,
     "book_learn": [ [ "mag_tailor", 0 ], [ "manual_tailor", 0 ], [ "textbook_tailor", 0 ] ],
     "using": [ [ "sewing_standard", 20 ] ],
+    "flags": [ "NO_RESIZE" ],
     "components": [ [ [ "long_undertop", 1 ] ], [ [ "long_underpants", 1 ] ], [ [ "cordage", 1, "LIST" ] ] ]
   },
   {
     "result": "wetsuit",
     "type": "recipe",
+    "activity_level": "MODERATE_EXERCISE",
     "category": "CC_ARMOR",
     "subcategory": "CSC_ARMOR_SUIT",
     "skill_used": "tailor",
@@ -753,6 +806,7 @@
   {
     "result": "wetsuit_spring",
     "type": "recipe",
+    "activity_level": "MODERATE_EXERCISE",
     "category": "CC_ARMOR",
     "subcategory": "CSC_ARMOR_SUIT",
     "skill_used": "tailor",
@@ -766,6 +820,7 @@
   {
     "result": "wool_suit",
     "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
     "category": "CC_ARMOR",
     "subcategory": "CSC_ARMOR_SUIT",
     "skill_used": "tailor",
@@ -778,6 +833,7 @@
   {
     "result": "wsurvivor_suit",
     "type": "recipe",
+    "activity_level": "MODERATE_EXERCISE",
     "category": "CC_ARMOR",
     "subcategory": "CSC_ARMOR_SUIT",
     "skill_used": "tailor",
@@ -804,12 +860,13 @@
         [ "fanny", 2 ]
       ],
       [ [ "duct_tape", 300 ] ],
-      [ [ "kevlar", 1 ], [ "modularvest", 1 ], [ "swat_armor", 1 ], [ "kevlar_plate", 24 ] ]
+      [ [ "kevlar", 1 ], [ "ballistic_vest_empty", 1 ], [ "swat_armor", 1 ], [ "sheet_kevlar_layered", 24 ] ]
     ]
   },
   {
     "result": "xlhsurvivor_suit",
     "type": "recipe",
+    "activity_level": "MODERATE_EXERCISE",
     "category": "CC_ARMOR",
     "subcategory": "CSC_ARMOR_SUIT",
     "skill_used": "tailor",
@@ -836,12 +893,13 @@
         [ "fanny", 2 ]
       ],
       [ [ "duct_tape", 400 ] ],
-      [ [ "kevlar", 2 ], [ "modularvest", 2 ], [ "swat_armor", 2 ], [ "kevlar_plate", 48 ] ]
+      [ [ "kevlar", 2 ], [ "ballistic_vest_empty", 2 ], [ "swat_armor", 2 ], [ "sheet_kevlar_layered", 48 ] ]
     ]
   },
   {
     "result": "xlsurvivor_suit",
     "type": "recipe",
+    "activity_level": "MODERATE_EXERCISE",
     "category": "CC_ARMOR",
     "subcategory": "CSC_ARMOR_SUIT",
     "skill_used": "tailor",
@@ -868,12 +926,13 @@
         [ "fanny", 2 ]
       ],
       [ [ "duct_tape", 400 ] ],
-      [ [ "kevlar", 2 ], [ "modularvest", 2 ], [ "swat_armor", 2 ], [ "kevlar_plate", 42 ] ]
+      [ [ "kevlar", 2 ], [ "ballistic_vest_empty", 2 ], [ "swat_armor", 2 ], [ "sheet_kevlar_layered", 42 ] ]
     ]
   },
   {
     "result": "yukata",
     "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
     "category": "CC_ARMOR",
     "subcategory": "CSC_ARMOR_SUIT",
     "skill_used": "tailor",
@@ -886,6 +945,7 @@
   {
     "result": "zentai",
     "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
     "category": "CC_ARMOR",
     "subcategory": "CSC_ARMOR_SUIT",
     "skill_used": "tailor",

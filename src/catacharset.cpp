@@ -1,15 +1,18 @@
 #include "catacharset.h"
 
+#include <algorithm>
+#include <array>
 #include <cstdlib>
 #include <cstring>
-#include <array>
 
 #include "options.h"
 #include "output.h"
 #include "wcwidth.h"
 
 #if defined(_WIN32)
+#if 1 // HACK: Hack to prevent reordering of #include "platform_win.h" by IWYU
 #include "platform_win.h"
+#endif
 #include "mmsystem.h"
 #endif
 
@@ -477,6 +480,26 @@ std::u32string utf8_to_utf32( const std::string &str )
     }
     ret.shrink_to_fit();
     return ret;
+}
+
+std::vector<std::string> utf8_display_split( const std::string &s )
+{
+    std::vector<std::string> result;
+    std::string current_glyph;
+    const char *pos = s.c_str();
+    int len = s.length();
+    while( len > 0 ) {
+        const char *old_pos = pos;
+        const uint32_t ch = UTF8_getch( &pos, &len );
+        const int width = mk_wcwidth( ch );
+        if( width > 0 && !current_glyph.empty() ) {
+            result.push_back( current_glyph );
+            current_glyph.clear();
+        }
+        current_glyph += std::string( old_pos, pos );
+    }
+    result.push_back( current_glyph );
+    return result;
 }
 
 int center_text_pos( const char *text, int start_pos, int end_pos )

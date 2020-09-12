@@ -2,6 +2,7 @@
   {
     "result": "apron_leather",
     "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
     "category": "CC_ARMOR",
     "subcategory": "CSC_ARMOR_TORSO",
     "skill_used": "tailor",
@@ -14,12 +15,12 @@
   {
     "result": "armor_lamellar",
     "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
     "category": "CC_ARMOR",
     "subcategory": "CSC_ARMOR_TORSO",
     "skill_used": "tailor",
     "difficulty": 3,
     "time": "4 h",
-    "autolearn": true,
     "book_learn": [ [ "textbook_armschina", 2 ] ],
     "using": [ [ "sewing_standard", 68 ] ],
     "components": [
@@ -31,6 +32,7 @@
   {
     "result": "bikini_top",
     "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
     "category": "CC_ARMOR",
     "subcategory": "CSC_ARMOR_TORSO",
     "skill_used": "tailor",
@@ -43,6 +45,7 @@
   {
     "result": "bikini_top_fur",
     "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
     "category": "CC_ARMOR",
     "subcategory": "CSC_ARMOR_TORSO",
     "skill_used": "tailor",
@@ -55,6 +58,7 @@
   {
     "result": "bikini_top_leather",
     "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
     "category": "CC_ARMOR",
     "subcategory": "CSC_ARMOR_TORSO",
     "skill_used": "tailor",
@@ -67,6 +71,7 @@
   {
     "result": "blazer",
     "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
     "category": "CC_ARMOR",
     "subcategory": "CSC_ARMOR_TORSO",
     "skill_used": "tailor",
@@ -79,6 +84,7 @@
   {
     "result": "bookplate",
     "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
     "category": "CC_ARMOR",
     "subcategory": "CSC_ARMOR_TORSO",
     "skill_used": "fabrication",
@@ -87,11 +93,12 @@
     "autolearn": true,
     "book_learn": [ [ "recipe_melee", 2 ] ],
     "qualities": [ { "id": "CUT", "level": 1 } ],
-    "components": [ [ [ "paper", 300 ] ], [ [ "duct_tape", 150 ] ] ]
+    "components": [ [ [ "paper", 1200 ] ], [ [ "duct_tape", 150 ] ] ]
   },
   {
     "result": "bra",
     "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
     "category": "CC_ARMOR",
     "subcategory": "CSC_ARMOR_TORSO",
     "skill_used": "tailor",
@@ -104,6 +111,7 @@
   {
     "result": "chestwrap",
     "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
     "category": "CC_ARMOR",
     "subcategory": "CSC_ARMOR_TORSO",
     "skill_used": "tailor",
@@ -116,6 +124,7 @@
   {
     "result": "chestwrap_fur",
     "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
     "category": "CC_ARMOR",
     "subcategory": "CSC_ARMOR_TORSO",
     "skill_used": "tailor",
@@ -128,6 +137,7 @@
   {
     "result": "chestwrap_leather",
     "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
     "category": "CC_ARMOR",
     "subcategory": "CSC_ARMOR_TORSO",
     "skill_used": "tailor",
@@ -140,6 +150,7 @@
   {
     "result": "chestwrap_wool",
     "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
     "category": "CC_ARMOR",
     "subcategory": "CSC_ARMOR_TORSO",
     "skill_used": "tailor",
@@ -152,6 +163,7 @@
   {
     "result": "coat_fur",
     "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
     "category": "CC_ARMOR",
     "subcategory": "CSC_ARMOR_TORSO",
     "skill_used": "tailor",
@@ -166,6 +178,7 @@
   {
     "result": "coat_faux_fur",
     "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
     "category": "CC_ARMOR",
     "subcategory": "CSC_ARMOR_TORSO",
     "skill_used": "tailor",
@@ -178,6 +191,7 @@
   {
     "result": "coat_gut",
     "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
     "category": "CC_ARMOR",
     "subcategory": "CSC_ARMOR_TORSO",
     "skill_used": "tailor",
@@ -187,11 +201,12 @@
     "autolearn": true,
     "qualities": [ { "id": "SEW", "level": 1 }, { "id": "CUT", "level": 1 } ],
     "book_learn": [ [ "trappers_companion", 6 ], [ "survival_book", 4 ] ],
-    "components": [ [ [ "stomach_sealed", 16 ], [ "large_stomach_sealed", 10 ] ], [ [ "sinew", 60 ] ] ]
+    "components": [ [ [ "stomach_sealed", 16 ], [ "large_stomach_sealed", 10 ] ], [ [ "filament", 60, "LIST" ] ] ]
   },
   {
     "result": "coat_rain",
     "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
     "category": "CC_ARMOR",
     "subcategory": "CSC_ARMOR_TORSO",
     "skill_used": "tailor",
@@ -204,6 +219,7 @@
   {
     "result": "cuirass_lightplate",
     "type": "recipe",
+    "activity_level": "BRISK_EXERCISE",
     "category": "CC_ARMOR",
     "subcategory": "CSC_ARMOR_TORSO",
     "skill_used": "fabrication",
@@ -218,6 +234,7 @@
   {
     "result": "cuirass_scrap",
     "type": "recipe",
+    "activity_level": "MODERATE_EXERCISE",
     "category": "CC_ARMOR",
     "subcategory": "CSC_ARMOR_TORSO",
     "skill_used": "fabrication",
@@ -232,6 +249,7 @@
   {
     "result": "duster",
     "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
     "category": "CC_ARMOR",
     "subcategory": "CSC_ARMOR_TORSO",
     "skill_used": "tailor",
@@ -244,6 +262,7 @@
   {
     "result": "duster_fur",
     "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
     "category": "CC_ARMOR",
     "subcategory": "CSC_ARMOR_TORSO",
     "skill_used": "tailor",
@@ -257,6 +276,7 @@
   {
     "result": "duster_faux_fur",
     "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
     "category": "CC_ARMOR",
     "subcategory": "CSC_ARMOR_TORSO",
     "skill_used": "tailor",
@@ -269,6 +289,7 @@
   {
     "result": "duster_leather",
     "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
     "category": "CC_ARMOR",
     "subcategory": "CSC_ARMOR_TORSO",
     "skill_used": "tailor",
@@ -282,6 +303,7 @@
   {
     "result": "duster_survivor",
     "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
     "category": "CC_ARMOR",
     "subcategory": "CSC_ARMOR_TORSO",
     "skill_used": "tailor",
@@ -292,8 +314,8 @@
     "using": [ [ "sewing_standard", 135 ] ],
     "components": [
       [ [ "coat_rain", 1 ] ],
-      [ [ "duster", 1 ], [ "duster_leather", 1 ], [ "jacket_army", 1 ] ],
-      [ [ "kevlar", 1 ], [ "modularvest", 1 ], [ "kevlar_plate", 16 ] ],
+      [ [ "duster", 1 ], [ "jacket_army", 1 ] ],
+      [ [ "kevlar", 1 ], [ "ballistic_vest_empty", 1 ], [ "sheet_kevlar_layered", 16 ] ],
       [ [ "rag", 19 ] ],
       [
         [ "tacvest", 1 ],
@@ -312,6 +334,7 @@
   {
     "result": "flotation_vest_ms",
     "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
     "category": "CC_ARMOR",
     "subcategory": "CSC_ARMOR_TORSO",
     "skill_used": "tailor",
@@ -327,6 +350,7 @@
   {
     "result": "greatcoat",
     "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
     "category": "CC_ARMOR",
     "subcategory": "CSC_ARMOR_TORSO",
     "skill_used": "tailor",
@@ -339,6 +363,7 @@
   {
     "result": "haori",
     "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
     "category": "CC_ARMOR",
     "subcategory": "CSC_ARMOR_TORSO",
     "skill_used": "tailor",
@@ -351,6 +376,7 @@
   {
     "result": "hoodie",
     "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
     "category": "CC_ARMOR",
     "subcategory": "CSC_ARMOR_TORSO",
     "skill_used": "tailor",
@@ -363,6 +389,7 @@
   {
     "result": "house_coat",
     "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
     "category": "CC_ARMOR",
     "subcategory": "CSC_ARMOR_TORSO",
     "skill_used": "tailor",
@@ -376,6 +403,7 @@
   {
     "result": "jacket_leather",
     "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
     "category": "CC_ARMOR",
     "subcategory": "CSC_ARMOR_TORSO",
     "skill_used": "tailor",
@@ -389,6 +417,7 @@
   {
     "result": "jacket_leather_mod",
     "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
     "category": "CC_ARMOR",
     "subcategory": "CSC_ARMOR_TORSO",
     "skill_used": "tailor",
@@ -403,6 +432,7 @@
   {
     "result": "leotard",
     "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
     "category": "CC_ARMOR",
     "subcategory": "CSC_ARMOR_TORSO",
     "skill_used": "tailor",
@@ -415,6 +445,7 @@
   {
     "result": "long_undertop",
     "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
     "category": "CC_ARMOR",
     "subcategory": "CSC_ARMOR_TORSO",
     "skill_used": "tailor",
@@ -427,6 +458,7 @@
   {
     "result": "long_undertop_sleeveless",
     "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
     "category": "CC_ARMOR",
     "subcategory": "CSC_ARMOR_TORSO",
     "skill_used": "tailor",
@@ -439,6 +471,7 @@
   {
     "result": "long_undertop_sleeveless",
     "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
     "id_suffix": "cutting",
     "category": "CC_ARMOR",
     "subcategory": "CSC_ARMOR_TORSO",
@@ -447,11 +480,13 @@
     "autolearn": true,
     "byproducts": [ [ "rag", 2 ] ],
     "qualities": [ { "id": "CUT", "level": 1 } ],
+    "flags": [ "NO_RESIZE" ],
     "components": [ [ [ "long_undertop", 1 ] ] ]
   },
   {
     "result": "longshirt",
     "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
     "category": "CC_ARMOR",
     "subcategory": "CSC_ARMOR_TORSO",
     "skill_used": "tailor",
@@ -464,6 +499,7 @@
   {
     "result": "lsurvivor_armor",
     "type": "recipe",
+    "activity_level": "MODERATE_EXERCISE",
     "category": "CC_ARMOR",
     "subcategory": "CSC_ARMOR_TORSO",
     "skill_used": "tailor",
@@ -488,91 +524,27 @@
         [ "fanny", 1 ]
       ],
       [ [ "duct_tape", 150 ] ],
-      [ [ "kevlar", 1 ], [ "modularvest", 1 ], [ "swat_armor", 1 ], [ "kevlar_plate", 16 ] ]
+      [ [ "kevlar", 1 ], [ "ballistic_vest_empty", 1 ], [ "swat_armor", 1 ], [ "kevlar_plate", 16 ] ]
     ]
   },
   {
-    "result": "modularvest",
+    "result": "ballistic_vest_esapi",
     "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
     "category": "CC_ARMOR",
     "subcategory": "CSC_ARMOR_TORSO",
     "skill_used": "tailor",
-    "difficulty": 4,
-    "time": "30 m",
-    "reversible": true,
-    "decomp_learn": 4,
-    "autolearn": true,
-    "using": [ [ "sewing_standard", 30 ] ],
-    "components": [ [ [ "kevlar_plate", 24 ] ] ]
-  },
-  {
-    "result": "modularvestceramic",
-    "type": "recipe",
-    "category": "CC_ARMOR",
-    "subcategory": "CSC_ARMOR_TORSO",
-    "skill_used": "tailor",
-    "time": "5 m",
+    "time": "2 m",
     "reversible": true,
     "decomp_learn": 0,
     "autolearn": true,
-    "components": [ [ [ "modularvest", 1 ] ], [ [ "ceramic_armor", 4 ] ] ],
-    "flags": [ "BLIND_EASY" ]
-  },
-  {
-    "result": "modularvesthard",
-    "type": "recipe",
-    "category": "CC_ARMOR",
-    "subcategory": "CSC_ARMOR_TORSO",
-    "skill_used": "tailor",
-    "time": "5 m",
-    "reversible": true,
-    "decomp_learn": 0,
-    "autolearn": true,
-    "components": [ [ [ "modularvest", 1 ] ], [ [ "hard_steel_armor", 8 ] ] ],
-    "flags": [ "BLIND_EASY" ]
-  },
-  {
-    "result": "modularvestkevlar",
-    "type": "recipe",
-    "category": "CC_ARMOR",
-    "subcategory": "CSC_ARMOR_TORSO",
-    "skill_used": "tailor",
-    "time": "5 m",
-    "reversible": true,
-    "decomp_learn": 0,
-    "autolearn": true,
-    "components": [ [ [ "modularvest", 1 ] ], [ [ "kevlar_plate", 8 ] ] ],
-    "flags": [ "BLIND_EASY" ]
-  },
-  {
-    "result": "modularveststeel",
-    "type": "recipe",
-    "category": "CC_ARMOR",
-    "subcategory": "CSC_ARMOR_TORSO",
-    "skill_used": "tailor",
-    "time": "5 m",
-    "reversible": true,
-    "decomp_learn": 0,
-    "autolearn": true,
-    "components": [ [ [ "modularvest", 1 ] ], [ [ "steel_armor", 8 ] ] ],
-    "flags": [ "BLIND_EASY" ]
-  },
-  {
-    "result": "modularvestsuper",
-    "type": "recipe",
-    "category": "CC_ARMOR",
-    "subcategory": "CSC_ARMOR_TORSO",
-    "skill_used": "tailor",
-    "time": "5 m",
-    "reversible": true,
-    "decomp_learn": 0,
-    "autolearn": true,
-    "components": [ [ [ "modularvest", 1 ] ], [ [ "alloy_sheet", 8 ] ] ],
+    "components": [ [ [ "ballistic_vest_empty", 1 ] ], [ [ "esapi_plate", 2 ] ], [ [ "esbi_plate", 2 ] ] ],
     "flags": [ "BLIND_EASY" ]
   },
   {
     "result": "dragonskin",
     "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
     "category": "CC_ARMOR",
     "subcategory": "CSC_ARMOR_TORSO",
     "skill_used": "tailor",
@@ -586,6 +558,7 @@
   {
     "result": "peacoat",
     "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
     "category": "CC_ARMOR",
     "subcategory": "CSC_ARMOR_TORSO",
     "skill_used": "tailor",
@@ -598,6 +571,7 @@
   {
     "result": "poncho",
     "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
     "category": "CC_ARMOR",
     "subcategory": "CSC_ARMOR_TORSO",
     "skill_used": "tailor",
@@ -610,6 +584,7 @@
   {
     "result": "poncho",
     "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
     "id_suffix": "knitted",
     "category": "CC_ARMOR",
     "subcategory": "CSC_ARMOR_TORSO",
@@ -623,6 +598,7 @@
   {
     "result": "sleeveless_duster",
     "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
     "category": "CC_ARMOR",
     "subcategory": "CSC_ARMOR_TORSO",
     "//": "The general guideline for sleeveless dusters is the components, volume, weight, time to craft, and value are 15% lower (rounded down) than the original.  Making it from an original takes 50% the time.",
@@ -636,6 +612,7 @@
   {
     "result": "sleeveless_duster",
     "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
     "id_suffix": "from_duster",
     "category": "CC_ARMOR",
     "subcategory": "CSC_ARMOR_TORSO",
@@ -645,11 +622,13 @@
     "autolearn": true,
     "byproducts": [ [ "rag", 5 ] ],
     "qualities": [ { "id": "CUT", "level": 1 } ],
+    "flags": [ "NO_RESIZE" ],
     "components": [ [ [ "duster", 1 ] ] ]
   },
   {
     "result": "sleeveless_duster_fur",
     "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
     "category": "CC_ARMOR",
     "subcategory": "CSC_ARMOR_TORSO",
     "//": "The general guideline for sleeveless dusters is the components, volume, weight, time to craft, and value are 15% lower (rounded down) than the original.  Making it from an original takes 50% the time.",
@@ -664,6 +643,7 @@
   {
     "result": "sleeveless_duster_faux_fur",
     "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
     "category": "CC_ARMOR",
     "subcategory": "CSC_ARMOR_TORSO",
     "//": "The general guideline for sleeveless dusters is the components, volume, weight, time to craft, and value are 15% lower (rounded down) than the original.  Making it from an original takes 50% the time.",
@@ -677,6 +657,7 @@
   {
     "result": "sleeveless_duster_fur",
     "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
     "id_suffix": "from_duster_fur",
     "category": "CC_ARMOR",
     "subcategory": "CSC_ARMOR_TORSO",
@@ -686,11 +667,13 @@
     "autolearn": true,
     "byproducts": [ [ "fur", 6 ] ],
     "qualities": [ { "id": "CUT", "level": 1 } ],
+    "flags": [ "NO_RESIZE" ],
     "components": [ [ [ "duster_fur", 1 ] ] ]
   },
   {
     "result": "sleeveless_duster_faux_fur",
     "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
     "id_suffix": "from_duster_faux_fur",
     "category": "CC_ARMOR",
     "subcategory": "CSC_ARMOR_TORSO",
@@ -700,11 +683,13 @@
     "autolearn": true,
     "byproducts": [ [ "faux_fur", 6 ] ],
     "qualities": [ { "id": "CUT", "level": 1 } ],
+    "flags": [ "NO_RESIZE" ],
     "components": [ [ [ "duster_faux_fur", 1 ] ] ]
   },
   {
     "result": "sleeveless_duster_leather",
     "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
     "category": "CC_ARMOR",
     "subcategory": "CSC_ARMOR_TORSO",
     "//": "The general guideline for sleeveless dusters is the components, volume, weight, time to craft, and value are 15% lower (rounded down) than the original.  Making it from an original takes 50% the time.",
@@ -719,6 +704,7 @@
   {
     "result": "sleeveless_duster_leather",
     "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
     "id_suffix": "from_duster_leather",
     "category": "CC_ARMOR",
     "subcategory": "CSC_ARMOR_TORSO",
@@ -728,11 +714,13 @@
     "autolearn": true,
     "byproducts": [ [ "leather", 4 ] ],
     "qualities": [ { "id": "CUT", "level": 1 } ],
+    "flags": [ "NO_RESIZE" ],
     "components": [ [ [ "duster_leather", 1 ] ] ]
   },
   {
     "result": "sleeveless_duster_survivor",
     "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
     "id_suffix": "from_duster_survivor",
     "category": "CC_ARMOR",
     "subcategory": "CSC_ARMOR_TORSO",
@@ -742,11 +730,13 @@
     "autolearn": true,
     "byproducts": [ [ "rag", 4 ] ],
     "qualities": [ { "id": "CUT", "level": 1 } ],
+    "flags": [ "NO_RESIZE" ],
     "components": [ [ [ "duster_survivor", 1 ] ] ]
   },
   {
     "result": "sleeveless_duster_survivor",
     "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
     "category": "CC_ARMOR",
     "subcategory": "CSC_ARMOR_TORSO",
     "//": "The general guideline for sleeveless dusters is the components, volume, weight, time to craft, and value are 15% lower (rounded down) than the original.  Making it from an original takes 50% the time.  The sleeveless survivor duster is the exception with the premade wearable items.",
@@ -758,8 +748,8 @@
     "using": [ [ "sewing_standard", 115 ] ],
     "components": [
       [ [ "coat_rain", 1 ] ],
-      [ [ "duster", 1 ], [ "duster_leather", 1 ], [ "jacket_army", 1 ], [ "sleeveless_duster", 1 ] ],
-      [ [ "kevlar", 1 ], [ "modularvest", 1 ], [ "kevlar_plate", 13 ] ],
+      [ [ "duster", 1 ], [ "jacket_army", 1 ], [ "sleeveless_duster", 1 ] ],
+      [ [ "kevlar", 1 ], [ "ballistic_vest_empty", 1 ], [ "sheet_kevlar_layered", 13 ] ],
       [ [ "rag", 14 ] ],
       [
         [ "tacvest", 1 ],
@@ -778,6 +768,7 @@
   {
     "result": "sleeveless_trenchcoat",
     "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
     "id_suffix": "from_trenchcoat",
     "category": "CC_ARMOR",
     "subcategory": "CSC_ARMOR_TORSO",
@@ -787,11 +778,13 @@
     "autolearn": true,
     "byproducts": [ [ "rag", 2 ] ],
     "qualities": [ { "id": "CUT", "level": 1 } ],
+    "flags": [ "NO_RESIZE" ],
     "components": [ [ [ "trenchcoat", 1 ] ] ]
   },
   {
     "result": "sleeveless_trenchcoat",
     "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
     "category": "CC_ARMOR",
     "subcategory": "CSC_ARMOR_TORSO",
     "//": "The general guideline for sleeveless trenchcoats is the components, volume, weight, time to craft, and value are 15% lower (rounded down) than the original.  Making it from an original takes 50% the time.",
@@ -805,6 +798,7 @@
   {
     "result": "sleeveless_trenchcoat_fur",
     "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
     "id_suffix": "from_trenchcoat_fur",
     "category": "CC_ARMOR",
     "subcategory": "CSC_ARMOR_TORSO",
@@ -814,11 +808,13 @@
     "autolearn": true,
     "byproducts": [ [ "fur", 2 ] ],
     "qualities": [ { "id": "CUT", "level": 1 } ],
+    "flags": [ "NO_RESIZE" ],
     "components": [ [ [ "trenchcoat_fur", 1 ] ] ]
   },
   {
     "result": "sleeveless_trenchcoat_faux_fur",
     "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
     "id_suffix": "from_trenchcoat_faux_fur",
     "category": "CC_ARMOR",
     "subcategory": "CSC_ARMOR_TORSO",
@@ -828,11 +824,13 @@
     "autolearn": true,
     "byproducts": [ [ "faux_fur", 2 ] ],
     "qualities": [ { "id": "CUT", "level": 1 } ],
+    "flags": [ "NO_RESIZE" ],
     "components": [ [ [ "trenchcoat_faux_fur", 1 ] ] ]
   },
   {
     "result": "sleeveless_trenchcoat_fur",
     "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
     "category": "CC_ARMOR",
     "subcategory": "CSC_ARMOR_TORSO",
     "//": "The general guideline for sleeveless trenchcoats is the components, volume, weight, time to craft, and value are 15% lower (rounded down) than the original.  Making it from an original takes 50% the time.",
@@ -847,6 +845,7 @@
   {
     "result": "sleeveless_trenchcoat_faux_fur",
     "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
     "category": "CC_ARMOR",
     "subcategory": "CSC_ARMOR_TORSO",
     "//": "The general guideline for sleeveless trenchcoats is the components, volume, weight, time to craft, and value are 15% lower (rounded down) than the original.  Making it from an original takes 50% the time.",
@@ -860,6 +859,7 @@
   {
     "result": "sleeveless_trenchcoat_leather",
     "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
     "id_suffix": "from_trenchcoat_leather",
     "category": "CC_ARMOR",
     "subcategory": "CSC_ARMOR_TORSO",
@@ -869,11 +869,13 @@
     "autolearn": true,
     "byproducts": [ [ "leather", 4 ] ],
     "qualities": [ { "id": "CUT", "level": 1 } ],
+    "flags": [ "NO_RESIZE" ],
     "components": [ [ [ "trenchcoat_leather", 1 ] ] ]
   },
   {
     "result": "sleeveless_trenchcoat_leather",
     "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
     "category": "CC_ARMOR",
     "subcategory": "CSC_ARMOR_TORSO",
     "//": "The general guideline for sleeveless trenchcoats is the components, volume, weight, time to craft, and value are 15% lower (rounded down) than the original.  Making it from an original takes 50% the time.",
@@ -888,6 +890,7 @@
   {
     "result": "sleeveless_trenchcoat_survivor",
     "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
     "category": "CC_ARMOR",
     "subcategory": "CSC_ARMOR_TORSO",
     "//": "The general guideline for sleeveless trenchcoats is the components, volume, weight, time to craft, and value are 15% lower (rounded down) than the original.  Making it from an original takes 50% the time.  The sleeveless survivor trenchcoat is the exception with the premade wearable items.",
@@ -900,7 +903,7 @@
     "components": [
       [ [ "coat_rain", 1 ] ],
       [ [ "trenchcoat", 1 ], [ "jacket_army", 1 ], [ "sleeveless_trenchcoat", 1 ] ],
-      [ [ "kevlar", 1 ], [ "modularvest", 1 ], [ "kevlar_plate", 10 ] ],
+      [ [ "kevlar", 1 ], [ "ballistic_vest_empty", 1 ], [ "sheet_kevlar_layered", 10 ] ],
       [ [ "rag", 11 ] ],
       [
         [ "tacvest", 1 ],
@@ -919,6 +922,7 @@
   {
     "result": "sleeveless_trenchcoat_survivor",
     "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
     "id_suffix": "from_trenchcoat_survivor",
     "category": "CC_ARMOR",
     "subcategory": "CSC_ARMOR_TORSO",
@@ -928,11 +932,13 @@
     "autolearn": true,
     "byproducts": [ [ "rag", 4 ] ],
     "qualities": [ { "id": "CUT", "level": 1 } ],
+    "flags": [ "NO_RESIZE" ],
     "components": [ [ [ "trenchcoat_survivor", 1 ] ] ]
   },
   {
     "result": "sleeveless_tunic",
     "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
     "id_suffix": "cutting",
     "category": "CC_ARMOR",
     "subcategory": "CSC_ARMOR_TORSO",
@@ -941,11 +947,13 @@
     "autolearn": true,
     "byproducts": [ [ "rag", 2 ] ],
     "qualities": [ { "id": "CUT", "level": 1 } ],
+    "flags": [ "NO_RESIZE" ],
     "components": [ [ [ "tunic", 1 ] ] ]
   },
   {
     "result": "sleeveless_tunic",
     "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
     "category": "CC_ARMOR",
     "subcategory": "CSC_ARMOR_TORSO",
     "skill_used": "tailor",
@@ -958,6 +966,7 @@
   {
     "result": "sports_bra",
     "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
     "category": "CC_ARMOR",
     "subcategory": "CSC_ARMOR_TORSO",
     "skill_used": "tailor",
@@ -968,8 +977,22 @@
     "components": [ [ [ "lycra_patch", 2 ] ] ]
   },
   {
+    "result": "xlsports_bra",
+    "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
+    "category": "CC_ARMOR",
+    "subcategory": "CSC_ARMOR_TORSO",
+    "skill_used": "tailor",
+    "difficulty": 3,
+    "time": "55 m",
+    "autolearn": true,
+    "using": [ [ "sewing_standard", 25 ] ],
+    "components": [ [ [ "lycra_patch", 4 ] ] ]
+  },
+  {
     "result": "sundress",
     "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
     "category": "CC_ARMOR",
     "subcategory": "CSC_ARMOR_TORSO",
     "skill_used": "tailor",
@@ -981,8 +1004,21 @@
     "components": [ [ [ "rag", 6 ] ] ]
   },
   {
+    "result": "maid_dress",
+    "type": "recipe",
+    "category": "CC_ARMOR",
+    "subcategory": "CSC_ARMOR_TORSO",
+    "skill_used": "tailor",
+    "difficulty": 3,
+    "time": "1 h 30 m",
+    "book_learn": [ [ "mag_animecon", 1 ] ],
+    "using": [ [ "sewing_standard", 15 ] ],
+    "components": [ [ [ "rag", 10 ] ] ]
+  },
+  {
     "result": "sweater",
     "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
     "category": "CC_ARMOR",
     "subcategory": "CSC_ARMOR_TORSO",
     "skill_used": "tailor",
@@ -995,6 +1031,7 @@
   {
     "result": "tank_top",
     "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
     "category": "CC_ARMOR",
     "subcategory": "CSC_ARMOR_TORSO",
     "skill_used": "tailor",
@@ -1007,6 +1044,7 @@
   {
     "result": "thermal_shirt",
     "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
     "category": "CC_ARMOR",
     "subcategory": "CSC_ARMOR_TORSO",
     "skill_used": "tailor",
@@ -1019,6 +1057,7 @@
   {
     "result": "trenchcoat",
     "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
     "category": "CC_ARMOR",
     "subcategory": "CSC_ARMOR_TORSO",
     "skill_used": "tailor",
@@ -1031,6 +1070,7 @@
   {
     "result": "trenchcoat_fur",
     "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
     "category": "CC_ARMOR",
     "subcategory": "CSC_ARMOR_TORSO",
     "skill_used": "tailor",
@@ -1044,6 +1084,7 @@
   {
     "result": "trenchcoat_faux_fur",
     "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
     "category": "CC_ARMOR",
     "subcategory": "CSC_ARMOR_TORSO",
     "skill_used": "tailor",
@@ -1056,6 +1097,7 @@
   {
     "result": "trenchcoat_leather",
     "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
     "category": "CC_ARMOR",
     "subcategory": "CSC_ARMOR_TORSO",
     "skill_used": "tailor",
@@ -1069,6 +1111,7 @@
   {
     "result": "trenchcoat_survivor",
     "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
     "category": "CC_ARMOR",
     "subcategory": "CSC_ARMOR_TORSO",
     "skill_used": "tailor",
@@ -1080,7 +1123,7 @@
     "components": [
       [ [ "coat_rain", 1 ] ],
       [ [ "trenchcoat", 1 ], [ "jacket_army", 1 ] ],
-      [ [ "kevlar", 1 ], [ "modularvest", 1 ], [ "kevlar_plate", 12 ] ],
+      [ [ "kevlar", 1 ], [ "ballistic_vest_empty", 1 ], [ "sheet_kevlar_layered", 12 ] ],
       [ [ "rag", 14 ] ],
       [
         [ "tacvest", 1 ],
@@ -1099,6 +1142,7 @@
   {
     "result": "tshirt",
     "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
     "category": "CC_ARMOR",
     "subcategory": "CSC_ARMOR_TORSO",
     "skill_used": "tailor",
@@ -1112,6 +1156,7 @@
   {
     "result": "tshirt",
     "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
     "category": "CC_ARMOR",
     "subcategory": "CSC_ARMOR_TORSO",
     "skill_used": "tailor",
@@ -1119,11 +1164,13 @@
     "autolearn": true,
     "byproducts": [ [ "rag", 2 ] ],
     "qualities": [ { "id": "CUT", "level": 1 } ],
+    "flags": [ "NO_RESIZE" ],
     "components": [ [ [ "longshirt", 1 ] ] ]
   },
   {
     "result": "tunic",
     "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
     "category": "CC_ARMOR",
     "subcategory": "CSC_ARMOR_TORSO",
     "skill_used": "tailor",
@@ -1136,6 +1183,7 @@
   {
     "result": "under_armor",
     "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
     "category": "CC_ARMOR",
     "subcategory": "CSC_ARMOR_TORSO",
     "skill_used": "tailor",
@@ -1148,6 +1196,7 @@
   {
     "result": "undershirt",
     "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
     "category": "CC_ARMOR",
     "subcategory": "CSC_ARMOR_TORSO",
     "skill_used": "tailor",
@@ -1160,6 +1209,7 @@
   {
     "result": "unitard",
     "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
     "category": "CC_ARMOR",
     "subcategory": "CSC_ARMOR_TORSO",
     "skill_used": "tailor",
@@ -1172,6 +1222,7 @@
   {
     "result": "xlkevlar",
     "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
     "category": "CC_ARMOR",
     "subcategory": "CSC_ARMOR_TORSO",
     "skill_used": "tailor",
@@ -1181,11 +1232,12 @@
     "decomp_learn": 6,
     "autolearn": true,
     "using": [ [ "sewing_standard", 54 ] ],
-    "components": [ [ [ "kevlar_plate", 43 ] ] ]
+    "components": [ [ [ "sheet_kevlar_layered", 43 ] ] ]
   },
   {
     "result": "vest_leather",
     "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
     "id_suffix": "from_patches",
     "category": "CC_ARMOR",
     "subcategory": "CSC_ARMOR_TORSO",
@@ -1200,6 +1252,7 @@
   {
     "result": "vest_leather",
     "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
     "category": "CC_ARMOR",
     "subcategory": "CSC_ARMOR_TORSO",
     "skill_used": "tailor",
@@ -1207,11 +1260,13 @@
     "autolearn": true,
     "byproducts": [ [ "leather", 5 ] ],
     "qualities": [ { "id": "CUT", "level": 1 } ],
+    "flags": [ "NO_RESIZE" ],
     "components": [ [ [ "jacket_leather", 1 ] ] ]
   },
   {
     "result": "vest_leather_mod",
     "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
     "category": "CC_ARMOR",
     "subcategory": "CSC_ARMOR_TORSO",
     "skill_used": "tailor",
@@ -1226,6 +1281,7 @@
   {
     "result": "wool_hoodie",
     "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
     "category": "CC_ARMOR",
     "subcategory": "CSC_ARMOR_TORSO",
     "skill_used": "tailor",
@@ -1238,6 +1294,7 @@
   {
     "result": "chainmail_vest",
     "type": "recipe",
+    "activity_level": "MODERATE_EXERCISE",
     "category": "CC_ARMOR",
     "subcategory": "CSC_ARMOR_TORSO",
     "skill_used": "fabrication",
@@ -1250,6 +1307,7 @@
   {
     "result": "armor_cuirass",
     "type": "recipe",
+    "activity_level": "BRISK_EXERCISE",
     "category": "CC_ARMOR",
     "subcategory": "CSC_ARMOR_TORSO",
     "skill_used": "fabrication",

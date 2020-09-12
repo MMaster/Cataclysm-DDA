@@ -2,6 +2,7 @@
   {
     "result": "gauntlets_chitin",
     "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
     "category": "CC_ARMOR",
     "subcategory": "CSC_ARMOR_HANDS",
     "skill_used": "tailor",
@@ -13,6 +14,7 @@
   {
     "result": "gauntlets_acidchitin",
     "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
     "category": "CC_ARMOR",
     "subcategory": "CSC_ARMOR_HANDS",
     "skill_used": "tailor",
@@ -26,6 +28,7 @@
   {
     "result": "gauntlets_larmor",
     "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
     "category": "CC_ARMOR",
     "subcategory": "CSC_ARMOR_HANDS",
     "skill_used": "tailor",
@@ -38,6 +41,7 @@
   {
     "result": "gloves_bag",
     "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
     "category": "CC_ARMOR",
     "subcategory": "CSC_ARMOR_HANDS",
     "skill_used": "survival",
@@ -49,6 +53,7 @@
   {
     "result": "gloves_fingerless",
     "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
     "category": "CC_ARMOR",
     "subcategory": "CSC_ARMOR_HANDS",
     "skill_used": "tailor",
@@ -60,6 +65,7 @@
   {
     "result": "gloves_fingerless",
     "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
     "id_suffix": "from patches",
     "category": "CC_ARMOR",
     "subcategory": "CSC_ARMOR_HANDS",
@@ -74,6 +80,7 @@
   {
     "result": "gloves_fingerless_mod",
     "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
     "category": "CC_ARMOR",
     "subcategory": "CSC_ARMOR_HANDS",
     "skill_used": "tailor",
@@ -88,6 +95,7 @@
   {
     "result": "gloves_fsurvivor",
     "type": "recipe",
+    "activity_level": "MODERATE_EXERCISE",
     "category": "CC_ARMOR",
     "subcategory": "CSC_ARMOR_HANDS",
     "skill_used": "tailor",
@@ -101,13 +109,14 @@
       [ [ "nomex", 6 ] ],
       [ [ "leather", 2 ] ],
       [ [ "duct_tape", 120 ] ],
-      [ [ "gloves_tactical", 1 ], [ "kevlar_plate", 4 ] ],
+      [ [ "gloves_tactical", 1 ], [ "sheet_kevlar_layered", 4 ] ],
       [ [ "nomex_gloves", 1 ], [ "fire_gauntlets", 1 ] ]
     ]
   },
   {
     "result": "gloves_fur",
     "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
     "category": "CC_ARMOR",
     "subcategory": "CSC_ARMOR_HANDS",
     "skill_used": "tailor",
@@ -122,6 +131,7 @@
   {
     "result": "gloves_h20survivor",
     "type": "recipe",
+    "activity_level": "MODERATE_EXERCISE",
     "category": "CC_ARMOR",
     "subcategory": "CSC_ARMOR_HANDS",
     "skill_used": "tailor",
@@ -134,13 +144,14 @@
     "components": [
       [ [ "plastic_chunk", 4 ] ],
       [ [ "duct_tape", 120 ] ],
-      [ [ "gloves_tactical", 1 ], [ "kevlar_plate", 4 ] ],
+      [ [ "gloves_tactical", 1 ], [ "sheet_kevlar_layered", 4 ] ],
       [ [ "wetsuit_gloves", 1 ] ]
     ]
   },
   {
     "result": "gloves_hsurvivor",
     "type": "recipe",
+    "activity_level": "MODERATE_EXERCISE",
     "category": "CC_ARMOR",
     "subcategory": "CSC_ARMOR_HANDS",
     "skill_used": "tailor",
@@ -155,7 +166,7 @@
       [ [ "leather", 2 ] ],
       [ [ "scrap", 4 ] ],
       [ [ "duct_tape", 50 ] ],
-      [ [ "gloves_tactical", 1 ], [ "kevlar_plate", 4 ] ],
+      [ [ "gloves_tactical", 1 ], [ "sheet_kevlar_layered", 4 ] ],
       [
         [ "gloves_leather", 1 ],
         [ "gloves_light", 1 ],
@@ -168,6 +179,7 @@
   {
     "result": "gloves_leather",
     "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
     "category": "CC_ARMOR",
     "subcategory": "CSC_ARMOR_HANDS",
     "skill_used": "tailor",
@@ -181,6 +193,7 @@
   {
     "result": "gloves_light",
     "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
     "category": "CC_ARMOR",
     "subcategory": "CSC_ARMOR_HANDS",
     "skill_used": "tailor",
@@ -193,6 +206,7 @@
   {
     "result": "gloves_liner",
     "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
     "category": "CC_ARMOR",
     "subcategory": "CSC_ARMOR_HANDS",
     "skill_used": "tailor",
@@ -205,6 +219,7 @@
   {
     "result": "gloves_lsurvivor",
     "type": "recipe",
+    "activity_level": "MODERATE_EXERCISE",
     "category": "CC_ARMOR",
     "subcategory": "CSC_ARMOR_HANDS",
     "skill_used": "tailor",
@@ -218,7 +233,7 @@
       [ [ "rag", 6 ] ],
       [ [ "leather", 2 ] ],
       [ [ "duct_tape", 80 ] ],
-      [ [ "gloves_tactical", 1 ], [ "kevlar_plate", 4 ] ],
+      [ [ "gloves_tactical", 1 ], [ "sheet_kevlar_layered", 4 ] ],
       [
         [ "gloves_leather", 1 ],
         [ "gloves_light", 1 ],
@@ -231,6 +246,7 @@
   {
     "result": "gloves_survivor_fingerless",
     "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
     "category": "CC_ARMOR",
     "subcategory": "CSC_ARMOR_HANDS",
     "skill_used": "tailor",
@@ -242,6 +258,7 @@
   {
     "result": "gloves_plate",
     "type": "recipe",
+    "activity_level": "BRISK_EXERCISE",
     "category": "CC_ARMOR",
     "subcategory": "CSC_ARMOR_HANDS",
     "skill_used": "fabrication",
@@ -256,6 +273,7 @@
   {
     "result": "gloves_survivor",
     "type": "recipe",
+    "activity_level": "MODERATE_EXERCISE",
     "category": "CC_ARMOR",
     "subcategory": "CSC_ARMOR_HANDS",
     "skill_used": "tailor",
@@ -269,7 +287,7 @@
       [ [ "rag", 2 ] ],
       [ [ "leather", 6 ], [ "tanned_hide", 1 ] ],
       [ [ "duct_tape", 80 ] ],
-      [ [ "gloves_tactical", 1 ], [ "kevlar_plate", 4 ] ],
+      [ [ "gloves_tactical", 1 ], [ "sheet_kevlar_layered", 4 ] ],
       [
         [ "gloves_leather", 1 ],
         [ "gloves_light", 1 ],
@@ -282,6 +300,7 @@
   {
     "result": "gloves_wool",
     "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
     "category": "CC_ARMOR",
     "subcategory": "CSC_ARMOR_HANDS",
     "skill_used": "tailor",
@@ -294,6 +313,7 @@
   {
     "result": "gloves_work",
     "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
     "category": "CC_ARMOR",
     "subcategory": "CSC_ARMOR_HANDS",
     "skill_used": "tailor",
@@ -306,6 +326,7 @@
   {
     "result": "gloves_wraps",
     "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
     "category": "CC_ARMOR",
     "subcategory": "CSC_ARMOR_HANDS",
     "skill_used": "tailor",
@@ -318,6 +339,7 @@
   {
     "result": "gloves_wraps_fur",
     "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
     "category": "CC_ARMOR",
     "subcategory": "CSC_ARMOR_HANDS",
     "skill_used": "tailor",
@@ -330,6 +352,7 @@
   {
     "result": "gloves_wraps_leather",
     "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
     "category": "CC_ARMOR",
     "subcategory": "CSC_ARMOR_HANDS",
     "skill_used": "tailor",
@@ -342,6 +365,7 @@
   {
     "result": "gloves_wraps_wool",
     "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
     "category": "CC_ARMOR",
     "subcategory": "CSC_ARMOR_HANDS",
     "skill_used": "tailor",
@@ -354,6 +378,7 @@
   {
     "result": "gloves_wsurvivor",
     "type": "recipe",
+    "activity_level": "MODERATE_EXERCISE",
     "category": "CC_ARMOR",
     "subcategory": "CSC_ARMOR_HANDS",
     "skill_used": "tailor",
@@ -367,7 +392,7 @@
       [ [ "rag", 2 ] ],
       [ [ "fur", 8 ], [ "tanned_pelt", 1 ] ],
       [ [ "duct_tape", 80 ] ],
-      [ [ "gloves_tactical", 1 ], [ "kevlar_plate", 4 ] ],
+      [ [ "gloves_tactical", 1 ], [ "sheet_kevlar_layered", 4 ] ],
       [
         [ "gloves_leather", 1 ],
         [ "gloves_light", 1 ],
@@ -380,6 +405,7 @@
   {
     "result": "gloves_xlsurvivor",
     "type": "recipe",
+    "activity_level": "MODERATE_EXERCISE",
     "category": "CC_ARMOR",
     "subcategory": "CSC_ARMOR_HANDS",
     "skill_used": "tailor",
@@ -394,12 +420,13 @@
       [ [ "rag", 6 ] ],
       [ [ "scrap", 2 ] ],
       [ [ "duct_tape", 160 ] ],
-      [ [ "gloves_tactical", 2 ], [ "kevlar_plate", 6 ] ]
+      [ [ "gloves_tactical", 2 ], [ "sheet_kevlar_layered", 6 ] ]
     ]
   },
   {
     "result": "mittens",
     "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
     "category": "CC_ARMOR",
     "subcategory": "CSC_ARMOR_HANDS",
     "skill_used": "tailor",
@@ -412,6 +439,7 @@
   {
     "result": "nomex_gloves",
     "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
     "category": "CC_ARMOR",
     "subcategory": "CSC_ARMOR_HANDS",
     "skill_used": "tailor",
@@ -424,17 +452,19 @@
   {
     "result": "sockmitts",
     "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
     "category": "CC_ARMOR",
     "subcategory": "CSC_ARMOR_HANDS",
     "skill_used": "survival",
     "time": "1 m",
     "autolearn": true,
     "components": [ [ [ "socks", 1 ] ] ],
-    "flags": [ "BLIND_EASY" ]
+    "flags": [ "BLIND_EASY", "NO_RESIZE" ]
   },
   {
     "result": "thermal_gloves",
     "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
     "category": "CC_ARMOR",
     "subcategory": "CSC_ARMOR_HANDS",
     "skill_used": "electronics",
@@ -448,6 +478,7 @@
   {
     "result": "wetsuit_gloves",
     "type": "recipe",
+    "activity_level": "MODERATE_EXERCISE",
     "category": "CC_ARMOR",
     "subcategory": "CSC_ARMOR_HANDS",
     "skill_used": "tailor",
@@ -461,6 +492,7 @@
   {
     "result": "chainmail_hands",
     "type": "recipe",
+    "activity_level": "MODERATE_EXERCISE",
     "category": "CC_ARMOR",
     "subcategory": "CSC_ARMOR_HANDS",
     "skill_used": "fabrication",
@@ -469,5 +501,22 @@
     "book_learn": [ [ "textbook_armwest", 6 ], [ "textbook_fabrication", 6 ], [ "recipe_melee", 6 ] ],
     "using": [ [ "chainmail_standard", 2 ] ],
     "components": [ [ [ "link_sheet", 2 ] ], [ [ "chain_link", 50 ] ], [ [ "wire", 1 ] ], [ [ "rag", 4 ] ] ]
+  },
+  {
+    "result": "gloves_studded",
+    "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
+    "category": "CC_ARMOR",
+    "subcategory": "CSC_ARMOR_HANDS",
+    "skill_used": "tailor",
+    "difficulty": 3,
+    "time": "30 m",
+    "autolearn": true,
+    "using": [ [ "sewing_standard", 4 ] ],
+    "components": [
+      [ [ "rag", 4 ], [ "gloves_light", 1 ], [ "gloves_liner", 1 ] ],
+      [ [ "leather", 2 ], [ "gloves_leather", 1 ] ],
+      [ [ "scrap", 4 ] ]
+    ]
   }
 ]
