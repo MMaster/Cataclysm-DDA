@@ -1180,6 +1180,13 @@ static void draw_limb_wide( avatar &u, const catacurses::window &w )
     for( const bodypart_id &bp :
          u.get_all_body_parts( get_body_part_flags::only_main | get_body_part_flags::sorted ) ) {
         int offset = i * 15;
+        if (i == 1) // torso
+            offset = 3 * 15;
+        if (i == 2) // l hand
+            offset = 1 * 15;
+        if (i == 3) // r hand
+            offset = 2 * 15;
+
         int ny = offset / 45;
         int nx = offset % 45;
         std::string str = string_format( " %s: ",
@@ -1338,7 +1345,8 @@ static void draw_stat_move_compact_wide( avatar &u, const catacurses::window &w 
     std::pair<nc_color, std::string> pwr_pair = power_stat( u );
 
     nc_color move_color =  move_mode_color( u );
-    std::string move_char = move_mode_string( u );
+    char move_char = move_mode_string( u );
+
     std::string movecost = std::to_string( u.movecounter ) + "(" + move_char + ")";
     bool m_style = get_option<std::string>( "MORALE_STYLE" ) == "horizontal";
     std::string smiley = morale_emotion( morale_pair.second, get_face_type( u ), m_style );
@@ -1398,7 +1406,7 @@ static void draw_stat_move_compact_wide( avatar &u, const catacurses::window &w 
     // safe
     mvwprintz( w, point( 35, 2 ), c_light_gray, _( "Saf:" ) );
     mvwprintz( w, point( 40, 2 ), safe_color(), g->safe_mode ? _( "On" ) : _( "Off" ) );
-    wrefresh( w );
+    wnoutrefresh( w );
 }
 
 static void draw_loc_labels( const avatar &u, const catacurses::window &w, bool minimap )
@@ -1466,18 +1474,21 @@ static void draw_loc_labels_compact( const avatar &u, const catacurses::window &
     // NOLINTNEXTLINE(cata-use-named-point-constants)
     mvwprintz( w, point( 1, 0 ), c_light_gray, _( "Loc: " ) );
     wprintz( w, c_white, utf8_truncate( cur_ter->get_name(), getmaxx( w ) - 6 ) );
+
+    map &here = get_map();
     // display weather
-    if( g->get_levz() < 0 ) {
+    if (here.get_abs_sub().z < 0) {
         // NOLINTNEXTLINE(cata-use-named-point-constants)
         mvwprintz( w, point( 1, 1 ), c_light_gray, _( "Sky: Underground" ) );
     } else {
         // NOLINTNEXTLINE(cata-use-named-point-constants)
         mvwprintz( w, point( 1, 1 ), c_light_gray, _( "Sky:" ) );
-        const weather_datum wdata = weather_data( g->weather.weather );
-        wprintz( w, wdata.color, " %s", utf8_truncate( wdata.name, getmaxx( w ) - 5 - 20 ) );
+        wprintz(w, get_weather().weather_id->color, " %s", utf8_truncate(get_weather().weather_id->name, getmaxx(w) - 5 - 20));
     }
+
     // display lighting
-    const auto ll = get_light_level( g->u.fine_detail_vision_mod() );
+    const std::pair<std::string, nc_color> ll = get_light_level(
+        get_avatar().fine_detail_vision_mod());
     mvwprintz( w, point( getmaxx( w ) - 20, 1 ), c_light_gray, "%s ", _( "Lgt:" ) );
     wprintz( w, ll.second, ll.first );
 
@@ -1485,7 +1496,7 @@ static void draw_loc_labels_compact( const avatar &u, const catacurses::window &
     if( u.has_watch() ) {
         mvwprintz( w, point( 1, 2 ), c_light_gray, _( "Time: %s" ),
                    to_string_time_of_day( calendar::turn ) );
-    } else if( g->get_levz() >= 0 ) {
+    } else if( here.get_abs_sub().z >= 0 ) {
         mvwprintz( w, point( 1, 2 ), c_light_gray, _( "Time: %s" ), time_approx() );
     } else {
         // NOLINTNEXTLINE(cata-text-style): the question mark does not end a sentence
@@ -1495,7 +1506,7 @@ static void draw_loc_labels_compact( const avatar &u, const catacurses::window &
                day_of_season<int>( calendar::turn ) + 1,
                calendar::name_season( season_of_year( calendar::turn ) ));
 
-    wrefresh( w );
+    wnoutrefresh( w );
 }
 
 static void draw_loc_compact_wide( const avatar &u, const catacurses::window &w )
@@ -1522,8 +1533,8 @@ static void draw_moon_wide( const avatar &u, const catacurses::window &w )
 {
     werase( w );
     // NOLINTNEXTLINE(cata-use-named-point-constants)
-    mvwprintz( w, point( 1, 0 ), c_light_gray, _( "Moon : %s" ), get_moon() );
-    mvwprintz( w, point( 23, 0 ), c_light_gray, _( "Temp : %s" ), get_temp( u ) );
+    mvwprintz( w, point( 1, 0 ), c_light_gray, _( "Moon: %s" ), get_moon() );
+    mvwprintz( w, point( 23, 0 ), c_light_gray, _( "Temp: %s" ), get_temp( u ) );
     wnoutrefresh( w );
 }
 
@@ -1609,6 +1620,32 @@ static void draw_needs_labels_alt( const avatar &u, const catacurses::window &w 
     mvwprintz( w, point( 1, 4 ), c_light_gray, _( "Heat :" ) );
     mvwprintz( w, point( 8, 4 ), temp_pair.first, temp_pair.second );
     wnoutrefresh( w );
+}
+
+static void draw_needs_labels_compact_wide(const avatar &u, const catacurses::window &w)
+{
+    werase(w);
+    std::pair<std::string, nc_color> hunger_pair = u.get_hunger_description();
+    std::pair<std::string, nc_color> thirst_pair = u.get_thirst_description();
+    std::pair<std::string, nc_color> rest_pair = u.get_fatigue_description();
+    std::pair<nc_color, std::string> temp_pair = temp_stat(u);
+    std::pair<std::string, nc_color> pain_pair = u.get_pain_description();
+    // NOLINTNEXTLINE(cata-use-named-point-constants)
+    mvwprintz(w, point(1, 0), c_light_gray, _("Pain:"));
+    mvwprintz(w, point(7, 0), pain_pair.second, pain_pair.first);
+    mvwprintz(w, point(18, 0), c_light_gray, _("Heat:"));
+    mvwprintz(w, point(24, 0), temp_pair.first, temp_pair.second);
+
+    mvwprintz(w, point(1, 1), c_light_gray, _("Need:"));
+
+    mvwprintz(w, point(7, 1), rest_pair.second, rest_pair.first);
+    if (rest_pair.first.length() > 0)
+        wprintz(w, c_light_gray, " ");
+    wprintz(w, thirst_pair.second, thirst_pair.first);
+    if (thirst_pair.first.length() > 0)
+        wprintz(w, c_light_gray, " ");
+    wprintz(w, hunger_pair.second, hunger_pair.first);
+    wnoutrefresh(w);
 }
 
 static void draw_sound_labels( const avatar &u, const catacurses::window &w )
@@ -2302,7 +2339,7 @@ static std::vector<window_panel> initialize_default_label_compact_panels()
     ret.emplace_back( window_panel( draw_wind_padding, translate_marker( "Wind" ), 1, 44, false ) );
     ret.emplace_back( window_panel( draw_loc_compact_wide, translate_marker( "Location Alt" ), 3, 44, true ) );
     ret.emplace_back( window_panel( draw_weapon_labels, translate_marker( "Weapon" ), 2, 44, true ) );
-    ret.emplace_back( window_panel( draw_needs_labels, translate_marker( "Needs" ), 3, 44, true ) );
+    ret.emplace_back( window_panel( draw_needs_labels_compact_wide, translate_marker( "Needs" ), 2, 44, true ) );
     ret.emplace_back( window_panel( draw_messages, translate_marker( "Log" ), -2, 44, true ) );
     ret.emplace_back( window_panel( draw_moon_wide, translate_marker( "Moon" ), 1, 44, false ) );
     ret.emplace_back( window_panel( draw_armor_padding, translate_marker( "Armor" ), 5, 44, false ) );
