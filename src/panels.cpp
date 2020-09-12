@@ -1336,7 +1336,7 @@ static void draw_stat_wide( avatar &u, const catacurses::window &w )
 ============================================
  Snd: 110    Mood: :|    Str: 100  Dex: 100
  Fcs: 100    Powr: --    Int: 100  Per: 100
- Sta: |||||  Spd: 100  Mov: 100(W) Saf: On
+ Sta: |||||  Spd: 100    Mov: 100W Saf: On
 ============================================
 */
 static void draw_stat_move_compact_wide( avatar &u, const catacurses::window &w )
@@ -1347,7 +1347,7 @@ static void draw_stat_move_compact_wide( avatar &u, const catacurses::window &w 
     nc_color move_color =  move_mode_color( u );
     char move_char = move_mode_string( u );
 
-    std::string movecost = std::to_string( u.movecounter ) + "(" + move_char + ")";
+    std::string movecost = std::to_string( u.movecounter ) + move_char;
     bool m_style = get_option<std::string>( "MORALE_STYLE" ) == "horizontal";
     std::string smiley = morale_emotion( morale_pair.second, get_face_type( u ), m_style );
 
@@ -1387,7 +1387,7 @@ static void draw_stat_move_compact_wide( avatar &u, const catacurses::window &w 
     // NOLINTNEXTLINE(cata-use-named-point-constants)
     mvwprintz( w, point( 1, 2 ), c_light_gray, _( "Sta:" ) );
     mvwprintz( w, point( 13, 2 ), c_light_gray, _( "Spd:" ) );
-    mvwprintz( w, point( 23, 2 ), c_light_gray, _( "Mov:" ) );
+    mvwprintz( w, point( 25, 2 ), c_light_gray, _( "Mov:" ) );
 
     // print stamina value (bar)
     auto needs_pair = std::make_pair( get_hp_bar( u.get_stamina(), u.get_stamina_max() ).second,
@@ -1401,7 +1401,7 @@ static void draw_stat_move_compact_wide( avatar &u, const catacurses::window &w 
     // speed value
     mvwprintz( w, point( 18, 2 ), focus_color( u.get_speed() ), "%s", u.get_speed() );
     // move value
-    mvwprintz( w, point( 28, 2 ), move_color, "%s", movecost );
+    mvwprintz( w, point( 30, 2 ), move_color, "%s", movecost );
 
     // safe
     mvwprintz( w, point( 35, 2 ), c_light_gray, _( "Saf:" ) );
@@ -1638,13 +1638,24 @@ static void draw_needs_labels_compact_wide(const avatar &u, const catacurses::wi
 
     mvwprintz(w, point(1, 1), c_light_gray, _("Need:"));
 
+    int len = 0;
+    // print this even if empty to set cursor position
     mvwprintz(w, point(7, 1), rest_pair.second, rest_pair.first);
-    if (rest_pair.first.length() > 0)
+    int width = utf8_width(rest_pair.first);
+    if (width > 0) {
         wprintz(w, c_light_gray, " ");
-    wprintz(w, thirst_pair.second, thirst_pair.first);
-    if (thirst_pair.first.length() > 0)
+        len += width + 1;
+    }
+    width = utf8_width(thirst_pair.first);
+    if (width > 0) {
+        wprintz(w, thirst_pair.second, thirst_pair.first);
         wprintz(w, c_light_gray, " ");
-    wprintz(w, hunger_pair.second, hunger_pair.first);
+        len += width + 1;
+    }
+    width = utf8_width(hunger_pair.first);
+    if (width > 0) {
+        wprintz(w, hunger_pair.second, utf8_truncate(hunger_pair.first, getmaxx( w ) - 8 - len ));
+    }
     wnoutrefresh(w);
 }
 
