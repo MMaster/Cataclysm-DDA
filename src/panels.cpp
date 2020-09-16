@@ -1199,6 +1199,36 @@ static void draw_limb_wide( avatar &u, const catacurses::window &w )
     wnoutrefresh( w );
 }
 
+static void draw_limb_bottom(avatar &u, const catacurses::window &w)
+{
+    werase(w);
+    int i = 0;
+    for (const bodypart_id &bp :
+        u.get_all_body_parts(get_body_part_flags::only_main | get_body_part_flags::sorted)) {
+        int offset = 56 + i * 15;
+        std::string str = string_format(" %s: ",
+            left_justify(body_part_hp_bar_ui_text(bp), 5));
+        nc_color part_color = u.limb_color(bp, true, true, true);
+
+        print_colored_text(w, point(offset, 0), part_color, c_white, str);
+        draw_limb_health(u, w, bp);
+        i++;
+    }
+
+    std::pair<std::string, nc_color> pain_pair = u.get_pain_description();
+    // NOLINTNEXTLINE(cata-use-named-point-constants)
+    mvwprintz(w, point(getmaxx(w) - 48, 0), pain_pair.second, pain_pair.first);
+
+    // NOLINTNEXTLINE(cata-use-named-point-constants)
+    mvwprintz(w, point(1, 0), c_light_gray, _("Wield:"));
+    trim_and_print(w, point(8, 0), 55 - 8, c_light_gray, u.weapname());
+    std::string style_name = u.martial_arts_data->selected_style_name(u);
+    // NOLINTNEXTLINE(cata-use-named-point-constants)
+    mvwprintz(w, point(getmaxx(w) - utf8_width(style_name) - 7, 0), c_light_gray, "Style: %s", style_name);
+
+    wnoutrefresh(w);
+}
+
 static void draw_char_narrow( avatar &u, const catacurses::window &w )
 {
     werase( w );
@@ -1509,6 +1539,82 @@ static void draw_loc_labels_compact( const avatar &u, const catacurses::window &
     wnoutrefresh( w );
 }
 
+static void render_wind_pos(const avatar &u, const catacurses::window &w, const point &p, const std::string &formatstr)
+{
+    mvwprintz(w, p, c_light_gray,
+        //~ translation should not exceed 5 console cells
+        string_format(formatstr, _("Wind")));
+    const oter_id &cur_om_ter = overmap_buffer.ter(u.global_omt_location());
+    double windpower = get_local_windpower(g->weather.windspeed, cur_om_ter,
+        u.pos(), g->weather.winddirection, g->is_sheltered(u.pos()));
+    mvwprintz(w, p + point(6, 0), get_wind_color(windpower),
+        get_wind_desc(windpower) + " " + get_wind_arrow(g->weather.winddirection));
+}
+
+static void draw_loc_labels_compact_top(const avatar &u, const catacurses::window &w)
+{
+    werase(w);
+    // display location
+    const oter_id &cur_ter = overmap_buffer.ter(u.global_omt_location());
+    // NOLINTNEXTLINE(cata-use-named-point-constants)
+    mvwprintz(w, point(1, 0), c_light_gray, _("Loc: "));
+    wprintz(w, c_white, utf8_truncate(cur_ter->get_name(), 48));
+
+    map &here = get_map();
+    // display weather
+    if (here.get_abs_sub().z < 0) {
+        // NOLINTNEXTLINE(cata-use-named-point-constants)
+        mvwprintz(w, point(49, 0), c_light_gray, _("Sky: Underground"));
+    }
+    else {
+        // NOLINTNEXTLINE(cata-use-named-point-constants)
+        mvwprintz(w, point(49, 0), c_light_gray, _("Sky:"));
+        wprintz(w, get_weather().weather_id->color, " %s", utf8_truncate(get_weather().weather_id->name, 20));
+    }
+
+    // moon
+    mvwprintz(w, point(75, 0), c_light_gray, _("Moon:"));
+    nc_color clr = c_white;
+    print_colored_text(w, point(81, 0), clr, c_white, get_moon_graphic());
+
+    // temp
+    std::string temp = get_temp(u);
+
+    mvwprintz(w, point(88, 0), c_light_gray, _("Temp: %s"), temp);
+
+    std::pair<nc_color, std::string> temp_pair = temp_stat(u);
+    // NOLINTNEXTLINE(cata-use-named-point-constants)
+    mvwprintz(w, point(88 + 6 + utf8_width(temp) + 1, 0), temp_pair.first, "(%s)", temp_pair.second);
+
+    // wind
+    render_wind_pos(u, w, point(113, 0), "%s: ");
+
+    // display lighting
+    const std::pair<std::string, nc_color> ll = get_light_level(
+        get_avatar().fine_detail_vision_mod());
+    mvwprintz(w, point(137, 0), c_light_gray, "%s ", _("Light:"));
+    wprintz(w, ll.second, ll.first);
+
+    // display time & date
+    if (u.has_watch()) {
+        mvwprintz(w, point(getmaxx(w) - 38, 0), c_light_gray, _("Time: %s"),
+            to_string_time_of_day(calendar::turn));
+    }
+    else if (here.get_abs_sub().z >= 0) {
+        mvwprintz(w, point(getmaxx(w) - 38, 0), c_light_gray, _("Time: %s"), time_approx());
+    }
+    else {
+        // NOLINTNEXTLINE(cata-text-style): the question mark does not end a sentence
+        mvwprintz(w, point(getmaxx(w) - 38, 0), c_light_gray, _("Time: ???"));
+    }
+    std::ostringstream day_stream;
+    day_stream << "Day " << day_of_season<int>(calendar::turn) + 1 << ", " << calendar::name_season(season_of_year(calendar::turn));
+
+    mvwprintz(w, point(getmaxx(w) - utf8_width(day_stream.str()), 0), c_light_gray, _(day_stream.str()));
+
+    wnoutrefresh(w);
+}
+
 static void draw_loc_compact_wide( const avatar &u, const catacurses::window &w )
 {
     draw_loc_labels_compact( u, w );
@@ -1628,19 +1734,19 @@ static void draw_needs_labels_compact_wide(const avatar &u, const catacurses::wi
     std::pair<std::string, nc_color> hunger_pair = u.get_hunger_description();
     std::pair<std::string, nc_color> thirst_pair = u.get_thirst_description();
     std::pair<std::string, nc_color> rest_pair = u.get_fatigue_description();
-    std::pair<nc_color, std::string> temp_pair = temp_stat(u);
+ /*   std::pair<nc_color, std::string> temp_pair = temp_stat(u);
     std::pair<std::string, nc_color> pain_pair = u.get_pain_description();
     // NOLINTNEXTLINE(cata-use-named-point-constants)
     mvwprintz(w, point(1, 0), c_light_gray, _("Pain:"));
     mvwprintz(w, point(7, 0), pain_pair.second, pain_pair.first);
     mvwprintz(w, point(18, 0), c_light_gray, _("Heat:"));
-    mvwprintz(w, point(24, 0), temp_pair.first, temp_pair.second);
+    mvwprintz(w, point(24, 0), temp_pair.first, temp_pair.second);*/
 
-    mvwprintz(w, point(1, 1), c_light_gray, _("Need:"));
+    mvwprintz(w, point(1, 0), c_light_gray, _("Need:"));
 
     int len = 0;
     // print this even if empty to set cursor position
-    mvwprintz(w, point(7, 1), rest_pair.second, rest_pair.first);
+    mvwprintz(w, point(7, 0), rest_pair.second, rest_pair.first);
     int width = utf8_width(rest_pair.first);
     if (width > 0) {
         wprintz(w, c_light_gray, " ");
@@ -2340,17 +2446,21 @@ static std::vector<window_panel> initialize_default_label_compact_panels()
 {
     std::vector<window_panel> ret;
 
+    // Keep Hint first (first panel needs to have width of sidebar)
     ret.emplace_back( window_panel( draw_hint, translate_marker( "Hint" ), 1, 44, true ) );
     ret.emplace_back( window_panel( draw_limb_wide, translate_marker( "Limbs" ), 2, 44, true ) );
+    ret.emplace_back( window_panel(draw_limb_bottom, translate_marker("Limbs Bottom"), 0, -2, true));
     ret.emplace_back( window_panel( draw_mana_wide, translate_marker( "Mana" ), 1, 44, true,
                                     spell_panel ) );
     ret.emplace_back( window_panel( draw_stat_move_compact_wide, translate_marker( "Stats" ), 3, 44, true ) );
     ret.emplace_back( window_panel( draw_veh_padding, translate_marker( "Vehicle" ), 1, 44, true ) );
     ret.emplace_back( window_panel( draw_loc_wide_map, translate_marker( "Location" ), 5, 44, false ) );
     ret.emplace_back( window_panel( draw_wind_padding, translate_marker( "Wind" ), 1, 44, false ) );
+    
+    ret.emplace_back( window_panel(draw_loc_labels_compact_top, translate_marker("Location Top"), 0, -1, true));
     ret.emplace_back( window_panel( draw_loc_compact_wide, translate_marker( "Location Alt" ), 3, 44, true ) );
     ret.emplace_back( window_panel( draw_weapon_labels, translate_marker( "Weapon" ), 2, 44, true ) );
-    ret.emplace_back( window_panel( draw_needs_labels_compact_wide, translate_marker( "Needs" ), 2, 44, true ) );
+    ret.emplace_back( window_panel( draw_needs_labels_compact_wide, translate_marker( "Needs" ), 1, 44, true ) );
     ret.emplace_back( window_panel( draw_messages, translate_marker( "Log" ), -2, 44, true ) );
     ret.emplace_back( window_panel( draw_moon_wide, translate_marker( "Moon" ), 1, 44, false ) );
     ret.emplace_back( window_panel( draw_armor_padding, translate_marker( "Armor" ), 5, 44, false ) );

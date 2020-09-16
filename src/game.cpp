@@ -3608,9 +3608,19 @@ void game::draw_panels( bool force_draw )
                 h = log_height;
             }
             h += spacer;
-            if( panel.toggle && panel.render() && h > 0 ) {
+            if( panel.toggle && panel.render() && (h > 0 || panel.get_width() < 0) ) {
                 if( panel.always_draw || draw_this_turn ) {
-                    panel.draw( u, catacurses::newwin( h, panel.get_width(),
+                    // top bar
+                    if( panel.get_width() == -1 ) {
+                        panel.draw(u, catacurses::newwin(1, TERMX - (mgr.get_width_left() + mgr.get_width_right()),
+                            point(sidebar_right ? 0 : panel.get_width(), 0)));
+                    } else
+                    // bottom bar
+                    if( panel.get_width() == -2 ) {
+                        panel.draw(u, catacurses::newwin(1, TERMX - (mgr.get_width_left() + mgr.get_width_right()),
+                            point(sidebar_right ? 0 : panel.get_width(), TERMY - 1)));
+                    } else
+                        panel.draw( u, catacurses::newwin( h, panel.get_width(),
                                                        point( sidebar_right ? TERMX - panel.get_width() : 0, y ) ) );
                 }
                 if( show_panel_adm ) {
