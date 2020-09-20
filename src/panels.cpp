@@ -424,6 +424,251 @@ void overmap_ui::draw_overmap_chunk( const catacurses::window &w_minimap, const 
     }
 }
 
+void overmap_ui::draw_overmap_chunk_wide(const catacurses::window &w_minimap, const avatar &you,
+    const tripoint_abs_omt &global_omt, const point &start_input,
+    const int width, const int height, const int midx_offset)
+{
+    const point_abs_omt curs = global_omt.xy();
+    const tripoint_abs_omt targ = you.get_active_mission_target();
+    bool drew_mission = targ == overmap::invalid_tripoint;
+    const int start_y = start_input.y;
+    const int start_x = start_input.x;
+    const int mid_x = width / 2 + midx_offset;
+    const int mid_y = height / 2;
+    map &here = get_map();
+
+    for (int i = -mid_x; i <= width - mid_x - 1; i++) {
+        for (int j = -(height / 2); j <= height - (height / 2) - 1; j++) {
+            const tripoint_abs_omt omp(curs + point((i < 0 ? i - 1 : i ) / 2, j), here.get_abs_sub().z);
+            nc_color ter_color;
+            std::string ter_sym;
+            const bool seen = overmap_buffer.seen(omp);
+            const bool vehicle_here = overmap_buffer.has_vehicle(omp);
+            if (overmap_buffer.has_note(omp)) {
+
+                const std::string &note_text = overmap_buffer.note(omp);
+
+                ter_color = c_yellow;
+                ter_sym = "N";
+
+                int symbolIndex = note_text.find(':');
+                int colorIndex = note_text.find(';');
+
+                bool symbolFirst = symbolIndex < colorIndex;
+
+                if (colorIndex > -1 && symbolIndex > -1) {
+                    if (symbolFirst) {
+                        if (colorIndex > 4) {
+                            colorIndex = -1;
+                        }
+                        if (symbolIndex > 1) {
+                            symbolIndex = -1;
+                            colorIndex = -1;
+                        }
+                    }
+                    else {
+                        if (symbolIndex > 4) {
+                            symbolIndex = -1;
+                        }
+                        if (colorIndex > 2) {
+                            colorIndex = -1;
+                        }
+                    }
+                }
+                else if (colorIndex > 2) {
+                    colorIndex = -1;
+                }
+                else if (symbolIndex > 1) {
+                    symbolIndex = -1;
+                }
+
+                if (symbolIndex > -1) {
+                    int symbolStart = 0;
+                    if (colorIndex > -1 && !symbolFirst) {
+                        symbolStart = colorIndex + 1;
+                    }
+                    ter_sym = note_text.substr(symbolStart, symbolIndex - symbolStart);
+                }
+
+                if (colorIndex > -1) {
+
+                    int colorStart = 0;
+
+                    if (symbolIndex > -1 && symbolFirst) {
+                        colorStart = symbolIndex + 1;
+                    }
+
+                    std::string sym = note_text.substr(colorStart, colorIndex - colorStart);
+
+                    if (sym.length() == 2) {
+                        if (sym == "br") {
+                            ter_color = c_brown;
+                        }
+                        else if (sym == "lg") {
+                            ter_color = c_light_gray;
+                        }
+                        else if (sym == "dg") {
+                            ter_color = c_dark_gray;
+                        }
+                    }
+                    else {
+                        char colorID = sym.c_str()[0];
+                        if (colorID == 'r') {
+                            ter_color = c_light_red;
+                        }
+                        else if (colorID == 'R') {
+                            ter_color = c_red;
+                        }
+                        else if (colorID == 'g') {
+                            ter_color = c_light_green;
+                        }
+                        else if (colorID == 'G') {
+                            ter_color = c_green;
+                        }
+                        else if (colorID == 'b') {
+                            ter_color = c_light_blue;
+                        }
+                        else if (colorID == 'B') {
+                            ter_color = c_blue;
+                        }
+                        else if (colorID == 'W') {
+                            ter_color = c_white;
+                        }
+                        else if (colorID == 'C') {
+                            ter_color = c_cyan;
+                        }
+                        else if (colorID == 'c') {
+                            ter_color = c_light_cyan;
+                        }
+                        else if (colorID == 'P') {
+                            ter_color = c_pink;
+                        }
+                        else if (colorID == 'm') {
+                            ter_color = c_magenta;
+                        }
+                    }
+                }
+            }
+            else if (!seen) {
+                ter_sym = "#";
+                ter_color = c_dark_gray;
+            }
+            else if (vehicle_here) {
+                ter_color = c_cyan;
+                ter_sym = "c";
+            }
+            else {
+                const oter_id &cur_ter = overmap_buffer.ter(omp);
+                ter_sym = cur_ter->get_symbol();
+                if (overmap_buffer.is_explored(omp)) {
+                    ter_color = c_dark_gray;
+                }
+                else {
+                    ter_color = cur_ter->get_color();
+                }
+            }
+            if (!drew_mission && targ.xy() == omp.xy()) {
+                // If there is a mission target, and it's not on the same
+                // overmap terrain as the player character, mark it.
+                // TODO: Inform player if the mission is above or below
+                drew_mission = true;
+                if (i != 0 || j != 0) {
+                    ter_color = red_background(ter_color);
+                }
+            }
+
+            if (i % 2 != 0) {
+                ter_sym = " ";
+            }
+
+            if (i == 0 && j == 0) {
+                // Highlight player character position in center of minimap
+                mvwputch_hi(w_minimap, point(mid_x + i + start_x, mid_y + j + start_y), ter_color, ter_sym);
+            }
+            else {
+                mvwputch(w_minimap, point(mid_x + i + start_x, mid_y + j + start_y), ter_color, ter_sym);
+            }
+        }
+    }
+
+    // Print arrow to mission if we have one!
+    if (!drew_mission) {
+        // Use an extreme slope rather than dividing by zero
+        double slope = curs.x() == targ.x() ? 1000 :
+            static_cast<double>(targ.y() - curs.y()) / (targ.x() - curs.x());
+
+        if (std::fabs(slope) > 12) {
+            // For any near-vertical slope, center the marker
+            if (targ.y() > curs.y()) {
+                mvwputch(w_minimap, point(mid_x + start_x, height - 1 + start_y), c_red, '*');
+            }
+            else {
+                mvwputch(w_minimap, point(mid_x + start_x, 1 + start_y), c_red, '*');
+            }
+        }
+        else {
+            int arrowx = -1;
+            int arrowy = -1;
+            if (std::fabs(slope) >= 1.) {
+                // If target to the north or south, arrow on top or bottom edge of minimap
+                if (targ.y() > curs.y()) {
+                    arrowx = static_cast<int>((1. + (1. / slope)) * mid_x);
+                    arrowy = height - 1;
+                }
+                else {
+                    arrowx = static_cast<int>((1. - (1. / slope)) * mid_x);
+                    arrowy = 0;
+                }
+                // Clip to left/right edges
+                arrowx = std::max(arrowx, 0);
+                arrowx = std::min(arrowx, width - 1);
+            }
+            else {
+                // If target to the east or west, arrow on left or right edge of minimap
+                if (targ.x() > curs.x()) {
+                    arrowx = width - 1;
+                    arrowy = static_cast<int>((1. + slope) * mid_y);
+                }
+                else {
+                    arrowx = 0;
+                    arrowy = static_cast<int>((1. - slope) * mid_y);
+                }
+                // Clip to top/bottom edges
+                arrowy = std::max(arrowy, 0);
+                arrowy = std::min(arrowy, height - 1);
+            }
+            char glyph = '*';
+            if (targ.z() > you.posz()) {
+                glyph = '^';
+            }
+            else if (targ.z() < you.posz()) {
+                glyph = 'v';
+            }
+
+            mvwputch(w_minimap, point(arrowx + start_x, arrowy + start_y), c_red, glyph);
+        }
+    }
+    avatar &player_character = get_avatar();
+    const int sight_points = player_character.overmap_sight_range(g->light_level(
+        player_character.posz()));
+    for (int i = -3; i <= 3; i++) {
+        for (int j = -3; j <= 3; j++) {
+            if (i > -3 && i < 3 && j > -3 && j < 3) {
+                continue; // only do hordes on the border, skip inner map
+            }
+            const tripoint_abs_omt omp(curs + point(i, j), here.get_abs_sub().z);
+            int horde_size = overmap_buffer.get_horde_size(omp);
+            if (horde_size >= HORDE_VISIBILITY_SIZE) {
+                if (overmap_buffer.seen(omp)
+                    && player_character.overmap_los(omp, sight_points)) {
+                    mvwputch(w_minimap, point(i + mid_x, j + mid_y), c_green,
+                        horde_size > HORDE_VISIBILITY_SIZE * 2 ? 'Z' : 'z');
+                }
+            }
+        }
+    }
+}
+
 static void decorate_panel( const std::string &name, const catacurses::window &w )
 {
     werase( w );
@@ -1439,6 +1684,29 @@ static void draw_stat_move_compact_wide( avatar &u, const catacurses::window &w 
     wnoutrefresh( w );
 }
 
+static void draw_attrs_compact_wide(avatar &u, const catacurses::window &w)
+{
+    werase(w);
+
+    // attr labels
+    mvwprintz(w, point( 1, 0), c_light_gray, _("Str:"));
+    mvwprintz(w, point(11, 0), c_light_gray, _("Dex:"));
+    mvwprintz(w, point(21, 0), c_light_gray, _("Int:"));
+    mvwprintz(w, point(31, 0), c_light_gray, _("Per:"));
+
+    // attr values
+    nc_color stat_clr = str_string(u).first;
+    mvwprintz(w, point( 6, 0), stat_clr, "%s", u.get_str());
+    stat_clr = int_string(u).first;
+    mvwprintz(w, point(16, 0), stat_clr, "%s", u.get_dex());
+    stat_clr = per_string(u).first;
+    mvwprintz(w, point(26, 0), stat_clr, "%s", u.get_int());
+    stat_clr = dex_string(u).first;
+    mvwprintz(w, point(36, 0), stat_clr, "%s", u.get_per());
+
+    wnoutrefresh(w);
+}
+
 static void draw_loc_labels( const avatar &u, const catacurses::window &w, bool minimap )
 {
     werase( w );
@@ -1734,13 +2002,50 @@ static void draw_needs_labels_compact_wide(const avatar &u, const catacurses::wi
     std::pair<std::string, nc_color> hunger_pair = u.get_hunger_description();
     std::pair<std::string, nc_color> thirst_pair = u.get_thirst_description();
     std::pair<std::string, nc_color> rest_pair = u.get_fatigue_description();
- /*   std::pair<nc_color, std::string> temp_pair = temp_stat(u);
+    std::pair<nc_color, std::string> temp_pair = temp_stat(u);
     std::pair<std::string, nc_color> pain_pair = u.get_pain_description();
     // NOLINTNEXTLINE(cata-use-named-point-constants)
     mvwprintz(w, point(1, 0), c_light_gray, _("Pain:"));
     mvwprintz(w, point(7, 0), pain_pair.second, pain_pair.first);
     mvwprintz(w, point(18, 0), c_light_gray, _("Heat:"));
-    mvwprintz(w, point(24, 0), temp_pair.first, temp_pair.second);*/
+    mvwprintz(w, point(24, 0), temp_pair.first, temp_pair.second);
+
+    mvwprintz(w, point(1, 1), c_light_gray, _("Need:"));
+
+    int len = 0;
+    // print this even if empty to set cursor position
+    mvwprintz(w, point(7, 1), rest_pair.second, rest_pair.first);
+    int width = utf8_width(rest_pair.first);
+    if (width > 0) {
+        wprintz(w, c_light_gray, " ");
+        len += width + 1;
+    }
+    width = utf8_width(thirst_pair.first);
+    if (width > 0) {
+        wprintz(w, thirst_pair.second, thirst_pair.first);
+        wprintz(w, c_light_gray, " ");
+        len += width + 1;
+    }
+    width = utf8_width(hunger_pair.first);
+    if (width > 0) {
+        wprintz(w, hunger_pair.second, utf8_truncate(hunger_pair.first, getmaxx( w ) - 8 - len ));
+    }
+    wnoutrefresh(w);
+}
+
+static void draw_needs_labels_compact_wide_alt(const avatar &u, const catacurses::window &w)
+{
+    werase(w);
+    std::pair<std::string, nc_color> hunger_pair = u.get_hunger_description();
+    std::pair<std::string, nc_color> thirst_pair = u.get_thirst_description();
+    std::pair<std::string, nc_color> rest_pair = u.get_fatigue_description();
+    /*   std::pair<nc_color, std::string> temp_pair = temp_stat(u);
+       std::pair<std::string, nc_color> pain_pair = u.get_pain_description();
+       // NOLINTNEXTLINE(cata-use-named-point-constants)
+       mvwprintz(w, point(1, 0), c_light_gray, _("Pain:"));
+       mvwprintz(w, point(7, 0), pain_pair.second, pain_pair.first);
+       mvwprintz(w, point(18, 0), c_light_gray, _("Heat:"));
+       mvwprintz(w, point(24, 0), temp_pair.first, temp_pair.second);*/
 
     mvwprintz(w, point(1, 0), c_light_gray, _("Need:"));
 
@@ -1760,7 +2065,7 @@ static void draw_needs_labels_compact_wide(const avatar &u, const catacurses::wi
     }
     width = utf8_width(hunger_pair.first);
     if (width > 0) {
-        wprintz(w, hunger_pair.second, utf8_truncate(hunger_pair.first, getmaxx( w ) - 8 - len ));
+        wprintz(w, hunger_pair.second, utf8_truncate(hunger_pair.first, getmaxx(w) - 8 - len));
     }
     wnoutrefresh(w);
 }
@@ -2085,6 +2390,83 @@ static void draw_overmap_wide( avatar &u, const catacurses::window &w )
     // NOLINTNEXTLINE(cata-use-named-point-constants)
     overmap_ui::draw_overmap_chunk( w, u, curs, point( 1, 1 ), 42, 18 );
     wnoutrefresh( w );
+}
+
+static void draw_overmap_wide_compact(avatar &u, const catacurses::window &w)
+{
+    werase(w);
+    const tripoint_abs_omt curs = u.global_omt_location();
+    // NOLINTNEXTLINE(cata-use-named-point-constants)
+    overmap_ui::draw_overmap_chunk_wide(w, u, curs, point( 0, 1 ), 43, 10, 0);
+    wnoutrefresh(w);
+}
+
+static void draw_overmap_wide_compact_stats(avatar &u, const catacurses::window &w)
+{
+    werase(w);
+
+    std::pair<nc_color, int> morale_pair = morale_stat(u);
+    std::pair<nc_color, std::string> pwr_pair = power_stat(u);
+
+    nc_color move_color = move_mode_color(u);
+    char move_char = move_mode_string(u);
+
+    std::string movecost = std::to_string(u.movecounter) + move_char;
+    bool m_style = get_option<std::string>("MORALE_STYLE") == "horizontal";
+    std::string smiley = morale_emotion(morale_pair.second, get_face_type(u), m_style);
+
+    werase(w);
+
+    int row = 1;
+
+    // NOLINTNEXTLINE(cata-use-named-point-constants)
+    mvwprintz(w, point(1, row++), c_light_gray, _("Sta:"));
+    // print stamina value (bar)
+    auto needs_pair = std::make_pair(get_hp_bar(u.get_stamina(), u.get_stamina_max()).second,
+        get_hp_bar(u.get_stamina(), u.get_stamina_max()).first);
+    mvwprintz(w, point(6, row-1), needs_pair.first, needs_pair.second);
+    const int width = utf8_width(needs_pair.second);
+    for (int i = 0; i < 5 - width; i++) {
+        mvwprintz(w, point(10 - i, row-1), c_white, ".");
+    }
+
+    mvwprintz(w, point(1, row++), c_light_gray, _("Speed:"));
+    // speed value
+    wprintz(w, focus_color(u.get_speed()), " %d", u.get_speed());
+
+    mvwprintz(w, point(1, row++), c_light_gray, _("Move:"));
+    // move value
+    wprintz(w, move_color, " %s", movecost);
+
+    row++;
+
+    // NOLINTNEXTLINE(cata-use-named-point-constants)
+    mvwprintz(w, point(1, row++), c_light_gray, _("Sound:"));
+    // sound value
+    wprintz(w, c_light_gray, " %d", u.volume);
+
+    row++;
+
+    mvwprintz(w, point(1, row++), c_light_gray, _("Focus:"));
+    // focus value
+    wprintz(w, focus_color(u.focus_pool), " %d", u.focus_pool);
+
+    mvwprintz(w, point(1, row++), c_light_gray, _("Mood:"));
+    // mood value
+    wprintz(w, morale_pair.first, " %s", smiley);
+
+    mvwprintz(w, point(1, row++), c_light_gray, _("Powr:"));
+    // power value
+    wprintz(w, pwr_pair.first, " %s", pwr_pair.second);
+
+    mvwprintz(w, point(1, row++), c_light_gray, _("Safe:"));
+    // safe
+    wprintz(w, safe_color(), " %s", g->safe_mode ? _("On") : _("Off"));
+
+    const tripoint_abs_omt curs = u.global_omt_location();
+    // NOLINTNEXTLINE(cata-use-named-point-constants)
+    overmap_ui::draw_overmap_chunk_wide(w, u, curs, point(13, 1), 30, 10, -1);
+    wnoutrefresh(w);
 }
 
 static void draw_veh_compact( const avatar &u, const catacurses::window &w )
@@ -2448,24 +2830,26 @@ static std::vector<window_panel> initialize_default_label_compact_panels()
 
     // Keep Hint first (first panel needs to have width of sidebar)
     ret.emplace_back( window_panel( draw_hint, translate_marker( "Hint" ), 1, 44, true ) );
-    ret.emplace_back( window_panel( draw_limb_wide, translate_marker( "Limbs" ), 2, 44, true ) );
-    ret.emplace_back( window_panel(draw_limb_bottom, translate_marker("Limbs Bottom"), 0, -2, true));
-    ret.emplace_back( window_panel( draw_mana_wide, translate_marker( "Mana" ), 1, 44, true,
-                                    spell_panel ) );
+    
+    ret.emplace_back( window_panel( draw_loc_labels_compact_top, translate_marker( "Location Top" ), 0, -1, true));
+    ret.emplace_back( window_panel( draw_limb_bottom, translate_marker( "Limbs Bottom" ), 0, -2, true));
+
+    ret.emplace_back( window_panel( draw_mana_wide, translate_marker( "Mana" ), 1, 44, true, spell_panel ) );
+    ret.emplace_back( window_panel( draw_attrs_compact_wide, translate_marker( "Attrs" ), 1, 44, true ) );
     ret.emplace_back( window_panel( draw_stat_move_compact_wide, translate_marker( "Stats" ), 3, 44, true ) );
+    
     ret.emplace_back( window_panel( draw_veh_padding, translate_marker( "Vehicle" ), 1, 44, true ) );
-    ret.emplace_back( window_panel( draw_loc_wide_map, translate_marker( "Location" ), 5, 44, false ) );
     ret.emplace_back( window_panel( draw_wind_padding, translate_marker( "Wind" ), 1, 44, false ) );
     
-    ret.emplace_back( window_panel(draw_loc_labels_compact_top, translate_marker("Location Top"), 0, -1, true));
     ret.emplace_back( window_panel( draw_loc_compact_wide, translate_marker( "Location Alt" ), 3, 44, true ) );
     ret.emplace_back( window_panel( draw_weapon_labels, translate_marker( "Weapon" ), 2, 44, true ) );
-    ret.emplace_back( window_panel( draw_needs_labels_compact_wide, translate_marker( "Needs" ), 1, 44, true ) );
+    ret.emplace_back( window_panel( draw_needs_labels_compact_wide, translate_marker( "Needs" ), 2, 44, true ) );
+    ret.emplace_back( window_panel( draw_needs_labels_compact_wide_alt, translate_marker( "Needs Alt" ), 1, 44, true));
     ret.emplace_back( window_panel( draw_messages, translate_marker( "Log" ), -2, 44, true ) );
-    ret.emplace_back( window_panel( draw_moon_wide, translate_marker( "Moon" ), 1, 44, false ) );
     ret.emplace_back( window_panel( draw_armor_padding, translate_marker( "Armor" ), 5, 44, false ) );
-    ret.emplace_back( window_panel( draw_compass_padding, translate_marker( "Compass" ), 8, 44,
-                                    true ) );
+    ret.emplace_back( window_panel( draw_compass_padding, translate_marker( "Compass" ), 8, 44, true ) );
+    ret.emplace_back( window_panel( draw_overmap_wide_compact, translate_marker( "Overmap" ), 12, 44, false));
+    ret.emplace_back( window_panel( draw_overmap_wide_compact_stats, translate_marker( "Overmap Stats" ), 12, 44, false));
 #if defined(TILES)
     ret.emplace_back( window_panel( draw_mminimap, translate_marker( "Map" ), -1, 44, true,
                                     default_render, true ) );
